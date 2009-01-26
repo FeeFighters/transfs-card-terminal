@@ -1,0 +1,5 @@
+h1. TransFS Card Terminal for iPhone
+
+This project is an open-source iPhone application for processing credit card transactions via the Authorize.Net gateway.
+
+It is sponsored by "Transparent Financial Services":http://transfs.com at "TransFS.com":http://transfs.com.
