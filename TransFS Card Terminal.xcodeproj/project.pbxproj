@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1D7520340F47D6C400996F8E /* AvsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520000F47D6C400996F8E /* AvsResult.m */; };
+		1D7520350F47D6C400996F8E /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520020F47D6C400996F8E /* Base.m */; };
+		1D7520360F47D6C400996F8E /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520040F47D6C400996F8E /* Check.m */; };
+		1D7520370F47D6C400996F8E /* CreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520060F47D6C400996F8E /* CreditCard.m */; };
+		1D7520380F47D6C400996F8E /* CreditCardMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520080F47D6C400996F8E /* CreditCardMethods.m */; };
+		1D7520390F47D6C400996F8E /* CvvResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D75200A0F47D6C400996F8E /* CvvResult.m */; };
+		1D75203A0F47D6C400996F8E /* ExpiryDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D75200C0F47D6C400996F8E /* ExpiryDate.m */; };
+		1D75203B0F47D6C400996F8E /* Gateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D75200E0F47D6C400996F8E /* Gateway.m */; };
+		1D75203C0F47D6C400996F8E /* AuthorizeNetGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520110F47D6C400996F8E /* AuthorizeNetGateway.m */; };
+		1D75203D0F47D6C400996F8E /* BogusGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520130F47D6C400996F8E /* BogusGateway.m */; };
+		1D75203E0F47D6C400996F8E /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520150F47D6C400996F8E /* Response.m */; };
+		1D75203F0F47D6C400996F8E /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520170F47D6C400996F8E /* Errors.m */; };
+		1D7520400F47D6C400996F8E /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520260F47D6C400996F8E /* NSArrayAdditions.m */; };
+		1D7520410F47D6C400996F8E /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520280F47D6C400996F8E /* NSDataAdditions.m */; };
+		1D7520420F47D6C400996F8E /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D75202A0F47D6C400996F8E /* NSStringAdditions.m */; };
+		1D7520430F47D6C400996F8E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D75202E0F47D6C400996F8E /* GDataXMLNode.m */; };
+		1D7520440F47D6C400996F8E /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520310F47D6C400996F8E /* RegexKitLite.m */; };
+		1D7520450F47D6C400996F8E /* VarArgsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520330F47D6C400996F8E /* VarArgsHelper.m */; };
+		1D75207C0F47D82300996F8E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D75207B0F47D82300996F8E /* libxml2.dylib */; };
+		1D7520920F47D85700996F8E /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7520910F47D85700996F8E /* libicucore.dylib */; };
+		1DA23D6E0F37605300B6635B /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA23D6D0F37605300B6635B /* CardView.xib */; };
+		1DA23D890F3779D100B6635B /* UIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA23D880F3779D100B6635B /* UIGradientView.m */; };
+		1DD9BF1B0F46DBF900343F2C /* CardExpirationPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		28216C970DB411BC00E5133A /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* CardViewController.m */; };
+		282CCBFE0DB6C98000C4EA27 /* AddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* AddressView.xib */; };
+		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1D751E8C0F47D1DC00996F8E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransFS_Card_TerminalAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransFS_Card_TerminalAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TransFS Card Terminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D751FFF0F47D6C400996F8E /* AvsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvsResult.h; sourceTree = "<group>"; };
+		1D7520000F47D6C400996F8E /* AvsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvsResult.m; sourceTree = "<group>"; };
+		1D7520010F47D6C400996F8E /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		1D7520020F47D6C400996F8E /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base.m; sourceTree = "<group>"; };
+		1D7520030F47D6C400996F8E /* Check.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Check.h; sourceTree = "<group>"; };
+		1D7520040F47D6C400996F8E /* Check.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Check.m; sourceTree = "<group>"; };
+		1D7520050F47D6C400996F8E /* CreditCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCard.h; sourceTree = "<group>"; };
+		1D7520060F47D6C400996F8E /* CreditCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCard.m; sourceTree = "<group>"; };
+		1D7520070F47D6C400996F8E /* CreditCardMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardMethods.h; sourceTree = "<group>"; };
+		1D7520080F47D6C400996F8E /* CreditCardMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardMethods.m; sourceTree = "<group>"; };
+		1D7520090F47D6C400996F8E /* CvvResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CvvResult.h; sourceTree = "<group>"; };
+		1D75200A0F47D6C400996F8E /* CvvResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CvvResult.m; sourceTree = "<group>"; };
+		1D75200B0F47D6C400996F8E /* ExpiryDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpiryDate.h; sourceTree = "<group>"; };
+		1D75200C0F47D6C400996F8E /* ExpiryDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpiryDate.m; sourceTree = "<group>"; };
+		1D75200D0F47D6C400996F8E /* Gateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gateway.h; sourceTree = "<group>"; };
+		1D75200E0F47D6C400996F8E /* Gateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gateway.m; sourceTree = "<group>"; };
+		1D7520100F47D6C400996F8E /* AuthorizeNetGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorizeNetGateway.h; sourceTree = "<group>"; };
+		1D7520110F47D6C400996F8E /* AuthorizeNetGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorizeNetGateway.m; sourceTree = "<group>"; };
+		1D7520120F47D6C400996F8E /* BogusGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BogusGateway.h; sourceTree = "<group>"; };
+		1D7520130F47D6C400996F8E /* BogusGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BogusGateway.m; sourceTree = "<group>"; };
+		1D7520140F47D6C400996F8E /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
+		1D7520150F47D6C400996F8E /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		1D7520160F47D6C400996F8E /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Errors.h; sourceTree = "<group>"; };
+		1D7520170F47D6C400996F8E /* Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Errors.m; sourceTree = "<group>"; };
+		1D7520190F47D6C400996F8E /* CreditCardFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardFormatting.h; sourceTree = "<group>"; };
+		1D75201A0F47D6C400996F8E /* CreditCardFormatting_Implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardFormatting_Implementation.h; sourceTree = "<group>"; };
+		1D75201B0F47D6C400996F8E /* PostsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostsData.h; sourceTree = "<group>"; };
+		1D75201C0F47D6C400996F8E /* PostsData_Implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostsData_Implementation.h; sourceTree = "<group>"; };
+		1D75201D0F47D6C400996F8E /* RequiresParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequiresParameters.h; sourceTree = "<group>"; };
+		1D75201E0F47D6C400996F8E /* RequiresParameters_Implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequiresParameters_Implementation.h; sourceTree = "<group>"; };
+		1D75201F0F47D6C400996F8E /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		1D7520200F47D6C400996F8E /* Utils_Implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils_Implementation.h; sourceTree = "<group>"; };
+		1D7520210F47D6C400996F8E /* Validatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validatable.h; sourceTree = "<group>"; };
+		1D7520220F47D6C400996F8E /* Validatable_Definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validatable_Definitions.h; sourceTree = "<group>"; };
+		1D7520230F47D6C400996F8E /* Validatable_Implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validatable_Implementation.h; sourceTree = "<group>"; };
+		1D7520250F47D6C400996F8E /* NSArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayAdditions.h; sourceTree = "<group>"; };
+		1D7520260F47D6C400996F8E /* NSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayAdditions.m; sourceTree = "<group>"; };
+		1D7520270F47D6C400996F8E /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		1D7520280F47D6C400996F8E /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		1D7520290F47D6C400996F8E /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		1D75202A0F47D6C400996F8E /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		1D75202C0F47D6C400996F8E /* GDataDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataDefines.h; sourceTree = "<group>"; };
+		1D75202D0F47D6C400996F8E /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		1D75202E0F47D6C400996F8E /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		1D75202F0F47D6C400996F8E /* objCFixes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objCFixes.h; sourceTree = "<group>"; };
+		1D7520300F47D6C400996F8E /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		1D7520310F47D6C400996F8E /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		1D7520320F47D6C400996F8E /* VarArgsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VarArgsHelper.h; sourceTree = "<group>"; };
+		1D7520330F47D6C400996F8E /* VarArgsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VarArgsHelper.m; sourceTree = "<group>"; };
+		1D75207B0F47D82300996F8E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = /usr/lib/libxml2.dylib; sourceTree = "<absolute>"; };
+		1D7520910F47D85700996F8E /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = /usr/lib/libicucore.dylib; sourceTree = "<absolute>"; };
+		1DA23D6D0F37605300B6635B /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		1DA23D870F3779D100B6635B /* UIGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGradientView.h; sourceTree = "<group>"; };
+		1DA23D880F3779D100B6635B /* UIGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGradientView.m; sourceTree = "<group>"; };
+		1DD9BF190F46DBF900343F2C /* CardExpirationPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardExpirationPickerDelegate.h; sourceTree = "<group>"; };
+		1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardExpirationPickerDelegate.m; sourceTree = "<group>"; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28216C950DB411BC00E5133A /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		28216C960DB411BC00E5133A /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		282CCBFD0DB6C98000C4EA27 /* AddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressView.xib; sourceTree = "<group>"; };
+		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AB4B0D9B1048005BE974 /* TransFS_Card_Terminal_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransFS_Card_Terminal_Prefix.pch; sourceTree = "<group>"; };
+		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
+				1D75207C0F47D82300996F8E /* libxml2.dylib in Frameworks */,
+				1D7520920F47D85700996F8E /* libicucore.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28216C950DB411BC00E5133A /* CardViewController.h */,
+				28216C960DB411BC00E5133A /* CardViewController.m */,
+				1D3623240D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.h */,
+				1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */,
+				1DA23D870F3779D100B6635B /* UIGradientView.h */,
+				1DA23D880F3779D100B6635B /* UIGradientView.m */,
+				1DD9BF190F46DBF900343F2C /* CardExpirationPickerDelegate.h */,
+				1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D751FF80F47D66B00996F8E /* objective_merchant */ = {
+			isa = PBXGroup;
+			children = (
+				1D751FFC0F47D6C400996F8E /* Classes */,
+			);
+			name = objective_merchant;
+			sourceTree = "<group>";
+		};
+		1D751FFC0F47D6C400996F8E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D751FFD0F47D6C400996F8E /* ActiveMerchant */,
+				1D7520240F47D6C400996F8E /* Additions */,
+				1D75202B0F47D6C400996F8E /* Utility */,
+			);
+			name = Classes;
+			path = objective_merchant/Classes;
+			sourceTree = "<group>";
+		};
+		1D751FFD0F47D6C400996F8E /* ActiveMerchant */ = {
+			isa = PBXGroup;
+			children = (
+				1D751FFE0F47D6C400996F8E /* Billing */,
+				1D7520160F47D6C400996F8E /* Errors.h */,
+				1D7520170F47D6C400996F8E /* Errors.m */,
+				1D7520180F47D6C400996F8E /* Protocols */,
+			);
+			path = ActiveMerchant;
+			sourceTree = "<group>";
+		};
+		1D751FFE0F47D6C400996F8E /* Billing */ = {
+			isa = PBXGroup;
+			children = (
+				1D751FFF0F47D6C400996F8E /* AvsResult.h */,
+				1D7520000F47D6C400996F8E /* AvsResult.m */,
+				1D7520010F47D6C400996F8E /* Base.h */,
+				1D7520020F47D6C400996F8E /* Base.m */,
+				1D7520030F47D6C400996F8E /* Check.h */,
+				1D7520040F47D6C400996F8E /* Check.m */,
+				1D7520050F47D6C400996F8E /* CreditCard.h */,
+				1D7520060F47D6C400996F8E /* CreditCard.m */,
+				1D7520070F47D6C400996F8E /* CreditCardMethods.h */,
+				1D7520080F47D6C400996F8E /* CreditCardMethods.m */,
+				1D7520090F47D6C400996F8E /* CvvResult.h */,
+				1D75200A0F47D6C400996F8E /* CvvResult.m */,
+				1D75200B0F47D6C400996F8E /* ExpiryDate.h */,
+				1D75200C0F47D6C400996F8E /* ExpiryDate.m */,
+				1D75200D0F47D6C400996F8E /* Gateway.h */,
+				1D75200E0F47D6C400996F8E /* Gateway.m */,
+				1D75200F0F47D6C400996F8E /* Gateways */,
+				1D7520140F47D6C400996F8E /* Response.h */,
+				1D7520150F47D6C400996F8E /* Response.m */,
+			);
+			path = Billing;
+			sourceTree = "<group>";
+		};
+		1D75200F0F47D6C400996F8E /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				1D7520100F47D6C400996F8E /* AuthorizeNetGateway.h */,
+				1D7520110F47D6C400996F8E /* AuthorizeNetGateway.m */,
+				1D7520120F47D6C400996F8E /* BogusGateway.h */,
+				1D7520130F47D6C400996F8E /* BogusGateway.m */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		1D7520180F47D6C400996F8E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1D7520190F47D6C400996F8E /* CreditCardFormatting.h */,
+				1D75201A0F47D6C400996F8E /* CreditCardFormatting_Implementation.h */,
+				1D75201B0F47D6C400996F8E /* PostsData.h */,
+				1D75201C0F47D6C400996F8E /* PostsData_Implementation.h */,
+				1D75201D0F47D6C400996F8E /* RequiresParameters.h */,
+				1D75201E0F47D6C400996F8E /* RequiresParameters_Implementation.h */,
+				1D75201F0F47D6C400996F8E /* Utils.h */,
+				1D7520200F47D6C400996F8E /* Utils_Implementation.h */,
+				1D7520210F47D6C400996F8E /* Validatable.h */,
+				1D7520220F47D6C400996F8E /* Validatable_Definitions.h */,
+				1D7520230F47D6C400996F8E /* Validatable_Implementation.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1D7520240F47D6C400996F8E /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				1D7520250F47D6C400996F8E /* NSArrayAdditions.h */,
+				1D7520260F47D6C400996F8E /* NSArrayAdditions.m */,
+				1D7520270F47D6C400996F8E /* NSDataAdditions.h */,
+				1D7520280F47D6C400996F8E /* NSDataAdditions.m */,
+				1D7520290F47D6C400996F8E /* NSStringAdditions.h */,
+				1D75202A0F47D6C400996F8E /* NSStringAdditions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		1D75202B0F47D6C400996F8E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1D75202C0F47D6C400996F8E /* GDataDefines.h */,
+				1D75202D0F47D6C400996F8E /* GDataXMLNode.h */,
+				1D75202E0F47D6C400996F8E /* GDataXMLNode.m */,
+				1D75202F0F47D6C400996F8E /* objCFixes.h */,
+				1D7520300F47D6C400996F8E /* RegexKitLite.h */,
+				1D7520310F47D6C400996F8E /* RegexKitLite.m */,
+				1D7520320F47D6C400996F8E /* VarArgsHelper.h */,
+				1D7520330F47D6C400996F8E /* VarArgsHelper.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* TransFS Card Terminal */ = {
+			isa = PBXGroup;
+			children = (
+				1D751FF80F47D66B00996F8E /* objective_merchant */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "TransFS Card Terminal";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AB4B0D9B1048005BE974 /* TransFS_Card_Terminal_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				282CCBFD0DB6C98000C4EA27 /* AddressView.xib */,
+				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				1DA23D6D0F37605300B6635B /* CardView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D7520910F47D85700996F8E /* libicucore.dylib */,
+				1D75207B0F47D82300996F8E /* libxml2.dylib */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765070DF74369002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* TransFS Card Terminal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "TransFS Card Terminal" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D751E8C0F47D1DC00996F8E /* CopyFiles */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TransFS Card Terminal";
+			productName = "TransFS Card Terminal";
+			productReference = 1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TransFS Card Terminal" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* TransFS Card Terminal */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* TransFS Card Terminal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
+				282CCBFE0DB6C98000C4EA27 /* AddressView.xib in Resources */,
+				1DA23D6E0F37605300B6635B /* CardView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m in Sources */,
+				28216C970DB411BC00E5133A /* CardViewController.m in Sources */,
+				1DA23D890F3779D100B6635B /* UIGradientView.m in Sources */,
+				1DD9BF1B0F46DBF900343F2C /* CardExpirationPickerDelegate.m in Sources */,
+				1D7520340F47D6C400996F8E /* AvsResult.m in Sources */,
+				1D7520350F47D6C400996F8E /* Base.m in Sources */,
+				1D7520360F47D6C400996F8E /* Check.m in Sources */,
+				1D7520370F47D6C400996F8E /* CreditCard.m in Sources */,
+				1D7520380F47D6C400996F8E /* CreditCardMethods.m in Sources */,
+				1D7520390F47D6C400996F8E /* CvvResult.m in Sources */,
+				1D75203A0F47D6C400996F8E /* ExpiryDate.m in Sources */,
+				1D75203B0F47D6C400996F8E /* Gateway.m in Sources */,
+				1D75203C0F47D6C400996F8E /* AuthorizeNetGateway.m in Sources */,
+				1D75203D0F47D6C400996F8E /* BogusGateway.m in Sources */,
+				1D75203E0F47D6C400996F8E /* Response.m in Sources */,
+				1D75203F0F47D6C400996F8E /* Errors.m in Sources */,
+				1D7520400F47D6C400996F8E /* NSArrayAdditions.m in Sources */,
+				1D7520410F47D6C400996F8E /* NSDataAdditions.m in Sources */,
+				1D7520420F47D6C400996F8E /* NSStringAdditions.m in Sources */,
+				1D7520430F47D6C400996F8E /* GDataXMLNode.m in Sources */,
+				1D7520440F47D6C400996F8E /* RegexKitLite.m in Sources */,
+				1D7520450F47D6C400996F8E /* VarArgsHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Krall";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TransFS_Card_Terminal_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "TransFS Card Terminal";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1DAC79A1-F665-41BC-8E10-A44FDCCCBDA5";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TransFS_Card_Terminal_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "TransFS Card Terminal";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "TransFS Card Terminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TransFS Card Terminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
