@@ -1,0 +1,3 @@
+[submodule "objective_merchant"]
+	path = objective_merchant
+	url = git://github.com/jkrall/objective_merchant.git
