@@ -3,7 +3,7 @@
 //  TransFS Card Terminal
 //
 //  Created by Joshua Krall on 2/2/09.
-//  Copyright __MyCompanyName__ 2009. All rights reserved.
+//  Copyright TransFS.com 2009. All rights reserved.
 //
 
 #import "TransFS_Card_TerminalAppDelegate.h"
@@ -11,9 +11,9 @@
 
 @implementation TransFS_Card_TerminalAppDelegate
 
+@synthesize cardViewController, processViewController;
 @synthesize window;
 @synthesize tabBarController;
-
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     

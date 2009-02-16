@@ -3,7 +3,7 @@
 //  TransFS Card Terminal
 //
 //  Created by Joshua Krall on 2/14/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyright 2009 TransFS.com. All rights reserved.
 //
 
 #import "CardExpirationPickerDelegate.h"
@@ -20,10 +20,7 @@
 	for (int i=0; i<12; i++)
 		[months addObject:[NSString stringWithFormat:@"(%@) %02d ", [monthNames objectAtIndex:i] ,i+1]];
 	
-	NSDate *today = [NSDate date];
-	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-	NSDateComponents *dateComponents = [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit) fromDate:today];
-	int todayYear = [dateComponents year];
+	int todayYear = [CardExpirationPickerDelegate currentYear];
 	years = [[NSMutableArray alloc] init];
 	for (int i=0; i<10; i++)
 		[years addObject:[NSString stringWithFormat:@"%04d", i+todayYear]];	
@@ -75,6 +72,15 @@
 		return l;
 	}
 	return nil;
+}
+
+
++ (int) currentYear
+{
+	NSDate *today = [NSDate date];
+	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	NSDateComponents *dateComponents = [gregorian components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit) fromDate:today];
+	return [dateComponents year];
 }
 
 @end

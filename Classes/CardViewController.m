@@ -3,7 +3,7 @@
 //  TransFS Card Terminal
 //
 //  Created by Joshua Krall on 2/2/09.
-//  Copyright __MyCompanyName__ 2009. All rights reserved.
+//  Copyright TransFS.com 2009. All rights reserved.
 //
 
 #import "CardViewController.h"
@@ -15,6 +15,7 @@
 
 @implementation CardViewController
 
+@synthesize cardNumberField, cvvNumberField, monthPicker, yearPicker, firstNameField, lastNameField;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
