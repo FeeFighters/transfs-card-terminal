@@ -38,6 +38,7 @@
 		1D7942550F4934F000CAA3CF /* master.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7942510F4934EF00CAA3CF /* master.png */; };
 		1D7942560F4934F000CAA3CF /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7942520F4934F000CAA3CF /* visa.png */; };
 		1D7942580F49368900CAA3CF /* unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7942570F49368900CAA3CF /* unknown.png */; };
+		1D7943C30F4965C500CAA3CF /* ProcessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7943C20F4965C500CAA3CF /* ProcessViewController.m */; };
 		1DA23D6E0F37605300B6635B /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA23D6D0F37605300B6635B /* CardView.xib */; };
 		1DA23D890F3779D100B6635B /* UIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA23D880F3779D100B6635B /* UIGradientView.m */; };
 		1DA7E3E50F48EA8300EE19CC /* credit_card_image_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7E3E40F48EA8300EE19CC /* credit_card_image_mask.png */; };
@@ -128,6 +129,8 @@
 		1D7942510F4934EF00CAA3CF /* master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = master.png; sourceTree = "<group>"; };
 		1D7942520F4934F000CAA3CF /* visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa.png; sourceTree = "<group>"; };
 		1D7942570F49368900CAA3CF /* unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown.png; sourceTree = "<group>"; };
+		1D7943C10F4965C500CAA3CF /* ProcessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessViewController.h; sourceTree = "<group>"; };
+		1D7943C20F4965C500CAA3CF /* ProcessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessViewController.m; sourceTree = "<group>"; };
 		1DA23D6D0F37605300B6635B /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		1DA23D870F3779D100B6635B /* UIGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGradientView.h; sourceTree = "<group>"; };
 		1DA23D880F3779D100B6635B /* UIGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGradientView.m; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */,
 				1D7941510F491CE000CAA3CF /* UIGradientScrollView.h */,
 				1D7941520F491CE000CAA3CF /* UIGradientScrollView.m */,
+				1D7943C10F4965C500CAA3CF /* ProcessViewController.h */,
+				1D7943C20F4965C500CAA3CF /* ProcessViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 				1D7520440F47D6C400996F8E /* RegexKitLite.m in Sources */,
 				1D7520450F47D6C400996F8E /* VarArgsHelper.m in Sources */,
 				1D7941530F491CE000CAA3CF /* UIGradientScrollView.m in Sources */,
+				1D7943C30F4965C500CAA3CF /* ProcessViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

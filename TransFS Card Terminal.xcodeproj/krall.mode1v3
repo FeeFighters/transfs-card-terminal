@@ -269,9 +269,6 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>1D751FF80F47D66B00996F8E</string>
-								<string>1D751FFC0F47D6C400996F8E</string>
-								<string>1D751FFD0F47D6C400996F8E</string>
-								<string>1D751FFE0F47D6C400996F8E</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
@@ -282,15 +279,12 @@
 							<array>
 								<array>
 									<integer>14</integer>
-									<integer>4</integer>
 									<integer>3</integer>
-									<integer>2</integer>
-									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 136}, {268, 647}}</string>
+							<string>{{0, 0}, {268, 647}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -327,7 +321,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CreditCardMethods.m</string>
+								<string>main.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -335,14 +329,13 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CreditCardMethods.m</string>
+										<string>main.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1D7943B50F494E2500CAA3CF</string>
+										<string>1D7943DA0F49660600CAA3CF</string>
 										<key>history</key>
 										<array>
-											<string>1DA23D950F37845D00B6635B</string>
 											<string>1D7520590F47D74500996F8E</string>
 											<string>1D7520A70F47E63700996F8E</string>
 											<string>1D7520A80F47E63700996F8E</string>
@@ -379,7 +372,6 @@
 											<string>1D7941560F491DE200CAA3CF</string>
 											<string>1D7941590F491DE200CAA3CF</string>
 											<string>1D79419D0F4926D700CAA3CF</string>
-											<string>1D7942290F49328100CAA3CF</string>
 											<string>1D7942330F4932F100CAA3CF</string>
 											<string>1D79423A0F49334700CAA3CF</string>
 											<string>1D79425E0F49377B00CAA3CF</string>
@@ -393,9 +385,12 @@
 											<string>1D79435D0F49450000CAA3CF</string>
 											<string>1D79435F0F49450000CAA3CF</string>
 											<string>1D79437E0F49468400CAA3CF</string>
-											<string>1D7943920F494A0600CAA3CF</string>
 											<string>1D7943930F494A0600CAA3CF</string>
-											<string>1D7943940F494A0600CAA3CF</string>
+											<string>1D7943BD0F49656900CAA3CF</string>
+											<string>1D7943D20F49660600CAA3CF</string>
+											<string>1D7943D30F49660600CAA3CF</string>
+											<string>1D7943D40F49660600CAA3CF</string>
+											<string>1D7943D50F49660600CAA3CF</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -509,6 +504,11 @@
 											<string>1D7943830F49468400CAA3CF</string>
 											<string>1D7943950F494A0600CAA3CF</string>
 											<string>1D7943960F494A0600CAA3CF</string>
+											<string>1D7943BF0F49656900CAA3CF</string>
+											<string>1D7943D60F49660600CAA3CF</string>
+											<string>1D7943D70F49660600CAA3CF</string>
+											<string>1D7943D80F49660600CAA3CF</string>
+											<string>1D7943D90F49660600CAA3CF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -706,8 +706,8 @@
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1DA23D7A0F3761C800B6635B</string>
 		<string>1D79400B0F48EE3400CAA3CF</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1D79400C0F48EE3400CAA3CF</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/krall/Documents/Entreprenuer/TransFS/programming/transfs-card-terminal/TransFS Card Terminal.xcodeproj</string>
 	</array>
@@ -949,7 +949,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AvsResult.m</string>
+										<string>main.m</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -1267,7 +1267,6 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>1</integer>
 											<integer>0</integer>
 										</array>
 									</array>
