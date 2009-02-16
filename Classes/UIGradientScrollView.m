@@ -1,18 +1,17 @@
 //
-//  UIGradientView.m
+//  UIGradientScrollView.m
 //  TransFS Card Terminal
 //
-//  Created by Joshua Krall on 2/2/09.
+//  Created by Joshua Krall on 2/15/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "UIGradientView.h"
+#import "UIGradientScrollView.h"
 
 
-@implementation UIGradientView
+@implementation UIGradientScrollView
 
 @synthesize topColor, midColor, bottomColor, midPosition;
-
 
 - (void)drawRect:(CGRect)rect {
 	CGColorSpaceRef rgb = CGColorSpaceCreateDeviceRGB();
@@ -24,7 +23,7 @@
 	};
 	backgroundGradient = CGGradientCreateWithColorComponents(rgb, colors, NULL, sizeof(colors)/(sizeof(colors[0])*4));
 	CGColorSpaceRelease(rgb);		
-
+	
 	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
@@ -35,6 +34,29 @@
 								kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
 }
 
+
+- (void) addControlToHitTestList:(UIView*)control
+{
+	if (hitTestIncludedControls==nil)
+		hitTestIncludedControls = [[NSMutableArray alloc] init];
+	
+	[hitTestIncludedControls addObject:control];
+}
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    for (int i=[self.subviews count]-1; i>=0; i--)
+    {
+		UIView *curView = [self.subviews objectAtIndex:i];
+		if ([hitTestIncludedControls containsObject:curView]) {
+			CGPoint convertedPoint = [self convertPoint:point toView:curView];
+			if ([(UIControl *)curView hitTest:convertedPoint withEvent:event] != nil)
+				return [(UIControl *)curView hitTest:convertedPoint withEvent:event];
+		}
+    }
+	
+    return self;
+}
 
 - (void)dealloc {
     [super dealloc];

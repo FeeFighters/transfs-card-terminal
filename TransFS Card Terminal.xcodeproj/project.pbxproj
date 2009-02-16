@@ -30,8 +30,17 @@
 		1D7520450F47D6C400996F8E /* VarArgsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520330F47D6C400996F8E /* VarArgsHelper.m */; };
 		1D75207C0F47D82300996F8E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D75207B0F47D82300996F8E /* libxml2.dylib */; };
 		1D7520920F47D85700996F8E /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7520910F47D85700996F8E /* libicucore.dylib */; };
+		1D7941420F49156B00CAA3CF /* StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7941410F49156B00CAA3CF /* StartView.xib */; };
+		1D7941490F49179300CAA3CF /* ProcessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7941480F49179300CAA3CF /* ProcessView.xib */; };
+		1D7941530F491CE000CAA3CF /* UIGradientScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7941520F491CE000CAA3CF /* UIGradientScrollView.m */; };
+		1D7942530F4934F000CAA3CF /* american_express.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D79424F0F4934EF00CAA3CF /* american_express.png */; };
+		1D7942540F4934F000CAA3CF /* discover.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7942500F4934EF00CAA3CF /* discover.png */; };
+		1D7942550F4934F000CAA3CF /* master.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7942510F4934EF00CAA3CF /* master.png */; };
+		1D7942560F4934F000CAA3CF /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7942520F4934F000CAA3CF /* visa.png */; };
+		1D7942580F49368900CAA3CF /* unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7942570F49368900CAA3CF /* unknown.png */; };
 		1DA23D6E0F37605300B6635B /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA23D6D0F37605300B6635B /* CardView.xib */; };
 		1DA23D890F3779D100B6635B /* UIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA23D880F3779D100B6635B /* UIGradientView.m */; };
+		1DA7E3E50F48EA8300EE19CC /* credit_card_image_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7E3E40F48EA8300EE19CC /* credit_card_image_mask.png */; };
 		1DD9BF1B0F46DBF900343F2C /* CardExpirationPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28216C970DB411BC00E5133A /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* CardViewController.m */; };
@@ -108,9 +117,21 @@
 		1D7520330F47D6C400996F8E /* VarArgsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VarArgsHelper.m; sourceTree = "<group>"; };
 		1D75207B0F47D82300996F8E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = /usr/lib/libxml2.dylib; sourceTree = "<absolute>"; };
 		1D7520910F47D85700996F8E /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = /usr/lib/libicucore.dylib; sourceTree = "<absolute>"; };
+		1D7940B50F48FF8B00CAA3CF /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		1D7940B60F48FF8B00CAA3CF /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		1D7941410F49156B00CAA3CF /* StartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartView.xib; sourceTree = "<group>"; };
+		1D7941480F49179300CAA3CF /* ProcessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessView.xib; sourceTree = "<group>"; };
+		1D7941510F491CE000CAA3CF /* UIGradientScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGradientScrollView.h; sourceTree = "<group>"; };
+		1D7941520F491CE000CAA3CF /* UIGradientScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGradientScrollView.m; sourceTree = "<group>"; };
+		1D79424F0F4934EF00CAA3CF /* american_express.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = american_express.png; sourceTree = "<group>"; };
+		1D7942500F4934EF00CAA3CF /* discover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discover.png; sourceTree = "<group>"; };
+		1D7942510F4934EF00CAA3CF /* master.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = master.png; sourceTree = "<group>"; };
+		1D7942520F4934F000CAA3CF /* visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa.png; sourceTree = "<group>"; };
+		1D7942570F49368900CAA3CF /* unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown.png; sourceTree = "<group>"; };
 		1DA23D6D0F37605300B6635B /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		1DA23D870F3779D100B6635B /* UIGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGradientView.h; sourceTree = "<group>"; };
 		1DA23D880F3779D100B6635B /* UIGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGradientView.m; sourceTree = "<group>"; };
+		1DA7E3E40F48EA8300EE19CC /* credit_card_image_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credit_card_image_mask.png; sourceTree = "<group>"; };
 		1DD9BF190F46DBF900343F2C /* CardExpirationPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardExpirationPickerDelegate.h; sourceTree = "<group>"; };
 		1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardExpirationPickerDelegate.m; sourceTree = "<group>"; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -151,6 +172,8 @@
 				1DA23D880F3779D100B6635B /* UIGradientView.m */,
 				1DD9BF190F46DBF900343F2C /* CardExpirationPickerDelegate.h */,
 				1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */,
+				1D7941510F491CE000CAA3CF /* UIGradientScrollView.h */,
+				1D7941520F491CE000CAA3CF /* UIGradientScrollView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -292,6 +315,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1D7940B50F48FF8B00CAA3CF /* RegexKitLite.h */,
+				1D7940B60F48FF8B00CAA3CF /* RegexKitLite.m */,
 				28A0AB4B0D9B1048005BE974 /* TransFS_Card_Terminal_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -301,10 +326,18 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1D7942570F49368900CAA3CF /* unknown.png */,
+				1D79424F0F4934EF00CAA3CF /* american_express.png */,
+				1D7942500F4934EF00CAA3CF /* discover.png */,
+				1D7942510F4934EF00CAA3CF /* master.png */,
+				1D7942520F4934F000CAA3CF /* visa.png */,
+				1DA7E3E40F48EA8300EE19CC /* credit_card_image_mask.png */,
 				282CCBFD0DB6C98000C4EA27 /* AddressView.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				1DA23D6D0F37605300B6635B /* CardView.xib */,
+				1D7941410F49156B00CAA3CF /* StartView.xib */,
+				1D7941480F49179300CAA3CF /* ProcessView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -367,6 +400,14 @@
 				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
 				282CCBFE0DB6C98000C4EA27 /* AddressView.xib in Resources */,
 				1DA23D6E0F37605300B6635B /* CardView.xib in Resources */,
+				1DA7E3E50F48EA8300EE19CC /* credit_card_image_mask.png in Resources */,
+				1D7941420F49156B00CAA3CF /* StartView.xib in Resources */,
+				1D7941490F49179300CAA3CF /* ProcessView.xib in Resources */,
+				1D7942530F4934F000CAA3CF /* american_express.png in Resources */,
+				1D7942540F4934F000CAA3CF /* discover.png in Resources */,
+				1D7942550F4934F000CAA3CF /* master.png in Resources */,
+				1D7942560F4934F000CAA3CF /* visa.png in Resources */,
+				1D7942580F49368900CAA3CF /* unknown.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +441,7 @@
 				1D7520430F47D6C400996F8E /* GDataXMLNode.m in Sources */,
 				1D7520440F47D6C400996F8E /* RegexKitLite.m in Sources */,
 				1D7520450F47D6C400996F8E /* VarArgsHelper.m in Sources */,
+				1D7941530F491CE000CAA3CF /* UIGradientScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,7 +45,7 @@
 	return 0;
 }
 
-#define PICKER_ROW_WIDTH 110
+#define PICKER_ROW_WIDTH 100
 #define PICKER_ROW_HEIGHT 40
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
 {
@@ -61,7 +61,7 @@
 	if (pickerView==monthPicker) {
 		UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, PICKER_ROW_WIDTH-10+30, PICKER_ROW_HEIGHT)];
 		[l setBackgroundColor:[UIColor colorWithRed:0.0	green:0.0 blue:0.0 alpha:0.0]];
-		[l setFont:[UIFont systemFontOfSize:28.0]];				
+		[l setFont:[UIFont systemFontOfSize:24.0]];				
 		[l setTextAlignment:UITextAlignmentRight];
 		[l setText:[months objectAtIndex:row]];
 		return l;
@@ -69,7 +69,7 @@
 	if (pickerView==yearPicker) {
 		UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, PICKER_ROW_WIDTH-10, PICKER_ROW_HEIGHT)];
 		[l setBackgroundColor:[UIColor colorWithRed:0.0	green:0.0 blue:0.0 alpha:0.0]];
-		[l setFont:[UIFont systemFontOfSize:28.0]];				
+		[l setFont:[UIFont systemFontOfSize:24.0]];				
 		[l setTextAlignment:UITextAlignmentCenter];
 		[l setText:[years objectAtIndex:row]];
 		return l;
