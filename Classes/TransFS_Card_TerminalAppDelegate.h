@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StartViewController.h"
 #import "CardViewController.h"
 #import "ProcessViewController.h"
 
 @interface TransFS_Card_TerminalAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
+	IBOutlet StartViewController* startViewController;
 	IBOutlet CardViewController* cardViewController;
 	IBOutlet ProcessViewController* processViewController;
 	
@@ -18,6 +20,7 @@
     UITabBarController *tabBarController;
 }
 
+@property (nonatomic, retain) IBOutlet StartViewController* startViewController;
 @property (nonatomic, retain) IBOutlet CardViewController* cardViewController;
 @property (nonatomic, retain) IBOutlet ProcessViewController* processViewController;
 

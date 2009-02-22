@@ -15,6 +15,7 @@
 
 @implementation CardViewController
 
+@synthesize cardTypeImage, cardNumberLabel;
 @synthesize cardNumberField, cvvNumberField, monthPicker, yearPicker, firstNameField, lastNameField;
 
 /*

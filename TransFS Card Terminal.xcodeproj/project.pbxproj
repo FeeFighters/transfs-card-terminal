@@ -10,6 +10,7 @@
 		1D3623260D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1D69BA4A0F507B4A00D0063C /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D69BA490F507B4A00D0063C /* AddressViewController.m */; };
 		1D7520340F47D6C400996F8E /* AvsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520000F47D6C400996F8E /* AvsResult.m */; };
 		1D7520350F47D6C400996F8E /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520020F47D6C400996F8E /* Base.m */; };
 		1D7520360F47D6C400996F8E /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520040F47D6C400996F8E /* Check.m */; };
@@ -39,10 +40,11 @@
 		1D7942560F4934F000CAA3CF /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7942520F4934F000CAA3CF /* visa.png */; };
 		1D7942580F49368900CAA3CF /* unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D7942570F49368900CAA3CF /* unknown.png */; };
 		1D7943C30F4965C500CAA3CF /* ProcessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7943C20F4965C500CAA3CF /* ProcessViewController.m */; };
-		1D7944790F49771100CAA3CF /* Authorize.Net.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D7944780F49771100CAA3CF /* Authorize.Net.plist */; };
 		1DA23D6E0F37605300B6635B /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA23D6D0F37605300B6635B /* CardView.xib */; };
 		1DA23D890F3779D100B6635B /* UIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA23D880F3779D100B6635B /* UIGradientView.m */; };
 		1DA7E3E50F48EA8300EE19CC /* credit_card_image_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA7E3E40F48EA8300EE19CC /* credit_card_image_mask.png */; };
+		1DB5DE300F4B8DA6005EA877 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB5DE2F0F4B8DA6005EA877 /* StartViewController.m */; };
+		1DB5DE950F4B9CEF005EA877 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1DB5DE940F4B9CEF005EA877 /* Settings.bundle */; };
 		1DD9BF1B0F46DBF900343F2C /* CardExpirationPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28216C970DB411BC00E5133A /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* CardViewController.m */; };
@@ -68,6 +70,8 @@
 		1D3623240D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransFS_Card_TerminalAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransFS_Card_TerminalAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TransFS Card Terminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D69BA480F507B4A00D0063C /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
+		1D69BA490F507B4A00D0063C /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
 		1D751FFF0F47D6C400996F8E /* AvsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvsResult.h; sourceTree = "<group>"; };
 		1D7520000F47D6C400996F8E /* AvsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvsResult.m; sourceTree = "<group>"; };
 		1D7520010F47D6C400996F8E /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
@@ -132,11 +136,13 @@
 		1D7942570F49368900CAA3CF /* unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown.png; sourceTree = "<group>"; };
 		1D7943C10F4965C500CAA3CF /* ProcessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessViewController.h; sourceTree = "<group>"; };
 		1D7943C20F4965C500CAA3CF /* ProcessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessViewController.m; sourceTree = "<group>"; };
-		1D7944780F49771100CAA3CF /* Authorize.Net.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Authorize.Net.plist; sourceTree = "<group>"; };
 		1DA23D6D0F37605300B6635B /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		1DA23D870F3779D100B6635B /* UIGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGradientView.h; sourceTree = "<group>"; };
 		1DA23D880F3779D100B6635B /* UIGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGradientView.m; sourceTree = "<group>"; };
 		1DA7E3E40F48EA8300EE19CC /* credit_card_image_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credit_card_image_mask.png; sourceTree = "<group>"; };
+		1DB5DE2E0F4B8DA6005EA877 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		1DB5DE2F0F4B8DA6005EA877 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		1DB5DE940F4B9CEF005EA877 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1DD9BF190F46DBF900343F2C /* CardExpirationPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardExpirationPickerDelegate.h; sourceTree = "<group>"; };
 		1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardExpirationPickerDelegate.m; sourceTree = "<group>"; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -181,6 +187,10 @@
 				1D7941520F491CE000CAA3CF /* UIGradientScrollView.m */,
 				1D7943C10F4965C500CAA3CF /* ProcessViewController.h */,
 				1D7943C20F4965C500CAA3CF /* ProcessViewController.m */,
+				1DB5DE2E0F4B8DA6005EA877 /* StartViewController.h */,
+				1DB5DE2F0F4B8DA6005EA877 /* StartViewController.m */,
+				1D69BA480F507B4A00D0063C /* AddressViewController.h */,
+				1D69BA490F507B4A00D0063C /* AddressViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -333,7 +343,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1D7944780F49771100CAA3CF /* Authorize.Net.plist */,
 				1D7942570F49368900CAA3CF /* unknown.png */,
 				1D79424F0F4934EF00CAA3CF /* american_express.png */,
 				1D7942500F4934EF00CAA3CF /* discover.png */,
@@ -346,6 +355,7 @@
 				1DA23D6D0F37605300B6635B /* CardView.xib */,
 				1D7941410F49156B00CAA3CF /* StartView.xib */,
 				1D7941480F49179300CAA3CF /* ProcessView.xib */,
+				1DB5DE940F4B9CEF005EA877 /* Settings.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -416,7 +426,7 @@
 				1D7942550F4934F000CAA3CF /* master.png in Resources */,
 				1D7942560F4934F000CAA3CF /* visa.png in Resources */,
 				1D7942580F49368900CAA3CF /* unknown.png in Resources */,
-				1D7944790F49771100CAA3CF /* Authorize.Net.plist in Resources */,
+				1DB5DE950F4B9CEF005EA877 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +462,8 @@
 				1D7520450F47D6C400996F8E /* VarArgsHelper.m in Sources */,
 				1D7941530F491CE000CAA3CF /* UIGradientScrollView.m in Sources */,
 				1D7943C30F4965C500CAA3CF /* ProcessViewController.m in Sources */,
+				1DB5DE300F4B8DA6005EA877 /* StartViewController.m in Sources */,
+				1D69BA4A0F507B4A00D0063C /* AddressViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +484,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1DAC79A1-F665-41BC-8E10-A44FDCCCBDA5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C228E99C-4543-448E-83A2-8BF84A37A916";
 			};
 			name = Debug;
 		};
@@ -480,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Krall";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -487,6 +500,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C228E99C-4543-448E-83A2-8BF84A37A916";
 			};
 			name = Release;
 		};

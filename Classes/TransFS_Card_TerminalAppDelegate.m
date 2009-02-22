@@ -11,7 +11,7 @@
 
 @implementation TransFS_Card_TerminalAppDelegate
 
-@synthesize cardViewController, processViewController;
+@synthesize startViewController, cardViewController, processViewController;
 @synthesize window;
 @synthesize tabBarController;
 
@@ -22,11 +22,10 @@
 }
 
 
-/*
 // Optional UITabBarControllerDelegate method
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+	
 }
-*/
 
 /*
 // Optional UITabBarControllerDelegate method

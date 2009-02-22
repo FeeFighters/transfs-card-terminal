@@ -12,6 +12,7 @@
 #import "CardExpirationPickerDelegate.h"
 #import "objCFixes.h"
 #import "AuthorizeNetGateway.h"
+#import "Base.h"
 
 @implementation ProcessViewController
 
@@ -59,33 +60,25 @@
 {
 	[NSThread sleepForTimeInterval:0.5];
 	
+	NSString *login = [[NSUserDefaults standardUserDefaults] stringForKey:@"login"];
+	if ([NSString is_blank:login])
+		login = [NSString stringWithString:@""];
+	NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];	
+	if ([NSString is_blank:password])
+		password = [NSString stringWithString:@""];
+	bool testMode = [[NSUserDefaults standardUserDefaults] boolForKey:@"testMode"];
 	
-	NSString *errorDesc = nil;
-	NSPropertyListFormat format;
-	NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
-	NSString *plistPath = [thisBundle pathForResource:@"Authorize.Net" ofType:@"plist"];
-	NSData *plistXML = [[NSFileManager defaultManager] contentsAtPath:plistPath];
-	NSDictionary *temp = (NSDictionary *)[NSPropertyListSerialization										  
-										  propertyListFromData:plistXML
-										  mutabilityOption:NSPropertyListMutableContainersAndLeaves
-										  format:&format errorDescription:&errorDesc];
-	if (!temp) {
-		[NSException raise:@"Authorize.Net Init, PList Error" format:errorDesc];
-		[errorDesc release];
-	}
-	NSMutableDictionary* authorizeNetOptions = [NSMutableDictionary dictionaryWithDictionary:temp];
-	
-	
-	
+	if (testMode) [BillingBase setGatewayMode:Test];
 	
 	TransFS_Card_TerminalAppDelegate* delegate = (TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate];
+	StartViewController *startViewController = [delegate startViewController];
 	CardViewController *cardViewController = [delegate cardViewController];
-	ProcessViewController *processViewController = [delegate processViewController];
+	//ProcessViewController *processViewController = [delegate processViewController];
 
 	int todayYear = [CardExpirationPickerDelegate currentYear];
 	BillingCreditCard *card = [[BillingCreditCard alloc] init:[NSDictionary dictionaryWithObjectsAndKeys:
 															   nilToEmptyStr([[cardViewController cardNumberField] text]), @"number",
-															   (NSNumber*)MakeInt([[cardViewController monthPicker] selectedRowInComponent:0]), @"month",
+															   (NSNumber*)MakeInt([[cardViewController monthPicker] selectedRowInComponent:0] + 1), @"month",
 															   (NSNumber*)MakeInt(todayYear + [[cardViewController yearPicker] selectedRowInComponent:0]), @"year",
 															   nilToEmptyStr([[cardViewController firstNameField] text]), @"firstName",
 															   nilToEmptyStr([[cardViewController lastNameField] text]), @"lastName",
@@ -95,8 +88,8 @@
 	if ([card is_valid])
 	{
 		AuthorizeNetGateway *gateway = [[AuthorizeNetGateway alloc] init:[NSDictionary dictionaryWithObjectsAndKeys:
-																		  [authorizeNetOptions objectForKey:@"login"], @"login",
-																		  [authorizeNetOptions objectForKey:@"tran_key"], @"password",
+																		  login, @"login",
+																		  password, @"password",
 																		  nil]];
 		
 		NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
@@ -105,21 +98,26 @@
 //		[options setObject:@"Chicago" forKey:@"city"];
 //		[options setObject:@"IL" forKey:@"state"];		
 //		
+		NSString* dollarTxt = [[startViewController dollarAmountLabel] text];
+		int saleAmount = [dollarTxt floatValue] * 100;
+		
 		@try {
 			BillingResponse *response;	
-			response = [gateway authorize:MakeInt(250) creditcard:card options:[NSDictionary dictionaryWithObject:options forKey:@"address"]];
+			response = [gateway authorize:MakeInt(saleAmount) creditcard:card options:[NSDictionary dictionaryWithObject:options forKey:@"address"]];
 			if (![response is_success])
 				[NSException raise:@"Authorize.Net Gateway Error, authorize:" format:[response message]];
 			else {
 				
-				response = [gateway capture:MakeInt(250) authorization:[response authorization] options:[[NSDictionary alloc] init]];
+				response = [gateway capture:MakeInt(saleAmount) authorization:[response authorization] options:[[NSDictionary alloc] init]];
 				if (![response is_success])
 					[NSException raise:@"Authorize.Net Gateway Error, capture:" format:[response message]];
 				
-				response = [gateway voidAuthorization:[response authorization] options:[[NSDictionary alloc] init]];
-				if (![response is_success])
-					[NSException raise:@"Authorize.Net Gateway Error, void:" format:[response message]];
+//				response = [gateway voidAuthorization:[response authorization] options:[[NSDictionary alloc] init]];
+//				if (![response is_success])
+//					[NSException raise:@"Authorize.Net Gateway Error, void:" format:[response message]];
 			}
+
+			[responseLabel setText:@"Transaction Processed Successfully!"];
 		}
 		@catch (NSException *exception) {
 			[responseLabel setText:[exception reason]];
@@ -127,7 +125,7 @@
 	}
 	else 
 	{
-		NSLog(@"Card Errors: %@", [[card errors] fullMessages]);
+		NSLog(@"Card Errors: %@", [[[card errors] fullMessages] componentsJoinedByString:@", "]);
 		NSString *err = [[[card errors] fullMessages] componentsJoinedByString:@"\n"];
 		[responseLabel setText:err];
 	}
