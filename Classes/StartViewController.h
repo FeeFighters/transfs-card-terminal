@@ -18,6 +18,7 @@
 @property(retain, nonatomic) IBOutlet UITextField* dollarAmountField;
 @property(retain, nonatomic) IBOutlet UILabel* dollarAmountLabel;
 
+- (void)textFieldDidChange;
 - (BOOL)textFieldShouldReturn:(UITextField *)textField;
 - (IBAction) doneEditingPressed:(id)sender;
 - (IBAction) proceedPressed:(id)sender;

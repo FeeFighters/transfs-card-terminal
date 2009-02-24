@@ -53,6 +53,14 @@
 		1DC868290F53B2FF00D2DB08 /* money_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868210F53B2FF00D2DB08 /* money_6.png */; };
 		1DC8682A0F53B2FF00D2DB08 /* money_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868220F53B2FF00D2DB08 /* money_7.png */; };
 		1DC8682B0F53B2FF00D2DB08 /* money_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868230F53B2FF00D2DB08 /* money_8.png */; };
+		1DC868DA0F53D0DD00D2DB08 /* HistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868D90F53D0DD00D2DB08 /* HistoryView.xib */; };
+		1DC868E70F53D87100D2DB08 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC868E60F53D87100D2DB08 /* HistoryTableViewController.m */; };
+		1DC8690D0F53DB9000D2DB08 /* HistoryDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8690C0F53DB9000D2DB08 /* HistoryDetailView.xib */; };
+		1DC869110F53DBB500D2DB08 /* HistoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC869100F53DBB500D2DB08 /* HistoryDetailViewController.m */; };
+		1DC869560F53EE4B00D2DB08 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC869550F53EE4B00D2DB08 /* libsqlite3.dylib */; };
+		1DC8697A0F53EF8200D2DB08 /* transactionHistory.sql in Resources */ = {isa = PBXBuildFile; fileRef = 1DC869790F53EF8200D2DB08 /* transactionHistory.sql */; };
+		1DC86A240F54030D00D2DB08 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DC86A230F54030D00D2DB08 /* TransactionTableViewCell.xib */; };
+		1DC86A3C0F5404CF00D2DB08 /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC86A3B0F5404CF00D2DB08 /* TransactionTableViewCell.m */; };
 		1DD9BF1B0F46DBF900343F2C /* CardExpirationPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		1DFC98B10F52126600191E58 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DFC98B00F52126600191E58 /* Entitlements.plist */; };
@@ -161,6 +169,17 @@
 		1DC868210F53B2FF00D2DB08 /* money_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_6.png; sourceTree = "<group>"; };
 		1DC868220F53B2FF00D2DB08 /* money_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_7.png; sourceTree = "<group>"; };
 		1DC868230F53B2FF00D2DB08 /* money_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_8.png; sourceTree = "<group>"; };
+		1DC868D90F53D0DD00D2DB08 /* HistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryView.xib; sourceTree = "<group>"; };
+		1DC868E50F53D87100D2DB08 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		1DC868E60F53D87100D2DB08 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
+		1DC8690C0F53DB9000D2DB08 /* HistoryDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDetailView.xib; sourceTree = "<group>"; };
+		1DC8690F0F53DBB500D2DB08 /* HistoryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDetailViewController.h; sourceTree = "<group>"; };
+		1DC869100F53DBB500D2DB08 /* HistoryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDetailViewController.m; sourceTree = "<group>"; };
+		1DC869550F53EE4B00D2DB08 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = /usr/lib/libsqlite3.dylib; sourceTree = "<absolute>"; };
+		1DC869790F53EF8200D2DB08 /* transactionHistory.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = transactionHistory.sql; sourceTree = "<group>"; };
+		1DC86A230F54030D00D2DB08 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		1DC86A3A0F5404CF00D2DB08 /* TransactionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionTableViewCell.h; sourceTree = "<group>"; };
+		1DC86A3B0F5404CF00D2DB08 /* TransactionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionTableViewCell.m; sourceTree = "<group>"; };
 		1DD9BF190F46DBF900343F2C /* CardExpirationPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardExpirationPickerDelegate.h; sourceTree = "<group>"; };
 		1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardExpirationPickerDelegate.m; sourceTree = "<group>"; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -187,6 +206,7 @@
 				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
 				1D75207C0F47D82300996F8E /* libxml2.dylib in Frameworks */,
 				1D7520920F47D85700996F8E /* libicucore.dylib in Frameworks */,
+				1DC869560F53EE4B00D2DB08 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +234,12 @@
 				1D69BA490F507B4A00D0063C /* AddressViewController.m */,
 				1DFC98E40F525DB900191E58 /* Transaction.h */,
 				1DFC98E50F525DB900191E58 /* Transaction.m */,
+				1DC868E50F53D87100D2DB08 /* HistoryTableViewController.h */,
+				1DC868E60F53D87100D2DB08 /* HistoryTableViewController.m */,
+				1DC8690F0F53DBB500D2DB08 /* HistoryDetailViewController.h */,
+				1DC869100F53DBB500D2DB08 /* HistoryDetailViewController.m */,
+				1DC86A3A0F5404CF00D2DB08 /* TransactionTableViewCell.h */,
+				1DC86A3B0F5404CF00D2DB08 /* TransactionTableViewCell.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -404,6 +430,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1DC869790F53EF8200D2DB08 /* transactionHistory.sql */,
 				1DC8680D0F53B2BC00D2DB08 /* images */,
 				282CCBFD0DB6C98000C4EA27 /* AddressView.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
@@ -412,6 +439,9 @@
 				1D7941410F49156B00CAA3CF /* StartView.xib */,
 				1D7941480F49179300CAA3CF /* ProcessView.xib */,
 				1DB5DE940F4B9CEF005EA877 /* Settings.bundle */,
+				1DC868D90F53D0DD00D2DB08 /* HistoryView.xib */,
+				1DC8690C0F53DB9000D2DB08 /* HistoryDetailView.xib */,
+				1DC86A230F54030D00D2DB08 /* TransactionTableViewCell.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -419,6 +449,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1DC869550F53EE4B00D2DB08 /* libsqlite3.dylib */,
 				1D7520910F47D85700996F8E /* libicucore.dylib */,
 				1D75207B0F47D82300996F8E /* libxml2.dylib */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -492,6 +523,10 @@
 				1DC868290F53B2FF00D2DB08 /* money_6.png in Resources */,
 				1DC8682A0F53B2FF00D2DB08 /* money_7.png in Resources */,
 				1DC8682B0F53B2FF00D2DB08 /* money_8.png in Resources */,
+				1DC868DA0F53D0DD00D2DB08 /* HistoryView.xib in Resources */,
+				1DC8690D0F53DB9000D2DB08 /* HistoryDetailView.xib in Resources */,
+				1DC8697A0F53EF8200D2DB08 /* transactionHistory.sql in Resources */,
+				1DC86A240F54030D00D2DB08 /* TransactionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +565,9 @@
 				1DB5DE300F4B8DA6005EA877 /* StartViewController.m in Sources */,
 				1D69BA4A0F507B4A00D0063C /* AddressViewController.m in Sources */,
 				1DFC98E60F525DB900191E58 /* Transaction.m in Sources */,
+				1DC868E70F53D87100D2DB08 /* HistoryTableViewController.m in Sources */,
+				1DC869110F53DBB500D2DB08 /* HistoryDetailViewController.m in Sources */,
+				1DC86A3C0F5404CF00D2DB08 /* TransactionTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

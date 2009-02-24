@@ -90,10 +90,9 @@
 	[NSThread sleepForTimeInterval:0.5];
 	
 	TransFS_Card_TerminalAppDelegate* delegate = (TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate];
-	Transaction* sale = [[Transaction alloc] init:delegate];
+	Transaction* sale = [Transaction initAndProcessFromCurrentState];
 	if ([sale status]==TransactionSuccess)
 	{
-		
 		[successViewImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"money_%d.png", (random() % 8)+1]]];
 		[successViewLabel setText:[NSString stringWithFormat:@"Successfully Charged $%.2f to %@ %@'s Card", [sale dollarAmount], [sale firstName], [sale lastName]]];
 		
@@ -121,7 +120,9 @@
 - (IBAction) startOverButtonClick:(id)sender
 {
 	[[self tabBarController] setSelectedIndex:0];
-
+	TransFS_Card_TerminalAppDelegate* delegate = (TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate];
+	[delegate resetTransactionFields];
+	
 	UIView* curView = [successView superview];
 	[UIView beginAnimations:@"startOver" context:nil];		//	Begin an animation block.
 	[UIView setAnimationDuration:0.5];
