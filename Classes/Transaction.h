@@ -27,12 +27,18 @@ typedef enum {
 	NSString* firstName;
 	NSString* lastName;	
 	NSString* sanitizedCardNumber;
-	int saleAmount;
+	float dollarAmount;
 	NSString* authorizationId;
 	
 	TransactionStatusCodes status;
 	NSString* errorMessages;
 }
+
+@property(readonly) NSString* firstName;
+@property(readonly) NSString* lastName;	
+@property(readonly) NSString* sanitizedCardNumber;
+@property(readonly) float dollarAmount;
+@property(readonly) NSString* authorizationId;
 
 @property(readonly) TransactionStatusCodes status;
 @property(readonly) NSString* errorMessages;

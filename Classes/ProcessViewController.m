@@ -7,6 +7,7 @@
 //
 
 #import "Transaction.h"
+#import <stdlib.h>
 
 @implementation ProcessViewController
 
@@ -92,7 +93,19 @@
 	Transaction* sale = [[Transaction alloc] init:delegate];
 	if ([sale status]==TransactionSuccess)
 	{
-		[responseLabel setText:@"Transaction Processed Successfully!"];		
+		
+		[successViewImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"money_%d.png", (random() % 8)+1]]];
+		[successViewLabel setText:[NSString stringWithFormat:@"Successfully Charged $%.2f to %@ %@'s Card", [sale dollarAmount], [sale firstName], [sale lastName]]];
+		
+		savedSubviewforSuccess = [[delegate tabBarController] view];
+		UIView* curView = [savedSubviewforSuccess superview];
+		[curView setBackgroundColor:[UIColor blackColor]];
+		[UIView beginAnimations:@"successView" context:nil];		//	Begin an animation block.
+		[UIView setAnimationDuration:0.75];
+		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:curView cache:true];	//	Set the transition on the container view.
+		[savedSubviewforSuccess removeFromSuperview];	//	Remove the subview from the container view.
+		[curView addSubview:successView];		//	Add the new subview to the container view.
+		[UIView commitAnimations];
 	}
 	else
 	{
@@ -103,6 +116,19 @@
 	[spinner stopAnimating];
 	[processButton setEnabled:true];
 	[NSThread exit];
+}
+
+- (IBAction) startOverButtonClick:(id)sender
+{
+	[[self tabBarController] setSelectedIndex:0];
+
+	UIView* curView = [successView superview];
+	[UIView beginAnimations:@"startOver" context:nil];		//	Begin an animation block.
+	[UIView setAnimationDuration:0.5];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:curView cache:true];	//	Set the transition on the container view.
+	[successView removeFromSuperview];	//	Remove the subview from the container view.
+	[curView addSubview:savedSubviewforSuccess];		//	Add the new subview to the container view.
+	[UIView commitAnimations];
 }
 
 - (void)didReceiveMemoryWarning {

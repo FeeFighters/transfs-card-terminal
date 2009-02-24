@@ -14,11 +14,17 @@
 	IBOutlet UILabel* responseLabel;
 	IBOutlet UILabel* responseInfoLabel;	
 	IBOutlet UIActivityIndicatorView* spinner;
+	IBOutlet UIView* successView;
+	IBOutlet UIImageView* successViewImage;
+	IBOutlet UILabel* successViewLabel;	
+	
+	UIView *savedSubviewforSuccess;
 }
 
 @property(nonatomic, retain) IBOutlet UILabel* responseLabel;
 @property(nonatomic, retain) IBOutlet UILabel* responseInfoLabel;
 
 - (IBAction) processButtonClick:(id)sender;
+- (IBAction) startOverButtonClick:(id)sender;
 
 @end

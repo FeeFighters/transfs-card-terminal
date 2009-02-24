@@ -12,6 +12,7 @@
 
 @implementation Transaction
 
+@synthesize firstName, lastName, sanitizedCardNumber, dollarAmount, authorizationId;
 @synthesize errorMessages, status;
 
 - (id) init:(TransFS_Card_TerminalAppDelegate*) _delegate
@@ -61,16 +62,16 @@
 		
 		// Store value that we want to keep around for later
 		NSString* dollarTxt = [[startViewController dollarAmountLabel] text];
-		saleAmount = [dollarTxt floatValue] * 100;
+		dollarAmount = [dollarTxt floatValue];
 		
 		@try {
 			BillingResponse *response;	
-			response = [gateway authorize:MakeInt(saleAmount) creditcard:card options:[NSDictionary dictionaryWithObject:options forKey:@"address"]];
+			response = [gateway authorize:MakeInt(dollarAmount * 100) creditcard:card options:[NSDictionary dictionaryWithObject:options forKey:@"address"]];
 			if (![response is_success])
 				[NSException raise:@"Authorize.Net Gateway Error, authorize:" format:[response message]];
 			else {
 				
-				response = [gateway capture:MakeInt(saleAmount) authorization:[response authorization] options:[[NSDictionary alloc] init]];
+				response = [gateway capture:MakeInt(dollarAmount * 100) authorization:[response authorization] options:[[NSDictionary alloc] init]];
 				if (![response is_success])
 					[NSException raise:@"Authorize.Net Gateway Error, capture:" format:[response message]];
 				
