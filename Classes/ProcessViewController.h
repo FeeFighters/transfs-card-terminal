@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ProcessViewController : UIViewController {
+@interface ProcessViewController : UIViewController <UIActionSheetDelegate> {
 	IBOutlet UIButton* processButton;
 	IBOutlet UILabel* responseLabel;
+	IBOutlet UILabel* responseInfoLabel;	
 	IBOutlet UIActivityIndicatorView* spinner;
 }
+
+@property(nonatomic, retain) IBOutlet UILabel* responseLabel;
+@property(nonatomic, retain) IBOutlet UILabel* responseInfoLabel;
 
 - (IBAction) processButtonClick:(id)sender;
 

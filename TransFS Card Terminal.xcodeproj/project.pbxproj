@@ -47,6 +47,8 @@
 		1DB5DE950F4B9CEF005EA877 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1DB5DE940F4B9CEF005EA877 /* Settings.bundle */; };
 		1DD9BF1B0F46DBF900343F2C /* CardExpirationPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		1DFC98B10F52126600191E58 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DFC98B00F52126600191E58 /* Entitlements.plist */; };
+		1DFC98E60F525DB900191E58 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC98E50F525DB900191E58 /* Transaction.m */; };
 		28216C970DB411BC00E5133A /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* CardViewController.m */; };
 		282CCBFE0DB6C98000C4EA27 /* AddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CCBFD0DB6C98000C4EA27 /* AddressView.xib */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
@@ -146,6 +148,9 @@
 		1DD9BF190F46DBF900343F2C /* CardExpirationPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardExpirationPickerDelegate.h; sourceTree = "<group>"; };
 		1DD9BF1A0F46DBF900343F2C /* CardExpirationPickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardExpirationPickerDelegate.m; sourceTree = "<group>"; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1DFC98B00F52126600191E58 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		1DFC98E40F525DB900191E58 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		1DFC98E50F525DB900191E58 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		28216C950DB411BC00E5133A /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
 		28216C960DB411BC00E5133A /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		282CCBFD0DB6C98000C4EA27 /* AddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressView.xib; sourceTree = "<group>"; };
@@ -191,6 +196,8 @@
 				1DB5DE2F0F4B8DA6005EA877 /* StartViewController.m */,
 				1D69BA480F507B4A00D0063C /* AddressViewController.h */,
 				1D69BA490F507B4A00D0063C /* AddressViewController.m */,
+				1DFC98E40F525DB900191E58 /* Transaction.h */,
+				1DFC98E50F525DB900191E58 /* Transaction.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -325,6 +332,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				1DFC98B00F52126600191E58 /* Entitlements.plist */,
 			);
 			name = "TransFS Card Terminal";
 			sourceTree = "<group>";
@@ -427,6 +435,7 @@
 				1D7942560F4934F000CAA3CF /* visa.png in Resources */,
 				1D7942580F49368900CAA3CF /* unknown.png in Resources */,
 				1DB5DE950F4B9CEF005EA877 /* Settings.bundle in Resources */,
+				1DFC98B10F52126600191E58 /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +473,7 @@
 				1D7943C30F4965C500CAA3CF /* ProcessViewController.m in Sources */,
 				1DB5DE300F4B8DA6005EA877 /* StartViewController.m in Sources */,
 				1D69BA4A0F507B4A00D0063C /* AddressViewController.m in Sources */,
+				1DFC98E60F525DB900191E58 /* Transaction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +514,36 @@
 			};
 			name = Release;
 		};
+		1DB647630F52104E00249886 /* Ad-Hoc Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = "Ad-Hoc Distribution";
+		};
+		1DB647640F52104E00249886 /* Ad-Hoc Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Transparent Financial Services, LLC";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TransFS_Card_Terminal_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "TransFS Card Terminal";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CA982B9B-7ED6-43BD-B57D-3934AF1C95E0";
+			};
+			name = "Ad-Hoc Distribution";
+		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -539,6 +579,7 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+				1DB647640F52104E00249886 /* Ad-Hoc Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -548,6 +589,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+				1DB647630F52104E00249886 /* Ad-Hoc Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

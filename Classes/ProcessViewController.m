@@ -6,15 +6,11 @@
 //  Copyright 2009 TransFS.com. All rights reserved.
 //
 
-#import "ProcessViewController.h"
-#import "TransFS_Card_TerminalAppDelegate.h"
-#import "CreditCard.h"
-#import "CardExpirationPickerDelegate.h"
-#import "objCFixes.h"
-#import "AuthorizeNetGateway.h"
-#import "Base.h"
+#import "Transaction.h"
 
 @implementation ProcessViewController
+
+@synthesize responseLabel, responseInfoLabel;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -49,87 +45,60 @@
 
 - (IBAction) processButtonClick:(id)sender
 {
-	[processButton setEnabled:false];
-	[spinner startAnimating];
-	[spinner setHidden:false];
-	[responseLabel setText:@""];
-	[NSThread detachNewThreadSelector:@selector(processTransactionThread) toTarget:self withObject:nil];
+	UIActionSheet *alert = [[UIActionSheet alloc] initWithTitle:@"Process Transaction?" 
+													   delegate:self 
+											  cancelButtonTitle:nil 
+										 destructiveButtonTitle:@"Cancel"
+											  otherButtonTitles:nil];
+	[alert addButtonWithTitle:@"Proceed!"];
+	
+//	UIImageView *greenButton = (UIView*)[[alert subviews] objectAtIndex:2];
+//	UIImage *image = [greenButton image];
+//	CGImageRef cgimage = [image cgimage];
+//	
+//	CGContextSetBlendMode(context, kCGBlendModeMultiply);
+//	CGContextSetFillColorWithColor(context, kCGColorWhite);
+//	CGContextFillRect(context, 
+//	//[greenButton setOpaque:false];
+	
+	[alert showInView:[self view]];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex==0) //Cancel
+	{
+		[processButton setEnabled:true];
+		[spinner stopAnimating];
+		[spinner setHidden:true];
+		[responseLabel setText:@"Transaction Cancelled."];
+	}
+	else if (buttonIndex==1)
+	{
+		[processButton setEnabled:false];
+		[spinner startAnimating];
+		[spinner setHidden:false];
+		[responseLabel setText:@""];
+		[responseInfoLabel setHidden:true];		
+		[NSThread detachNewThreadSelector:@selector(processTransactionThread) toTarget:self withObject:nil];
+	}
 }
 
 - (void) processTransactionThread
 {
 	[NSThread sleepForTimeInterval:0.5];
 	
-	NSString *login = [[NSUserDefaults standardUserDefaults] stringForKey:@"login"];
-	if ([NSString is_blank:login])
-		login = [NSString stringWithString:@""];
-	NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];	
-	if ([NSString is_blank:password])
-		password = [NSString stringWithString:@""];
-	bool testMode = [[NSUserDefaults standardUserDefaults] boolForKey:@"testMode"];
-	
-	if (testMode) [BillingBase setGatewayMode:Test];
-	
 	TransFS_Card_TerminalAppDelegate* delegate = (TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate];
-	StartViewController *startViewController = [delegate startViewController];
-	CardViewController *cardViewController = [delegate cardViewController];
-	//ProcessViewController *processViewController = [delegate processViewController];
-
-	int todayYear = [CardExpirationPickerDelegate currentYear];
-	BillingCreditCard *card = [[BillingCreditCard alloc] init:[NSDictionary dictionaryWithObjectsAndKeys:
-															   nilToEmptyStr([[cardViewController cardNumberField] text]), @"number",
-															   (NSNumber*)MakeInt([[cardViewController monthPicker] selectedRowInComponent:0] + 1), @"month",
-															   (NSNumber*)MakeInt(todayYear + [[cardViewController yearPicker] selectedRowInComponent:0]), @"year",
-															   nilToEmptyStr([[cardViewController firstNameField] text]), @"firstName",
-															   nilToEmptyStr([[cardViewController lastNameField] text]), @"lastName",
-															   nilToEmptyStr([[cardViewController cvvNumberField] text]), @"verificationValue",
-															   nil]];	
-	
-	if ([card is_valid])
+	Transaction* sale = [[Transaction alloc] init:delegate];
+	if ([sale status]==TransactionSuccess)
 	{
-		AuthorizeNetGateway *gateway = [[AuthorizeNetGateway alloc] init:[NSDictionary dictionaryWithObjectsAndKeys:
-																		  login, @"login",
-																		  password, @"password",
-																		  nil]];
-		
-		NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
-//		[options setObject:@"1240 W Monroe Ave. #1" forKey:@"address1"];
-//		[options setObject:@"60607" forKey:@"zip"];
-//		[options setObject:@"Chicago" forKey:@"city"];
-//		[options setObject:@"IL" forKey:@"state"];		
-//		
-		NSString* dollarTxt = [[startViewController dollarAmountLabel] text];
-		int saleAmount = [dollarTxt floatValue] * 100;
-		
-		@try {
-			BillingResponse *response;	
-			response = [gateway authorize:MakeInt(saleAmount) creditcard:card options:[NSDictionary dictionaryWithObject:options forKey:@"address"]];
-			if (![response is_success])
-				[NSException raise:@"Authorize.Net Gateway Error, authorize:" format:[response message]];
-			else {
-				
-				response = [gateway capture:MakeInt(saleAmount) authorization:[response authorization] options:[[NSDictionary alloc] init]];
-				if (![response is_success])
-					[NSException raise:@"Authorize.Net Gateway Error, capture:" format:[response message]];
-				
-//				response = [gateway voidAuthorization:[response authorization] options:[[NSDictionary alloc] init]];
-//				if (![response is_success])
-//					[NSException raise:@"Authorize.Net Gateway Error, void:" format:[response message]];
-			}
-
-			[responseLabel setText:@"Transaction Processed Successfully!"];
-		}
-		@catch (NSException *exception) {
-			[responseLabel setText:[exception reason]];
-		}
+		[responseLabel setText:@"Transaction Processed Successfully!"];		
 	}
-	else 
+	else
 	{
-		NSLog(@"Card Errors: %@", [[[card errors] fullMessages] componentsJoinedByString:@", "]);
-		NSString *err = [[[card errors] fullMessages] componentsJoinedByString:@"\n"];
-		[responseLabel setText:err];
+		[responseLabel setText:[sale errorMessages]];
+		[responseInfoLabel setHidden:false];
 	}
-	
 	
 	[spinner stopAnimating];
 	[processButton setEnabled:true];

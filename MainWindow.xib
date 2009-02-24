@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="106"/>
+			<integer value="108"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -49,29 +49,29 @@
 			<object class="IBUITabBarController" id="1034742383">
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUIViewController" key="IBUISelectedViewController" id="1008058925">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="442483684">
-						<string key="IBUITitle">Start</string>
+				<object class="IBUIViewController" key="IBUISelectedViewController" id="1024858337">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="765670903">
+						<string key="IBUITitle">Card</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">credit_card_image_mask.png</string>
+						</object>
 						<reference key="IBUITabBar"/>
 					</object>
 					<reference key="IBUIParentViewController" ref="1034742383"/>
-					<string key="IBUINibName">StartView</string>
+					<string key="IBUINibName">CardView</string>
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<reference ref="1008058925"/>
-					<object class="IBUIViewController" id="1024858337">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="765670903">
-							<string key="IBUITitle">Card</string>
-							<object class="NSCustomResource" key="IBUIImage">
-								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">credit_card_image_mask.png</string>
-							</object>
+					<object class="IBUIViewController" id="57308008">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="858870033">
+							<string key="IBUITitle">Start</string>
 							<reference key="IBUITabBar"/>
 						</object>
 						<reference key="IBUIParentViewController" ref="1034742383"/>
-						<string key="IBUINibName">CardView</string>
+						<string key="IBUINibName">StartView</string>
 					</object>
+					<reference ref="1024858337"/>
 					<object class="IBUIViewController" id="268481961">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="807309489">
 							<string key="IBUITitle">Address</string>
@@ -148,7 +148,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">startViewController</string>
 						<reference key="source" ref="664661524"/>
-						<reference key="destination" ref="1008058925"/>
+						<reference key="destination" ref="57308008"/>
 					</object>
 					<int key="connectionID">151</int>
 				</object>
@@ -192,7 +192,7 @@
 							<reference ref="1024858337"/>
 							<reference ref="268481961"/>
 							<reference ref="784991426"/>
-							<reference ref="1008058925"/>
+							<reference ref="57308008"/>
 						</object>
 						<reference key="parent" ref="957960031"/>
 					</object>
@@ -250,17 +250,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">147</int>
-						<reference key="object" ref="1008058925"/>
+						<reference key="object" ref="57308008"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="442483684"/>
+							<reference ref="858870033"/>
 						</object>
 						<reference key="parent" ref="1034742383"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">148</int>
-						<reference key="object" ref="442483684"/>
-						<reference key="parent" ref="1008058925"/>
+						<reference key="object" ref="858870033"/>
+						<reference key="parent" ref="57308008"/>
 					</object>
 				</object>
 			</object>
@@ -339,7 +339,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">151</int>
+			<int key="maxID">152</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
