@@ -272,6 +272,7 @@
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1DC8680D0F53B2BC00D2DB08</string>
+								<string>1DB5DE940F4B9CEF005EA877</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -279,8 +280,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>2</integer>
+									<integer>54</integer>
+									<integer>53</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -315,14 +316,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TransFS_Card_TerminalAppDelegate.m</string>
+								<string>Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TransFS_Card_TerminalAppDelegate.m</string>
+										<string>Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1D46C7570F55609C0099533D</string>
+										<string>1D46C7680F5562FA0099533D</string>
 										<key>history</key>
 										<array>
 											<string>1D7520A90F47E63700996F8E</string>
@@ -356,7 +355,6 @@
 											<string>1D7944F80F4983D700CAA3CF</string>
 											<string>1D7945090F49840900CAA3CF</string>
 											<string>1DB5DE140F4AFC82005EA877</string>
-											<string>1DB5DECE0F4BAB6A005EA877</string>
 											<string>1DFC98CE0F525C9500191E58</string>
 											<string>1DFC98CF0F525C9500191E58</string>
 											<string>1DC866D40F52A29300D2DB08</string>
@@ -402,7 +400,6 @@
 											<string>1D46C4C40F54D5A20099533D</string>
 											<string>1D46C5F40F553A650099533D</string>
 											<string>1D46C5F50F553A650099533D</string>
-											<string>1D46C61D0F554A260099533D</string>
 											<string>1D46C61F0F554A260099533D</string>
 											<string>1D46C62B0F554B020099533D</string>
 											<string>1D46C62C0F554B020099533D</string>
@@ -419,8 +416,10 @@
 											<string>1D46C7250F555C590099533D</string>
 											<string>1D46C7440F5560380099533D</string>
 											<string>1D46C7450F5560380099533D</string>
-											<string>1D46C7540F55609C0099533D</string>
-											<string>1D46C7550F55609C0099533D</string>
+											<string>1D46C7610F5562E30099533D</string>
+											<string>1D46C7620F5562E30099533D</string>
+											<string>1D46C7630F5562E30099533D</string>
+											<string>1D46C7640F5562E30099533D</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -466,7 +465,6 @@
 											<string>1D7945680F4986FC00CAA3CF</string>
 											<string>1DB5DDE40F4AF839005EA877</string>
 											<string>1DB5DE270F4AFDB0005EA877</string>
-											<string>1DB5DEA00F4BA2AB005EA877</string>
 											<string>1D69BA510F507BB900D0063C</string>
 											<string>1D69BA530F507BB900D0063C</string>
 											<string>1DFC98B90F5212BE00191E58</string>
@@ -564,6 +562,8 @@
 											<string>1D46C74D0F5560380099533D</string>
 											<string>1D46C74E0F5560380099533D</string>
 											<string>1D46C7560F55609C0099533D</string>
+											<string>1D46C7650F5562E30099533D</string>
+											<string>1D46C7660F5562E30099533D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -757,7 +757,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1D46C7580F55609C0099533D</string>
 		<string>1D46C4D80F54D5D70099533D</string>
 		<string>1D46C4D40F54D5A20099533D</string>
 		<string>1DA23D7A0F3761C800B6635B</string>

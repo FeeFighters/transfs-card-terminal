@@ -4394,6 +4394,98 @@
 		vrLen = 1322;
 		vrLoc = 835;
 	};
+	1D46C7610F5562E30099533D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */;
+		name = "TransFS_Card_TerminalAppDelegate.m: 44";
+		rLen = 0;
+		rLoc = 1590;
+		rType = 0;
+		vrLen = 1405;
+		vrLoc = 835;
+	};
+	1D46C7620F5562E30099533D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1DB5DE2F0F4B8DA6005EA877 /* StartViewController.m */;
+		name = "StartViewController.m: 154";
+		rLen = 0;
+		rLoc = 5730;
+		rType = 0;
+		vrLen = 2101;
+		vrLoc = 4214;
+	};
+	1D46C7630F5562E30099533D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 1DB5DEA10F4BA2AB005EA877 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			PreferenceSpecifiers,
+			6,
+		);
+		name = "/Users/krall/Documents/Entreprenuer/TransFS/programming/transfs-card-terminal/Settings.bundle/Root.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1D46C7640F5562E30099533D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSRequiresIPhoneOS,
+		);
+		name = "/Users/krall/Documents/Entreprenuer/TransFS/programming/transfs-card-terminal/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1D46C7650F5562E30099533D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */;
+		name = "TransFS_Card_TerminalAppDelegate.m: 44";
+		rLen = 0;
+		rLoc = 1590;
+		rType = 0;
+		vrLen = 1405;
+		vrLoc = 835;
+	};
+	1D46C7660F5562E30099533D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 1DB5DEA10F4BA2AB005EA877 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			PreferenceSpecifiers,
+			6,
+		);
+		name = "/Users/krall/Documents/Entreprenuer/TransFS/programming/transfs-card-terminal/Settings.bundle/Root.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1D46C7670F5562E30099533D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSRequiresIPhoneOS,
+		);
+		name = "/Users/krall/Documents/Entreprenuer/TransFS/programming/transfs-card-terminal/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1D46C7680F5562FA0099533D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSRequiresIPhoneOS,
+		);
+		name = "/Users/krall/Documents/Entreprenuer/TransFS/programming/transfs-card-terminal/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
 	1D6058900D05DD3D006BFB54 /* TransFS Card Terminal */ = {
 		activeExec = 0;
 		executables = (
@@ -7102,6 +7194,14 @@
 			1D46C7550F55609C0099533D /* PBXTextBookmark */ = 1D46C7550F55609C0099533D /* PBXTextBookmark */;
 			1D46C7560F55609C0099533D /* PBXTextBookmark */ = 1D46C7560F55609C0099533D /* PBXTextBookmark */;
 			1D46C7570F55609C0099533D /* PBXTextBookmark */ = 1D46C7570F55609C0099533D /* PBXTextBookmark */;
+			1D46C7610F5562E30099533D /* PBXTextBookmark */ = 1D46C7610F5562E30099533D /* PBXTextBookmark */;
+			1D46C7620F5562E30099533D /* PBXTextBookmark */ = 1D46C7620F5562E30099533D /* PBXTextBookmark */;
+			1D46C7630F5562E30099533D /* PlistBookmark */ = 1D46C7630F5562E30099533D /* PlistBookmark */;
+			1D46C7640F5562E30099533D /* PlistBookmark */ = 1D46C7640F5562E30099533D /* PlistBookmark */;
+			1D46C7650F5562E30099533D /* PBXTextBookmark */ = 1D46C7650F5562E30099533D /* PBXTextBookmark */;
+			1D46C7660F5562E30099533D /* PlistBookmark */ = 1D46C7660F5562E30099533D /* PlistBookmark */;
+			1D46C7670F5562E30099533D /* PlistBookmark */ = 1D46C7670F5562E30099533D /* PlistBookmark */;
+			1D46C7680F5562FA0099533D /* PlistBookmark */ = 1D46C7680F5562FA0099533D /* PlistBookmark */;
 			1D69BA510F507BB900D0063C = 1D69BA510F507BB900D0063C /* PBXTextBookmark */;
 			1D69BA530F507BB900D0063C = 1D69BA530F507BB900D0063C /* PBXTextBookmark */;
 			1D69BA7C0F50943400D0063C = 1D69BA7C0F50943400D0063C /* PBXTextBookmark */;
