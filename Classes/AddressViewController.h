@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TransFS_Card_TerminalAppDelegate.h"
 
 @interface AddressViewController : UIViewController {
-
+	
+	IBOutlet TransFS_Card_TerminalAppDelegate* delegate;
 }
 
 - (IBAction) proceedPressed:(id)sender;

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CardExpirationPickerDelegate.h"
+#import "TransFS_Card_TerminalAppDelegate.h"
 
 @interface CardViewController : UIViewController <UIPickerViewDelegate, UITextFieldDelegate> {
 	IBOutlet UIImageView* cardTypeImage;
@@ -20,6 +21,11 @@
 	IBOutlet CardExpirationPickerDelegate* expDatePickerDelegate;
 	IBOutlet UITextField* firstNameField;	
 	IBOutlet UITextField* lastNameField;		
+	
+	CGPoint savedContentOffset;
+	bool isScrolledToControl;
+	
+	IBOutlet TransFS_Card_TerminalAppDelegate* delegate;
 }
 
 @property(retain, nonatomic) IBOutlet UIImageView* cardTypeImage;

@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="157"/>
+			<integer value="110"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -49,36 +49,13 @@
 			<object class="IBUITabBarController" id="1034742383">
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUINavigationController" key="IBUISelectedViewController" id="487740164">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="423566870">
-						<string key="IBUITitle">History</string>
+				<object class="IBUIViewController" key="IBUISelectedViewController" id="268481961">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="807309489">
+						<string key="IBUITitle">Address</string>
 						<reference key="IBUITabBar"/>
 					</object>
 					<reference key="IBUIParentViewController" ref="1034742383"/>
-					<object class="IBUINavigationBar" key="IBUINavigationBar" id="844056465">
-						<nil key="NSNextResponder"/>
-						<int key="NSvFlags">256</int>
-						<string key="NSFrameSize">{320, 44}</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<int key="IBUIBarStyle">1</int>
-					</object>
-					<object class="NSArray" key="IBUIViewControllers">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="IBUIViewController" id="776217030">
-							<object class="IBUINavigationItem" key="IBUINavigationItem" id="247125890">
-								<reference key="IBUINavigationBar"/>
-								<string key="IBUITitle">Transaction History</string>
-								<object class="IBUIBarButtonItem" key="IBUIBackBarButtonItem" id="318858569">
-									<string key="IBUITitle">Back</string>
-									<int key="IBUIStyle">1</int>
-								</object>
-							</object>
-							<reference key="IBUIParentViewController" ref="487740164"/>
-							<string key="IBUINibName">HistoryView</string>
-						</object>
-					</object>
+					<string key="IBUINibName">AddressView</string>
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -102,14 +79,7 @@
 						<reference key="IBUIParentViewController" ref="1034742383"/>
 						<string key="IBUINibName">CardView</string>
 					</object>
-					<object class="IBUIViewController" id="268481961">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="807309489">
-							<string key="IBUITitle">Address</string>
-							<reference key="IBUITabBar"/>
-						</object>
-						<reference key="IBUIParentViewController" ref="1034742383"/>
-						<string key="IBUINibName">AddressView</string>
-					</object>
+					<reference ref="268481961"/>
 					<object class="IBUIViewController" id="784991426">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="116098409">
 							<string key="IBUITitle">Process!</string>
@@ -118,7 +88,36 @@
 						<reference key="IBUIParentViewController" ref="1034742383"/>
 						<string key="IBUINibName">ProcessView</string>
 					</object>
-					<reference ref="487740164"/>
+					<object class="IBUINavigationController" id="487740164">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="423566870">
+							<string key="IBUITitle">History</string>
+							<reference key="IBUITabBar"/>
+						</object>
+						<reference key="IBUIParentViewController" ref="1034742383"/>
+						<object class="IBUINavigationBar" key="IBUINavigationBar" id="844056465">
+							<nil key="NSNextResponder"/>
+							<int key="NSvFlags">256</int>
+							<string key="NSFrameSize">{320, 44}</string>
+							<bool key="IBUIOpaque">NO</bool>
+							<bool key="IBUIClipsSubviews">YES</bool>
+							<bool key="IBUIMultipleTouchEnabled">YES</bool>
+							<int key="IBUIBarStyle">1</int>
+						</object>
+						<object class="NSMutableArray" key="IBUIViewControllers">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBUIViewController" id="776217030">
+								<object class="IBUINavigationItem" key="IBUINavigationItem" id="247125890">
+									<string key="IBUITitle">Transaction History</string>
+									<object class="IBUIBarButtonItem" key="IBUIBackBarButtonItem" id="318858569">
+										<string key="IBUITitle">Back</string>
+										<int key="IBUIStyle">1</int>
+									</object>
+								</object>
+								<reference key="IBUIParentViewController" ref="487740164"/>
+								<string key="IBUINibName">HistoryView</string>
+							</object>
+						</object>
+					</object>
 				</object>
 				<object class="IBUITabBar" key="IBUITabBar" id="795333663">
 					<nil key="NSNextResponder"/>
@@ -182,6 +181,70 @@
 						<reference key="destination" ref="57308008"/>
 					</object>
 					<int key="connectionID">151</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="57308008"/>
+						<reference key="destination" ref="664661524"/>
+					</object>
+					<int key="connectionID">161</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="1024858337"/>
+						<reference key="destination" ref="664661524"/>
+					</object>
+					<int key="connectionID">162</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="268481961"/>
+						<reference key="destination" ref="664661524"/>
+					</object>
+					<int key="connectionID">163</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="784991426"/>
+						<reference key="destination" ref="664661524"/>
+					</object>
+					<int key="connectionID">164</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="776217030"/>
+						<reference key="destination" ref="664661524"/>
+					</object>
+					<int key="connectionID">166</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">addressViewController</string>
+						<reference key="source" ref="664661524"/>
+						<reference key="destination" ref="268481961"/>
+					</object>
+					<int key="connectionID">167</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">historyTableNavigationController</string>
+						<reference key="source" ref="664661524"/>
+						<reference key="destination" ref="487740164"/>
+					</object>
+					<int key="connectionID">169</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">tabBar</string>
+						<reference key="source" ref="664661524"/>
+						<reference key="destination" ref="795333663"/>
+					</object>
+					<int key="connectionID">170</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -417,7 +480,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">160</int>
+			<int key="maxID">170</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -428,6 +491,10 @@
 					<object class="NSMutableDictionary" key="actions">
 						<string key="NS.key.0">proceedPressed:</string>
 						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">delegate</string>
+						<string key="NS.object.0">TransFS_Card_TerminalAppDelegate</string>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
@@ -479,6 +546,7 @@
 							<string>cardNumberLabel</string>
 							<string>cardTypeImage</string>
 							<string>cvvNumberField</string>
+							<string>delegate</string>
 							<string>expDatePickerDelegate</string>
 							<string>finishButton</string>
 							<string>firstNameField</string>
@@ -492,6 +560,7 @@
 							<string>UILabel</string>
 							<string>UIImageView</string>
 							<string>UITextField</string>
+							<string>TransFS_Card_TerminalAppDelegate</string>
 							<string>CardExpirationPickerDelegate</string>
 							<string>UIButton</string>
 							<string>UITextField</string>
@@ -506,8 +575,60 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
+					<string key="className">HistoryDetailViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">voidButtonClick:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>amount</string>
+							<string>date</string>
+							<string>firstName</string>
+							<string>lastName</string>
+							<string>sanitizedCardNumber</string>
+							<string>transactionId</string>
+							<string>voidResponseLabel</string>
+							<string>voidTransactionButton</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UIButton</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/HistoryDetailViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">HistoryTableViewController</string>
 					<string key="superclassName">UITableViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>delegate</string>
+							<string>detailViewController</string>
+							<string>tableCell</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>TransFS_Card_TerminalAppDelegate</string>
+							<string>HistoryDetailViewController</string>
+							<string>UITableViewCell</string>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/HistoryTableViewController.h</string>
@@ -533,6 +654,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>delegate</string>
 							<string>processButton</string>
 							<string>responseInfoLabel</string>
 							<string>responseLabel</string>
@@ -543,6 +665,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>TransFS_Card_TerminalAppDelegate</string>
 							<string>UIButton</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
@@ -566,9 +689,15 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>doneEditingPressed:</string>
 							<string>proceedPressed:</string>
+							<string>settingsClearHistoryPressed:</string>
+							<string>settingsClosePressed:</string>
+							<string>settingsPressed:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -577,15 +706,33 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>aboutWebView</string>
+							<string>authNetLogin</string>
+							<string>authNetPassword</string>
+							<string>authNetTestMode</string>
+							<string>avsEnabled</string>
+							<string>delegate</string>
 							<string>dollarAmountField</string>
 							<string>dollarAmountLabel</string>
+							<string>emailReceiptAddress</string>
+							<string>emailReceiptEnabled</string>
 							<string>finishButton</string>
+							<string>settingsView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIWebView</string>
+							<string>UITextField</string>
+							<string>UITextField</string>
+							<string>UISwitch</string>
+							<string>UISwitch</string>
+							<string>TransFS_Card_TerminalAppDelegate</string>
 							<string>UITextField</string>
 							<string>UILabel</string>
+							<string>UITextField</string>
+							<string>UISwitch</string>
 							<string>UIButton</string>
+							<string>UIScrollView</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -600,17 +747,23 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>addressViewController</string>
 							<string>cardViewController</string>
+							<string>historyTableNavigationController</string>
 							<string>processViewController</string>
 							<string>startViewController</string>
+							<string>tabBar</string>
 							<string>tabBarController</string>
 							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>AddressViewController</string>
 							<string>CardViewController</string>
+							<string>UINavigationController</string>
 							<string>ProcessViewController</string>
 							<string>StartViewController</string>
+							<string>UITabBar</string>
 							<string>UITabBarController</string>
 							<string>UIWindow</string>
 						</object>
@@ -618,6 +771,13 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/TransFS_Card_TerminalAppDelegate.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">UIScrollView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/UIScrollViewAdditions.h</string>
 					</object>
 				</object>
 			</object>

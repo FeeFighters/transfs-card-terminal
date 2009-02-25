@@ -36,7 +36,7 @@
 
 - (IBAction) proceedPressed:(id)sender
 {
-	[[self tabBarController] setSelectedIndex:3];	
+	[delegate goToNextTab];
 }
 
 /*

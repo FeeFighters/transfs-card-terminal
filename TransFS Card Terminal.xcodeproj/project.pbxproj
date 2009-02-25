@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */; };
+		1D46C4F70F5502AC0099533D /* transparent-logo-small-nobeta.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D46C4F60F5502AC0099533D /* transparent-logo-small-nobeta.png */; };
+		1D46C5790F5530380099533D /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D46C5780F5530380099533D /* UIScrollViewAdditions.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1D69BA4A0F507B4A00D0063C /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D69BA490F507B4A00D0063C /* AddressViewController.m */; };
@@ -87,6 +89,9 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransFS_Card_TerminalAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransFS_Card_TerminalAppDelegate.m; sourceTree = "<group>"; };
+		1D46C4F60F5502AC0099533D /* transparent-logo-small-nobeta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transparent-logo-small-nobeta.png"; sourceTree = "<group>"; };
+		1D46C5770F5530380099533D /* UIScrollViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewAdditions.h; sourceTree = "<group>"; };
+		1D46C5780F5530380099533D /* UIScrollViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewAdditions.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TransFS Card Terminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D69BA480F507B4A00D0063C /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
 		1D69BA490F507B4A00D0063C /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
@@ -240,6 +245,8 @@
 				1DC869100F53DBB500D2DB08 /* HistoryDetailViewController.m */,
 				1DC86A3A0F5404CF00D2DB08 /* TransactionTableViewCell.h */,
 				1DC86A3B0F5404CF00D2DB08 /* TransactionTableViewCell.m */,
+				1D46C5770F5530380099533D /* UIScrollViewAdditions.h */,
+				1D46C5780F5530380099533D /* UIScrollViewAdditions.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -368,6 +375,7 @@
 		1DC8680D0F53B2BC00D2DB08 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1D46C4F60F5502AC0099533D /* transparent-logo-small-nobeta.png */,
 				1DC8681B0F53B2FF00D2DB08 /* money */,
 				1DC8680E0F53B2BC00D2DB08 /* cards */,
 			);
@@ -527,6 +535,7 @@
 				1DC8690D0F53DB9000D2DB08 /* HistoryDetailView.xib in Resources */,
 				1DC8697A0F53EF8200D2DB08 /* transactionHistory.sql in Resources */,
 				1DC86A240F54030D00D2DB08 /* TransactionTableViewCell.xib in Resources */,
+				1D46C4F70F5502AC0099533D /* transparent-logo-small-nobeta.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +577,7 @@
 				1DC868E70F53D87100D2DB08 /* HistoryTableViewController.m in Sources */,
 				1DC869110F53DBB500D2DB08 /* HistoryDetailViewController.m in Sources */,
 				1DC86A3C0F5404CF00D2DB08 /* TransactionTableViewCell.m in Sources */,
+				1D46C5790F5530380099533D /* UIScrollViewAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

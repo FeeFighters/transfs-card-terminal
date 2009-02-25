@@ -12,6 +12,8 @@
 @interface HistoryTableViewController : UITableViewController {
 	IBOutlet HistoryDetailViewController *detailViewController;
 	IBOutlet UITableViewCell* tableCell;
+	
+	IBOutlet TransFS_Card_TerminalAppDelegate* delegate;
 }
 
 @end

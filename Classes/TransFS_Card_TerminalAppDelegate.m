@@ -10,6 +10,7 @@
 #import "StartViewController.h"
 #import "CardViewController.h"
 #import "ProcessViewController.h"
+#import "AddressViewController.h"
 #import "Transaction.h"
 
 // Private interface for AppDelegate - internal only methods.
@@ -20,10 +21,9 @@
 
 @implementation TransFS_Card_TerminalAppDelegate
 
-@synthesize startViewController, cardViewController, processViewController;
-@synthesize window;
-@synthesize tabBarController;
-@synthesize transactionHistory;
+@synthesize startViewController, cardViewController, addressViewController, processViewController, historyTableNavigationController;
+@synthesize window, tabBarController, tabBar;
+@synthesize transactionHistory, database;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application 
 {
@@ -34,16 +34,20 @@
 	// Call internal method to initialize database connection
 	[self initializeDatabase];
 	
+	// Set tab bar items based on preference setting
+	[self setAddressTabVisible:[[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"]];
+	
     // Add the tab bar controller's current view as a subview of the window
     [window addSubview:tabBarController.view];
 }
 
 
+/*
 // Optional UITabBarControllerDelegate method
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
 	
 }
-
+*/
 /*
 // Optional UITabBarControllerDelegate method
 - (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed {
@@ -141,6 +145,32 @@
 {
 	[[startViewController dollarAmountField] setText:@"."];
 	[startViewController textFieldDidChange];
+}
+
+- (void) goToNextTab
+{
+	[tabBarController setSelectedIndex:[tabBarController selectedIndex]+1];
+}
+
+- (void) setAddressTabVisible:(bool)visible
+{
+	if (!visible && [[tabBarController viewControllers] containsObject:addressViewController]) {
+		[tabBarController setViewControllers:[NSArray arrayWithObjects:startViewController,
+																		 cardViewController,
+																		 processViewController,
+																		 historyTableNavigationController,
+																		 nil] 
+									animated:true];
+	}
+	else if (visible && ![[tabBarController viewControllers] containsObject:addressViewController]) {
+		[tabBarController setViewControllers:[NSArray arrayWithObjects:startViewController,
+															   cardViewController,
+															   addressViewController,					   					   
+															   processViewController,
+															   historyTableNavigationController,
+															   nil]
+									animated:true];
+	}
 }
 
 - (void)dealloc {

@@ -80,8 +80,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    TransFS_Card_TerminalAppDelegate *appDelegate = (TransFS_Card_TerminalAppDelegate *)[[UIApplication sharedApplication] delegate];
-    return appDelegate.transactionHistory.count;
+    return delegate.transactionHistory.count;
 }
 
 
@@ -100,8 +99,7 @@
 	}
 	
     // Retrieve the Transaction object matching the row from the application delegate's array.
-    TransFS_Card_TerminalAppDelegate *appDelegate = (TransFS_Card_TerminalAppDelegate *)[[UIApplication sharedApplication] delegate];
-    Transaction *transaction = (Transaction *)[appDelegate.transactionHistory objectAtIndex:indexPath.row];
+    Transaction *transaction = (Transaction *)[delegate.transactionHistory objectAtIndex:indexPath.row];
 
     // Set up the cell...	
 	if (transaction.status == TransactionVoided) {
@@ -132,8 +130,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     // Inspect the transaction (method defined above).
-    TransFS_Card_TerminalAppDelegate *appDelegate = (TransFS_Card_TerminalAppDelegate *)[[UIApplication sharedApplication] delegate];
-    Transaction *transaction = (Transaction *)[appDelegate.transactionHistory objectAtIndex:indexPath.row];
+    Transaction *transaction = (Transaction *)[delegate.transactionHistory objectAtIndex:indexPath.row];
     // Retrieve the other attributes of the transaction from the database (if needed).
     [transaction hydrate];
     // Set the detail controller's inspected item to the currently-selected transaction.
@@ -146,12 +143,11 @@
 - (void)tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
 									forRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-    TransFS_Card_TerminalAppDelegate *appDelegate = (TransFS_Card_TerminalAppDelegate *)[[UIApplication sharedApplication] delegate];
     // If row is deleted, remove it from the list.
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Find the book at the deleted row, and remove from application delegate's array.
-		Transaction *transaction = (Transaction *)[appDelegate.transactionHistory objectAtIndex:indexPath.row];
-        [appDelegate removeTransaction:transaction];
+		Transaction *transaction = (Transaction *)[delegate.transactionHistory objectAtIndex:indexPath.row];
+        [delegate removeTransaction:transaction];
         // Animate the deletion from the table.
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] 
 							  withRowAnimation:UITableViewRowAnimationFade];

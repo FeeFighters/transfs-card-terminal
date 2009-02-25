@@ -89,7 +89,6 @@
 {
 	[NSThread sleepForTimeInterval:0.5];
 	
-	TransFS_Card_TerminalAppDelegate* delegate = (TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate];
 	Transaction* sale = [Transaction initAndProcessFromCurrentState];
 	if ([sale status]==TransactionSuccess)
 	{
@@ -120,7 +119,6 @@
 - (IBAction) startOverButtonClick:(id)sender
 {
 	[[self tabBarController] setSelectedIndex:0];
-	TransFS_Card_TerminalAppDelegate* delegate = (TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate];
 	[delegate resetTransactionFields];
 	
 	UIView* curView = [successView superview];

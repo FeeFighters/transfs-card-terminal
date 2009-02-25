@@ -21,6 +21,7 @@
 static sqlite3_stmt *insert_statement = nil;
 static sqlite3_stmt *init_statement = nil;
 static sqlite3_stmt *delete_statement = nil;
+static sqlite3_stmt *deleteall_statement = nil;
 static sqlite3_stmt *hydrate_statement = nil;
 static sqlite3_stmt *dehydrate_statement = nil;
 
@@ -41,6 +42,10 @@ static sqlite3_stmt *dehydrate_statement = nil;
     if (delete_statement) {
         sqlite3_finalize(delete_statement);
         delete_statement = nil;
+    }
+    if (deleteall_statement) {
+        sqlite3_finalize(deleteall_statement);
+        deleteall_statement = nil;
     }
     if (hydrate_statement) {
         sqlite3_finalize(hydrate_statement);
@@ -242,6 +247,26 @@ static sqlite3_stmt *dehydrate_statement = nil;
     if (success != SQLITE_DONE) {
         NSAssert1(0, @"Error: failed to delete from database with message '%s'.", sqlite3_errmsg(database));
     }
+}
+
++ (void)deleteAllFromDatabase {
+	sqlite3* database = [(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] database];
+    // Compile the delete statement if needed.
+    if (deleteall_statement == nil) {
+        const char *sql = "DELETE FROM transactions";
+        if (sqlite3_prepare_v2(database, sql, -1, &deleteall_statement, NULL) != SQLITE_OK) {
+            NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
+        }
+    }
+    // Execute the query.
+    int success = sqlite3_step(deleteall_statement);
+    // Reset the statement for future use.
+    sqlite3_reset(deleteall_statement);
+    // Handle errors.
+    if (success != SQLITE_DONE) {
+        NSAssert1(0, @"Error: failed to delete all from database with message '%s'.", sqlite3_errmsg(database));
+    }
+	[[(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] transactionHistory] removeAllObjects];
 }
 
 // Brings the rest of the object data into memory. If already in memory, no action is taken (harmless no-op).

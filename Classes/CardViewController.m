@@ -11,6 +11,7 @@
 #import "RegexKitLite.h"
 #import "CreditCard.h"
 #import "CreditCardMethods.h"
+#import "UIScrollViewAdditions.h"
 #import <stdlib.h>
 
 @implementation CardViewController
@@ -74,18 +75,15 @@
 {
 	if (textField==firstNameField || textField==lastNameField) 
 	{
-		CGPoint loc = [textField frame].origin;
-		loc.x = 0;
-		loc.y -= 130;
-		[(UIGradientScrollView*)[self view] setContentOffset:loc animated:YES];
+		if (isScrolledToControl==false) {
+			savedContentOffset = [(UIScrollView*)[textField superview] scrollToTextField:textField];
+			isScrolledToControl = true;
+		}
 	}
 	else 
 	{
-		CGPoint loc = [cvvNumberField frame].origin;
-		loc.x = 0;
-		loc.y -= 150;
-		[finishButton setFrame:CGRectMake(10, 195 + loc.y, 300, 50)];
-		[(UIGradientScrollView*)[self view] setContentOffset:loc animated:YES];
+		savedContentOffset = [(UIScrollView*)[cardNumberField superview] scrollToTextField:cardNumberField withOffset:(NSInteger)20];
+		[finishButton setFrame:CGRectMake(10, 110 + [cardNumberField frame].origin.y, 300, 50)];
 		[textField resignFirstResponder];
 		[finishButton setHighlighted:true];
 		[finishButton setHidden:false];
@@ -140,12 +138,16 @@
 {
 	[textField resignFirstResponder];
 	[(UIGradientScrollView*)[self view] setScrollEnabled:true];	
+	if ([[textField superview] isKindOfClass:[UIScrollView class]] && isScrolledToControl) {
+		[(UIScrollView*)[textField superview] setContentOffset:savedContentOffset animated:true];
+		isScrolledToControl = false;
+	}
 	return YES;
 }
 
 - (IBAction) proceedPressed:(id)sender
 {
-	[[self tabBarController] setSelectedIndex:2];
+	[delegate goToNextTab];
 }
 
 /*

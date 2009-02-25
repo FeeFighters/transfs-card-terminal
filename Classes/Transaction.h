@@ -72,14 +72,15 @@ typedef enum {
 
 // Creates the object with primary key and title is brought into memory.
 - (id)initWithPrimaryKey:(NSInteger)pk database:(sqlite3 *)db;
-// Inserts the book into the database and stores its primary key.
+// Inserts the transaction into the database and stores its primary key.
 - (void)insertIntoDatabase:(sqlite3 *)database;
 
 // Brings the rest of the object data into memory. If already in memory, no action is taken (harmless no-op).
 - (void)hydrate;
 // Flushes all but the primary key out to the database.
 - (void)dehydrate;
-// Remove the book complete from the database. In memory deletion to follow...
+// Remove the transaction complete from the database. In memory deletion to follow...
 - (void)deleteFromDatabase;
++ (void)deleteAllFromDatabase;
 
 @end

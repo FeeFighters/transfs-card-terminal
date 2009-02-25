@@ -19,6 +19,8 @@
 	IBOutlet UILabel* successViewLabel;	
 	
 	UIView *savedSubviewforSuccess;
+	
+	IBOutlet TransFS_Card_TerminalAppDelegate* delegate;
 }
 
 @property(nonatomic, retain) IBOutlet UILabel* responseLabel;
