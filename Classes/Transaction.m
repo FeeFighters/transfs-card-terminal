@@ -128,9 +128,9 @@ static sqlite3_stmt *dehydrate_statement = nil;
 															   nil]];
 	
 	// Store sanitized card number that we want to keep around for later
-	_self.sanitizedCardNumber = [card displayNumber];
-	_self.firstName = [card firstName];
-	_self.lastName = [card lastName];
+	_self.sanitizedCardNumber = [NSString stringWithString:[card displayNumber]];
+	_self.firstName = [NSString stringWithString:[card firstName]];
+	_self.lastName = [NSString stringWithString:[card lastName]];
 	
 	if ([card is_valid])
 	{
@@ -162,20 +162,20 @@ static sqlite3_stmt *dehydrate_statement = nil;
 					[NSException raise:@"Authorize.Net Gateway Error, capture:" format:[response message]];
 				
 				// Store the auth id so that we can void this later
-				_self.authorizationId = [response authorization];
+				_self.authorizationId = [NSString stringWithString:[response authorization]];
 				
 				//	response = [gateway voidAuthorization:[response authorization] options:[[NSDictionary alloc] init]];
 				//	if (![response is_success])
 				//		[NSException raise:@"Authorize.Net Gateway Error, void:" format:[response message]];
 			}
 			
-			_self.errorMessages = @"";		
+			_self.errorMessages = @"";
 			_self.status = TransactionSuccess;
 			_self.date = [NSDate date];
 			[delegate addTransaction:_self];
 		}
 		@catch (NSException *exception) {
-			_self.errorMessages = [exception reason];		
+			_self.errorMessages = [NSString stringWithString:[exception reason]];
 			_self.status = TransactionError;			
 		}
 	}
@@ -190,7 +190,7 @@ static sqlite3_stmt *dehydrate_statement = nil;
 		while (curString = [enumerator nextObject]) {
 			[arr addObject:[NSString stringWithFormat:@"• %@", [[curString humanize] capitalizeFirstLetter]]];
 		}
-		_self.errorMessages = [arr componentsJoinedByString:@"\n"];
+		_self.errorMessages = [NSString stringWithString:[arr componentsJoinedByString:@"\n"]];
 	}
 	
 	return _self;

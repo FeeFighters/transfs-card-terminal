@@ -54,7 +54,6 @@
 		1DC868280F53B2FF00D2DB08 /* money_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868200F53B2FF00D2DB08 /* money_5.png */; };
 		1DC868290F53B2FF00D2DB08 /* money_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868210F53B2FF00D2DB08 /* money_6.png */; };
 		1DC8682A0F53B2FF00D2DB08 /* money_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868220F53B2FF00D2DB08 /* money_7.png */; };
-		1DC8682B0F53B2FF00D2DB08 /* money_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868230F53B2FF00D2DB08 /* money_8.png */; };
 		1DC868DA0F53D0DD00D2DB08 /* HistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868D90F53D0DD00D2DB08 /* HistoryView.xib */; };
 		1DC868E70F53D87100D2DB08 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC868E60F53D87100D2DB08 /* HistoryTableViewController.m */; };
 		1DC8690D0F53DB9000D2DB08 /* HistoryDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8690C0F53DB9000D2DB08 /* HistoryDetailView.xib */; };
@@ -173,7 +172,6 @@
 		1DC868200F53B2FF00D2DB08 /* money_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_5.png; sourceTree = "<group>"; };
 		1DC868210F53B2FF00D2DB08 /* money_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_6.png; sourceTree = "<group>"; };
 		1DC868220F53B2FF00D2DB08 /* money_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_7.png; sourceTree = "<group>"; };
-		1DC868230F53B2FF00D2DB08 /* money_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_8.png; sourceTree = "<group>"; };
 		1DC868D90F53D0DD00D2DB08 /* HistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryView.xib; sourceTree = "<group>"; };
 		1DC868E50F53D87100D2DB08 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
 		1DC868E60F53D87100D2DB08 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
@@ -405,7 +403,6 @@
 				1DC868200F53B2FF00D2DB08 /* money_5.png */,
 				1DC868210F53B2FF00D2DB08 /* money_6.png */,
 				1DC868220F53B2FF00D2DB08 /* money_7.png */,
-				1DC868230F53B2FF00D2DB08 /* money_8.png */,
 			);
 			path = money;
 			sourceTree = "<group>";
@@ -530,7 +527,6 @@
 				1DC868280F53B2FF00D2DB08 /* money_5.png in Resources */,
 				1DC868290F53B2FF00D2DB08 /* money_6.png in Resources */,
 				1DC8682A0F53B2FF00D2DB08 /* money_7.png in Resources */,
-				1DC8682B0F53B2FF00D2DB08 /* money_8.png in Resources */,
 				1DC868DA0F53D0DD00D2DB08 /* HistoryView.xib in Resources */,
 				1DC8690D0F53DB9000D2DB08 /* HistoryDetailView.xib in Resources */,
 				1DC8697A0F53EF8200D2DB08 /* transactionHistory.sql in Resources */,

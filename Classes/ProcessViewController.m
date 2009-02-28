@@ -87,12 +87,14 @@
 
 - (void) processTransactionThread
 {
+	NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
+	
 	[NSThread sleepForTimeInterval:0.5];
 	
 	Transaction* sale = [Transaction initAndProcessFromCurrentState];
 	if ([sale status]==TransactionSuccess)
 	{
-		[successViewImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"money_%d.png", (random() % 8)+1]]];
+		[successViewImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"money_%d.png", (random() % 7)+1]]];
 		[successViewLabel setText:[NSString stringWithFormat:@"Successfully Charged $%.2f to %@ %@'s Card", [sale dollarAmount], [sale firstName], [sale lastName]]];
 		
 		savedSubviewforSuccess = [[delegate tabBarController] view];
@@ -107,9 +109,11 @@
 	}
 	else
 	{
-		[responseLabel setText:[sale errorMessages]];
+		[responseLabel setText:[NSString stringWithString:[sale errorMessages]]];
 		[responseInfoLabel setHidden:false];
 	}
+	
+	[autoreleasepool release];
 	
 	[spinner stopAnimating];
 	[processButton setEnabled:true];
