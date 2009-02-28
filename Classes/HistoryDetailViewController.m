@@ -71,7 +71,7 @@
 											  otherButtonTitles:nil];
 	[alert addButtonWithTitle:@"Yes, Void!"];
 		
-	[alert showInView:[self view]];
+	[alert showInView:self.tabBarController.view];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex

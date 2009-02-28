@@ -14,11 +14,13 @@
 - (id) init
 {
 	months = [[NSMutableArray alloc] init];
-	NSArray *monthNames = [NSArray arrayWithObjects:
-							@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec",
-						   nil];
+	//	NSArray *monthNames = [NSArray arrayWithObjects:
+	//							@"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec",
+	//						   nil];
+	//	for (int i=0; i<12; i++)
+	//		[months addObject:[NSString stringWithFormat:@"(%@) %02d ", [monthNames objectAtIndex:i] ,i+1]];
 	for (int i=0; i<12; i++)
-		[months addObject:[NSString stringWithFormat:@"(%@) %02d ", [monthNames objectAtIndex:i] ,i+1]];
+		[months addObject:[NSString stringWithFormat:@"%02d ", i+1]];
 	
 	int todayYear = [CardExpirationPickerDelegate currentYear];
 	years = [[NSMutableArray alloc] init];
@@ -42,29 +44,28 @@
 	return 0;
 }
 
-#define PICKER_ROW_WIDTH 100
 #define PICKER_ROW_HEIGHT 40
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
 {
 	if (pickerView==monthPicker)
-		return PICKER_ROW_WIDTH+30;
+		return 70;
 	if (pickerView==yearPicker)
-		return PICKER_ROW_WIDTH-30;
+		return 70;
 	return 0.0;
 }
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {
 	if (pickerView==monthPicker) {
-		UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, PICKER_ROW_WIDTH-10+30, PICKER_ROW_HEIGHT)];
+		UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 90, PICKER_ROW_HEIGHT)];
 		[l setBackgroundColor:[UIColor colorWithRed:0.0	green:0.0 blue:0.0 alpha:0.0]];
 		[l setFont:[UIFont systemFontOfSize:24.0]];				
-		[l setTextAlignment:UITextAlignmentRight];
+		[l setTextAlignment:UITextAlignmentCenter];
 		[l setText:[months objectAtIndex:row]];
 		return l;
 	}
 	if (pickerView==yearPicker) {
-		UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, PICKER_ROW_WIDTH-10, PICKER_ROW_HEIGHT)];
+		UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 90, PICKER_ROW_HEIGHT)];
 		[l setBackgroundColor:[UIColor colorWithRed:0.0	green:0.0 blue:0.0 alpha:0.0]];
 		[l setFont:[UIFont systemFontOfSize:24.0]];				
 		[l setTextAlignment:UITextAlignmentCenter];

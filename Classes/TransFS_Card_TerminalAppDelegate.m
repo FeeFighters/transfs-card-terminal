@@ -11,6 +11,10 @@
 #import "CardViewController.h"
 #import "ProcessViewController.h"
 #import "AddressViewController.h"
+#import "GeneralSettingsViewController.h"
+#import "EmailSettingsViewController.h"
+#import "AuthNetSettingsController.h"
+#import "AboutSettingsController.h"
 #import "Transaction.h"
 
 // Private interface for AppDelegate - internal only methods.
@@ -22,6 +26,8 @@
 @implementation TransFS_Card_TerminalAppDelegate
 
 @synthesize startViewController, cardViewController, addressViewController, processViewController, historyTableNavigationController;
+@synthesize settingsNavigationController, settingsTabController, aboutSettingsController, generalSettingsController, emailSettingsController, authNetSettingsController;
+
 @synthesize window, tabBarController, tabBar;
 @synthesize transactionHistory, database;
 
@@ -36,6 +42,15 @@
 	
 	// Set tab bar items based on preference setting
 	[self setAddressTabVisible:[[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"]];
+	
+	// Load the settings Nib
+	[[NSBundle mainBundle] loadNibNamed:@"Settings" owner:self options:nil];
+	[[NSBundle mainBundle] loadNibNamed:@"SettingsTabController" owner:self options:nil];
+	[[NSBundle mainBundle] loadNibNamed:@"EmailSettings" owner:self.emailSettingsController options:nil];
+	[[NSBundle mainBundle] loadNibNamed:@"GeneralSettings" owner:self.generalSettingsController options:nil];
+	[[NSBundle mainBundle] loadNibNamed:@"AboutSettings" owner:self.aboutSettingsController options:nil];
+	[[NSBundle mainBundle] loadNibNamed:@"AuthNetSettings" owner:self.authNetSettingsController options:nil];	
+	[self.settingsNavigationController pushViewController:self.settingsTabController animated:false];
 	
     // Add the tab bar controller's current view as a subview of the window
     [window addSubview:tabBarController.view];

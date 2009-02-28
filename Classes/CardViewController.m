@@ -61,11 +61,11 @@
 	[cvvNumberField setClearButtonMode:UITextFieldViewModeAlways];
 	[cvvNumberField setDelegate:self];
 	
-	[finishButton setHidden:true];	
+	[finishButton setHidden:true];
 	
 	CGRect loc = [monthPicker frame];
-	[monthPicker setFrame:CGRectMake(20, loc.origin.y, 150, loc.size.height)];
-	[yearPicker setFrame:CGRectMake(171, loc.origin.y, 110, loc.size.height)];	
+	[monthPicker setFrame:CGRectMake(loc.origin.x, loc.origin.y, 110, loc.size.height)];
+	[yearPicker setFrame:CGRectMake(loc.origin.x + 90, loc.origin.y, 110, loc.size.height)];	
 	
 	[firstNameField setDelegate:self];
 	[lastNameField setDelegate:self];

@@ -9,24 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "TransFS_Card_TerminalAppDelegate.h"
 
-@interface StartViewController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate> {
+@interface StartViewController : UIViewController <UITextFieldDelegate> {
 	IBOutlet UITextField* dollarAmountField;
 	IBOutlet UILabel* dollarAmountLabel;		
 	IBOutlet UIButton* finishButton;
 	
-	IBOutlet UIScrollView* settingsView;
-	UIView* settingsPreviousView;
-	IBOutlet UIWebView* aboutWebView;
-		
-	IBOutlet UITextField* authNetLogin;
-	IBOutlet UITextField* authNetPassword;
-	IBOutlet UISwitch* authNetTestMode;
-	IBOutlet UISwitch* avsEnabled;
-	IBOutlet UISwitch* emailReceiptEnabled;
-	IBOutlet UITextField* emailReceiptAddress;	
-	
 	CGPoint savedContentOffset;
-	
 	IBOutlet TransFS_Card_TerminalAppDelegate* delegate;
 }
 
@@ -38,7 +26,5 @@
 - (IBAction) doneEditingPressed:(id)sender;
 - (IBAction) proceedPressed:(id)sender;
 - (IBAction) settingsPressed:(id)sender;
-- (IBAction) settingsClosePressed:(id)sender;
-- (IBAction) settingsClearHistoryPressed:(id)sender;
 
 @end

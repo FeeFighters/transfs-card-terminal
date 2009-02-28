@@ -62,7 +62,7 @@
 //	CGContextFillRect(context, 
 //	//[greenButton setOpaque:false];
 	
-	[alert showInView:[self view]];
+	[alert showInView:self.tabBarController.view];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex

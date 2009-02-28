@@ -10,6 +10,7 @@
 #import <sqlite3.h>
 
 @class Transaction, StartViewController, CardViewController, ProcessViewController, AddressViewController;
+@class AboutSettingsController, EmailSettingsViewController, GeneralSettingsViewController, AuthNetSettingsController;
 
 @interface TransFS_Card_TerminalAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 	IBOutlet StartViewController* startViewController;
@@ -17,6 +18,13 @@
 	IBOutlet AddressViewController* addressViewController;
 	IBOutlet ProcessViewController* processViewController;
 	IBOutlet UINavigationController* historyTableNavigationController;	
+	
+	IBOutlet UINavigationController* settingsNavigationController;		
+	IBOutlet UITabBarController* settingsTabController;
+	IBOutlet AboutSettingsController* aboutSettingsController;
+	IBOutlet GeneralSettingsViewController* generalSettingsController;
+	IBOutlet EmailSettingsViewController* emailSettingsController;
+	IBOutlet AuthNetSettingsController* authNetSettingsController;
 	
     UIWindow *window;
     UITabBarController *tabBarController;
@@ -31,6 +39,14 @@
 @property (nonatomic, retain) IBOutlet ProcessViewController* processViewController;
 @property (nonatomic, retain) IBOutlet AddressViewController* addressViewController;
 @property (nonatomic, retain) IBOutlet UINavigationController* historyTableNavigationController;
+
+@property (nonatomic, retain) IBOutlet UINavigationController* settingsNavigationController;		
+@property (nonatomic, retain) IBOutlet UITabBarController* settingsTabController;
+@property (nonatomic, retain) IBOutlet AboutSettingsController* aboutSettingsController;
+@property (nonatomic, retain) IBOutlet GeneralSettingsViewController* generalSettingsController;
+@property (nonatomic, retain) IBOutlet EmailSettingsViewController* emailSettingsController;
+@property (nonatomic, retain) IBOutlet AuthNetSettingsController* authNetSettingsController;
+
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;

@@ -36,6 +36,16 @@
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<object class="IBUIPickerView" id="471063884">
+						<reference key="NSNextResponder" ref="215204782"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{277, 297}, {320, 216}}</string>
+						<reference key="NSSuperview" ref="215204782"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+						<bool key="IBUIShowsSelectionIndicator">YES</bool>
+					</object>
 					<object class="IBUITextField" id="150594149">
 						<reference key="NSNextResponder" ref="215204782"/>
 						<int key="NSvFlags">292</int>
@@ -113,17 +123,7 @@
 					<object class="IBUIPickerView" id="628697629">
 						<reference key="NSNextResponder" ref="215204782"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{5, 297}, {320, 216}}</string>
-						<reference key="NSSuperview" ref="215204782"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<bool key="IBUIClipsSubviews">YES</bool>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<bool key="IBUIShowsSelectionIndicator">YES</bool>
-					</object>
-					<object class="IBUIPickerView" id="471063884">
-						<reference key="NSNextResponder" ref="215204782"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{122, 297}, {320, 216}}</string>
+						<string key="NSFrame">{{102, 297}, {320, 216}}</string>
 						<reference key="NSSuperview" ref="215204782"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -328,7 +328,7 @@
 					<object class="IBUIButton" id="1052609847">
 						<reference key="NSNextResponder" ref="215204782"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{17, 644}, {285, 49}}</string>
+						<string key="NSFrame">{{17, 652}, {285, 49}}</string>
 						<reference key="NSSuperview" ref="215204782"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -367,7 +367,7 @@
 					<object class="IBUIButton" id="210731193">
 						<reference key="NSNextResponder" ref="215204782"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{267, 653}, {29, 31}}</string>
+						<string key="NSFrame">{{267, 661}, {29, 31}}</string>
 						<reference key="NSSuperview" ref="215204782"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -578,8 +578,6 @@
 						<reference key="object" ref="215204782"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="628697629"/>
-							<reference ref="471063884"/>
 							<reference ref="845324054"/>
 							<reference ref="726014322"/>
 							<reference ref="335893293"/>
@@ -595,6 +593,8 @@
 							<reference ref="589206318"/>
 							<reference ref="1052609847"/>
 							<reference ref="210731193"/>
+							<reference ref="471063884"/>
+							<reference ref="628697629"/>
 						</object>
 						<reference key="parent" ref="957960031"/>
 					</object>

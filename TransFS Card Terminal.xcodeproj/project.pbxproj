@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */; };
+		1D3803D80F591F4E0041D924 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3803D70F591F4E0041D924 /* Settings.xib */; };
+		1D3803DB0F5934490041D924 /* EmailSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3803DA0F5934490041D924 /* EmailSettings.xib */; };
+		1D3803E00F59363D0041D924 /* AuthNetSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3803DF0F59363D0041D924 /* AuthNetSettings.xib */; };
+		1D3803E30F59367C0041D924 /* GeneralSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3803E20F59367C0041D924 /* GeneralSettings.xib */; };
+		1D3803EE0F59396F0041D924 /* GeneralSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3803ED0F59396F0041D924 /* GeneralSettingsViewController.m */; };
+		1D3804020F593BC10041D924 /* EmailSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3804010F593BC10041D924 /* EmailSettingsViewController.m */; };
+		1D3804170F593C7E0041D924 /* AuthNetSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3804160F593C7E0041D924 /* AuthNetSettingsController.m */; };
+		1D3804380F593CFE0041D924 /* AboutSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3804370F593CFE0041D924 /* AboutSettingsController.m */; };
+		1D3804E20F599B990041D924 /* AboutSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3804E10F599B990041D924 /* AboutSettings.xib */; };
+		1D3804EA0F599CBE0041D924 /* SettingsTabController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3804E90F599CBE0041D924 /* SettingsTabController.xib */; };
+		1D3805000F59A0410041D924 /* SettingsTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3804FF0F59A0410041D924 /* SettingsTabBarController.m */; };
 		1D46C4F70F5502AC0099533D /* transparent-logo-small-nobeta.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D46C4F60F5502AC0099533D /* transparent-logo-small-nobeta.png */; };
 		1D46C5790F5530380099533D /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D46C5780F5530380099533D /* UIScrollViewAdditions.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
@@ -88,6 +99,22 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransFS_Card_TerminalAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransFS_Card_TerminalAppDelegate.m; sourceTree = "<group>"; };
+		1D3803D70F591F4E0041D924 /* Settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
+		1D3803DA0F5934490041D924 /* EmailSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailSettings.xib; sourceTree = "<group>"; };
+		1D3803DF0F59363D0041D924 /* AuthNetSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthNetSettings.xib; sourceTree = "<group>"; };
+		1D3803E20F59367C0041D924 /* GeneralSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralSettings.xib; sourceTree = "<group>"; };
+		1D3803EC0F59396F0041D924 /* GeneralSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralSettingsViewController.h; sourceTree = "<group>"; };
+		1D3803ED0F59396F0041D924 /* GeneralSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralSettingsViewController.m; sourceTree = "<group>"; };
+		1D3804000F593BC10041D924 /* EmailSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailSettingsViewController.h; sourceTree = "<group>"; };
+		1D3804010F593BC10041D924 /* EmailSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailSettingsViewController.m; sourceTree = "<group>"; };
+		1D3804150F593C7E0041D924 /* AuthNetSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthNetSettingsController.h; sourceTree = "<group>"; };
+		1D3804160F593C7E0041D924 /* AuthNetSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthNetSettingsController.m; sourceTree = "<group>"; };
+		1D3804360F593CFE0041D924 /* AboutSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutSettingsController.h; sourceTree = "<group>"; };
+		1D3804370F593CFE0041D924 /* AboutSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutSettingsController.m; sourceTree = "<group>"; };
+		1D3804E10F599B990041D924 /* AboutSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutSettings.xib; sourceTree = "<group>"; };
+		1D3804E90F599CBE0041D924 /* SettingsTabController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTabController.xib; sourceTree = "<group>"; };
+		1D3804FE0F59A0410041D924 /* SettingsTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTabBarController.h; sourceTree = "<group>"; };
+		1D3804FF0F59A0410041D924 /* SettingsTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTabBarController.m; sourceTree = "<group>"; };
 		1D46C4F60F5502AC0099533D /* transparent-logo-small-nobeta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transparent-logo-small-nobeta.png"; sourceTree = "<group>"; };
 		1D46C5770F5530380099533D /* UIScrollViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewAdditions.h; sourceTree = "<group>"; };
 		1D46C5780F5530380099533D /* UIScrollViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewAdditions.m; sourceTree = "<group>"; };
@@ -219,6 +246,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1D3803E80F5939380041D924 /* Settings */,
 				28216C950DB411BC00E5133A /* CardViewController.h */,
 				28216C960DB411BC00E5133A /* CardViewController.m */,
 				1D3623240D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.h */,
@@ -255,6 +283,23 @@
 				1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1D3803E80F5939380041D924 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1D3803EC0F59396F0041D924 /* GeneralSettingsViewController.h */,
+				1D3803ED0F59396F0041D924 /* GeneralSettingsViewController.m */,
+				1D3804000F593BC10041D924 /* EmailSettingsViewController.h */,
+				1D3804010F593BC10041D924 /* EmailSettingsViewController.m */,
+				1D3804150F593C7E0041D924 /* AuthNetSettingsController.h */,
+				1D3804160F593C7E0041D924 /* AuthNetSettingsController.m */,
+				1D3804360F593CFE0041D924 /* AboutSettingsController.h */,
+				1D3804370F593CFE0041D924 /* AboutSettingsController.m */,
+				1D3804FE0F59A0410041D924 /* SettingsTabBarController.h */,
+				1D3804FF0F59A0410041D924 /* SettingsTabBarController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		1D751FF80F47D66B00996F8E /* objective_merchant */ = {
@@ -447,6 +492,12 @@
 				1DC868D90F53D0DD00D2DB08 /* HistoryView.xib */,
 				1DC8690C0F53DB9000D2DB08 /* HistoryDetailView.xib */,
 				1DC86A230F54030D00D2DB08 /* TransactionTableViewCell.xib */,
+				1D3803D70F591F4E0041D924 /* Settings.xib */,
+				1D3803DA0F5934490041D924 /* EmailSettings.xib */,
+				1D3803DF0F59363D0041D924 /* AuthNetSettings.xib */,
+				1D3803E20F59367C0041D924 /* GeneralSettings.xib */,
+				1D3804E10F599B990041D924 /* AboutSettings.xib */,
+				1D3804E90F599CBE0041D924 /* SettingsTabController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -532,6 +583,12 @@
 				1DC8697A0F53EF8200D2DB08 /* transactionHistory.sql in Resources */,
 				1DC86A240F54030D00D2DB08 /* TransactionTableViewCell.xib in Resources */,
 				1D46C4F70F5502AC0099533D /* transparent-logo-small-nobeta.png in Resources */,
+				1D3803D80F591F4E0041D924 /* Settings.xib in Resources */,
+				1D3803DB0F5934490041D924 /* EmailSettings.xib in Resources */,
+				1D3803E00F59363D0041D924 /* AuthNetSettings.xib in Resources */,
+				1D3803E30F59367C0041D924 /* GeneralSettings.xib in Resources */,
+				1D3804E20F599B990041D924 /* AboutSettings.xib in Resources */,
+				1D3804EA0F599CBE0041D924 /* SettingsTabController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +631,11 @@
 				1DC869110F53DBB500D2DB08 /* HistoryDetailViewController.m in Sources */,
 				1DC86A3C0F5404CF00D2DB08 /* TransactionTableViewCell.m in Sources */,
 				1D46C5790F5530380099533D /* UIScrollViewAdditions.m in Sources */,
+				1D3803EE0F59396F0041D924 /* GeneralSettingsViewController.m in Sources */,
+				1D3804020F593BC10041D924 /* EmailSettingsViewController.m in Sources */,
+				1D3804170F593C7E0041D924 /* AuthNetSettingsController.m in Sources */,
+				1D3804380F593CFE0041D924 /* AboutSettingsController.m in Sources */,
+				1D3805000F59A0410041D924 /* SettingsTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

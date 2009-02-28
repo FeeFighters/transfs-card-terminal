@@ -48,10 +48,6 @@
 												 name:@"UITextFieldTextDidBeginEditingNotification" 
 											   object:dollarAmountField];
 	[finishButton setHidden:true];
-	
-	[authNetLogin setDelegate:self];
-	[authNetPassword setDelegate:self];	
-	[emailReceiptAddress setDelegate:self];
 }
 
 
@@ -69,8 +65,8 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-	NSString *txt = [[textField text] stringByReplacingCharactersInRange:range withString:string];
 	if (textField == dollarAmountField) {
+		NSString *txt = [[textField text] stringByReplacingCharactersInRange:range withString:string];
 		if ([txt length]>7 || [txt length]<=0)
 			return NO;
 	} 
@@ -110,80 +106,14 @@
 
 
 - (IBAction) settingsPressed:(id)sender
-{	
-	// Load settings into view
-	[authNetLogin setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"login"]];
-	[authNetPassword setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"password"]];
-	[authNetTestMode setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"testMode"]];	
-	[emailReceiptEnabled setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"emailReceiptEnabled"]];			
-	[emailReceiptAddress setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"emailReceiptAddress"]];
-	[avsEnabled setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"]];			
-	
-	[aboutWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://transfs.com"]]];
-	[settingsView setContentSize:CGSizeMake(320, 800)];
-	[settingsView setFrame:CGRectMake(0,0, 320, 480)];	
-	[settingsView setScrollEnabled:YES];	
-	
+{		
 	// Now transition to settings
-	settingsPreviousView = [[self view] superview];
-	UIView* curView = [settingsPreviousView superview];
-	[curView setBackgroundColor:[UIColor blackColor]];
+	[[[self.tabBarController view] superview] setBackgroundColor:[UIColor blackColor]];
 	[UIView beginAnimations:@"settingsView" context:nil];		//	Begin an animation block.
 	[UIView setAnimationDuration:1.0];
-	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:curView cache:true];	//	Set the transition on the container view.
-	[settingsPreviousView removeFromSuperview];	//	Remove the subview from the container view.
-	[curView addSubview:settingsView];		//	Add the new subview to the container view.
+	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:[[self.tabBarController view] superview] cache:true];	//	Set the transition on the container view.
+	[[[self.tabBarController view] superview] addSubview:delegate.settingsNavigationController.view];	//	Add the new subview to the container view.
 	[UIView commitAnimations];	
-}
-
-- (IBAction) settingsClosePressed:(id)sender
-{
-	// Apply settings changes
-	if (![NSString is_blank:[authNetLogin text]])
-		[[NSUserDefaults standardUserDefaults] setObject:[authNetLogin text] forKey:@"login"];
-	if (![NSString is_blank:[authNetPassword text]])
-		[[NSUserDefaults standardUserDefaults] setObject:[authNetPassword text] forKey:@"password"];
-	[[NSUserDefaults standardUserDefaults] setBool:[authNetTestMode isOn] forKey:@"testMode"];	
-	[[NSUserDefaults standardUserDefaults] setBool:[emailReceiptEnabled isOn] forKey:@"emailReceiptEnabled"];	
-	if (![NSString is_blank:[emailReceiptAddress text]])
-		[[NSUserDefaults standardUserDefaults] setObject:[emailReceiptAddress text] forKey:@"emailReceiptAddress"];
-	[[NSUserDefaults standardUserDefaults] setBool:[avsEnabled isOn] forKey:@"avsEnabled"];	
-	[[NSUserDefaults standardUserDefaults] synchronize];
-	
-	// Operate on New Settings
-	[delegate setAddressTabVisible:[avsEnabled isOn]];
-	
-	// Load Start view
-	UIView* curView = [settingsView superview];
-	[curView setBackgroundColor:[UIColor blackColor]];
-	[UIView beginAnimations:@"settingsView" context:nil];		//	Begin an animation block.
-	[UIView setAnimationDuration:0.5];
-	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:curView cache:true];	//	Set the transition on the container view.
-	[settingsView removeFromSuperview];	//	Remove the subview from the container view.
-	[curView addSubview:settingsPreviousView];		//	Add the new subview to the container view.
-	[UIView commitAnimations];	
-}
-
-- (IBAction) settingsClearHistoryPressed:(id)sender
-{
-	UIActionSheet *alert = [[UIActionSheet alloc] initWithTitle:@"Clear Transaction History?" 
-													   delegate:self 
-											  cancelButtonTitle:nil 
-										 destructiveButtonTitle:@"No, Cancel"
-											  otherButtonTitles:nil];
-	[alert addButtonWithTitle:@"Yes, Clear History."];
-	[alert showInView:[self view]];
-}
-
-- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-	if (buttonIndex==0) //Cancel
-	{
-	}
-	else if (buttonIndex==1)
-	{
-		[Transaction deleteAllFromDatabase];
-	}
 }
 
 /*
