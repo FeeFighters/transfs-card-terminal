@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2BA5180F62362000DB0F6E /* keypad_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA5160F62362000DB0F6E /* keypad_button_normal.png */; };
+		1D2BA5190F62362000DB0F6E /* keypad_button_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA5170F62362000DB0F6E /* keypad_button_highlighted.png */; };
+		1D2BA53D0F62454D00DB0F6E /* ChargeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA53C0F62454D00DB0F6E /* ChargeView.xib */; };
+		1D2BA5420F6248FE00DB0F6E /* ChargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA5410F6248FE00DB0F6E /* ChargeViewController.m */; };
+		1D2BA5450F6249B500DB0F6E /* ChargeAmountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA5440F6249B500DB0F6E /* ChargeAmountViewController.m */; };
+		1D2BA54D0F624AE400DB0F6E /* ChargeTableCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA54C0F624AE400DB0F6E /* ChargeTableCells.xib */; };
+		1D2BA5520F624D8C00DB0F6E /* ChargeTableAmountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA5510F624D8C00DB0F6E /* ChargeTableAmountCell.m */; };
+		1D2BA5550F624DA800DB0F6E /* ChargeTableCardNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA5540F624DA800DB0F6E /* ChargeTableCardNumberCell.m */; };
+		1D2BA5ED0F62654700DB0F6E /* ChargeTableAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA5EC0F62654700DB0F6E /* ChargeTableAddressCell.m */; };
+		1D2BA6840F6288E600DB0F6E /* ChargeTableCardExpCvvCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA6830F6288E600DB0F6E /* ChargeTableCardExpCvvCell.m */; };
+		1D2BA6870F62890400DB0F6E /* ChargeTableCardNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA6860F62890400DB0F6E /* ChargeTableCardNameCell.m */; };
+		1D2BA72F0F6291DC00DB0F6E /* ChargeCardNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA72E0F6291DC00DB0F6E /* ChargeCardNumberViewController.m */; };
+		1D2BA7320F6291EB00DB0F6E /* ChargeCardExpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA7310F6291EB00DB0F6E /* ChargeCardExpViewController.m */; };
+		1D2BA7350F6291F800DB0F6E /* ChargeCardCvvViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA7340F6291F800DB0F6E /* ChargeCardCvvViewController.m */; };
+		1D2BA7380F62920400DB0F6E /* ChargeAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA7370F62920400DB0F6E /* ChargeAddressViewController.m */; };
+		1D2BA73A0F62921F00DB0F6E /* ChargeCardNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA7390F62921F00DB0F6E /* ChargeCardNumberView.xib */; };
+		1D2BA7C80F62983E00DB0F6E /* ChargeCardNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BA7C70F62983E00DB0F6E /* ChargeCardNameViewController.m */; };
+		1D2BA7CA0F62989600DB0F6E /* ChargeCardNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA7C90F62989600DB0F6E /* ChargeCardNameView.xib */; };
+		1D2BA7D00F629B2F00DB0F6E /* ChargeCardExpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA7CF0F629B2F00DB0F6E /* ChargeCardExpView.xib */; };
+		1D2BA7D20F629B3800DB0F6E /* ChargeCardCvvView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA7D10F629B3800DB0F6E /* ChargeCardCvvView.xib */; };
+		1D2BA7FE0F629CED00DB0F6E /* ChargeAddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA7FD0F629CED00DB0F6E /* ChargeAddressView.xib */; };
 		1D3623260D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */; };
 		1D3803D80F591F4E0041D924 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3803D70F591F4E0041D924 /* Settings.xib */; };
 		1D3803DB0F5934490041D924 /* EmailSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3803DA0F5934490041D924 /* EmailSettings.xib */; };
@@ -48,6 +69,10 @@
 		1D7941490F49179300CAA3CF /* ProcessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7941480F49179300CAA3CF /* ProcessView.xib */; };
 		1D7941530F491CE000CAA3CF /* UIGradientScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7941520F491CE000CAA3CF /* UIGradientScrollView.m */; };
 		1D7943C30F4965C500CAA3CF /* ProcessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7943C20F4965C500CAA3CF /* ProcessViewController.m */; };
+		1D91A75D0F604C4E00792E8B /* PaypalGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A7570F604C4E00792E8B /* PaypalGateway.m */; };
+		1D91A7600F604C6000792E8B /* GDataXMLNodeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A75E0F604C6000792E8B /* GDataXMLNodeAdditions.m */; };
+		1D91A79B0F61B98200792E8B /* ChargeAmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D91A79A0F61B98200792E8B /* ChargeAmountView.xib */; };
+		1D91A7D50F61FAE600792E8B /* NumberKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A7D40F61FAE600792E8B /* NumberKeypadView.m */; };
 		1DA23D6E0F37605300B6635B /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA23D6D0F37605300B6635B /* CardView.xib */; };
 		1DA23D890F3779D100B6635B /* UIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA23D880F3779D100B6635B /* UIGradientView.m */; };
 		1DB5DE300F4B8DA6005EA877 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB5DE2F0F4B8DA6005EA877 /* StartViewController.m */; };
@@ -96,6 +121,39 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D2BA5160F62362000DB0F6E /* keypad_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keypad_button_normal.png; sourceTree = "<group>"; };
+		1D2BA5170F62362000DB0F6E /* keypad_button_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keypad_button_highlighted.png; sourceTree = "<group>"; };
+		1D2BA53C0F62454D00DB0F6E /* ChargeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChargeView.xib; sourceTree = "<group>"; };
+		1D2BA5400F6248FE00DB0F6E /* ChargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeViewController.h; sourceTree = "<group>"; };
+		1D2BA5410F6248FE00DB0F6E /* ChargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeViewController.m; sourceTree = "<group>"; };
+		1D2BA5430F6249B500DB0F6E /* ChargeAmountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeAmountViewController.h; sourceTree = "<group>"; };
+		1D2BA5440F6249B500DB0F6E /* ChargeAmountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeAmountViewController.m; sourceTree = "<group>"; };
+		1D2BA54C0F624AE400DB0F6E /* ChargeTableCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChargeTableCells.xib; sourceTree = "<group>"; };
+		1D2BA5500F624D8C00DB0F6E /* ChargeTableAmountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeTableAmountCell.h; sourceTree = "<group>"; };
+		1D2BA5510F624D8C00DB0F6E /* ChargeTableAmountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeTableAmountCell.m; sourceTree = "<group>"; };
+		1D2BA5530F624DA800DB0F6E /* ChargeTableCardNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeTableCardNumberCell.h; sourceTree = "<group>"; };
+		1D2BA5540F624DA800DB0F6E /* ChargeTableCardNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeTableCardNumberCell.m; sourceTree = "<group>"; };
+		1D2BA5EB0F62654700DB0F6E /* ChargeTableAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeTableAddressCell.h; sourceTree = "<group>"; };
+		1D2BA5EC0F62654700DB0F6E /* ChargeTableAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeTableAddressCell.m; sourceTree = "<group>"; };
+		1D2BA6820F6288E600DB0F6E /* ChargeTableCardExpCvvCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeTableCardExpCvvCell.h; sourceTree = "<group>"; };
+		1D2BA6830F6288E600DB0F6E /* ChargeTableCardExpCvvCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeTableCardExpCvvCell.m; sourceTree = "<group>"; };
+		1D2BA6850F62890400DB0F6E /* ChargeTableCardNameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeTableCardNameCell.h; sourceTree = "<group>"; };
+		1D2BA6860F62890400DB0F6E /* ChargeTableCardNameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeTableCardNameCell.m; sourceTree = "<group>"; };
+		1D2BA72D0F6291DC00DB0F6E /* ChargeCardNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeCardNumberViewController.h; sourceTree = "<group>"; };
+		1D2BA72E0F6291DC00DB0F6E /* ChargeCardNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeCardNumberViewController.m; sourceTree = "<group>"; };
+		1D2BA7300F6291EB00DB0F6E /* ChargeCardExpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeCardExpViewController.h; sourceTree = "<group>"; };
+		1D2BA7310F6291EB00DB0F6E /* ChargeCardExpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeCardExpViewController.m; sourceTree = "<group>"; };
+		1D2BA7330F6291F800DB0F6E /* ChargeCardCvvViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeCardCvvViewController.h; sourceTree = "<group>"; };
+		1D2BA7340F6291F800DB0F6E /* ChargeCardCvvViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeCardCvvViewController.m; sourceTree = "<group>"; };
+		1D2BA7360F62920400DB0F6E /* ChargeAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeAddressViewController.h; sourceTree = "<group>"; };
+		1D2BA7370F62920400DB0F6E /* ChargeAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeAddressViewController.m; sourceTree = "<group>"; };
+		1D2BA7390F62921F00DB0F6E /* ChargeCardNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChargeCardNumberView.xib; sourceTree = "<group>"; };
+		1D2BA7C60F62983E00DB0F6E /* ChargeCardNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeCardNameViewController.h; sourceTree = "<group>"; };
+		1D2BA7C70F62983E00DB0F6E /* ChargeCardNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeCardNameViewController.m; sourceTree = "<group>"; };
+		1D2BA7C90F62989600DB0F6E /* ChargeCardNameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChargeCardNameView.xib; sourceTree = "<group>"; };
+		1D2BA7CF0F629B2F00DB0F6E /* ChargeCardExpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChargeCardExpView.xib; sourceTree = "<group>"; };
+		1D2BA7D10F629B3800DB0F6E /* ChargeCardCvvView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChargeCardCvvView.xib; sourceTree = "<group>"; };
+		1D2BA7FD0F629CED00DB0F6E /* ChargeAddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChargeAddressView.xib; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransFS_Card_TerminalAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransFS_Card_TerminalAppDelegate.m; sourceTree = "<group>"; };
@@ -180,6 +238,16 @@
 		1D7941520F491CE000CAA3CF /* UIGradientScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGradientScrollView.m; sourceTree = "<group>"; };
 		1D7943C10F4965C500CAA3CF /* ProcessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessViewController.h; sourceTree = "<group>"; };
 		1D7943C20F4965C500CAA3CF /* ProcessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessViewController.m; sourceTree = "<group>"; };
+		1D91A7570F604C4E00792E8B /* PaypalGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaypalGateway.m; sourceTree = "<group>"; };
+		1D91A7580F604C4E00792E8B /* PaypalGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaypalGateway.h; sourceTree = "<group>"; };
+		1D91A75A0F604C4E00792E8B /* PaypalCommonAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaypalCommonAPI.h; sourceTree = "<group>"; };
+		1D91A75B0F604C4E00792E8B /* PaypalCommonAPI_Implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaypalCommonAPI_Implementation.h; sourceTree = "<group>"; };
+		1D91A75C0F604C4E00792E8B /* PaypalCommonAPI_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaypalCommonAPI_Private.h; sourceTree = "<group>"; };
+		1D91A75E0F604C6000792E8B /* GDataXMLNodeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNodeAdditions.m; sourceTree = "<group>"; };
+		1D91A75F0F604C6000792E8B /* GDataXMLNodeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNodeAdditions.h; sourceTree = "<group>"; };
+		1D91A79A0F61B98200792E8B /* ChargeAmountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChargeAmountView.xib; sourceTree = "<group>"; };
+		1D91A7D30F61FAE600792E8B /* NumberKeypadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberKeypadView.h; sourceTree = "<group>"; };
+		1D91A7D40F61FAE600792E8B /* NumberKeypadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberKeypadView.m; sourceTree = "<group>"; };
 		1DA23D6D0F37605300B6635B /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		1DA23D870F3779D100B6635B /* UIGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIGradientView.h; sourceTree = "<group>"; };
 		1DA23D880F3779D100B6635B /* UIGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIGradientView.m; sourceTree = "<group>"; };
@@ -273,6 +341,32 @@
 				1DC86A3B0F5404CF00D2DB08 /* TransactionTableViewCell.m */,
 				1D46C5770F5530380099533D /* UIScrollViewAdditions.h */,
 				1D46C5780F5530380099533D /* UIScrollViewAdditions.m */,
+				1D91A7D30F61FAE600792E8B /* NumberKeypadView.h */,
+				1D91A7D40F61FAE600792E8B /* NumberKeypadView.m */,
+				1D2BA5400F6248FE00DB0F6E /* ChargeViewController.h */,
+				1D2BA5410F6248FE00DB0F6E /* ChargeViewController.m */,
+				1D2BA5430F6249B500DB0F6E /* ChargeAmountViewController.h */,
+				1D2BA5440F6249B500DB0F6E /* ChargeAmountViewController.m */,
+				1D2BA5500F624D8C00DB0F6E /* ChargeTableAmountCell.h */,
+				1D2BA5510F624D8C00DB0F6E /* ChargeTableAmountCell.m */,
+				1D2BA5530F624DA800DB0F6E /* ChargeTableCardNumberCell.h */,
+				1D2BA5540F624DA800DB0F6E /* ChargeTableCardNumberCell.m */,
+				1D2BA5EB0F62654700DB0F6E /* ChargeTableAddressCell.h */,
+				1D2BA5EC0F62654700DB0F6E /* ChargeTableAddressCell.m */,
+				1D2BA6820F6288E600DB0F6E /* ChargeTableCardExpCvvCell.h */,
+				1D2BA6830F6288E600DB0F6E /* ChargeTableCardExpCvvCell.m */,
+				1D2BA6850F62890400DB0F6E /* ChargeTableCardNameCell.h */,
+				1D2BA6860F62890400DB0F6E /* ChargeTableCardNameCell.m */,
+				1D2BA72D0F6291DC00DB0F6E /* ChargeCardNumberViewController.h */,
+				1D2BA72E0F6291DC00DB0F6E /* ChargeCardNumberViewController.m */,
+				1D2BA7300F6291EB00DB0F6E /* ChargeCardExpViewController.h */,
+				1D2BA7310F6291EB00DB0F6E /* ChargeCardExpViewController.m */,
+				1D2BA7330F6291F800DB0F6E /* ChargeCardCvvViewController.h */,
+				1D2BA7340F6291F800DB0F6E /* ChargeCardCvvViewController.m */,
+				1D2BA7360F62920400DB0F6E /* ChargeAddressViewController.h */,
+				1D2BA7370F62920400DB0F6E /* ChargeAddressViewController.m */,
+				1D2BA7C60F62983E00DB0F6E /* ChargeCardNameViewController.h */,
+				1D2BA7C70F62983E00DB0F6E /* ChargeCardNameViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -361,6 +455,9 @@
 		1D75200F0F47D6C400996F8E /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
+				1D91A7570F604C4E00792E8B /* PaypalGateway.m */,
+				1D91A7580F604C4E00792E8B /* PaypalGateway.h */,
+				1D91A7590F604C4E00792E8B /* Paypal */,
 				1D7520100F47D6C400996F8E /* AuthorizeNetGateway.h */,
 				1D7520110F47D6C400996F8E /* AuthorizeNetGateway.m */,
 				1D7520120F47D6C400996F8E /* BogusGateway.h */,
@@ -403,6 +500,8 @@
 		1D75202B0F47D6C400996F8E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1D91A75E0F604C6000792E8B /* GDataXMLNodeAdditions.m */,
+				1D91A75F0F604C6000792E8B /* GDataXMLNodeAdditions.h */,
 				1D75202C0F47D6C400996F8E /* GDataDefines.h */,
 				1D75202D0F47D6C400996F8E /* GDataXMLNode.h */,
 				1D75202E0F47D6C400996F8E /* GDataXMLNode.m */,
@@ -415,9 +514,21 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		1D91A7590F604C4E00792E8B /* Paypal */ = {
+			isa = PBXGroup;
+			children = (
+				1D91A75A0F604C4E00792E8B /* PaypalCommonAPI.h */,
+				1D91A75B0F604C4E00792E8B /* PaypalCommonAPI_Implementation.h */,
+				1D91A75C0F604C4E00792E8B /* PaypalCommonAPI_Private.h */,
+			);
+			path = Paypal;
+			sourceTree = "<group>";
+		};
 		1DC8680D0F53B2BC00D2DB08 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1D2BA5160F62362000DB0F6E /* keypad_button_normal.png */,
+				1D2BA5170F62362000DB0F6E /* keypad_button_highlighted.png */,
 				1D46C4F60F5502AC0099533D /* transparent-logo-small-nobeta.png */,
 				1DC8681B0F53B2FF00D2DB08 /* money */,
 				1DC8680E0F53B2BC00D2DB08 /* cards */,
@@ -483,9 +594,9 @@
 				1DC869790F53EF8200D2DB08 /* transactionHistory.sql */,
 				1DC8680D0F53B2BC00D2DB08 /* images */,
 				282CCBFD0DB6C98000C4EA27 /* AddressView.xib */,
-				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				1DA23D6D0F37605300B6635B /* CardView.xib */,
+				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				1D7941410F49156B00CAA3CF /* StartView.xib */,
 				1D7941480F49179300CAA3CF /* ProcessView.xib */,
 				1DB5DE940F4B9CEF005EA877 /* Settings.bundle */,
@@ -498,6 +609,14 @@
 				1D3803E20F59367C0041D924 /* GeneralSettings.xib */,
 				1D3804E10F599B990041D924 /* AboutSettings.xib */,
 				1D3804E90F599CBE0041D924 /* SettingsTabController.xib */,
+				1D91A79A0F61B98200792E8B /* ChargeAmountView.xib */,
+				1D2BA53C0F62454D00DB0F6E /* ChargeView.xib */,
+				1D2BA54C0F624AE400DB0F6E /* ChargeTableCells.xib */,
+				1D2BA7390F62921F00DB0F6E /* ChargeCardNumberView.xib */,
+				1D2BA7C90F62989600DB0F6E /* ChargeCardNameView.xib */,
+				1D2BA7CF0F629B2F00DB0F6E /* ChargeCardExpView.xib */,
+				1D2BA7D10F629B3800DB0F6E /* ChargeCardCvvView.xib */,
+				1D2BA7FD0F629CED00DB0F6E /* ChargeAddressView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -589,6 +708,16 @@
 				1D3803E30F59367C0041D924 /* GeneralSettings.xib in Resources */,
 				1D3804E20F599B990041D924 /* AboutSettings.xib in Resources */,
 				1D3804EA0F599CBE0041D924 /* SettingsTabController.xib in Resources */,
+				1D91A79B0F61B98200792E8B /* ChargeAmountView.xib in Resources */,
+				1D2BA5180F62362000DB0F6E /* keypad_button_normal.png in Resources */,
+				1D2BA5190F62362000DB0F6E /* keypad_button_highlighted.png in Resources */,
+				1D2BA53D0F62454D00DB0F6E /* ChargeView.xib in Resources */,
+				1D2BA54D0F624AE400DB0F6E /* ChargeTableCells.xib in Resources */,
+				1D2BA73A0F62921F00DB0F6E /* ChargeCardNumberView.xib in Resources */,
+				1D2BA7CA0F62989600DB0F6E /* ChargeCardNameView.xib in Resources */,
+				1D2BA7D00F629B2F00DB0F6E /* ChargeCardExpView.xib in Resources */,
+				1D2BA7D20F629B3800DB0F6E /* ChargeCardCvvView.xib in Resources */,
+				1D2BA7FE0F629CED00DB0F6E /* ChargeAddressView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +765,21 @@
 				1D3804170F593C7E0041D924 /* AuthNetSettingsController.m in Sources */,
 				1D3804380F593CFE0041D924 /* AboutSettingsController.m in Sources */,
 				1D3805000F59A0410041D924 /* SettingsTabBarController.m in Sources */,
+				1D91A75D0F604C4E00792E8B /* PaypalGateway.m in Sources */,
+				1D91A7600F604C6000792E8B /* GDataXMLNodeAdditions.m in Sources */,
+				1D91A7D50F61FAE600792E8B /* NumberKeypadView.m in Sources */,
+				1D2BA5420F6248FE00DB0F6E /* ChargeViewController.m in Sources */,
+				1D2BA5450F6249B500DB0F6E /* ChargeAmountViewController.m in Sources */,
+				1D2BA5520F624D8C00DB0F6E /* ChargeTableAmountCell.m in Sources */,
+				1D2BA5550F624DA800DB0F6E /* ChargeTableCardNumberCell.m in Sources */,
+				1D2BA5ED0F62654700DB0F6E /* ChargeTableAddressCell.m in Sources */,
+				1D2BA6840F6288E600DB0F6E /* ChargeTableCardExpCvvCell.m in Sources */,
+				1D2BA6870F62890400DB0F6E /* ChargeTableCardNameCell.m in Sources */,
+				1D2BA72F0F6291DC00DB0F6E /* ChargeCardNumberViewController.m in Sources */,
+				1D2BA7320F6291EB00DB0F6E /* ChargeCardExpViewController.m in Sources */,
+				1D2BA7350F6291F800DB0F6E /* ChargeCardCvvViewController.m in Sources */,
+				1D2BA7380F62920400DB0F6E /* ChargeAddressViewController.m in Sources */,
+				1D2BA7C80F62983E00DB0F6E /* ChargeCardNameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

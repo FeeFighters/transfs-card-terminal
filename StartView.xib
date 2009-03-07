@@ -463,7 +463,6 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>-1.CustomClassName</string>
 					<string>-2.CustomClassName</string>
-					<string>1.CustomClassName</string>
 					<string>1.IBEditorWindowLastContentRect</string>
 					<string>1.IBPluginDependency</string>
 					<string>26.IBPluginDependency</string>
@@ -483,7 +482,6 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>StartViewController</string>
 					<string>UIResponder</string>
-					<string>UIGradientView</string>
 					<string>{{225, 376}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -526,6 +524,18 @@
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
+					<string key="className">AboutSettingsController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">aboutWebView</string>
+						<string key="NS.object.0">UIWebView</string>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/AboutSettingsController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">AddressViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="actions">
@@ -539,6 +549,29 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/AddressViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">AuthNetSettingsController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>authNetLogin</string>
+							<string>authNetPassword</string>
+							<string>authNetTestMode</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UITextField</string>
+							<string>UITextField</string>
+							<string>UISwitch</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/AuthNetSettingsController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -615,6 +648,52 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
+					<string key="className">EmailSettingsViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>emailReceiptAddress</string>
+							<string>emailReceiptEnabled</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UITextField</string>
+							<string>UISwitch</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/EmailSettingsViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">GeneralSettingsViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">settingsClearHistoryPressed:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>avsEnabled</string>
+							<string>gatewaySelector</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UISwitch</string>
+							<string>UISegmentedControl</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/GeneralSettingsViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">ProcessViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="actions">
@@ -669,14 +748,10 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>doneEditingPressed:</string>
 							<string>proceedPressed:</string>
-							<string>settingsClearHistoryPressed:</string>
-							<string>settingsClosePressed:</string>
 							<string>settingsPressed:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -686,33 +761,17 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>aboutWebView</string>
-							<string>authNetLogin</string>
-							<string>authNetPassword</string>
-							<string>authNetTestMode</string>
-							<string>avsEnabled</string>
 							<string>delegate</string>
 							<string>dollarAmountField</string>
 							<string>dollarAmountLabel</string>
-							<string>emailReceiptAddress</string>
-							<string>emailReceiptEnabled</string>
 							<string>finishButton</string>
-							<string>settingsView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>UIWebView</string>
-							<string>UITextField</string>
-							<string>UITextField</string>
-							<string>UISwitch</string>
-							<string>UISwitch</string>
 							<string>TransFS_Card_TerminalAppDelegate</string>
 							<string>UITextField</string>
 							<string>UILabel</string>
-							<string>UITextField</string>
-							<string>UISwitch</string>
 							<string>UIButton</string>
-							<string>UIScrollView</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -727,10 +786,16 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>aboutSettingsController</string>
 							<string>addressViewController</string>
+							<string>authNetSettingsController</string>
 							<string>cardViewController</string>
+							<string>emailSettingsController</string>
+							<string>generalSettingsController</string>
 							<string>historyTableNavigationController</string>
 							<string>processViewController</string>
+							<string>settingsNavigationController</string>
+							<string>settingsTabController</string>
 							<string>startViewController</string>
 							<string>tabBar</string>
 							<string>tabBarController</string>
@@ -738,10 +803,16 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>AboutSettingsController</string>
 							<string>AddressViewController</string>
+							<string>AuthNetSettingsController</string>
 							<string>CardViewController</string>
+							<string>EmailSettingsViewController</string>
+							<string>GeneralSettingsViewController</string>
 							<string>UINavigationController</string>
 							<string>ProcessViewController</string>
+							<string>UINavigationController</string>
+							<string>UITabBarController</string>
 							<string>StartViewController</string>
 							<string>UITabBar</string>
 							<string>UITabBarController</string>
@@ -751,21 +822,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/TransFS_Card_TerminalAppDelegate.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">UIGradientView</string>
-					<string key="superclassName">UIView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/UIGradientView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">UIScrollView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/UIScrollViewAdditions.h</string>
 					</object>
 				</object>
 			</object>

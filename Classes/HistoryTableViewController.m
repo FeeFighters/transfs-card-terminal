@@ -33,6 +33,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+
+	self.navigationItem.prompt = @"TransFS.com Card Terminal";
+	self.navigationItem.title = @"Transaction History";	
 }
 
 /*

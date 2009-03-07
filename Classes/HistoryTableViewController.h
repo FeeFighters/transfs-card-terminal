@@ -10,7 +10,7 @@
 #import "HistoryDetailViewController.h"
 
 @interface HistoryTableViewController : UITableViewController {
-	IBOutlet HistoryDetailViewController *detailViewController;
+	IBOutlet HistoryDetailViewController* detailViewController;
 	IBOutlet UITableViewCell* tableCell;
 	
 	IBOutlet TransFS_Card_TerminalAppDelegate* delegate;
