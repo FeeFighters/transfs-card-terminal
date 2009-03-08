@@ -56,7 +56,7 @@
 			}			
 			[newButton setFrame:btnFrame];
 			
-			[newButton setFont:[UIFont systemFontOfSize:30.0]];
+			[newButton setFont:[UIFont systemFontOfSize:28.0]];
 			[newButton setTitle:[NSString stringWithFormat:@"%d", i] forState:UIControlStateNormal];
 			[newButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 			[newButton setBackgroundImage:[UIImage imageNamed:@"keypad_button_normal.png"] forState:UIControlStateNormal];

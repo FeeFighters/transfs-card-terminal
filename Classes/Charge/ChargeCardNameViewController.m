@@ -40,6 +40,7 @@
     [super viewWillAppear:animated];
 	//	self.navigationItem.prompt = @"TransFS.com Card Terminal";
 	self.navigationItem.title = @"Customer Name";	
+	[firstName becomeFirstResponder];
 }
 
 

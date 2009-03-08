@@ -14,6 +14,7 @@
 #import "ChargeTableAddressCell.h"
 #import "CreditCard.h"
 #import "CreditCardMethods.h"
+#import "Transaction.h"
 
 @implementation ChargeViewController
 
@@ -68,6 +69,113 @@
 }
 */
 
+- (IBAction) processButtonClick:(id)sender
+{
+	UIActionSheet *alert = [[UIActionSheet alloc] initWithTitle:@"Process Transaction?" 
+													   delegate:self 
+											  cancelButtonTitle:nil 
+										 destructiveButtonTitle:@"Cancel"
+											  otherButtonTitles:nil];
+	[alert addButtonWithTitle:@"Proceed!"];
+	
+	[alert showInView:self.tabBarController.view];
+}
+
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex==0) //Cancel
+	{
+		[processButton setEnabled:true];
+		[processButton setHidden:false];
+		[spinner stopAnimating];
+		[spinner setHidden:true];
+		[responseLabel setText:@"Transaction Cancelled."];
+	}
+	else if (buttonIndex==1)
+	{
+		[processButton setEnabled:false];
+		[processButton setHidden:true];		
+		[spinner startAnimating];
+		[spinner setHidden:false];
+		[responseLabel setText:@""];
+		[NSThread detachNewThreadSelector:@selector(processTransactionThread) toTarget:self withObject:nil];
+	}
+}
+
+- (void) processTransactionThread
+{
+	NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
+	
+	[NSThread sleepForTimeInterval:0.5];
+	
+	Transaction* sale = [Transaction initAndProcessFromCurrentState];
+	if ([sale status]==TransactionSuccess)
+	{
+		[successViewImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"money_%d.png", (random() % 7)+1]]];
+		[successViewLabel setText:[NSString stringWithFormat:@"Successfully Charged $%.2f to %@ %@'s Card", [sale dollarAmount], [sale firstName], [sale lastName]]];
+		
+		savedSubviewforSuccess = [[self tabBarController] view];
+		UIView* curView = [savedSubviewforSuccess superview];
+		[curView setBackgroundColor:[UIColor blackColor]];
+		[UIView beginAnimations:@"successView" context:nil];		//	Begin an animation block.
+		[UIView setAnimationDuration:0.75];
+		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:curView cache:true];	//	Set the transition on the container view.
+		[savedSubviewforSuccess removeFromSuperview];	//	Remove the subview from the container view.
+		[curView addSubview:successView];		//	Add the new subview to the container view.
+		[UIView commitAnimations];
+	}
+	else
+	{
+		[responseLabel setText:[NSString stringWithString:[sale errorMessages]]];
+		
+		savedSubviewforSuccess = [[self tabBarController] view];
+		UIView* curView = [savedSubviewforSuccess superview];
+		[curView setBackgroundColor:[UIColor blackColor]];
+		[UIView beginAnimations:@"failureView" context:nil];		//	Begin an animation block.
+		[UIView setAnimationDuration:0.75];
+		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:curView cache:true];	//	Set the transition on the container view.
+		[savedSubviewforSuccess removeFromSuperview];	//	Remove the subview from the container view.
+		[curView addSubview:failureView];		//	Add the new subview to the container view.
+		[UIView commitAnimations];
+	}
+	
+	[autoreleasepool release];
+	
+	[spinner stopAnimating];
+	[processButton setEnabled:true];
+	[processButton setHidden:false];
+	[NSThread exit];
+}
+
+- (IBAction) goBackButtonClick:(id)sender
+{
+	[chargeAmountViewController.number setString:@""];  // Reset amount field
+
+	UIView* curView = [failureView superview];
+	[UIView beginAnimations:@"startOver" context:nil];		//	Begin an animation block.
+	[UIView setAnimationDuration:0.5];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:curView cache:true];	//	Set the transition on the container view.
+	[failureView removeFromSuperview];	//	Remove the subview from the container view.
+	[curView addSubview:savedSubviewforSuccess];		//	Add the new subview to the container view.
+	[UIView commitAnimations];
+}
+
+- (IBAction) startOverButtonClick:(id)sender
+{
+	[chargeAmountViewController.number setString:@""];  // Reset amount field
+
+	UIView* curView = [successView superview];
+	[UIView beginAnimations:@"startOver" context:nil];		//	Begin an animation block.
+	[UIView setAnimationDuration:0.5];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:curView cache:true];	//	Set the transition on the container view.
+	[successView removeFromSuperview];	//	Remove the subview from the container view.
+	[curView addSubview:savedSubviewforSuccess];		//	Add the new subview to the container view.
+	[UIView commitAnimations];
+
+}
+
+
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -77,7 +185,11 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+	// Set address visible based on preference setting
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"])
+		return 5;
+    
+	return 4;
 }
 
 
@@ -115,10 +227,10 @@
 			cell = (ChargeTableAmountCell*)[[[NSBundle mainBundle] loadNibNamed:@"ChargeTableCells" owner:self.tableView options: nil] objectAtIndex:0];
 		}
 		if ([NSString is_blank:chargeAmountViewController.number]) {
-			((ChargeTableAmountCell*)cell).amount.text = @"0.00";
+			((ChargeTableAmountCell*)cell).amount.text = @"$ 0.00";
 		}
 		else {	
-			((ChargeTableAmountCell*)cell).amount.text = chargeAmountViewController.number;
+			((ChargeTableAmountCell*)cell).amount.text = [NSString stringWithFormat:@"$ %@", chargeAmountViewController.number];
 		}
 	}
 	else if (indexPath.row == 1) {
@@ -149,8 +261,21 @@
 		else {	
 			((ChargeTableCardNumberCell*)cell).number.hidden = false;
 			((ChargeTableCardNumberCell*)cell).disabledLabel.hidden = true;
-			((ChargeTableCardNumberCell*)cell).number.text = chargeCardNumberViewController.number;
+			((ChargeTableCardNumberCell*)cell).number.text = [BillingCreditCard number:chargeCardNumberViewController.number withSeperator:@" "];
 		}
+		
+		NSString *type = [BillingCreditCard getTypeWithPartialNumber:chargeCardNumberViewController.number];
+		NSArray *validImages = [NSArray arrayWithObjects:@"visa", @"master", @"discover", @"american_express", nil];
+		if ([validImages containsObject:type]) {
+			NSString *filename = [NSString stringWithFormat:@"%@.png", type];
+			UIImage *image = [UIImage imageNamed:filename];
+			[((ChargeTableCardNumberCell*)cell).cardImage setImage:image];
+		}
+		else {
+			UIImage *image = [UIImage imageNamed:@"unknown.png"];
+			[((ChargeTableCardNumberCell*)cell).cardImage setImage:image];
+		}
+		
 	}
 	else if (indexPath.row == 3) {
 		cell = (ChargeTableCardExpCvvCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChargeTableCardExpCvvCell"];
@@ -164,25 +289,36 @@
 						[chargeCardExpViewController.yearPicker selectedRowInComponent:0]+[CardExpirationPickerDelegate currentYear]];
 		((ChargeTableCardExpCvvCell*)cell).expDate.text = exp;
 
-		((ChargeTableCardExpCvvCell*)cell).cvv.text = chargeCardCvvViewController.number;
-		
-		NSString *type = [BillingCreditCard getTypeWithPartialNumber:chargeCardNumberViewController.number];
-		NSArray *validImages = [NSArray arrayWithObjects:@"visa", @"master", @"discover", @"american_express", nil];
-		if ([validImages containsObject:type]) {
-			NSString *filename = [NSString stringWithFormat:@"%@.png", type];
-			UIImage *image = [UIImage imageNamed:filename];
-			[((ChargeTableCardExpCvvCell*)cell).cardImage setImage:image];
+		if ([NSString is_blank:chargeCardCvvViewController.number]) {
+			((ChargeTableCardExpCvvCell*)cell).cvv.hidden = true;
+			((ChargeTableCardExpCvvCell*)cell).cvvDisabledLabel.hidden = false;
 		}
-		else {
-			UIImage *image = [UIImage imageNamed:@"unknown.png"];
-			[((ChargeTableCardExpCvvCell*)cell).cardImage setImage:image];
+		else {	
+			((ChargeTableCardExpCvvCell*)cell).cvv.hidden = false;
+			((ChargeTableCardExpCvvCell*)cell).cvvDisabledLabel.hidden = true;
+			((ChargeTableCardExpCvvCell*)cell).cvv.text = chargeCardCvvViewController.number;
 		}
-		
 	}
 	else if (indexPath.row == 4) {
 		cell = (ChargeTableAddressCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChargeTableAddressCell"];
 		if (cell == nil) {
 			cell = (ChargeTableAddressCell*)[[[NSBundle mainBundle] loadNibNamed:@"ChargeTableCells" owner:self.tableView options: nil] objectAtIndex:4];
+		}
+		
+		if ([NSString is_blank:chargeAddressViewController.zipcode.text]) {
+			((ChargeTableAddressCell*)cell).address.hidden = true;
+			((ChargeTableAddressCell*)cell).city.hidden = true;
+			((ChargeTableAddressCell*)cell).zip.hidden = true;			
+			((ChargeTableAddressCell*)cell).disabledLabel.hidden = false;
+		}
+		else {
+			((ChargeTableAddressCell*)cell).address.hidden = [NSString is_blank:chargeAddressViewController.address.text];
+			((ChargeTableAddressCell*)cell).city.hidden = [NSString is_blank:chargeAddressViewController.city.text];
+			((ChargeTableAddressCell*)cell).zip.hidden = [NSString is_blank:chargeAddressViewController.zipcode.text];
+			((ChargeTableAddressCell*)cell).disabledLabel.hidden = true;
+			((ChargeTableAddressCell*)cell).address.text = chargeAddressViewController.address.text;
+			((ChargeTableAddressCell*)cell).city.text = chargeAddressViewController.city.text;
+			((ChargeTableAddressCell*)cell).zip.text = chargeAddressViewController.zipcode.text;
 		}
 		
 	}

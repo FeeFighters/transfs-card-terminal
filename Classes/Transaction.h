@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 #import "TransFS_Card_TerminalAppDelegate.h"
-#import "ProcessViewController.h"
+#import "ChargeViewController.h"
 #import "TransFS_Card_TerminalAppDelegate.h"
 #import "CreditCard.h"
 #import "CardExpirationPickerDelegate.h"

@@ -33,6 +33,16 @@
 	[aboutWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://transfs.com"]]];	
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	// [[NSUserDefaults standardUserDefaults] synchronize];		
+}
+
+
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

@@ -7,9 +7,7 @@
 //
 
 #import "Transaction.h"
-#import "ProcessViewController.h"
-#import "StartViewController.h"
-#import "CardViewController.h"
+#import "ChargeViewController.h"
 #import "NSArrayAdditions.h"
 #import <sqlite3.h>
 
@@ -103,9 +101,13 @@ static sqlite3_stmt *dehydrate_statement = nil;
 {		
 	Transaction *_self = [[Transaction alloc] init];
 	
-	TransFS_Card_TerminalAppDelegate* delegate = (TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate]; 
-	StartViewController *startViewController = [delegate startViewController];
-	CardViewController *cardViewController = [delegate cardViewController];
+	TransFS_Card_TerminalAppDelegate* delegate = (TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate];
+	ChargeAmountViewController* chargeAmountViewController = delegate.chargeViewController.chargeAmountViewController;
+	ChargeCardNameViewController* chargeCardNameViewController = delegate.chargeViewController.chargeCardNameViewController;
+	ChargeCardNumberViewController* chargeCardNumberViewController = delegate.chargeViewController.chargeCardNumberViewController;
+	ChargeCardExpViewController* chargeCardExpViewController = delegate.chargeViewController.chargeCardExpViewController;
+	ChargeCardCvvViewController* chargeCardCvvViewController = delegate.chargeViewController.chargeCardCvvViewController;
+	ChargeAddressViewController* chargeAddressViewController = delegate.chargeViewController.chargeAddressViewController;
 	
 	NSString *login = [[NSUserDefaults standardUserDefaults] stringForKey:@"login"];
 	if ([NSString is_blank:login])
@@ -119,12 +121,12 @@ static sqlite3_stmt *dehydrate_statement = nil;
 	
 	int todayYear = [CardExpirationPickerDelegate currentYear];
 	BillingCreditCard *card = [[BillingCreditCard alloc] init:[NSDictionary dictionaryWithObjectsAndKeys:
-															   nilToEmptyStr([[cardViewController cardNumberField] text]), @"number",
-															   (NSNumber*)MakeInt([[cardViewController monthPicker] selectedRowInComponent:0] + 1), @"month",
-															   (NSNumber*)MakeInt(todayYear + [[cardViewController yearPicker] selectedRowInComponent:0]), @"year",
-															   nilToEmptyStr([[cardViewController firstNameField] text]), @"firstName",
-															   nilToEmptyStr([[cardViewController lastNameField] text]), @"lastName",
-															   nilToEmptyStr([[cardViewController cvvNumberField] text]), @"verificationValue",
+															   nilToEmptyStr(chargeCardNumberViewController.number), @"number",
+															   (NSNumber*)MakeInt([chargeCardExpViewController.monthPicker selectedRowInComponent:0] + 1), @"month",
+															   (NSNumber*)MakeInt(todayYear + [chargeCardExpViewController.yearPicker selectedRowInComponent:0]), @"year",
+															   nilToEmptyStr(chargeCardNameViewController.firstName.text), @"firstName",
+															   nilToEmptyStr(chargeCardNameViewController.lastName.text), @"lastName",
+															   nilToEmptyStr(chargeCardCvvViewController.number), @"verificationValue",
 															   nil]];
 	
 	// Store sanitized card number that we want to keep around for later
@@ -147,7 +149,7 @@ static sqlite3_stmt *dehydrate_statement = nil;
 		//		
 		
 		// Store value that we want to keep around for later
-		NSString* dollarTxt = [[startViewController dollarAmountLabel] text];
+		NSString* dollarTxt = chargeAmountViewController.number;
 		_self.dollarAmount = [dollarTxt floatValue];
 		
 		@try {

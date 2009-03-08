@@ -1,17 +1,17 @@
 //
-//  ChargeTableCardCell.m
+//  SettingsTableCell.m
 //  TransFS Card Terminal
 //
-//  Created by Joshua Krall on 3/7/09.
-//  Copyright 2009 TransFS.com. All rights reserved.
+//  Created by Joshua Krall on 3/8/09.
+//  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "ChargeTableCardNumberCell.h"
+#import "SettingsTableCell.h"
 
 
-@implementation ChargeTableCardNumberCell
+@implementation SettingsTableCell
 
-@synthesize number, disabledLabel, cardImage;
+@synthesize label;
 
 - (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithFrame:frame reuseIdentifier:reuseIdentifier]) {

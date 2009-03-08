@@ -30,7 +30,6 @@
 		1D5058370F63D88D008B2FCC /* AuthNetSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058150F63D88D008B2FCC /* AuthNetSettingsController.m */; };
 		1D5058380F63D88D008B2FCC /* EmailSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058170F63D88D008B2FCC /* EmailSettingsViewController.m */; };
 		1D5058390F63D88D008B2FCC /* GeneralSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058190F63D88D008B2FCC /* GeneralSettingsViewController.m */; };
-		1D50583A0F63D88D008B2FCC /* SettingsTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50581B0F63D88D008B2FCC /* SettingsTabBarController.m */; };
 		1D50583B0F63D88D008B2FCC /* CardExpirationPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50581E0F63D88D008B2FCC /* CardExpirationPickerDelegate.m */; };
 		1D50583C0F63D88D008B2FCC /* NumberKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058200F63D88D008B2FCC /* NumberKeypadView.m */; };
 		1D50583D0F63D88D008B2FCC /* UIGradientScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058220F63D88D008B2FCC /* UIGradientScrollView.m */; };
@@ -39,7 +38,6 @@
 		1D50585A0F63D8A0008B2FCC /* AboutSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058440F63D8A0008B2FCC /* AboutSettings.xib */; };
 		1D50585B0F63D8A0008B2FCC /* AddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058450F63D8A0008B2FCC /* AddressView.xib */; };
 		1D50585C0F63D8A0008B2FCC /* AuthNetSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058460F63D8A0008B2FCC /* AuthNetSettings.xib */; };
-		1D50585D0F63D8A0008B2FCC /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058470F63D8A0008B2FCC /* CardView.xib */; };
 		1D50585E0F63D8A0008B2FCC /* ChargeAddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058480F63D8A0008B2FCC /* ChargeAddressView.xib */; };
 		1D50585F0F63D8A0008B2FCC /* ChargeAmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058490F63D8A0008B2FCC /* ChargeAmountView.xib */; };
 		1D5058600F63D8A0008B2FCC /* ChargeCardCvvView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D50584A0F63D8A0008B2FCC /* ChargeCardCvvView.xib */; };
@@ -54,13 +52,13 @@
 		1D5058690F63D8A0008B2FCC /* HistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058530F63D8A0008B2FCC /* HistoryView.xib */; };
 		1D50586A0F63D8A0008B2FCC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058540F63D8A0008B2FCC /* MainWindow.xib */; };
 		1D50586B0F63D8A0008B2FCC /* ProcessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058550F63D8A0008B2FCC /* ProcessView.xib */; };
-		1D50586C0F63D8A0008B2FCC /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058560F63D8A0008B2FCC /* Settings.xib */; };
-		1D50586D0F63D8A0008B2FCC /* SettingsTabController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058570F63D8A0008B2FCC /* SettingsTabController.xib */; };
-		1D50586E0F63D8A0008B2FCC /* StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058580F63D8A0008B2FCC /* StartView.xib */; };
 		1D50586F0F63D8A0008B2FCC /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058590F63D8A0008B2FCC /* TransactionTableViewCell.xib */; };
+		1D50592B0F63F840008B2FCC /* SettingsIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D50592A0F63F840008B2FCC /* SettingsIndexView.xib */; };
+		1D50592F0F63F891008B2FCC /* SettingsIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50592E0F63F891008B2FCC /* SettingsIndexViewController.m */; };
+		1D50594C0F63FC58008B2FCC /* SettingsTableCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D50594B0F63FC58008B2FCC /* SettingsTableCells.xib */; };
+		1D5059500F63FC8B008B2FCC /* SettingsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50594F0F63FC8B008B2FCC /* SettingsTableCell.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1D69BA4A0F507B4A00D0063C /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D69BA490F507B4A00D0063C /* AddressViewController.m */; };
 		1D7520340F47D6C400996F8E /* AvsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520000F47D6C400996F8E /* AvsResult.m */; };
 		1D7520350F47D6C400996F8E /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520020F47D6C400996F8E /* Base.m */; };
 		1D7520360F47D6C400996F8E /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520040F47D6C400996F8E /* Check.m */; };
@@ -81,10 +79,8 @@
 		1D7520450F47D6C400996F8E /* VarArgsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520330F47D6C400996F8E /* VarArgsHelper.m */; };
 		1D75207C0F47D82300996F8E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D75207B0F47D82300996F8E /* libxml2.dylib */; };
 		1D7520920F47D85700996F8E /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7520910F47D85700996F8E /* libicucore.dylib */; };
-		1D7943C30F4965C500CAA3CF /* ProcessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7943C20F4965C500CAA3CF /* ProcessViewController.m */; };
 		1D91A75D0F604C4E00792E8B /* PaypalGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A7570F604C4E00792E8B /* PaypalGateway.m */; };
 		1D91A7600F604C6000792E8B /* GDataXMLNodeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A75E0F604C6000792E8B /* GDataXMLNodeAdditions.m */; };
-		1DB5DE300F4B8DA6005EA877 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB5DE2F0F4B8DA6005EA877 /* StartViewController.m */; };
 		1DB5DE950F4B9CEF005EA877 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1DB5DE940F4B9CEF005EA877 /* Settings.bundle */; };
 		1DC868150F53B2BC00D2DB08 /* american_express.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8680F0F53B2BC00D2DB08 /* american_express.png */; };
 		1DC868160F53B2BC00D2DB08 /* credit_card_image_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868100F53B2BC00D2DB08 /* credit_card_image_mask.png */; };
@@ -104,7 +100,6 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		1DFC98B10F52126600191E58 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DFC98B00F52126600191E58 /* Entitlements.plist */; };
 		1DFC98E60F525DB900191E58 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC98E50F525DB900191E58 /* Transaction.m */; };
-		28216C970DB411BC00E5133A /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28216C960DB411BC00E5133A /* CardViewController.m */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
@@ -165,8 +160,6 @@
 		1D5058170F63D88D008B2FCC /* EmailSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailSettingsViewController.m; sourceTree = "<group>"; };
 		1D5058180F63D88D008B2FCC /* GeneralSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralSettingsViewController.h; sourceTree = "<group>"; };
 		1D5058190F63D88D008B2FCC /* GeneralSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralSettingsViewController.m; sourceTree = "<group>"; };
-		1D50581A0F63D88D008B2FCC /* SettingsTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTabBarController.h; sourceTree = "<group>"; };
-		1D50581B0F63D88D008B2FCC /* SettingsTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTabBarController.m; sourceTree = "<group>"; };
 		1D50581D0F63D88D008B2FCC /* CardExpirationPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardExpirationPickerDelegate.h; sourceTree = "<group>"; };
 		1D50581E0F63D88D008B2FCC /* CardExpirationPickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardExpirationPickerDelegate.m; sourceTree = "<group>"; };
 		1D50581F0F63D88D008B2FCC /* NumberKeypadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberKeypadView.h; sourceTree = "<group>"; };
@@ -180,7 +173,6 @@
 		1D5058440F63D8A0008B2FCC /* AboutSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutSettings.xib; sourceTree = "<group>"; };
 		1D5058450F63D8A0008B2FCC /* AddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressView.xib; sourceTree = "<group>"; };
 		1D5058460F63D8A0008B2FCC /* AuthNetSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthNetSettings.xib; sourceTree = "<group>"; };
-		1D5058470F63D8A0008B2FCC /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		1D5058480F63D8A0008B2FCC /* ChargeAddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChargeAddressView.xib; sourceTree = "<group>"; };
 		1D5058490F63D8A0008B2FCC /* ChargeAmountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChargeAmountView.xib; sourceTree = "<group>"; };
 		1D50584A0F63D8A0008B2FCC /* ChargeCardCvvView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChargeCardCvvView.xib; sourceTree = "<group>"; };
@@ -195,13 +187,14 @@
 		1D5058530F63D8A0008B2FCC /* HistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryView.xib; sourceTree = "<group>"; };
 		1D5058540F63D8A0008B2FCC /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		1D5058550F63D8A0008B2FCC /* ProcessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessView.xib; sourceTree = "<group>"; };
-		1D5058560F63D8A0008B2FCC /* Settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
-		1D5058570F63D8A0008B2FCC /* SettingsTabController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTabController.xib; sourceTree = "<group>"; };
-		1D5058580F63D8A0008B2FCC /* StartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartView.xib; sourceTree = "<group>"; };
 		1D5058590F63D8A0008B2FCC /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		1D50592A0F63F840008B2FCC /* SettingsIndexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsIndexView.xib; sourceTree = "<group>"; };
+		1D50592D0F63F891008B2FCC /* SettingsIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsIndexViewController.h; sourceTree = "<group>"; };
+		1D50592E0F63F891008B2FCC /* SettingsIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsIndexViewController.m; sourceTree = "<group>"; };
+		1D50594B0F63FC58008B2FCC /* SettingsTableCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableCells.xib; sourceTree = "<group>"; };
+		1D50594E0F63FC8B008B2FCC /* SettingsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableCell.h; sourceTree = "<group>"; };
+		1D50594F0F63FC8B008B2FCC /* SettingsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableCell.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TransFS Card Terminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D69BA480F507B4A00D0063C /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
-		1D69BA490F507B4A00D0063C /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
 		1D751FFF0F47D6C400996F8E /* AvsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvsResult.h; sourceTree = "<group>"; };
 		1D7520000F47D6C400996F8E /* AvsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvsResult.m; sourceTree = "<group>"; };
 		1D7520010F47D6C400996F8E /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
@@ -255,8 +248,6 @@
 		1D7520910F47D85700996F8E /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = /usr/lib/libicucore.dylib; sourceTree = "<absolute>"; };
 		1D7940B50F48FF8B00CAA3CF /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		1D7940B60F48FF8B00CAA3CF /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
-		1D7943C10F4965C500CAA3CF /* ProcessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessViewController.h; sourceTree = "<group>"; };
-		1D7943C20F4965C500CAA3CF /* ProcessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessViewController.m; sourceTree = "<group>"; };
 		1D91A7570F604C4E00792E8B /* PaypalGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaypalGateway.m; sourceTree = "<group>"; };
 		1D91A7580F604C4E00792E8B /* PaypalGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaypalGateway.h; sourceTree = "<group>"; };
 		1D91A75A0F604C4E00792E8B /* PaypalCommonAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaypalCommonAPI.h; sourceTree = "<group>"; };
@@ -264,8 +255,6 @@
 		1D91A75C0F604C4E00792E8B /* PaypalCommonAPI_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaypalCommonAPI_Private.h; sourceTree = "<group>"; };
 		1D91A75E0F604C6000792E8B /* GDataXMLNodeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNodeAdditions.m; sourceTree = "<group>"; };
 		1D91A75F0F604C6000792E8B /* GDataXMLNodeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNodeAdditions.h; sourceTree = "<group>"; };
-		1DB5DE2E0F4B8DA6005EA877 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
-		1DB5DE2F0F4B8DA6005EA877 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		1DB5DE940F4B9CEF005EA877 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1DC8680F0F53B2BC00D2DB08 /* american_express.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = american_express.png; sourceTree = "<group>"; };
 		1DC868100F53B2BC00D2DB08 /* credit_card_image_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credit_card_image_mask.png; sourceTree = "<group>"; };
@@ -286,8 +275,6 @@
 		1DFC98B00F52126600191E58 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		1DFC98E40F525DB900191E58 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		1DFC98E50F525DB900191E58 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
-		28216C950DB411BC00E5133A /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
-		28216C960DB411BC00E5133A /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* TransFS_Card_Terminal_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransFS_Card_Terminal_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -318,16 +305,8 @@
 				1D50580A0F63D88D008B2FCC /* History */,
 				1D5058110F63D88D008B2FCC /* Settings */,
 				1D50581C0F63D88D008B2FCC /* Utility */,
-				28216C950DB411BC00E5133A /* CardViewController.h */,
-				28216C960DB411BC00E5133A /* CardViewController.m */,
 				1D3623240D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */,
-				1D7943C10F4965C500CAA3CF /* ProcessViewController.h */,
-				1D7943C20F4965C500CAA3CF /* ProcessViewController.m */,
-				1DB5DE2E0F4B8DA6005EA877 /* StartViewController.h */,
-				1DB5DE2F0F4B8DA6005EA877 /* StartViewController.m */,
-				1D69BA480F507B4A00D0063C /* AddressViewController.h */,
-				1D69BA490F507B4A00D0063C /* AddressViewController.m */,
 				1DFC98E40F525DB900191E58 /* Transaction.h */,
 				1DFC98E50F525DB900191E58 /* Transaction.m */,
 			);
@@ -397,8 +376,10 @@
 				1D5058170F63D88D008B2FCC /* EmailSettingsViewController.m */,
 				1D5058180F63D88D008B2FCC /* GeneralSettingsViewController.h */,
 				1D5058190F63D88D008B2FCC /* GeneralSettingsViewController.m */,
-				1D50581A0F63D88D008B2FCC /* SettingsTabBarController.h */,
-				1D50581B0F63D88D008B2FCC /* SettingsTabBarController.m */,
+				1D50592D0F63F891008B2FCC /* SettingsIndexViewController.h */,
+				1D50592E0F63F891008B2FCC /* SettingsIndexViewController.m */,
+				1D50594E0F63FC8B008B2FCC /* SettingsTableCell.h */,
+				1D50594F0F63FC8B008B2FCC /* SettingsTableCell.m */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -426,7 +407,6 @@
 				1D5058440F63D8A0008B2FCC /* AboutSettings.xib */,
 				1D5058450F63D8A0008B2FCC /* AddressView.xib */,
 				1D5058460F63D8A0008B2FCC /* AuthNetSettings.xib */,
-				1D5058470F63D8A0008B2FCC /* CardView.xib */,
 				1D5058480F63D8A0008B2FCC /* ChargeAddressView.xib */,
 				1D5058490F63D8A0008B2FCC /* ChargeAmountView.xib */,
 				1D50584A0F63D8A0008B2FCC /* ChargeCardCvvView.xib */,
@@ -441,10 +421,9 @@
 				1D5058530F63D8A0008B2FCC /* HistoryView.xib */,
 				1D5058540F63D8A0008B2FCC /* MainWindow.xib */,
 				1D5058550F63D8A0008B2FCC /* ProcessView.xib */,
-				1D5058560F63D8A0008B2FCC /* Settings.xib */,
-				1D5058570F63D8A0008B2FCC /* SettingsTabController.xib */,
-				1D5058580F63D8A0008B2FCC /* StartView.xib */,
 				1D5058590F63D8A0008B2FCC /* TransactionTableViewCell.xib */,
+				1D50592A0F63F840008B2FCC /* SettingsIndexView.xib */,
+				1D50594B0F63FC58008B2FCC /* SettingsTableCells.xib */,
 			);
 			path = interfaces;
 			sourceTree = "<group>";
@@ -731,7 +710,6 @@
 				1D50585A0F63D8A0008B2FCC /* AboutSettings.xib in Resources */,
 				1D50585B0F63D8A0008B2FCC /* AddressView.xib in Resources */,
 				1D50585C0F63D8A0008B2FCC /* AuthNetSettings.xib in Resources */,
-				1D50585D0F63D8A0008B2FCC /* CardView.xib in Resources */,
 				1D50585E0F63D8A0008B2FCC /* ChargeAddressView.xib in Resources */,
 				1D50585F0F63D8A0008B2FCC /* ChargeAmountView.xib in Resources */,
 				1D5058600F63D8A0008B2FCC /* ChargeCardCvvView.xib in Resources */,
@@ -746,10 +724,9 @@
 				1D5058690F63D8A0008B2FCC /* HistoryView.xib in Resources */,
 				1D50586A0F63D8A0008B2FCC /* MainWindow.xib in Resources */,
 				1D50586B0F63D8A0008B2FCC /* ProcessView.xib in Resources */,
-				1D50586C0F63D8A0008B2FCC /* Settings.xib in Resources */,
-				1D50586D0F63D8A0008B2FCC /* SettingsTabController.xib in Resources */,
-				1D50586E0F63D8A0008B2FCC /* StartView.xib in Resources */,
 				1D50586F0F63D8A0008B2FCC /* TransactionTableViewCell.xib in Resources */,
+				1D50592B0F63F840008B2FCC /* SettingsIndexView.xib in Resources */,
+				1D50594C0F63FC58008B2FCC /* SettingsTableCells.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,7 +739,6 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m in Sources */,
-				28216C970DB411BC00E5133A /* CardViewController.m in Sources */,
 				1D7520340F47D6C400996F8E /* AvsResult.m in Sources */,
 				1D7520350F47D6C400996F8E /* Base.m in Sources */,
 				1D7520360F47D6C400996F8E /* Check.m in Sources */,
@@ -781,9 +757,6 @@
 				1D7520430F47D6C400996F8E /* GDataXMLNode.m in Sources */,
 				1D7520440F47D6C400996F8E /* RegexKitLite.m in Sources */,
 				1D7520450F47D6C400996F8E /* VarArgsHelper.m in Sources */,
-				1D7943C30F4965C500CAA3CF /* ProcessViewController.m in Sources */,
-				1DB5DE300F4B8DA6005EA877 /* StartViewController.m in Sources */,
-				1D69BA4A0F507B4A00D0063C /* AddressViewController.m in Sources */,
 				1DFC98E60F525DB900191E58 /* Transaction.m in Sources */,
 				1D91A75D0F604C4E00792E8B /* PaypalGateway.m in Sources */,
 				1D91A7600F604C6000792E8B /* GDataXMLNodeAdditions.m in Sources */,
@@ -806,12 +779,13 @@
 				1D5058370F63D88D008B2FCC /* AuthNetSettingsController.m in Sources */,
 				1D5058380F63D88D008B2FCC /* EmailSettingsViewController.m in Sources */,
 				1D5058390F63D88D008B2FCC /* GeneralSettingsViewController.m in Sources */,
-				1D50583A0F63D88D008B2FCC /* SettingsTabBarController.m in Sources */,
 				1D50583B0F63D88D008B2FCC /* CardExpirationPickerDelegate.m in Sources */,
 				1D50583C0F63D88D008B2FCC /* NumberKeypadView.m in Sources */,
 				1D50583D0F63D88D008B2FCC /* UIGradientScrollView.m in Sources */,
 				1D50583E0F63D88D008B2FCC /* UIGradientView.m in Sources */,
 				1D50583F0F63D88D008B2FCC /* UIScrollViewAdditions.m in Sources */,
+				1D50592F0F63F891008B2FCC /* SettingsIndexViewController.m in Sources */,
+				1D5059500F63FC8B008B2FCC /* SettingsTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

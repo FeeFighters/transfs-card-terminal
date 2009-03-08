@@ -40,7 +40,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 //	self.navigationItem.prompt = @"TransFS.com Card Terminal";
-	self.navigationItem.title = @"Set Charge Amount";	
+	self.navigationItem.title = @"Set Charge Amount";
+	numberField.text = number;
 }
 
 

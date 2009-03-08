@@ -11,6 +11,8 @@
 
 @implementation ChargeAddressViewController
 
+@synthesize address, city, zipcode;
+
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -37,7 +39,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	//	self.navigationItem.prompt = @"TransFS.com Card Terminal";
-	self.navigationItem.title = @"Customer Address";	
+	self.navigationItem.title = @"Customer Address";
+	[address becomeFirstResponder];
 }
 
 /*

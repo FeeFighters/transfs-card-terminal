@@ -7,7 +7,7 @@
 //
 
 #import "AuthNetSettingsController.h"
-
+#import "NSStringAdditions.h"
 
 @implementation AuthNetSettingsController
 
@@ -35,6 +35,25 @@
     [super viewDidLoad];
 }
 */
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+	[authNetLogin setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"login"]];
+	[authNetPassword setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"password"]];
+	[authNetTestMode setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"testMode"]];	
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+
+	if (![NSString is_blank:[authNetLogin text]])//
+		[[NSUserDefaults standardUserDefaults] setObject:[authNetLogin text] forKey:@"login"];
+	if (![NSString is_blank:[authNetPassword text]])
+		[[NSUserDefaults standardUserDefaults] setObject:[authNetPassword text] forKey:@"password"];
+	[[NSUserDefaults standardUserDefaults] setBool:[authNetTestMode isOn] forKey:@"testMode"];
+	[[NSUserDefaults standardUserDefaults] synchronize];	
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {

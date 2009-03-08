@@ -7,7 +7,7 @@
 //
 
 #import "EmailSettingsViewController.h"
-
+#import "NSStringAdditions.h"
 
 @implementation EmailSettingsViewController
 
@@ -35,6 +35,20 @@
     [super viewDidLoad];
 }
 */
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+	[emailReceiptEnabled setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"emailReceiptEnabled"]];			
+	[emailReceiptAddress setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"emailReceiptAddress"]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	[[NSUserDefaults standardUserDefaults] setBool:[emailReceiptEnabled isOn] forKey:@"emailReceiptEnabled"];	
+	if (![NSString is_blank:[emailReceiptAddress text]])
+		[[NSUserDefaults standardUserDefaults] setObject:[emailReceiptAddress text] forKey:@"emailReceiptAddress"];
+	[[NSUserDefaults standardUserDefaults] synchronize];	
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {

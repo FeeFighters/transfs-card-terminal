@@ -14,7 +14,7 @@
 #import "ChargeCardCvvViewController.h"
 #import "ChargeAddressViewController.h"
 
-@interface ChargeViewController : UIViewController <UITableViewDelegate> {
+@interface ChargeViewController : UIViewController <UITableViewDelegate, UIActionSheetDelegate> {
 	IBOutlet UITableView* tableView;
 
 	IBOutlet ChargeAmountViewController* chargeAmountViewController;
@@ -24,8 +24,15 @@
 	IBOutlet ChargeCardCvvViewController* chargeCardCvvViewController;	
 	IBOutlet ChargeAddressViewController* chargeAddressViewController;
 
+	IBOutlet UIButton* processButton;
+	IBOutlet UIActivityIndicatorView* spinner;
+	IBOutlet UIView* successView;
+	IBOutlet UIImageView* successViewImage;
+	IBOutlet UILabel* successViewLabel;	
+	IBOutlet UIView* failureView;
+	IBOutlet UILabel* responseLabel;
+	UIView *savedSubviewforSuccess;
 }
-
 
 @property(retain, nonatomic) IBOutlet ChargeAmountViewController* chargeAmountViewController;
 @property(retain, nonatomic) IBOutlet ChargeCardNameViewController* chargeCardNameViewController;
@@ -34,5 +41,9 @@
 @property(retain, nonatomic) IBOutlet ChargeCardCvvViewController* chargeCardCvvViewController;	
 @property(retain, nonatomic) IBOutlet ChargeAddressViewController* chargeAddressViewController;
 @property(retain, nonatomic) IBOutlet UITableView* tableView;
+
+- (IBAction) processButtonClick:(id)sender;
+- (IBAction) startOverButtonClick:(id)sender;
+- (IBAction) goBackButtonClick:(id)sender;
 
 @end

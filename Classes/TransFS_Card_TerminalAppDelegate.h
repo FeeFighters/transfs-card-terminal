@@ -8,23 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
+#import "ChargeViewController.h"
 
 @class Transaction, StartViewController, CardViewController, ProcessViewController, AddressViewController;
 @class AboutSettingsController, EmailSettingsViewController, GeneralSettingsViewController, AuthNetSettingsController;
 
 @interface TransFS_Card_TerminalAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
-	IBOutlet StartViewController* startViewController;
-	IBOutlet CardViewController* cardViewController;
-	IBOutlet AddressViewController* addressViewController;
-	IBOutlet ProcessViewController* processViewController;
+	IBOutlet ChargeViewController* chargeViewController;
 	IBOutlet UINavigationController* historyTableNavigationController;	
-	
-	IBOutlet UINavigationController* settingsNavigationController;		
-	IBOutlet UITabBarController* settingsTabController;
-	IBOutlet AboutSettingsController* aboutSettingsController;
-	IBOutlet GeneralSettingsViewController* generalSettingsController;
-	IBOutlet EmailSettingsViewController* emailSettingsController;
-	IBOutlet AuthNetSettingsController* authNetSettingsController;
 	
     UIWindow *window;
     UITabBarController *tabBarController;
@@ -34,19 +25,8 @@
     sqlite3 *database; // Opaque reference to the SQLite database.
 }
 
-@property (nonatomic, retain) IBOutlet StartViewController* startViewController;
-@property (nonatomic, retain) IBOutlet CardViewController* cardViewController;
-@property (nonatomic, retain) IBOutlet ProcessViewController* processViewController;
-@property (nonatomic, retain) IBOutlet AddressViewController* addressViewController;
+@property (nonatomic, retain) IBOutlet ChargeViewController* chargeViewController;
 @property (nonatomic, retain) IBOutlet UINavigationController* historyTableNavigationController;
-
-@property (nonatomic, retain) IBOutlet UINavigationController* settingsNavigationController;		
-@property (nonatomic, retain) IBOutlet UITabBarController* settingsTabController;
-@property (nonatomic, retain) IBOutlet AboutSettingsController* aboutSettingsController;
-@property (nonatomic, retain) IBOutlet GeneralSettingsViewController* generalSettingsController;
-@property (nonatomic, retain) IBOutlet EmailSettingsViewController* emailSettingsController;
-@property (nonatomic, retain) IBOutlet AuthNetSettingsController* authNetSettingsController;
-
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
@@ -60,12 +40,5 @@
 - (void)addTransaction:(Transaction *)transaction;
 - (void)removeTransaction:(Transaction *)transaction;
 
-// Resets the fields to start a fresh transaction
-- (void) resetTransactionFields;
-
-// Move to next tab bar item
-- (void) goToNextTab;
-// Toggle Address View Visibility
-- (void) setAddressTabVisible:(bool)visible;
 
 @end

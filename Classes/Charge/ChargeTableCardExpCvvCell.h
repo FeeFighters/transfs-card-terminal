@@ -14,7 +14,6 @@
 	IBOutlet UILabel* cvv;
 	IBOutlet UILabel* expDisabledLabel;
 	IBOutlet UILabel* cvvDisabledLabel;
-	IBOutlet UIImageView* cardImage;
 	IBOutlet ChargeViewController* chargeView;
 }
 
@@ -22,7 +21,6 @@
 @property(assign, nonatomic) IBOutlet UILabel* cvv;
 @property(assign, nonatomic) IBOutlet UILabel* expDisabledLabel;
 @property(assign, nonatomic) IBOutlet UILabel* cvvDisabledLabel;
-@property(assign, nonatomic) IBOutlet UIImageView* cardImage;
 @property(assign, nonatomic) IBOutlet ChargeViewController* chargeView;
 
 - (IBAction) expDateDetailPressed:(id)sender;

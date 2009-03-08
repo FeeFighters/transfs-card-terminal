@@ -11,11 +11,9 @@
 
 @interface GeneralSettingsViewController : UIViewController <UIActionSheetDelegate> {
 	IBOutlet UISwitch* avsEnabled;
-	IBOutlet UISegmentedControl* gatewaySelector;
 }
 
 @property(retain, nonatomic) IBOutlet UISwitch* avsEnabled;
-@property(retain, nonatomic) IBOutlet UISegmentedControl* gatewaySelector;
 
 - (IBAction) settingsClearHistoryPressed:(id)sender;
 

@@ -11,10 +11,12 @@
 
 @interface ChargeTableCardNumberCell : UITableViewCell {
 	IBOutlet UILabel* number;
+	IBOutlet UIImageView* cardImage;
 	IBOutlet UILabel* disabledLabel;
 }
 
 @property(nonatomic, retain) IBOutlet UILabel* number;
 @property(nonatomic, retain) IBOutlet UILabel* disabledLabel;
+@property(assign, nonatomic) IBOutlet UIImageView* cardImage;
 
 @end

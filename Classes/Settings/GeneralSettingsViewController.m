@@ -11,7 +11,7 @@
 
 @implementation GeneralSettingsViewController
 
-@synthesize avsEnabled, gatewaySelector;
+@synthesize avsEnabled;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -36,6 +36,16 @@
 }
 */
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+	[avsEnabled setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	[[NSUserDefaults standardUserDefaults] setBool:[avsEnabled isOn] forKey:@"avsEnabled"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 - (IBAction) settingsClearHistoryPressed:(id)sender
 {

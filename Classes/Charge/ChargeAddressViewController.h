@@ -10,7 +10,13 @@
 
 
 @interface ChargeAddressViewController : UIViewController {
-
+	IBOutlet UITextField* address;
+	IBOutlet UITextField* city;
+	IBOutlet UITextField* zipcode;	
 }
+
+@property(retain, nonatomic) IBOutlet UITextField* address;
+@property(retain, nonatomic) IBOutlet UITextField* city;
+@property(retain, nonatomic) IBOutlet UITextField* zipcode;	
 
 @end
