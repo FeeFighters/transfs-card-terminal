@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="106"/>
+			<integer value="155"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -49,68 +49,68 @@
 			<object class="IBUITabBarController" id="1034742383">
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUINavigationController" key="IBUISelectedViewController" id="793733198">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="421011478">
-						<string key="IBUITitle">Charge!</string>
+				<object class="IBUINavigationController" key="IBUISelectedViewController" id="487740164">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="423566870">
+						<string key="IBUITitle">History</string>
 						<reference key="IBUITabBar"/>
 					</object>
 					<reference key="IBUIParentViewController" ref="1034742383"/>
-					<object class="IBUINavigationBar" key="IBUINavigationBar" id="362811196">
+					<object class="IBUINavigationBar" key="IBUINavigationBar" id="844056465">
 						<nil key="NSNextResponder"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrameSize">{320, 44}</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+						<object class="NSColor" key="IBUITintColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC44Nzg0MzEzOCAwLjU1OTgyNTk2IDAuMjMwMjM0MDcAA</bytes>
+						</object>
 					</object>
-					<object class="NSArray" key="IBUIViewControllers">
+					<object class="NSMutableArray" key="IBUIViewControllers">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="IBUIViewController" id="444985039">
-							<object class="IBUINavigationItem" key="IBUINavigationItem" id="914439327">
+						<object class="IBUIViewController" id="776217030">
+							<object class="IBUINavigationItem" key="IBUINavigationItem" id="247125890">
 								<reference key="IBUINavigationBar"/>
-								<string key="IBUITitle">Process Transaction</string>
+								<string key="IBUITitle">Transaction History</string>
+								<object class="IBUIBarButtonItem" key="IBUIBackBarButtonItem" id="318858569">
+									<string key="IBUITitle">Back</string>
+									<int key="IBUIStyle">1</int>
+								</object>
 							</object>
-							<reference key="IBUIParentViewController" ref="793733198"/>
-							<string key="IBUINibName">ChargeView</string>
+							<reference key="IBUIParentViewController" ref="487740164"/>
+							<string key="IBUINibName">HistoryView</string>
 						</object>
 					</object>
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<reference ref="793733198"/>
-					<object class="IBUINavigationController" id="487740164">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="423566870">
-							<string key="IBUITitle">History</string>
+					<object class="IBUINavigationController" id="793733198">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="421011478">
+							<string key="IBUITitle">Charge!</string>
 							<reference key="IBUITabBar"/>
 						</object>
 						<reference key="IBUIParentViewController" ref="1034742383"/>
-						<object class="IBUINavigationBar" key="IBUINavigationBar" id="844056465">
+						<object class="IBUINavigationBar" key="IBUINavigationBar" id="362811196">
 							<nil key="NSNextResponder"/>
 							<int key="NSvFlags">256</int>
 							<string key="NSFrameSize">{320, 44}</string>
 							<bool key="IBUIOpaque">NO</bool>
 							<bool key="IBUIClipsSubviews">YES</bool>
 							<bool key="IBUIMultipleTouchEnabled">YES</bool>
-							<object class="NSColor" key="IBUITintColor">
-								<int key="NSColorSpace">2</int>
-								<bytes key="NSRGB">MC4yNzUwMDAwMSAwLjUgMC4yNQA</bytes>
-							</object>
 						</object>
 						<object class="NSMutableArray" key="IBUIViewControllers">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIViewController" id="776217030">
-								<object class="IBUINavigationItem" key="IBUINavigationItem" id="247125890">
-									<string key="IBUITitle">Transaction History</string>
-									<object class="IBUIBarButtonItem" key="IBUIBackBarButtonItem" id="318858569">
-										<string key="IBUITitle">Back</string>
-										<int key="IBUIStyle">1</int>
-									</object>
+							<object class="IBUIViewController" id="444985039">
+								<object class="IBUINavigationItem" key="IBUINavigationItem" id="914439327">
+									<string key="IBUITitle">Process Transaction</string>
 								</object>
-								<reference key="IBUIParentViewController" ref="487740164"/>
-								<string key="IBUINibName">HistoryView</string>
+								<reference key="IBUIParentViewController" ref="793733198"/>
+								<string key="IBUINibName">ChargeView</string>
 							</object>
 						</object>
 					</object>
+					<reference ref="487740164"/>
 				</object>
 				<object class="IBUITabBar" key="IBUITabBar" id="795333663">
 					<nil key="NSNextResponder"/>
@@ -383,7 +383,7 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/AboutSettingsController.h</string>
+						<string key="minorKey">Classes/Settings/AboutSettingsController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -422,7 +422,7 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/AuthNetSettingsController.h</string>
+						<string key="minorKey">Classes/Settings/AuthNetSettingsController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -443,7 +443,7 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/CardExpirationPickerDelegate.h</string>
+						<string key="minorKey">Classes/Utility/CardExpirationPickerDelegate.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -499,11 +499,112 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">ChargeAmountViewController</string>
+					<string key="className">ChargeAddressViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/ChargeAmountViewController.h</string>
+						<string key="minorKey">Classes/Charge/ChargeAddressViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">ChargeAmountViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>keypadBackspacePressed:</string>
+							<string>keypadPeriodPressed:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIButton</string>
+							<string>UIButton</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">numberField</string>
+						<string key="NS.object.0">UITextField</string>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/Charge/ChargeAmountViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">ChargeCardCvvViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">keypadBackspacePressed:</string>
+						<string key="NS.object.0">UIButton</string>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">cvvLabel</string>
+						<string key="NS.object.0">UILabel</string>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/Charge/ChargeCardCvvViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">ChargeCardExpViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>expDatePickerDelegate</string>
+							<string>monthPicker</string>
+							<string>yearPicker</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>CardExpirationPickerDelegate</string>
+							<string>UIPickerView</string>
+							<string>UIPickerView</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/Charge/ChargeCardExpViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">ChargeCardNameViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>firstName</string>
+							<string>lastName</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UITextField</string>
+							<string>UITextField</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/Charge/ChargeCardNameViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">ChargeCardNumberViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">keypadBackspacePressed:</string>
+						<string key="NS.object.0">UIButton</string>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">numberLabel</string>
+						<string key="NS.object.0">UILabel</string>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/Charge/ChargeCardNumberViewController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -513,18 +614,28 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>chargeAddressViewController</string>
 							<string>chargeAmountViewController</string>
+							<string>chargeCardCvvViewController</string>
+							<string>chargeCardExpViewController</string>
+							<string>chargeCardNameViewController</string>
+							<string>chargeCardNumberViewController</string>
 							<string>tableView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>ChargeAddressViewController</string>
 							<string>ChargeAmountViewController</string>
+							<string>ChargeCardCvvViewController</string>
+							<string>ChargeCardExpViewController</string>
+							<string>ChargeCardNameViewController</string>
+							<string>ChargeCardNumberViewController</string>
 							<string>UITableView</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/ChargeViewController.h</string>
+						<string key="minorKey">Classes/Charge/ChargeViewController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -545,7 +656,7 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/EmailSettingsViewController.h</string>
+						<string key="minorKey">Classes/Settings/EmailSettingsViewController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -570,7 +681,7 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/GeneralSettingsViewController.h</string>
+						<string key="minorKey">Classes/Settings/GeneralSettingsViewController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -607,7 +718,7 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/HistoryDetailViewController.h</string>
+						<string key="minorKey">Classes/History/HistoryDetailViewController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -630,7 +741,7 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/HistoryTableViewController.h</string>
+						<string key="minorKey">Classes/History/HistoryTableViewController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -768,13 +879,13 @@
 					<string key="className">UIScrollView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/UIScrollViewAdditions.h</string>
+						<string key="minorKey">Classes/Utility/UIScrollViewAdditions.h</string>
 					</object>
 				</object>
 			</object>
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
-		<string key="IBDocument.LastKnownRelativeProjectPath">TransFS Card Terminal.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../TransFS Card Terminal.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 	</data>
 </archive>

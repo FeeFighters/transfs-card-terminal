@@ -48,6 +48,7 @@
 	chargeAddressViewController = [[ChargeAddressViewController alloc] initWithNibName:@"ChargeAddressView" bundle:nil];
 	
 	tableView.backgroundColor = self.view.backgroundColor;
+	
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -99,7 +100,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-	return @"Create a New Transaction";
+	return nil;
 }
 
 
