@@ -12,7 +12,8 @@
 
 @implementation SettingsIndexViewController
 
-@synthesize aboutSettingsController, generalSettingsController, emailSettingsController, authNetSettingsController;
+@synthesize aboutSettingsController, generalSettingsController, emailSettingsController;
+@synthesize authNetSettingsController, paypalSettingsController;
 @synthesize selectedGatewayIndex;
 
 /*
@@ -30,6 +31,7 @@
 	generalSettingsController = [[GeneralSettingsViewController alloc] initWithNibName:@"GeneralSettings" bundle:nil];
 	aboutSettingsController = [[AboutSettingsController alloc] initWithNibName:@"AboutSettings" bundle:nil];
 	authNetSettingsController = [[AuthNetSettingsController alloc] initWithNibName:@"AuthNetSettings" bundle:nil];	
+	paypalSettingsController = [[PaypalSettingsController alloc] initWithNibName:@"PaypalSettings" bundle:nil];		
 }
 
 
@@ -185,7 +187,7 @@ typedef enum gateways {
 		if (indexPath.row==authNet) {
 			[self.navigationController pushViewController:authNetSettingsController animated:true];
 		} else if (indexPath.row==paypal) {
-			//[self.navigationController pushViewController:paypalSettingsController animated:true];
+			[self.navigationController pushViewController:paypalSettingsController animated:true];
 		}
 	}
 	else if (indexPath.section==generalSection) {

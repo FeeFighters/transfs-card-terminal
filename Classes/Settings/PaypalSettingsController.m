@@ -1,15 +1,17 @@
 //
-//  AboutSettingsController.m
+//  PaypalSettingsController.m
 //  TransFS Card Terminal
 //
-//  Created by Joshua Krall on 2/28/09.
+//  Created by Joshua Krall on 3/9/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "AboutSettingsController.h"
+#import "PaypalSettingsController.h"
 
 
-@implementation AboutSettingsController
+@implementation PaypalSettingsController
+
+@synthesize login, password, signature, testMode;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -27,21 +29,40 @@
 }
 */
 
+/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+*/
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-	[aboutWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://iphone.localhost.com:3000/business/cardterminal"]]];	
+	
+	[login setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"paypalLogin"]];
+	[password setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"paypalPassword"]];
+	[signature setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"paypalSignature"]];	
+	[testMode setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"paypalTestMode"]];	
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
-	// [[NSUserDefaults standardUserDefaults] synchronize];		
+	
+	if (![NSString is_blank:[login text]])
+		[[NSUserDefaults standardUserDefaults] setObject:[login text] forKey:@"paypalLogin"];
+	if (![NSString is_blank:[password text]])
+		[[NSUserDefaults standardUserDefaults] setObject:[password text] forKey:@"paypalPassword"];
+	if (![NSString is_blank:[signature text]])
+		[[NSUserDefaults standardUserDefaults] setObject:[signature text] forKey:@"paypalSignature"];
+	[[NSUserDefaults standardUserDefaults] setBool:[testMode isOn] forKey:@"paypalTestMode"];
+	[[NSUserDefaults standardUserDefaults] synchronize];	
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	[textField resignFirstResponder];
+	return YES;
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.

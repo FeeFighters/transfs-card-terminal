@@ -57,6 +57,8 @@
 		1D50592F0F63F891008B2FCC /* SettingsIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50592E0F63F891008B2FCC /* SettingsIndexViewController.m */; };
 		1D50594C0F63FC58008B2FCC /* SettingsTableCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D50594B0F63FC58008B2FCC /* SettingsTableCells.xib */; };
 		1D5059500F63FC8B008B2FCC /* SettingsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50594F0F63FC8B008B2FCC /* SettingsTableCell.m */; };
+		1D5220130F65415600F11E37 /* PaypalSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5220120F65415600F11E37 /* PaypalSettingsController.m */; };
+		1D5220150F6542C400F11E37 /* PaypalSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5220140F6542C400F11E37 /* PaypalSettings.xib */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1D7520340F47D6C400996F8E /* AvsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520000F47D6C400996F8E /* AvsResult.m */; };
@@ -194,6 +196,9 @@
 		1D50594B0F63FC58008B2FCC /* SettingsTableCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableCells.xib; sourceTree = "<group>"; };
 		1D50594E0F63FC8B008B2FCC /* SettingsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableCell.h; sourceTree = "<group>"; };
 		1D50594F0F63FC8B008B2FCC /* SettingsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableCell.m; sourceTree = "<group>"; };
+		1D5220110F65415600F11E37 /* PaypalSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaypalSettingsController.h; sourceTree = "<group>"; };
+		1D5220120F65415600F11E37 /* PaypalSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaypalSettingsController.m; sourceTree = "<group>"; };
+		1D5220140F6542C400F11E37 /* PaypalSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaypalSettings.xib; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TransFS Card Terminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D751FFF0F47D6C400996F8E /* AvsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvsResult.h; sourceTree = "<group>"; };
 		1D7520000F47D6C400996F8E /* AvsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvsResult.m; sourceTree = "<group>"; };
@@ -380,6 +385,8 @@
 				1D50592E0F63F891008B2FCC /* SettingsIndexViewController.m */,
 				1D50594E0F63FC8B008B2FCC /* SettingsTableCell.h */,
 				1D50594F0F63FC8B008B2FCC /* SettingsTableCell.m */,
+				1D5220110F65415600F11E37 /* PaypalSettingsController.h */,
+				1D5220120F65415600F11E37 /* PaypalSettingsController.m */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -404,6 +411,7 @@
 		1D5058430F63D8A0008B2FCC /* interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				1D5220140F6542C400F11E37 /* PaypalSettings.xib */,
 				1D5058440F63D8A0008B2FCC /* AboutSettings.xib */,
 				1D5058450F63D8A0008B2FCC /* AddressView.xib */,
 				1D5058460F63D8A0008B2FCC /* AuthNetSettings.xib */,
@@ -727,6 +735,7 @@
 				1D50586F0F63D8A0008B2FCC /* TransactionTableViewCell.xib in Resources */,
 				1D50592B0F63F840008B2FCC /* SettingsIndexView.xib in Resources */,
 				1D50594C0F63FC58008B2FCC /* SettingsTableCells.xib in Resources */,
+				1D5220150F6542C400F11E37 /* PaypalSettings.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +795,7 @@
 				1D50583F0F63D88D008B2FCC /* UIScrollViewAdditions.m in Sources */,
 				1D50592F0F63F891008B2FCC /* SettingsIndexViewController.m in Sources */,
 				1D5059500F63FC8B008B2FCC /* SettingsTableCell.m in Sources */,
+				1D5220130F65415600F11E37 /* PaypalSettingsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
