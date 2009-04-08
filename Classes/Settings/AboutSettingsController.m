@@ -35,7 +35,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	[spinner startAnimating];
-	[aboutWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://iphone.localhost.com:3000/transfs-card-terminal/about"]]];	
+	[aboutWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://jkrall.github.com/transfs-card-terminal"]]];	
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
