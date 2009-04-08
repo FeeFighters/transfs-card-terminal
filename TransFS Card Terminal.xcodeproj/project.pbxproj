@@ -10,7 +10,6 @@
 		1D2BA5180F62362000DB0F6E /* keypad_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA5160F62362000DB0F6E /* keypad_button_normal.png */; };
 		1D2BA5190F62362000DB0F6E /* keypad_button_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA5170F62362000DB0F6E /* keypad_button_highlighted.png */; };
 		1D3623260D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */; };
-		1D46C4F70F5502AC0099533D /* transparent-logo-small-nobeta.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D46C4F60F5502AC0099533D /* transparent-logo-small-nobeta.png */; };
 		1D5058270F63D88D008B2FCC /* ChargeAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057F30F63D88D008B2FCC /* ChargeAddressViewController.m */; };
 		1D5058280F63D88D008B2FCC /* ChargeAmountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057F50F63D88D008B2FCC /* ChargeAmountViewController.m */; };
 		1D5058290F63D88D008B2FCC /* ChargeCardCvvViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057F70F63D88D008B2FCC /* ChargeCardCvvViewController.m */; };
@@ -123,7 +122,6 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransFS_Card_TerminalAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransFS_Card_TerminalAppDelegate.m; sourceTree = "<group>"; };
-		1D46C4F60F5502AC0099533D /* transparent-logo-small-nobeta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transparent-logo-small-nobeta.png"; sourceTree = "<group>"; };
 		1D5057F20F63D88D008B2FCC /* ChargeAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeAddressViewController.h; sourceTree = "<group>"; };
 		1D5057F30F63D88D008B2FCC /* ChargeAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeAddressViewController.m; sourceTree = "<group>"; };
 		1D5057F40F63D88D008B2FCC /* ChargeAmountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeAmountViewController.h; sourceTree = "<group>"; };
@@ -569,7 +567,6 @@
 			children = (
 				1D2BA5160F62362000DB0F6E /* keypad_button_normal.png */,
 				1D2BA5170F62362000DB0F6E /* keypad_button_highlighted.png */,
-				1D46C4F60F5502AC0099533D /* transparent-logo-small-nobeta.png */,
 				1DC8681B0F53B2FF00D2DB08 /* money */,
 				1DC8680E0F53B2BC00D2DB08 /* cards */,
 			);
@@ -712,7 +709,6 @@
 				1DC868290F53B2FF00D2DB08 /* money_6.png in Resources */,
 				1DC8682A0F53B2FF00D2DB08 /* money_7.png in Resources */,
 				1DC8697A0F53EF8200D2DB08 /* transactionHistory.sql in Resources */,
-				1D46C4F70F5502AC0099533D /* transparent-logo-small-nobeta.png in Resources */,
 				1D2BA5180F62362000DB0F6E /* keypad_button_normal.png in Resources */,
 				1D2BA5190F62362000DB0F6E /* keypad_button_highlighted.png in Resources */,
 				1D50585A0F63D8A0008B2FCC /* AboutSettings.xib in Resources */,

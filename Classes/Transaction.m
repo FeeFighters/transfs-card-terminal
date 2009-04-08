@@ -142,11 +142,14 @@ static sqlite3_stmt *dehydrate_statement = nil;
 																		  nil]];
 		
 		NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
-		//		[options setObject:@"1240 W Monroe Ave. #1" forKey:@"address1"];
-		//		[options setObject:@"60607" forKey:@"zip"];
-		//		[options setObject:@"Chicago" forKey:@"city"];
-		//		[options setObject:@"IL" forKey:@"state"];		
-		//		
+		
+		bool avsEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"];
+		if (avsEnabled) {
+			[options setObject:[chargeAddressViewController address] forKey:@"address1"];
+			[options setObject:[chargeAddressViewController zipcode] forKey:@"zip"];
+			[options setObject:[chargeAddressViewController city] forKey:@"city"];
+			// [options setObject:[chargeAddressViewController state] forKey:@"state"];		
+		}
 		
 		// Store value that we want to keep around for later
 		NSString* dollarTxt = chargeAmountViewController.number;
