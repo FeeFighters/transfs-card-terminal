@@ -79,7 +79,7 @@ typedef enum sections {
 	aboutSection = 0,
 	generalSection,
 	gatewaySection,
-	emailSection,
+//	emailSection,
 	sectionCount
 } tableSections;
 
@@ -101,8 +101,8 @@ typedef enum gateways {
 		return 2;
 	else if (section==generalSection)
 		return 1;
-	else if (section==emailSection)
-		return 1;
+//	else if (section==emailSection)
+//		return 1;
 	return 1;
 }
 
@@ -114,8 +114,8 @@ typedef enum gateways {
 		return @"Processing Gateways:";
 	else if (section==generalSection)
 		return nil;
-	else if (section==emailSection)
-		return nil;
+//	else if (section==emailSection)
+//		return nil;
 	return nil;	
 }
 
@@ -131,9 +131,9 @@ typedef enum gateways {
 	else if (indexPath.section==generalSection) {
 		return UITableViewCellAccessoryDetailDisclosureButton;
 	}
-	else if (indexPath.section==emailSection) {
-		return UITableViewCellAccessoryDetailDisclosureButton;
-	}
+//	else if (indexPath.section==emailSection) {
+//		return UITableViewCellAccessoryDetailDisclosureButton;
+//	}
 	
 	return UITableViewCellAccessoryNone;
 }
@@ -164,10 +164,10 @@ typedef enum gateways {
 	{
 		cell.label.text = @"General Settings";
 	}
-	else if (indexPath.section==emailSection)
-	{
-		cell.label.text = @"Email Receipt Settings";
-	}
+//	else if (indexPath.section==emailSection)
+//	{
+//		cell.label.text = @"Email Receipt Settings";
+//	}
 	
     return cell;
 }
@@ -193,9 +193,9 @@ typedef enum gateways {
 	else if (indexPath.section==generalSection) {
 		[self.navigationController pushViewController:generalSettingsController animated:true];		
 	}
-	else if (indexPath.section==emailSection) {
-		[self.navigationController pushViewController:emailSettingsController animated:true];		
-	}
+//	else if (indexPath.section==emailSection) {
+//		[self.navigationController pushViewController:emailSettingsController animated:true];		
+//	}
 	else if (indexPath.section==aboutSection) {
 		[self.navigationController pushViewController:aboutSettingsController animated:true];		
 	}
