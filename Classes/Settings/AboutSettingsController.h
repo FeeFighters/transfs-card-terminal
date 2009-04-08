@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 
-@interface AboutSettingsController : UIViewController {
+@interface AboutSettingsController : UIViewController <UIWebViewDelegate> {
 	IBOutlet UIWebView* aboutWebView;
+	IBOutlet UIActivityIndicatorView* spinner;
 }
+
+- (IBAction) openInSafari:(id)sender;
 
 @end

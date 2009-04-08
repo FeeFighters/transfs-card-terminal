@@ -34,7 +34,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-	[aboutWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://iphone.localhost.com:3000/business/cardterminal"]]];	
+	[spinner startAnimating];
+	[aboutWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://iphone.localhost.com:3000/transfs-card-terminal/about"]]];	
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -42,6 +43,18 @@
 	// [[NSUserDefaults standardUserDefaults] synchronize];		
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+	[spinner stopAnimating];	
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+	[spinner stopAnimating];
+	[[[UIAlertView alloc] initWithTitle:@"About TransFS Card Terminal" message:@"Couldn't open TransFS.com web address." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+}
+	
+- (void) openInSafari:(id)sender {
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://transfs.com"]];
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
