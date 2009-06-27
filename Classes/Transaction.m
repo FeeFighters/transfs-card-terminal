@@ -145,9 +145,9 @@ static sqlite3_stmt *dehydrate_statement = nil;
 		
 		bool avsEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"];
 		if (avsEnabled) {
-			[options setObject:[chargeAddressViewController address] forKey:@"address1"];
-			[options setObject:[chargeAddressViewController zipcode] forKey:@"zip"];
-			[options setObject:[chargeAddressViewController city] forKey:@"city"];
+			[options setObject:nilToEmptyStr(chargeAddressViewController.address.text) forKey:@"address1"];
+			[options setObject:nilToEmptyStr(chargeAddressViewController.zipcode.text) forKey:@"zip"];
+			[options setObject:nilToEmptyStr(chargeAddressViewController.city.text) forKey:@"city"];
 			// [options setObject:[chargeAddressViewController state] forKey:@"state"];		
 		}
 		
