@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.03">
 	<data>
 		<int key="IBDocument.SystemTarget">544</int>
-		<string key="IBDocument.SystemVersion">9G55</string>
+		<string key="IBDocument.SystemVersion">9J61</string>
 		<string key="IBDocument.InterfaceBuilderVersion">677</string>
-		<string key="IBDocument.AppKitVersion">949.43</string>
+		<string key="IBDocument.AppKitVersion">949.46</string>
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="182"/>
+			<integer value="187"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -49,43 +49,75 @@
 			<object class="IBUITabBarController" id="1034742383">
 				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUINavigationController" key="IBUISelectedViewController" id="793733198">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="421011478">
-						<string key="IBUITitle">Charge!</string>
+				<object class="IBUINavigationController" key="IBUISelectedViewController" id="665134379">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="316066353">
+						<string type="base64-UTF8" key="IBUITitle">QWJvdXQgJiBTZXR0aW5ncw</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">setting-tab-icon.png</string>
+						</object>
 						<reference key="IBUITabBar"/>
 					</object>
 					<reference key="IBUIParentViewController" ref="1034742383"/>
-					<object class="IBUINavigationBar" key="IBUINavigationBar" id="362811196">
+					<object class="IBUINavigationBar" key="IBUINavigationBar" id="374018178">
 						<nil key="NSNextResponder"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrameSize">{320, 44}</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<object class="NSColor" key="IBUITintColor">
-							<int key="NSColorSpace">2</int>
-							<bytes key="NSRGB">MCAwLjMwMDQ4MDYgMC41AA</bytes>
-						</object>
 					</object>
 					<object class="NSMutableArray" key="IBUIViewControllers">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="IBUIViewController" id="444985039">
-							<object class="IBUINavigationItem" key="IBUINavigationItem" id="914439327">
+						<object class="IBUIViewController" id="547070145">
+							<object class="IBUINavigationItem" key="IBUINavigationItem" id="648398452">
 								<reference key="IBUINavigationBar"/>
-								<string key="IBUITitle">Process Transaction</string>
+								<string key="IBUITitle">Item</string>
 							</object>
-							<reference key="IBUIParentViewController" ref="793733198"/>
-							<string key="IBUINibName">ChargeView</string>
+							<reference key="IBUIParentViewController" ref="665134379"/>
+							<string key="IBUINibName">SettingsIndexView</string>
 						</object>
 					</object>
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<reference ref="793733198"/>
+					<object class="IBUINavigationController" id="793733198">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="421011478">
+							<string key="IBUITitle">Charge!</string>
+							<object class="NSCustomResource" key="IBUIImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">credit_card_image_mask.png</string>
+							</object>
+							<reference key="IBUITabBar"/>
+						</object>
+						<reference key="IBUIParentViewController" ref="1034742383"/>
+						<object class="IBUINavigationBar" key="IBUINavigationBar" id="362811196">
+							<nil key="NSNextResponder"/>
+							<int key="NSvFlags">256</int>
+							<string key="NSFrameSize">{320, 44}</string>
+							<bool key="IBUIOpaque">NO</bool>
+							<bool key="IBUIClipsSubviews">YES</bool>
+							<bool key="IBUIMultipleTouchEnabled">YES</bool>
+							<object class="NSColor" key="IBUITintColor">
+								<int key="NSColorSpace">2</int>
+								<bytes key="NSRGB">MCAwLjMwMDQ4MDYgMC41AA</bytes>
+							</object>
+						</object>
+						<object class="NSMutableArray" key="IBUIViewControllers">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBUIViewController" id="444985039">
+								<object class="IBUINavigationItem" key="IBUINavigationItem" id="914439327">
+									<string key="IBUITitle">Process Transaction</string>
+								</object>
+								<reference key="IBUIParentViewController" ref="793733198"/>
+								<string key="IBUINibName">ChargeView</string>
+							</object>
+						</object>
+					</object>
 					<object class="IBUINavigationController" id="487740164">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="423566870">
-							<string key="IBUITitle">History</string>
 							<reference key="IBUITabBar"/>
+							<int key="IBUISystemItemIdentifier">6</int>
 						</object>
 						<reference key="IBUIParentViewController" ref="1034742383"/>
 						<object class="IBUINavigationBar" key="IBUINavigationBar" id="844056465">
@@ -115,31 +147,7 @@
 							</object>
 						</object>
 					</object>
-					<object class="IBUINavigationController" id="665134379">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="316066353">
-							<string type="base64-UTF8" key="IBUITitle">QWJvdXQgJiBTZXR0aW5ncw</string>
-							<reference key="IBUITabBar"/>
-						</object>
-						<reference key="IBUIParentViewController" ref="1034742383"/>
-						<object class="IBUINavigationBar" key="IBUINavigationBar" id="374018178">
-							<nil key="NSNextResponder"/>
-							<int key="NSvFlags">256</int>
-							<string key="NSFrameSize">{320, 44}</string>
-							<bool key="IBUIOpaque">NO</bool>
-							<bool key="IBUIClipsSubviews">YES</bool>
-							<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						</object>
-						<object class="NSMutableArray" key="IBUIViewControllers">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIViewController" id="547070145">
-								<object class="IBUINavigationItem" key="IBUINavigationItem" id="648398452">
-									<string key="IBUITitle">Item</string>
-								</object>
-								<reference key="IBUIParentViewController" ref="665134379"/>
-								<string key="IBUINibName">SettingsIndexView</string>
-							</object>
-						</object>
-					</object>
+					<reference ref="665134379"/>
 				</object>
 				<object class="IBUITabBar" key="IBUITabBar" id="795333663">
 					<nil key="NSNextResponder"/>
@@ -452,9 +460,22 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">AboutSettingsController</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">openInSafari:</string>
+						<string key="NS.object.0">id</string>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">aboutWebView</string>
-						<string key="NS.object.0">UIWebView</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>aboutWebView</string>
+							<string>spinner</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIWebView</string>
+							<string>UIActivityIndicatorView</string>
+						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
@@ -636,11 +657,13 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>goBackButtonClick:</string>
 							<string>processButtonClick:</string>
 							<string>startOverButtonClick:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -785,6 +808,31 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
+					<string key="className">PaypalSettingsController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>login</string>
+							<string>password</string>
+							<string>signature</string>
+							<string>testMode</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UITextField</string>
+							<string>UITextField</string>
+							<string>UITextField</string>
+							<string>UISwitch</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/Settings/PaypalSettingsController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">SettingsIndexViewController</string>
 					<string key="superclassName">UITableViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
@@ -795,6 +843,7 @@
 							<string>authNetSettingsController</string>
 							<string>emailSettingsController</string>
 							<string>generalSettingsController</string>
+							<string>paypalSettingsController</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -802,6 +851,7 @@
 							<string>AuthNetSettingsController</string>
 							<string>EmailSettingsViewController</string>
 							<string>GeneralSettingsViewController</string>
+							<string>PaypalSettingsController</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -848,5 +898,6 @@
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.LastKnownRelativeProjectPath">../TransFS Card Terminal.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<string key="IBCocoaTouchPluginVersion">3.0</string>
 	</data>
 </archive>

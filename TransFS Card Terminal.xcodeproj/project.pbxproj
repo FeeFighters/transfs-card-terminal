@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D129AB80FF65D4A00509A6C /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D129AB60FF65D4A00509A6C /* icon-small.png */; };
+		1D129AB90FF65D4A00509A6C /* icon-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D129AB70FF65D4A00509A6C /* icon-large.png */; };
+		1D129AEB0FF6626C00509A6C /* setting-tab-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D129AEA0FF6626C00509A6C /* setting-tab-icon.png */; };
 		1D2BA5180F62362000DB0F6E /* keypad_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA5160F62362000DB0F6E /* keypad_button_normal.png */; };
 		1D2BA5190F62362000DB0F6E /* keypad_button_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA5170F62362000DB0F6E /* keypad_button_highlighted.png */; };
 		1D3623260D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */; };
@@ -117,6 +120,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D129AB60FF65D4A00509A6C /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
+		1D129AB70FF65D4A00509A6C /* icon-large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-large.png"; sourceTree = "<group>"; };
+		1D129AEA0FF6626C00509A6C /* setting-tab-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-tab-icon.png"; sourceTree = "<group>"; };
 		1D2BA5160F62362000DB0F6E /* keypad_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keypad_button_normal.png; sourceTree = "<group>"; };
 		1D2BA5170F62362000DB0F6E /* keypad_button_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keypad_button_highlighted.png; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -565,6 +571,9 @@
 		1DC8680D0F53B2BC00D2DB08 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1D129AEA0FF6626C00509A6C /* setting-tab-icon.png */,
+				1D129AB60FF65D4A00509A6C /* icon-small.png */,
+				1D129AB70FF65D4A00509A6C /* icon-large.png */,
 				1D2BA5160F62362000DB0F6E /* keypad_button_normal.png */,
 				1D2BA5170F62362000DB0F6E /* keypad_button_highlighted.png */,
 				1DC8681B0F53B2FF00D2DB08 /* money */,
@@ -732,6 +741,9 @@
 				1D50592B0F63F840008B2FCC /* SettingsIndexView.xib in Resources */,
 				1D50594C0F63FC58008B2FCC /* SettingsTableCells.xib in Resources */,
 				1D5220150F6542C400F11E37 /* PaypalSettings.xib in Resources */,
+				1D129AB80FF65D4A00509A6C /* icon-small.png in Resources */,
+				1D129AB90FF65D4A00509A6C /* icon-large.png in Resources */,
+				1D129AEB0FF6626C00509A6C /* setting-tab-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
