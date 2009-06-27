@@ -30,7 +30,7 @@
 		ignoreCount = 0;
 		lineNumber = 168;
 		location = "TransFS Card Terminal";
-		modificationTime = 267793989.949476;
+		modificationTime = 267794542.60914;
 		state = 2;
 	};
 	1D32DD9C0F8DBE8700469E04 /* PlistBookmark */ = {
@@ -94,7 +94,7 @@
 		ignoreCount = 0;
 		lineNumber = 56;
 		location = "TransFS Card Terminal";
-		modificationTime = 267793989.949493;
+		modificationTime = 267794542.609152;
 		state = 2;
 	};
 	1D3789C80F8D3C38005B795E /* PBXTextBookmark */ = {
@@ -215,7 +215,7 @@
 		ignoreCount = 0;
 		lineNumber = 88;
 		location = "TransFS Card Terminal";
-		modificationTime = 267793989.949462;
+		modificationTime = 267794542.609135;
 		state = 2;
 	};
 	1D3804490F593FD50041D924 /* PBXTextBookmark */ = {
@@ -762,7 +762,7 @@
 		ignoreCount = 0;
 		lineNumber = 183;
 		location = "TransFS Card Terminal";
-		modificationTime = 267793989.949486;
+		modificationTime = 267794542.609146;
 		state = 2;
 	};
 	1D5059A30F640335008B2FCC /* PBXTextBookmark */ = {
@@ -1209,6 +1209,108 @@
 		vrLen = 2162;
 		vrLoc = 6281;
 	};
+	1D59415B0FF637780026B16A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: no '+className' method found";
+		fRef = 1D75200E0F47D6C400996F8E /* Gateway.m */;
+		rLen = 1;
+		rLoc = 42;
+		rType = 1;
+	};
+	1D59415C0FF637780026B16A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D75200E0F47D6C400996F8E /* Gateway.m */;
+		name = "Gateway.m: 43";
+		rLen = 34;
+		rLoc = 526;
+		rType = 0;
+		vrLen = 56;
+		vrLoc = 504;
+	};
+	1D5941680FF637E90026B16A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1DFC98E50F525DB900191E58 /* Transaction.m */;
+		name = "Transaction.m: 185";
+		rLen = 0;
+		rLoc = 8737;
+		rType = 0;
+		vrLen = 2162;
+		vrLoc = 6281;
+	};
+	1D5941690FF637E90026B16A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D75200E0F47D6C400996F8E /* Gateway.m */;
+		name = "Gateway.m: 43";
+		rLen = 34;
+		rLoc = 526;
+		rType = 0;
+		vrLen = 670;
+		vrLoc = 314;
+	};
+	1D59416A0FF637E90026B16A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/krall/Documents/Entreprenuer/TransFS/programming/transfs-card-terminal/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1D59416B0FF637E90026B16A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1DFC98E50F525DB900191E58 /* Transaction.m */;
+		name = "Transaction.m: 185";
+		rLen = 0;
+		rLoc = 8737;
+		rType = 0;
+		vrLen = 2162;
+		vrLoc = 6281;
+	};
+	1D59416C0FF637E90026B16A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D75200E0F47D6C400996F8E /* Gateway.m */;
+		name = "Gateway.m: 43";
+		rLen = 34;
+		rLoc = 526;
+		rType = 0;
+		vrLen = 670;
+		vrLoc = 314;
+	};
+	1D59416D0FF637E90026B16A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/krall/Documents/Entreprenuer/TransFS/programming/transfs-card-terminal/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1D59416E0FF637E90026B16A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 1DFC98B00F52126600191E58 /* Entitlements.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			"get-task-allow",
+		);
+		name = "/Users/krall/Documents/Entreprenuer/TransFS/programming/transfs-card-terminal/Entitlements.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1D59416F0FF638520026B16A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D75200E0F47D6C400996F8E /* Gateway.m */;
+		name = "Gateway.m: 43";
+		rLen = 34;
+		rLoc = 526;
+		rType = 0;
+		vrLen = 56;
+		vrLoc = 504;
+	};
 	1D6058900D05DD3D006BFB54 /* TransFS Card Terminal */ = {
 		activeExec = 0;
 		executables = (
@@ -1322,9 +1424,9 @@
 	};
 	1D75200E0F47D6C400996F8E /* Gateway.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {789, 2926}}";
+			sepNavIntBoundsRect = "{{0, 0}, {789, 3008}}";
 			sepNavSelRange = "{526, 34}";
-			sepNavVisRange = "{487, 76}";
+			sepNavVisRange = "{504, 56}";
 			sepNavWindowFrame = "{{15, 34}, {960, 839}}";
 		};
 	};
@@ -1539,8 +1641,8 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 24;
-		modificationTime = 267794168.205032;
-		state = 1;
+		modificationTime = 267794543.411226;
+		state = 0;
 	};
 	1D7521C80F481EA000996F8E /* CardNumberTextField.m:35 */ = {
 		isa = PBXFileBreakpoint;
@@ -1555,8 +1657,8 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 35;
-		modificationTime = 267794168.205054;
-		state = 1;
+		modificationTime = 267794543.446032;
+		state = 0;
 	};
 	1D7940B50F48FF8B00CAA3CF /* RegexKitLite.h */ = {
 		uiCtxt = {
@@ -1596,7 +1698,7 @@
 		ignoreCount = 0;
 		lineNumber = 137;
 		location = "TransFS Card Terminal";
-		modificationTime = 267793989.949446;
+		modificationTime = 267794542.609123;
 		state = 2;
 	};
 	1D7943880F49472800CAA3CF /* CreditCardMethods.m:122 */ = {
@@ -1613,7 +1715,7 @@
 		ignoreCount = 0;
 		lineNumber = 122;
 		location = "TransFS Card Terminal";
-		modificationTime = 267793989.949455;
+		modificationTime = 267794542.609129;
 		state = 2;
 	};
 	1D91A7570F604C4E00792E8B /* PaypalGateway.m */ = {
@@ -1774,7 +1876,7 @@
 		ignoreCount = 0;
 		lineNumber = 171;
 		location = "TransFS Card Terminal";
-		modificationTime = 267793989.949364;
+		modificationTime = 267794542.609076;
 		state = 2;
 	};
 	1DD9BEEA0F46D95600343F2C /* CardViewController.m:171 */ = {
@@ -1791,7 +1893,7 @@
 		ignoreCount = 0;
 		lineNumber = 171;
 		location = "TransFS Card Terminal";
-		modificationTime = 267793989.949397;
+		modificationTime = 267794542.609104;
 		state = 2;
 	};
 	1DFC98B90F5212BE00191E58 /* PlistBookmark */ = {
@@ -1845,9 +1947,9 @@
 	};
 	1DFC98E50F525DB900191E58 /* Transaction.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1032, 6048}}";
-			sepNavSelRange = "{8737, 0}";
-			sepNavVisRange = "{6281, 2162}";
+			sepNavIntBoundsRect = "{{0, 0}, {828, 6342}}";
+			sepNavSelRange = "{6914, 0}";
+			sepNavVisRange = "{6736, 606}";
 			sepNavWindowFrame = "{{15, 34}, {960, 839}}";
 		};
 	};
@@ -1869,7 +1971,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Release;
 		activeExecutable = 1D4547410F375F78007CB4E4 /* TransFS Card Terminal */;
-		activeSDKPreference = iphonesimulator3.0;
+		activeSDKPreference = iphoneos3.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* TransFS Card Terminal */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* TransFS Card Terminal */,
@@ -1963,7 +2065,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					565,
+					639,
 					60,
 					20,
 					48,
@@ -2069,6 +2171,16 @@
 			1D5941540FF636430026B16A /* PBXTextBookmark */ = 1D5941540FF636430026B16A /* PBXTextBookmark */;
 			1D5941550FF636430026B16A /* PBXTextBookmark */ = 1D5941550FF636430026B16A /* PBXTextBookmark */;
 			1D5941570FF636FA0026B16A /* PBXTextBookmark */ = 1D5941570FF636FA0026B16A /* PBXTextBookmark */;
+			1D59415B0FF637780026B16A /* PBXTextBookmark */ = 1D59415B0FF637780026B16A /* PBXTextBookmark */;
+			1D59415C0FF637780026B16A /* PBXTextBookmark */ = 1D59415C0FF637780026B16A /* PBXTextBookmark */;
+			1D5941680FF637E90026B16A /* PBXTextBookmark */ = 1D5941680FF637E90026B16A /* PBXTextBookmark */;
+			1D5941690FF637E90026B16A /* PBXTextBookmark */ = 1D5941690FF637E90026B16A /* PBXTextBookmark */;
+			1D59416A0FF637E90026B16A /* PlistBookmark */ = 1D59416A0FF637E90026B16A /* PlistBookmark */;
+			1D59416B0FF637E90026B16A /* PBXTextBookmark */ = 1D59416B0FF637E90026B16A /* PBXTextBookmark */;
+			1D59416C0FF637E90026B16A /* PBXTextBookmark */ = 1D59416C0FF637E90026B16A /* PBXTextBookmark */;
+			1D59416D0FF637E90026B16A /* PlistBookmark */ = 1D59416D0FF637E90026B16A /* PlistBookmark */;
+			1D59416E0FF637E90026B16A /* PlistBookmark */ = 1D59416E0FF637E90026B16A /* PlistBookmark */;
+			1D59416F0FF638520026B16A /* PBXTextBookmark */ = 1D59416F0FF638520026B16A /* PBXTextBookmark */;
 			1D7940E70F49054C00CAA3CF = 1D7940E70F49054C00CAA3CF /* PBXTextBookmark */;
 			1DA23D9C0F37845D00B6635B = 1DA23D9C0F37845D00B6635B /* PlistBookmark */;
 			1DA23DA60F37845D00B6635B = 1DA23DA60F37845D00B6635B /* PBXTextBookmark */;
