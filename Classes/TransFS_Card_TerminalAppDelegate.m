@@ -8,38 +8,98 @@
 
 #import "TransFS_Card_TerminalAppDelegate.h"
 #import "Transaction.h"
+#import "SettingsIndexViewController.h"
+#import "AuthorizeNetGateway.h"
+#import "PaypalGateway.h"
+#import "UsaEpayGateway.h"
 
 // Private interface for AppDelegate - internal only methods.
 @interface TransFS_Card_TerminalAppDelegate (Private)
 - (void)createEditableCopyOfDatabaseIfNeeded;
 - (void)initializeDatabase;
+- (void)startSplashAnim:(id)obj;
+- (void)splashScreenAnimDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context;
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
 @end
 
 @implementation TransFS_Card_TerminalAppDelegate
 
 @synthesize historyTableNavigationController, chargeViewController;
 
-@synthesize window, tabBarController, tabBar;
+@synthesize window, tabBarController;
+@synthesize splashScreenView, splashScreenBgView, splashScreenLogoView, splashScreenCcView, splashScreenTerminalView;
+@synthesize splashScreenInfo, splashScreenSpinner, splashScreenPressToBegin, splashScreenAboutSettings;
 @synthesize transactionHistory, database;
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application 
+- (void)applicationDidFinishLaunching:(UIApplication *)application
 {
 	// The application ships with a default database in its bundle. If anything in the application
-	// bundle is altered, the code sign will fail. We want the database to be editable by users, 
-	// so we need to create a copy of it in the application's Documents directory.     
+	// bundle is altered, the code sign will fail. We want the database to be editable by users,
+	// so we need to create a copy of it in the application's Documents directory.
 	[self createEditableCopyOfDatabaseIfNeeded];
 	// Call internal method to initialize database connection
 	[self initializeDatabase];
-	
-    // Add the tab bar controller's current view as a subview of the window
-    [window addSubview:tabBarController.view];
+
+
+	// Set up the text that we'll show in the splash screen
+	bool showSetupMessage = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSetupMessage"];
+	if (showSetupMessage) {
+		splashScreenSpinner.hidden = true;
+		splashScreenAboutSettings.hidden = false;
+		splashScreenPressToBegin.hidden = false;
+		splashScreenInfo.text = @"To get started... Set up your gateway account information in the Settings tab.";
+		[[NSUserDefaults standardUserDefaults] setBool:false forKey:@"showSetupMessage"];
+		tabBarController.selectedIndex = 2;
+	}
+	else {
+		splashScreenAboutSettings.hidden = true;
+		splashScreenPressToBegin.hidden = true;
+		splashScreenSpinner.hidden = false;
+		splashScreenInfo.text = @"Loading...";
+	}
+
+
+	// Add the views that we'll need
+	[window addSubview:splashScreenView];
+	[window insertSubview:tabBarController.view belowSubview:splashScreenView];
+
+	// Kick off a delayed animation to get rid of the splash screen
+	if (showSetupMessage) {
+
+	} else {
+		[self performSelector:@selector(startSplashAnim:) withObject:nil afterDelay:2.0];
+	}
 }
 
+- (IBAction) aboutSettingsPressed:(id)sender
+{
+	[self startSplashAnim:nil];
+}
+
+- (void)startSplashAnim:(id)obj
+{
+	[UIView beginAnimations:nil context:NULL];
+	{
+		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+		[UIView setAnimationDuration:1.0];
+		[UIView setAnimationDidStopSelector:@selector(splashScreenAnimDidStop)];
+		splashScreenView.alpha = 0.0;
+		splashScreenLogoView.center = CGPointMake(splashScreenLogoView.center.x, -100);
+		splashScreenCcView.center = CGPointMake(-160, splashScreenCcView.center.y);
+		splashScreenTerminalView.center = CGPointMake(480, splashScreenTerminalView.center.y);
+	}
+	[UIView commitAnimations];
+}
+
+- (void)splashScreenAnimDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
+{
+	[splashScreenView removeFromSuperview];
+}
 
 /*
 // Optional UITabBarControllerDelegate method
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-	
+
 }
 */
 /*
@@ -71,10 +131,8 @@
 
 // Open the database connection and retrieve minimal information for all objects.
 - (void)initializeDatabase {
-    NSMutableArray *transactionHistoryArray = [[NSMutableArray alloc] init];
-    self.transactionHistory = transactionHistoryArray;
-    [transactionHistoryArray release];
-    // The database is stored in the application bundle. 
+    self.transactionHistory = [[NSMutableArray alloc] init];
+    // The database is stored in the application bundle.
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [documentsDirectory stringByAppendingPathComponent:@"transactionHistory.sql"];
@@ -84,7 +142,7 @@
         const char *sql = "SELECT pk FROM transactions";
         sqlite3_stmt *statement;
         // Preparing a statement compiles the SQL query into a byte-code program in the SQLite library.
-        // The third parameter is either the length of the SQL string or -1 to read up to the first null terminator.        
+        // The third parameter is either the length of the SQL string or -1 to read up to the first null terminator.
         if (sqlite3_prepare_v2(database, sql, -1, &statement, NULL) == SQLITE_OK) {
             // We "step" through the results - once for each row.
             while (sqlite3_step(statement) == SQLITE_ROW) {
@@ -140,6 +198,62 @@
     [window release];
     [super dealloc];
 }
+
+
+- (BillingGateway*) setupGateway
+{
+	int gatewayIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"gatewayId"];
+	bool testMode = true;
+	BillingGateway* gateway;
+
+	if (gatewayIndex == authNet) {
+
+		NSString *login = [[NSUserDefaults standardUserDefaults] stringForKey:@"authNetLogin"];
+		if ([NSString isBlank:login]) login = @"";
+		NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:@"authNetPassword"];
+		if ([NSString isBlank:password]) password = @"";
+		testMode = [[NSUserDefaults standardUserDefaults] boolForKey:@"authNetTestMode"];
+
+		gateway = [[AuthorizeNetGateway alloc] init:[NSDictionary dictionaryWithObjectsAndKeys:
+																		  login, @"login",
+																		  password, @"password",
+																		  nil]];
+
+	}
+	else if (gatewayIndex == paypal) {
+
+		NSString *login = [[NSUserDefaults standardUserDefaults] stringForKey:@"paypalLogin"];
+		if ([NSString isBlank:login]) login = @"";
+		NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:@"paypalPassword"];
+		if ([NSString isBlank:password]) password = @"";
+		NSString *signature = [[NSUserDefaults standardUserDefaults] stringForKey:@"paypalSignature"];
+			if ([NSString isBlank:signature]) signature = @"";
+		testMode = [[NSUserDefaults standardUserDefaults] boolForKey:@"paypalTestMode"];
+
+		gateway = [[PaypalGateway alloc] init:[NSDictionary dictionaryWithObjectsAndKeys:
+																		  login, @"login",
+																		  password, @"password",
+																		  signature, @"signature",
+																		  nil]];
+
+	}
+	else {			/* if (gatewayIndex == usaEpay) { */
+
+		NSString *sourcekey = [[NSUserDefaults standardUserDefaults] stringForKey:@"usaEpaySourceKey"];
+		if ([NSString isBlank:sourcekey]) sourcekey = @"";
+		testMode = [[NSUserDefaults standardUserDefaults] boolForKey:@"usaEpayTestMode"];
+
+		gateway = [[UsaEpayGateway alloc] init:[NSDictionary dictionaryWithObjectsAndKeys:
+																		  sourcekey, @"login",
+																		  nil]];
+
+	}
+
+	if (testMode) [BillingBase setGatewayMode:Test];
+
+	return gateway;
+}
+
 
 @end
 

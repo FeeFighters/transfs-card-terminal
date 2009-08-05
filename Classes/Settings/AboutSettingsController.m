@@ -30,6 +30,9 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	NSDictionary* bundleDict = [[NSBundle mainBundle] infoDictionary];
+	NSString* version = [NSString stringWithFormat:@"Version: %@", [bundleDict objectForKey:@"CFBundleVersion"]];
+	[versionLabel setText:version];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

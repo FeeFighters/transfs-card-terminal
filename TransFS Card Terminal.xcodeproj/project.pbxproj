@@ -86,6 +86,17 @@
 		1D91A75D0F604C4E00792E8B /* PaypalGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A7570F604C4E00792E8B /* PaypalGateway.m */; };
 		1D91A7600F604C6000792E8B /* GDataXMLNodeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A75E0F604C6000792E8B /* GDataXMLNodeAdditions.m */; };
 		1DB5DE950F4B9CEF005EA877 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1DB5DE940F4B9CEF005EA877 /* Settings.bundle */; };
+		1DB9B5B61009C31000A71B93 /* NSNullAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9B5B51009C31000A71B93 /* NSNullAdditions.m */; };
+		1DB9B5B91009C32C00A71B93 /* UsaEpayGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9B5B81009C32C00A71B93 /* UsaEpayGateway.m */; };
+		1DB9B5EB1009CE9600A71B93 /* UsaEpaySettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9B5EA1009CE9600A71B93 /* UsaEpaySettings.xib */; };
+		1DB9B5EE1009CEA200A71B93 /* UsaEpaySettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9B5ED1009CEA200A71B93 /* UsaEpaySettingsController.m */; };
+		1DB9B5FC1009D58400A71B93 /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9B5FB1009D58400A71B93 /* Money.m */; };
+		1DB9B662100AD9B000A71B93 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9B661100AD9B000A71B93 /* default.png */; };
+		1DB9B697100AE16500A71B93 /* splash-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9B693100AE16500A71B93 /* splash-bg.png */; };
+		1DB9B698100AE16500A71B93 /* splash-cc.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9B694100AE16500A71B93 /* splash-cc.png */; };
+		1DB9B699100AE16500A71B93 /* splash-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9B695100AE16500A71B93 /* splash-logo.png */; };
+		1DB9B69A100AE16500A71B93 /* splash-terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9B696100AE16500A71B93 /* splash-terminal.png */; };
+		1DB9B706100AF4DB00A71B93 /* splash-about_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9B705100AF4DB00A71B93 /* splash-about_settings.png */; };
 		1DC868150F53B2BC00D2DB08 /* american_express.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8680F0F53B2BC00D2DB08 /* american_express.png */; };
 		1DC868160F53B2BC00D2DB08 /* credit_card_image_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868100F53B2BC00D2DB08 /* credit_card_image_mask.png */; };
 		1DC868170F53B2BC00D2DB08 /* discover.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868110F53B2BC00D2DB08 /* discover.png */; };
@@ -265,6 +276,21 @@
 		1D91A75E0F604C6000792E8B /* GDataXMLNodeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNodeAdditions.m; sourceTree = "<group>"; };
 		1D91A75F0F604C6000792E8B /* GDataXMLNodeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNodeAdditions.h; sourceTree = "<group>"; };
 		1DB5DE940F4B9CEF005EA877 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		1DB9B5B41009C31000A71B93 /* NSNullAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNullAdditions.h; sourceTree = "<group>"; };
+		1DB9B5B51009C31000A71B93 /* NSNullAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNullAdditions.m; sourceTree = "<group>"; };
+		1DB9B5B71009C32C00A71B93 /* UsaEpayGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsaEpayGateway.h; sourceTree = "<group>"; };
+		1DB9B5B81009C32C00A71B93 /* UsaEpayGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsaEpayGateway.m; sourceTree = "<group>"; };
+		1DB9B5EA1009CE9600A71B93 /* UsaEpaySettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsaEpaySettings.xib; sourceTree = "<group>"; };
+		1DB9B5EC1009CEA200A71B93 /* UsaEpaySettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsaEpaySettingsController.h; sourceTree = "<group>"; };
+		1DB9B5ED1009CEA200A71B93 /* UsaEpaySettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsaEpaySettingsController.m; sourceTree = "<group>"; };
+		1DB9B5FA1009D58400A71B93 /* Money.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Money.h; sourceTree = "<group>"; };
+		1DB9B5FB1009D58400A71B93 /* Money.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Money.m; sourceTree = "<group>"; };
+		1DB9B661100AD9B000A71B93 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		1DB9B693100AE16500A71B93 /* splash-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-bg.png"; sourceTree = "<group>"; };
+		1DB9B694100AE16500A71B93 /* splash-cc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-cc.png"; sourceTree = "<group>"; };
+		1DB9B695100AE16500A71B93 /* splash-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-logo.png"; sourceTree = "<group>"; };
+		1DB9B696100AE16500A71B93 /* splash-terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-terminal.png"; sourceTree = "<group>"; };
+		1DB9B705100AF4DB00A71B93 /* splash-about_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-about_settings.png"; sourceTree = "<group>"; };
 		1DC8680F0F53B2BC00D2DB08 /* american_express.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = american_express.png; sourceTree = "<group>"; };
 		1DC868100F53B2BC00D2DB08 /* credit_card_image_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credit_card_image_mask.png; sourceTree = "<group>"; };
 		1DC868110F53B2BC00D2DB08 /* discover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discover.png; sourceTree = "<group>"; };
@@ -318,6 +344,8 @@
 				1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */,
 				1DFC98E40F525DB900191E58 /* Transaction.h */,
 				1DFC98E50F525DB900191E58 /* Transaction.m */,
+				1DB9B5FA1009D58400A71B93 /* Money.h */,
+				1DB9B5FB1009D58400A71B93 /* Money.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -377,6 +405,8 @@
 		1D5058110F63D88D008B2FCC /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				1DB9B5EC1009CEA200A71B93 /* UsaEpaySettingsController.h */,
+				1DB9B5ED1009CEA200A71B93 /* UsaEpaySettingsController.m */,
 				1D5058120F63D88D008B2FCC /* AboutSettingsController.h */,
 				1D5058130F63D88D008B2FCC /* AboutSettingsController.m */,
 				1D5058140F63D88D008B2FCC /* AuthNetSettingsController.h */,
@@ -415,6 +445,7 @@
 		1D5058430F63D8A0008B2FCC /* interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				1DB9B5EA1009CE9600A71B93 /* UsaEpaySettings.xib */,
 				1D5220140F6542C400F11E37 /* PaypalSettings.xib */,
 				1D5058440F63D8A0008B2FCC /* AboutSettings.xib */,
 				1D5058450F63D8A0008B2FCC /* AddressView.xib */,
@@ -499,6 +530,8 @@
 		1D75200F0F47D6C400996F8E /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
+				1DB9B5B71009C32C00A71B93 /* UsaEpayGateway.h */,
+				1DB9B5B81009C32C00A71B93 /* UsaEpayGateway.m */,
 				1D91A7570F604C4E00792E8B /* PaypalGateway.m */,
 				1D91A7580F604C4E00792E8B /* PaypalGateway.h */,
 				1D91A7590F604C4E00792E8B /* Paypal */,
@@ -531,6 +564,8 @@
 		1D7520240F47D6C400996F8E /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				1DB9B5B41009C31000A71B93 /* NSNullAdditions.h */,
+				1DB9B5B51009C31000A71B93 /* NSNullAdditions.m */,
 				1D7520250F47D6C400996F8E /* NSArrayAdditions.h */,
 				1D7520260F47D6C400996F8E /* NSArrayAdditions.m */,
 				1D7520270F47D6C400996F8E /* NSDataAdditions.h */,
@@ -571,6 +606,12 @@
 		1DC8680D0F53B2BC00D2DB08 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1DB9B705100AF4DB00A71B93 /* splash-about_settings.png */,
+				1DB9B693100AE16500A71B93 /* splash-bg.png */,
+				1DB9B694100AE16500A71B93 /* splash-cc.png */,
+				1DB9B695100AE16500A71B93 /* splash-logo.png */,
+				1DB9B696100AE16500A71B93 /* splash-terminal.png */,
+				1DB9B661100AD9B000A71B93 /* default.png */,
 				1D129AEA0FF6626C00509A6C /* setting-tab-icon.png */,
 				1D129AB60FF65D4A00509A6C /* icon-small.png */,
 				1D129AB70FF65D4A00509A6C /* icon-large.png */,
@@ -744,6 +785,13 @@
 				1D129AB80FF65D4A00509A6C /* icon-small.png in Resources */,
 				1D129AB90FF65D4A00509A6C /* icon-large.png in Resources */,
 				1D129AEB0FF6626C00509A6C /* setting-tab-icon.png in Resources */,
+				1DB9B5EB1009CE9600A71B93 /* UsaEpaySettings.xib in Resources */,
+				1DB9B662100AD9B000A71B93 /* default.png in Resources */,
+				1DB9B697100AE16500A71B93 /* splash-bg.png in Resources */,
+				1DB9B698100AE16500A71B93 /* splash-cc.png in Resources */,
+				1DB9B699100AE16500A71B93 /* splash-logo.png in Resources */,
+				1DB9B69A100AE16500A71B93 /* splash-terminal.png in Resources */,
+				1DB9B706100AF4DB00A71B93 /* splash-about_settings.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +852,10 @@
 				1D50592F0F63F891008B2FCC /* SettingsIndexViewController.m in Sources */,
 				1D5059500F63FC8B008B2FCC /* SettingsTableCell.m in Sources */,
 				1D5220130F65415600F11E37 /* PaypalSettingsController.m in Sources */,
+				1DB9B5B61009C31000A71B93 /* NSNullAdditions.m in Sources */,
+				1DB9B5B91009C32C00A71B93 /* UsaEpayGateway.m in Sources */,
+				1DB9B5EE1009CEA200A71B93 /* UsaEpaySettingsController.m in Sources */,
+				1DB9B5FC1009D58400A71B93 /* Money.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,7 +866,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Krall";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -824,7 +877,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C228E99C-4543-448E-83A2-8BF84A37A916";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos3.0;
 			};
 			name = Debug;
@@ -833,7 +886,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Joshua Krall";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -841,7 +895,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C228E99C-4543-448E-83A2-8BF84A37A916";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos3.0;
 			};
 			name = Release;
@@ -850,11 +904,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Transparent Financial Services, LLC";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				PROVISIONING_PROFILE = "0D8CB9ED-4F7E-4523-BC97-E41986909AD7";
 				SDKROOT = iphoneos3.0;
 			};
 			name = "Ad-Hoc Distribution";
@@ -864,7 +921,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Transparent Financial Services, LLC";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -872,7 +930,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CA982B9B-7ED6-43BD-B57D-3934AF1C95E0";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos3.0;
 			};
 			name = "Ad-Hoc Distribution";
@@ -881,12 +939,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos3.0;
 			};
 			name = Debug;
@@ -895,11 +955,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos3.0;
 			};
 			name = Release;

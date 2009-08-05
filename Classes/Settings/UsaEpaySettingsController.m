@@ -1,17 +1,17 @@
 //
-//  PaypalSettingsController.m
+//  UsaEpaySettingsController.m
 //  TransFS Card Terminal
 //
-//  Created by Joshua Krall on 3/9/09.
+//  Created by Joshua Krall on 7/9/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "PaypalSettingsController.h"
+#import "UsaEpaySettingsController.h"
 #import "NSStringAdditions.h"
 
-@implementation PaypalSettingsController
+@implementation UsaEpaySettingsController
 
-@synthesize login, password, signature, testMode;
+@synthesize sourceKey, testMode;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -38,24 +38,18 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-	
-	[login setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"paypalLogin"]];
-	[password setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"paypalPassword"]];
-	[signature setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"paypalSignature"]];	
-	[testMode setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"paypalTestMode"]];	
+
+	[sourceKey setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"usaEpaySourceKey"]];
+	[testMode setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"usaEpayTestMode"]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
-	
-	if (![NSString isBlank:[login text]])
-		[[NSUserDefaults standardUserDefaults] setObject:[login text] forKey:@"paypalLogin"];
-	if (![NSString isBlank:[password text]])
-		[[NSUserDefaults standardUserDefaults] setObject:[password text] forKey:@"paypalPassword"];
-	if (![NSString isBlank:[signature text]])
-		[[NSUserDefaults standardUserDefaults] setObject:[signature text] forKey:@"paypalSignature"];
-	[[NSUserDefaults standardUserDefaults] setBool:[testMode isOn] forKey:@"paypalTestMode"];
-	[[NSUserDefaults standardUserDefaults] synchronize];	
+
+	if (![NSString isBlank:[sourceKey text]])
+		[[NSUserDefaults standardUserDefaults] setObject:[sourceKey text] forKey:@"usaEpaySourceKey"];
+	[[NSUserDefaults standardUserDefaults] setBool:[testMode isOn] forKey:@"usaEpayTestMode"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

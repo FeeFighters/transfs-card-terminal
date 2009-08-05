@@ -31,7 +31,7 @@
     return self;
 }
 */
- 
+
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
@@ -47,17 +47,17 @@
 	chargeCardExpViewController = [[ChargeCardExpViewController alloc] initWithNibName:@"ChargeCardExpView" bundle:nil];
 	chargeCardCvvViewController = [[ChargeCardCvvViewController alloc] initWithNibName:@"ChargeCardCvvView" bundle:nil];
 	chargeAddressViewController = [[ChargeAddressViewController alloc] initWithNibName:@"ChargeAddressView" bundle:nil];
-	
+
 	tableView.backgroundColor = self.view.backgroundColor;
-	
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
-	
+
 //	self.navigationItem.prompt = @"TransFS.com Card Terminal";
-	self.navigationItem.title = @"Process Transaction";	
+	self.navigationItem.title = @"Process Transaction";
 }
 
 
@@ -71,13 +71,13 @@
 
 - (IBAction) processButtonClick:(id)sender
 {
-	UIActionSheet *alert = [[UIActionSheet alloc] initWithTitle:@"Process Transaction?" 
-													   delegate:self 
-											  cancelButtonTitle:nil 
+	UIActionSheet *alert = [[UIActionSheet alloc] initWithTitle:@"Process Transaction?"
+													   delegate:self
+											  cancelButtonTitle:nil
 										 destructiveButtonTitle:@"Cancel"
 											  otherButtonTitles:nil];
 	[alert addButtonWithTitle:@"Proceed!"];
-	
+
 	[alert showInView:self.tabBarController.view];
 }
 
@@ -95,7 +95,7 @@
 	else if (buttonIndex==1)
 	{
 		[processButton setEnabled:false];
-		[processButton setHidden:true];		
+		[processButton setHidden:true];
 		[spinner startAnimating];
 		[spinner setHidden:false];
 		[responseLabel setText:@""];
@@ -106,15 +106,17 @@
 - (void) processTransactionThread
 {
 	NSAutoreleasePool *autoreleasepool = [[NSAutoreleasePool alloc] init];
-	
+
 	[NSThread sleepForTimeInterval:0.5];
-	
-	Transaction* sale = [Transaction initAndProcessFromCurrentState];
+
+	BillingGateway* gateway = [(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] setupGateway];
+	Transaction* sale = [Transaction transactionAndProcessWithGateway:gateway];
+
 	if ([sale status]==TransactionSuccess)
 	{
 		[successViewImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"money_%d.png", (random() % 7)+1]]];
-		[successViewLabel setText:[NSString stringWithFormat:@"Successfully Charged $%.2f to %@ %@'s Card", [sale dollarAmount], [sale firstName], [sale lastName]]];
-		
+		[successViewLabel setText:[NSString stringWithFormat:@"Successfully Charged $%.2f to %@ %@'s Card", [sale.moneyAmount dollars], [sale firstName], [sale lastName]]];
+
 		savedSubviewforSuccess = [[self tabBarController] view];
 		UIView* curView = [savedSubviewforSuccess superview];
 		[curView setBackgroundColor:[UIColor blackColor]];
@@ -128,7 +130,7 @@
 	else
 	{
 		[responseLabel setText:[NSString stringWithString:[sale errorMessages]]];
-		
+
 		savedSubviewforSuccess = [[self tabBarController] view];
 		UIView* curView = [savedSubviewforSuccess superview];
 		[curView setBackgroundColor:[UIColor blackColor]];
@@ -139,9 +141,9 @@
 		[curView addSubview:failureView];		//	Add the new subview to the container view.
 		[UIView commitAnimations];
 	}
-	
+
 	[autoreleasepool release];
-	
+
 	[spinner stopAnimating];
 	[processButton setEnabled:true];
 	[processButton setHidden:false];
@@ -188,25 +190,17 @@
 	// Set address visible based on preference setting
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"])
 		return 5;
-    
+
 	return 4;
 }
 
 
-// The accessory type is the image displayed on the far right of each table cell. In order for the delegate method
-// tableView:accessoryButtonClickedForRowWithIndexPath: to be called, you must return the "Detail Disclosure Button" type.
-/*
-- (UITableViewCellAccessoryType)tableView:(UITableView *)tv accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellAccessoryDisclosureIndicator;
-}
-*/
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (indexPath.row == 4)
-		return 60.0;		
-	
-	return 45.0;	
+		return 60.0;
+
+	return 45.0;
 }
 
 
@@ -217,19 +211,19 @@
 
 
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	UITableViewCell* cell = nil;
-	
+
 	if (indexPath.row == 0) {
 		cell = (ChargeTableAmountCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChargeTableAmountCell"];
 		if (cell == nil) {
 			cell = (ChargeTableAmountCell*)[[[NSBundle mainBundle] loadNibNamed:@"ChargeTableCells" owner:self.tableView options: nil] objectAtIndex:0];
 		}
-		if ([NSString is_blank:chargeAmountViewController.number]) {
+		if ([NSString isBlank:chargeAmountViewController.number]) {
 			((ChargeTableAmountCell*)cell).amount.text = @"$ 0.00";
 		}
-		else {	
+		else {
 			((ChargeTableAmountCell*)cell).amount.text = [NSString stringWithFormat:@"$ %@", chargeAmountViewController.number];
 		}
 	}
@@ -238,32 +232,32 @@
 		if (cell == nil) {
 			cell = (ChargeTableCardNameCell*)[[[NSBundle mainBundle] loadNibNamed:@"ChargeTableCells" owner:self.tableView options: nil] objectAtIndex:1];
 		}
-		if ([NSString is_blank:chargeCardNameViewController.firstName.text] || [NSString is_blank:chargeCardNameViewController.lastName.text]) {
+		if ([NSString isBlank:chargeCardNameViewController.firstName.text] || [NSString isBlank:chargeCardNameViewController.lastName.text]) {
 			((ChargeTableCardNameCell*)cell).name.hidden = true;
 			((ChargeTableCardNameCell*)cell).disabledLabel.hidden = false;
 		}
-		else {	
+		else {
 			((ChargeTableCardNameCell*)cell).name.hidden = false;
 			((ChargeTableCardNameCell*)cell).disabledLabel.hidden = true;
-			((ChargeTableCardNameCell*)cell).name.text = [NSString stringWithFormat:@"%@ %@", chargeCardNameViewController.firstName.text, chargeCardNameViewController.lastName.text];			
-		}			
+			((ChargeTableCardNameCell*)cell).name.text = [NSString stringWithFormat:@"%@ %@", chargeCardNameViewController.firstName.text, chargeCardNameViewController.lastName.text];
+		}
 	}
 	else if (indexPath.row == 2) {
 		cell = (ChargeTableCardNumberCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChargeTableCardNumberCell"];
 		if (cell == nil) {
 			cell = (ChargeTableCardNumberCell*)[[[NSBundle mainBundle] loadNibNamed:@"ChargeTableCells" owner:self.tableView options: nil] objectAtIndex:2];
 		}
-		
-		if ([NSString is_blank:chargeCardNumberViewController.number]) {
+
+		if ([NSString isBlank:chargeCardNumberViewController.number]) {
 			((ChargeTableCardNumberCell*)cell).number.hidden = true;
 			((ChargeTableCardNumberCell*)cell).disabledLabel.hidden = false;
 		}
-		else {	
+		else {
 			((ChargeTableCardNumberCell*)cell).number.hidden = false;
 			((ChargeTableCardNumberCell*)cell).disabledLabel.hidden = true;
 			((ChargeTableCardNumberCell*)cell).number.text = [BillingCreditCard number:chargeCardNumberViewController.number withSeperator:@" "];
 		}
-		
+
 		NSString *type = [BillingCreditCard getTypeWithPartialNumber:chargeCardNumberViewController.number];
 		NSArray *validImages = [NSArray arrayWithObjects:@"visa", @"master", @"discover", @"american_express", nil];
 		if ([validImages containsObject:type]) {
@@ -275,7 +269,7 @@
 			UIImage *image = [UIImage imageNamed:@"unknown.png"];
 			[((ChargeTableCardNumberCell*)cell).cardImage setImage:image];
 		}
-		
+
 	}
 	else if (indexPath.row == 3) {
 		cell = (ChargeTableCardExpCvvCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChargeTableCardExpCvvCell"];
@@ -283,17 +277,17 @@
 			cell = (ChargeTableCardExpCvvCell*)[[[NSBundle mainBundle] loadNibNamed:@"ChargeTableCells" owner:self.tableView options: nil] objectAtIndex:3];
 			[(ChargeTableCardExpCvvCell*)cell setChargeView:self];
 		}
-		
-		NSString* exp = [NSString stringWithFormat:@"%02d/%04d", 
-						[chargeCardExpViewController.monthPicker selectedRowInComponent:0]+1, 
+
+		NSString* exp = [NSString stringWithFormat:@"%02d/%04d",
+						[chargeCardExpViewController.monthPicker selectedRowInComponent:0]+1,
 						[chargeCardExpViewController.yearPicker selectedRowInComponent:0]+[CardExpirationPickerDelegate currentYear]];
 		((ChargeTableCardExpCvvCell*)cell).expDate.text = exp;
 
-		if ([NSString is_blank:chargeCardCvvViewController.number]) {
+		if ([NSString isBlank:chargeCardCvvViewController.number]) {
 			((ChargeTableCardExpCvvCell*)cell).cvv.hidden = true;
 			((ChargeTableCardExpCvvCell*)cell).cvvDisabledLabel.hidden = false;
 		}
-		else {	
+		else {
 			((ChargeTableCardExpCvvCell*)cell).cvv.hidden = false;
 			((ChargeTableCardExpCvvCell*)cell).cvvDisabledLabel.hidden = true;
 			((ChargeTableCardExpCvvCell*)cell).cvv.text = chargeCardCvvViewController.number;
@@ -304,30 +298,35 @@
 		if (cell == nil) {
 			cell = (ChargeTableAddressCell*)[[[NSBundle mainBundle] loadNibNamed:@"ChargeTableCells" owner:self.tableView options: nil] objectAtIndex:4];
 		}
-		
-		if ([NSString is_blank:chargeAddressViewController.zipcode.text]) {
+
+		if ([NSString isBlank:chargeAddressViewController.zipcode.text]) {
 			((ChargeTableAddressCell*)cell).address.hidden = true;
 			((ChargeTableAddressCell*)cell).city.hidden = true;
-			((ChargeTableAddressCell*)cell).zip.hidden = true;			
+			((ChargeTableAddressCell*)cell).zip.hidden = true;
 			((ChargeTableAddressCell*)cell).disabledLabel.hidden = false;
 		}
 		else {
-			((ChargeTableAddressCell*)cell).address.hidden = [NSString is_blank:chargeAddressViewController.address.text];
-			((ChargeTableAddressCell*)cell).city.hidden = [NSString is_blank:chargeAddressViewController.city.text];
-			((ChargeTableAddressCell*)cell).zip.hidden = [NSString is_blank:chargeAddressViewController.zipcode.text];
+			((ChargeTableAddressCell*)cell).address.hidden = [NSString isBlank:chargeAddressViewController.address.text];
+			((ChargeTableAddressCell*)cell).city.hidden = [NSString isBlank:chargeAddressViewController.city.text];
+			((ChargeTableAddressCell*)cell).zip.hidden = [NSString isBlank:chargeAddressViewController.zipcode.text];
 			((ChargeTableAddressCell*)cell).disabledLabel.hidden = true;
 			((ChargeTableAddressCell*)cell).address.text = chargeAddressViewController.address.text;
 			((ChargeTableAddressCell*)cell).city.text = chargeAddressViewController.city.text;
 			((ChargeTableAddressCell*)cell).zip.text = chargeAddressViewController.zipcode.text;
 		}
-		
+
 	}
-	
+
     return cell;
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+- (void)tableView:(UITableView *)_tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+	[self tableView:_tableView didSelectRowAtIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (indexPath.row == 0) {
 		[self.navigationController pushViewController:chargeAmountViewController animated:true];
@@ -342,13 +341,13 @@
 	}
 	else if (indexPath.row == 4) {
 		[self.navigationController pushViewController:chargeAddressViewController animated:true];
-	}	
+	}
 
 	[self.tableView deselectRowAtIndexPath:indexPath animated:true];
 }
 
 /*
-- (void)tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath 
+- (void)tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
 }
 */

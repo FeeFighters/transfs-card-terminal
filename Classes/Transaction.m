@@ -7,6 +7,7 @@
 //
 
 #import "Transaction.h"
+#import "Response.h"
 #import "ChargeViewController.h"
 #import "NSArrayAdditions.h"
 #import <sqlite3.h>
@@ -71,16 +72,16 @@ static sqlite3_stmt *dehydrate_statement = nil;
     // variable is used to store the SQLite compiled byte-code for the query, which is generated one time - the first
     // time the method is executed by any Book object.
     if (insert_statement == nil) {
-        static char *sql = "INSERT INTO transactions (firstName, lastName, dollarAmount, date, status) VALUES(?,?,?,?,?)";
+        static char *sql = "INSERT INTO transactions (firstName, lastName, cents, date, status) VALUES(?,?,?,?,?)";
         if (sqlite3_prepare_v2(database, sql, -1, &insert_statement, NULL) != SQLITE_OK) {
             NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
         }
     }
     sqlite3_bind_text(insert_statement, 1, [firstName UTF8String], -1, SQLITE_TRANSIENT);
     sqlite3_bind_text(insert_statement, 2, [lastName UTF8String], -1, SQLITE_TRANSIENT);
-	sqlite3_bind_double(dehydrate_statement, 3, dollarAmount);
-	sqlite3_bind_double(dehydrate_statement, 4, [date timeIntervalSince1970]);		
-	sqlite3_bind_int(dehydrate_statement, 5, (int)status);			
+	sqlite3_bind_int(insert_statement, 3, [[moneyAmount cents] intValue]);
+	sqlite3_bind_double(insert_statement, 4, [date timeIntervalSince1970]);
+	sqlite3_bind_int(insert_statement, 5, (int)status);
     int success = sqlite3_step(insert_statement);
     // Because we want to reuse the statement, we "reset" it instead of "finalizing" it.
     sqlite3_reset(insert_statement);
@@ -88,19 +89,17 @@ static sqlite3_stmt *dehydrate_statement = nil;
         NSAssert1(0, @"Error: failed to insert into the database with message '%s'.", sqlite3_errmsg(database));
     } else {
         // SQLite provides a method which retrieves the value of the most recently auto-generated primary key sequence
-        // in the database. To access this functionality, the table should have a column declared of type 
+        // in the database. To access this functionality, the table should have a column declared of type
         // "INTEGER PRIMARY KEY"
         primaryKey = sqlite3_last_insert_rowid(database);
     }
-    // All data for the book is already in memory, but has not be written to the database
+    // All data for the transaction is already in memory, but has not be written to the database
     // Mark as hydrated to prevent empty/default values from overwriting what is in memory
     hydrated = YES;
 }
 
-+ (id) initAndProcessFromCurrentState
-{		
-	Transaction *_self = [[Transaction alloc] init];
-	
+- (id) initAndProcessWithGateway:(BillingGateway*)gateway
+{
 	TransFS_Card_TerminalAppDelegate* delegate = (TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate];
 	ChargeAmountViewController* chargeAmountViewController = delegate.chargeViewController.chargeAmountViewController;
 	ChargeCardNameViewController* chargeCardNameViewController = delegate.chargeViewController.chargeCardNameViewController;
@@ -108,17 +107,7 @@ static sqlite3_stmt *dehydrate_statement = nil;
 	ChargeCardExpViewController* chargeCardExpViewController = delegate.chargeViewController.chargeCardExpViewController;
 	ChargeCardCvvViewController* chargeCardCvvViewController = delegate.chargeViewController.chargeCardCvvViewController;
 	ChargeAddressViewController* chargeAddressViewController = delegate.chargeViewController.chargeAddressViewController;
-	
-	NSString *login = [[NSUserDefaults standardUserDefaults] stringForKey:@"login"];
-	if ([NSString is_blank:login])
-		login = [NSString stringWithString:@""];
-	NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];	
-	if ([NSString is_blank:password])
-		password = [NSString stringWithString:@""];
-	bool testMode = [[NSUserDefaults standardUserDefaults] boolForKey:@"testMode"];
-	
-	if (testMode) [BillingBase setGatewayMode:Test];
-	
+
 	int todayYear = [CardExpirationPickerDelegate currentYear];
 	BillingCreditCard *card = [[BillingCreditCard alloc] init:[NSDictionary dictionaryWithObjectsAndKeys:
 															   nilToEmptyStr(chargeCardNumberViewController.number), @"number",
@@ -128,109 +117,92 @@ static sqlite3_stmt *dehydrate_statement = nil;
 															   nilToEmptyStr(chargeCardNameViewController.lastName.text), @"lastName",
 															   nilToEmptyStr(chargeCardCvvViewController.number), @"verificationValue",
 															   nil]];
-	
+
 	// Store sanitized card number that we want to keep around for later
-	_self.sanitizedCardNumber = [NSString stringWithString:[card displayNumber]];
-	_self.firstName = [NSString stringWithString:[card firstName]];
-	_self.lastName = [NSString stringWithString:[card lastName]];
-	
+	self.sanitizedCardNumber = [NSString stringWithString:[card displayNumber]];
+	self.firstName = [NSString stringWithString:[card firstName]];
+	self.lastName = [NSString stringWithString:[card lastName]];
+
 	if ([card is_valid])
 	{
-		AuthorizeNetGateway *gateway = [[AuthorizeNetGateway alloc] init:[NSDictionary dictionaryWithObjectsAndKeys:
-																		  login, @"login",
-																		  password, @"password",
-																		  nil]];
-		
 		NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
-		
+
 		bool avsEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"];
 		if (avsEnabled) {
 			[options setObject:nilToEmptyStr(chargeAddressViewController.address.text) forKey:@"address1"];
 			[options setObject:nilToEmptyStr(chargeAddressViewController.zipcode.text) forKey:@"zip"];
 			[options setObject:nilToEmptyStr(chargeAddressViewController.city.text) forKey:@"city"];
-			// [options setObject:[chargeAddressViewController state] forKey:@"state"];		
+			// [options setObject:[chargeAddressViewController state] forKey:@"state"];
 		}
-		
+
 		// Store value that we want to keep around for later
 		NSString* dollarTxt = chargeAmountViewController.number;
-		_self.dollarAmount = [dollarTxt floatValue];
-		
+		self.moneyAmount = [Money moneyWithDollars:[dollarTxt floatValue]];
+
 		@try {
-			BillingResponse *response;	
-			response = [gateway authorize:MakeInt(_self.dollarAmount * 100) creditcard:card options:[NSDictionary dictionaryWithObject:options forKey:@"address"]];
+			BillingResponse *response;
+			response = [gateway authorize:self.moneyAmount creditcard:card options:[NSDictionary dictionaryWithObject:options forKey:@"address"]];
 			if (![response is_success])
 				[NSException raise:@"Authorize.Net Gateway Error, authorize:" format:[response message]];
 			else {
-				
-				response = [gateway capture:MakeInt(_self.dollarAmount * 100) authorization:[response authorization] options:[[NSDictionary alloc] init]];
+
+				response = [gateway capture:self.moneyAmount authorization:[response authorization] options:[[NSDictionary alloc] init]];
 				if (![response is_success])
 					[NSException raise:@"Authorize.Net Gateway Error, capture:" format:[response message]];
-				
+
 				// Store the auth id so that we can void this later
-				_self.authorizationId = [NSString stringWithString:[response authorization]];
-				
-				//	response = [gateway voidAuthorization:[response authorization] options:[[NSDictionary alloc] init]];
-				//	if (![response is_success])
-				//		[NSException raise:@"Authorize.Net Gateway Error, void:" format:[response message]];
+				self.authorizationId = [NSString stringWithString:[response authorization]];
 			}
-			
-			_self.errorMessages = @"";
-			_self.status = TransactionSuccess;
-			_self.date = [NSDate date];
-			[delegate addTransaction:_self];
+
+			self.errorMessages = @"";
+			self.status = TransactionSuccess;
+			self.date = [NSDate date];
+			[delegate addTransaction:self];
 		}
 		@catch (NSException *exception) {
-			_self.errorMessages = [NSString stringWithString:[exception reason]];
-			_self.status = TransactionError;			
+			self.errorMessages = [NSString stringWithString:[exception reason]];
+			self.status = TransactionError;
 		}
 	}
-	else 
+	else
 	{
 		NSLog(@"Card Errors: %@", [[[card errors] fullMessages] componentsJoinedByString:@", "]);
-		_self.status = TransactionError;
-		
+		self.status = TransactionError;
+
 		NSMutableArray *arr = [[NSMutableArray alloc] init];
 		NSString *curString;
 		NSEnumerator *enumerator = [[[card errors] fullMessages] objectEnumerator];
 		while (curString = [enumerator nextObject]) {
 			[arr addObject:[NSString stringWithFormat:@"• %@", [[curString humanize] capitalizeFirstLetter]]];
 		}
-		_self.errorMessages = [NSString stringWithString:[arr componentsJoinedByString:@"\n"]];
+		self.errorMessages = [NSString stringWithString:[arr componentsJoinedByString:@"\n"]];
 	}
-	
-	return _self;
+
+	return self;
 }
 
-- (void)voidTransaction
++ (id) transactionAndProcessWithGateway:(BillingGateway*)gateway
 {
-	NSString *login = [[NSUserDefaults standardUserDefaults] stringForKey:@"login"];
-	if ([NSString is_blank:login])
-		login = [NSString stringWithString:@""];
-	NSString *password = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];	
-	if ([NSString is_blank:password])
-		password = [NSString stringWithString:@""];
-	bool testMode = [[NSUserDefaults standardUserDefaults] boolForKey:@"testMode"];
-	
-	if (testMode) [BillingBase setGatewayMode:Test];
-	
-	AuthorizeNetGateway *gateway = [[AuthorizeNetGateway alloc] init:[NSDictionary dictionaryWithObjectsAndKeys:
-																	  login, @"login",
-																	  password, @"password",
-																	  nil]];
-	
+	return [[Transaction alloc] initAndProcessWithGateway:gateway];
+}
+
+
+
+- (void)voidTransaction:(BillingGateway*)gateway
+{
 	@try {
 		BillingResponse *response = [gateway voidAuthorization:self.authorizationId options:[[NSDictionary alloc] init]];
 		if (![response is_success])
 			[NSException raise:@"Authorize.Net Gateway Error, void:" format:[response message]];
-		
-		self.errorMessages = @"";		
+
+		self.errorMessages = @"";
 		self.status = TransactionVoided;
 		self.date = [NSDate date];
 	}
 	@catch (NSException *exception) {
-		self.errorMessages = [exception reason];		
-		self.status = TransactionError;			
-	}	
+		self.errorMessages = [exception reason];
+		self.status = TransactionError;
+	}
 }
 
 
@@ -280,7 +252,7 @@ static sqlite3_stmt *dehydrate_statement = nil;
     if (hydrated) return;
     // Compile the hydration statement, if needed.
     if (hydrate_statement == nil) {
-        const char *sql = "SELECT firstName, lastName, dollarAmount, authorizationId, sanitizedCardNumber, date, status FROM transactions WHERE pk=?";
+        const char *sql = "SELECT firstName, lastName, cents, authorizationId, sanitizedCardNumber, date, status FROM transactions WHERE pk=?";
         if (sqlite3_prepare_v2(database, sql, -1, &hydrate_statement, NULL) != SQLITE_OK) {
             NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
         }
@@ -291,34 +263,35 @@ static sqlite3_stmt *dehydrate_statement = nil;
     int success =sqlite3_step(hydrate_statement);
     if (success == SQLITE_ROW) {
         char *str;
-		
+
 		str = (char *)sqlite3_column_text(hydrate_statement, 0);
         self.firstName = (str) ? [NSString stringWithUTF8String:str] : @"";
 
         str = (char *)sqlite3_column_text(hydrate_statement, 1);
         self.lastName = (str) ? [NSString stringWithUTF8String:str] : @"";
 
-        self.dollarAmount = sqlite3_column_double(hydrate_statement, 2);
-		
+		int cents = sqlite3_column_int(hydrate_statement, 2);
+        self.moneyAmount = [Money moneyWithCents:cents];
+
         str = (char *)sqlite3_column_text(hydrate_statement, 3);
         self.authorizationId = (str) ? [NSString stringWithUTF8String:str] : @"";
-		
+
         str = (char *)sqlite3_column_text(hydrate_statement, 4);
         self.sanitizedCardNumber = (str) ? [NSString stringWithUTF8String:str] : @"";
-		
-        self.date = [NSDate dateWithTimeIntervalSinceNow:sqlite3_column_double(hydrate_statement, 5)];
-		
+
+        self.date = [NSDate dateWithTimeIntervalSince1970:sqlite3_column_double(hydrate_statement, 5)];
+
 		self.status = (TransactionStatusCodes)sqlite3_column_int(hydrate_statement, 6);
-		
+
     } else {
-        // The query did not return 
+        // The query did not return
         self.firstName = @"Unknown";
         self.lastName = @"";
-        self.dollarAmount = 0.0;
+        self.moneyAmount = [Money moneyWithCents:0];
         self.authorizationId = @"";
         self.sanitizedCardNumber = @"Unknown";
     }
-	
+
     // Reset the query for the next use.
     sqlite3_reset(hydrate_statement);
     // Update object state with respect to hydration.
@@ -331,19 +304,20 @@ static sqlite3_stmt *dehydrate_statement = nil;
         // Write any changes to the database.
         // First, if needed, compile the dehydrate query.
         if (dehydrate_statement == nil) {
-            const char *sql = "UPDATE transactions SET firstName=?, lastName=?, dollarAmount=?, authorizationId=?, sanitizedCardNumber=?, date=?, status=? WHERE pk=?";
+            const char *sql = "UPDATE transactions SET firstName=?, lastName=?, cents=?, authorizationId=?, sanitizedCardNumber=?, date=?, status=? WHERE pk=?";
             if (sqlite3_prepare_v2(database, sql, -1, &dehydrate_statement, NULL) != SQLITE_OK) {
                 NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
             }
         }
         // Bind the query variables.
         sqlite3_bind_text(dehydrate_statement, 1, [firstName UTF8String], -1, SQLITE_TRANSIENT);
-        sqlite3_bind_text(dehydrate_statement, 2, [lastName UTF8String], -1, SQLITE_TRANSIENT);		
-        sqlite3_bind_double(dehydrate_statement, 3, dollarAmount);
-        sqlite3_bind_text(dehydrate_statement, 4, [authorizationId UTF8String], -1, SQLITE_TRANSIENT);		
-        sqlite3_bind_text(dehydrate_statement, 5, [sanitizedCardNumber UTF8String], -1, SQLITE_TRANSIENT);				
-        sqlite3_bind_double(dehydrate_statement, 6, [date timeIntervalSince1970]);		
-        sqlite3_bind_int(dehydrate_statement, 7, (int)status);				
+        sqlite3_bind_text(dehydrate_statement, 2, [lastName UTF8String], -1, SQLITE_TRANSIENT);
+		int cents = [[moneyAmount cents] intValue];
+        sqlite3_bind_int(dehydrate_statement, 3, cents);
+        sqlite3_bind_text(dehydrate_statement, 4, [authorizationId UTF8String], -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(dehydrate_statement, 5, [sanitizedCardNumber UTF8String], -1, SQLITE_TRANSIENT);
+        sqlite3_bind_double(dehydrate_statement, 6, [date timeIntervalSince1970]);
+        sqlite3_bind_int(dehydrate_statement, 7, (int)status);
         sqlite3_bind_int(dehydrate_statement, 8, primaryKey);
         // Execute the query.
         int success = sqlite3_step(dehydrate_statement);
@@ -356,7 +330,7 @@ static sqlite3_stmt *dehydrate_statement = nil;
         // Update the object state with respect to unwritten changes.
         dirty = NO;
     }
-    // Release member variables to reclaim memory. Set to nil to avoid over-releasing them 
+    // Release member variables to reclaim memory. Set to nil to avoid over-releasing them
     // if dehydrate is called multiple times.
     [firstName release];
     firstName = nil;
@@ -377,8 +351,8 @@ static sqlite3_stmt *dehydrate_statement = nil;
 // logic or steps for synchronization. The "set" accessors attempt to verify that the new value is definitely
 // different from the old value, to minimize the amount of work done. Any "set" which actually results in changing
 // data will mark the object as "dirty" - i.e., possessing data that has not been written to the database.
-// All the "set" accessors copy data, rather than retain it. This is common for value objects - strings, numbers, 
-// dates, data buffers, etc. This ensures that subsequent changes to either the original or the copy don't violate 
+// All the "set" accessors copy data, rather than retain it. This is common for value objects - strings, numbers,
+// dates, data buffers, etc. This ensures that subsequent changes to either the original or the copy don't violate
 // the encapsulation of the owning object.
 
 #define storeAttr(attrName) if ((!attrName && !aString) || (attrName && aString && [attrName isEqualToString:aString])) return; \
@@ -405,13 +379,11 @@ static sqlite3_stmt *dehydrate_statement = nil;
 	storeAttr(firstName);
 }
 
-- (float)dollarAmount {
-    return dollarAmount;
+- (Money*)moneyAmount {
+    return moneyAmount;
 }
-- (void)setDollarAmount:(float)aVal {
-	if (dollarAmount == aVal) return;
-	dirty = YES;
-	dollarAmount = aVal;
+- (void)setMoneyAmount:(Money*)aString {
+	storeAttr(moneyAmount);
 }
 
 - (NSString *)authorizationId {
@@ -446,5 +418,7 @@ static sqlite3_stmt *dehydrate_statement = nil;
 	dirty = YES;
 	status = aVal;
 }
+
+
 
 @end

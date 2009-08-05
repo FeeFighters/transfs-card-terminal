@@ -45,7 +45,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 	[[NSUserDefaults standardUserDefaults] setBool:[emailReceiptEnabled isOn] forKey:@"emailReceiptEnabled"];	
-	if (![NSString is_blank:[emailReceiptAddress text]])
+	if (![NSString isBlank:[emailReceiptAddress text]])
 		[[NSUserDefaults standardUserDefaults] setObject:[emailReceiptAddress text] forKey:@"emailReceiptAddress"];
 	[[NSUserDefaults standardUserDefaults] synchronize];	
 }

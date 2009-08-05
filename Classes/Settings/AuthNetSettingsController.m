@@ -39,19 +39,19 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-	[authNetLogin setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"login"]];
-	[authNetPassword setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"password"]];
-	[authNetTestMode setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"testMode"]];	
+	[authNetLogin setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"authNetLogin"]];
+	[authNetPassword setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"authNetPassword"]];
+	[authNetTestMode setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"authNetTestMode"]];	
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 
-	if (![NSString is_blank:[authNetLogin text]])//
-		[[NSUserDefaults standardUserDefaults] setObject:[authNetLogin text] forKey:@"login"];
-	if (![NSString is_blank:[authNetPassword text]])
-		[[NSUserDefaults standardUserDefaults] setObject:[authNetPassword text] forKey:@"password"];
-	[[NSUserDefaults standardUserDefaults] setBool:[authNetTestMode isOn] forKey:@"testMode"];
+	if (![NSString isBlank:[authNetLogin text]])//
+		[[NSUserDefaults standardUserDefaults] setObject:[authNetLogin text] forKey:@"authNetLogin"];
+	if (![NSString isBlank:[authNetPassword text]])
+		[[NSUserDefaults standardUserDefaults] setObject:[authNetPassword text] forKey:@"authNetPassword"];
+	[[NSUserDefaults standardUserDefaults] setBool:[authNetTestMode isOn] forKey:@"authNetTestMode"];
 	[[NSUserDefaults standardUserDefaults] synchronize];	
 }
 

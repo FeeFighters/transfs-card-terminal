@@ -50,7 +50,7 @@
 
 - (void) keypadBackspacePressed:(UIButton*)sender
 {
-	if (![NSString is_blank:number])
+	if (![NSString isBlank:number])
 		[number deleteCharactersInRange:NSMakeRange([number length]-1, 1)];
 	[cvvLabel setText:number];
 }

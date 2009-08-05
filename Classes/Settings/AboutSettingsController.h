@@ -12,6 +12,7 @@
 @interface AboutSettingsController : UIViewController <UIWebViewDelegate> {
 	IBOutlet UIWebView* aboutWebView;
 	IBOutlet UIActivityIndicatorView* spinner;
+	IBOutlet UILabel* versionLabel;
 }
 
 - (IBAction) openInSafari:(id)sender;

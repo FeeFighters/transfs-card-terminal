@@ -14,8 +14,9 @@
 #import "CreditCard.h"
 #import "CardExpirationPickerDelegate.h"
 #import "objCFixes.h"
-#import "AuthorizeNetGateway.h"
 #import "Base.h"
+#import "Money.h"
+#import "Gateway.h"
 
 typedef enum {
 	TransactionSuccess = 0,
@@ -23,19 +24,19 @@ typedef enum {
 	TransactionVoided
 } TransactionStatusCodes;
 
-@interface Transaction : NSObject 
+@interface Transaction : NSObject
 {
 	NSString* firstName;
-	NSString* lastName;	
+	NSString* lastName;
 	NSString* sanitizedCardNumber;
-	float dollarAmount;
+	Money* moneyAmount;
 	NSString* authorizationId;
 	NSDate* date;
-	
+
 	TransactionStatusCodes status;
 	NSString* errorMessages;
-	
-	
+
+
     // Opaque reference to the underlying database.
     sqlite3 *database;
     // Primary key in the database.
@@ -47,25 +48,26 @@ typedef enum {
 }
 
 @property(copy, nonatomic) NSString* firstName;
-@property(copy, nonatomic) NSString* lastName;	
+@property(copy, nonatomic) NSString* lastName;
 @property(copy, nonatomic) NSString* sanitizedCardNumber;
-@property(assign) float dollarAmount;
+@property(copy, nonatomic) Money* moneyAmount;
 @property(copy, nonatomic) NSString* authorizationId;
 @property(copy, nonatomic) NSDate* date;
 @property(assign) TransactionStatusCodes status;
 
 @property(retain, nonatomic) NSString* errorMessages;
 
-// Property exposure for primary key and other attributes. The primary key is 'assign' because it is not an object, 
-// nonatomic because there is no need for concurrent access, and readonly because it cannot be changed without 
+// Property exposure for primary key and other attributes. The primary key is 'assign' because it is not an object,
+// nonatomic because there is no need for concurrent access, and readonly because it cannot be changed without
 // corrupting the database.
 @property (assign, nonatomic, readonly) NSInteger primaryKey;
 
 // Initialize the Transaction and Process it!
-+ (id) initAndProcessFromCurrentState;
+- (id) initAndProcessWithGateway:(BillingGateway*)gateway;
++ (id) transactionAndProcessWithGateway:(BillingGateway*)gateway;
 
 // Void an existing transaction
-- (void)voidTransaction;
+- (void)voidTransaction:(BillingGateway*)gateway;
 
 // Finalize (delete) all of the SQLite compiled queries.
 + (void)finalizeStatements;

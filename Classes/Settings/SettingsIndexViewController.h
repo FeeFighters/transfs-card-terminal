@@ -12,14 +12,23 @@
 #import "EmailSettingsViewController.h"
 #import "AuthNetSettingsController.h"
 #import "PaypalSettingsController.h"
+#import "UsaEpaySettingsController.h"
+
+typedef enum gateways {
+	authNet = 0,
+	paypal,
+	usaEpay,
+	gatewaysCount
+} gatewayList;
 
 @interface SettingsIndexViewController : UITableViewController {
 	IBOutlet AboutSettingsController* aboutSettingsController;
 	IBOutlet GeneralSettingsViewController* generalSettingsController;
 	IBOutlet EmailSettingsViewController* emailSettingsController;
 	IBOutlet AuthNetSettingsController* authNetSettingsController;
-	IBOutlet PaypalSettingsController* paypalSettingsController;	
-	
+	IBOutlet PaypalSettingsController* paypalSettingsController;
+	IBOutlet UsaEpaySettingsController* usaEpaySettingsController;
+
 	int selectedGatewayIndex;
 }
 
@@ -27,7 +36,8 @@
 @property (nonatomic, retain) IBOutlet GeneralSettingsViewController* generalSettingsController;
 @property (nonatomic, retain) IBOutlet EmailSettingsViewController* emailSettingsController;
 @property (nonatomic, retain) IBOutlet AuthNetSettingsController* authNetSettingsController;
-@property (nonatomic, retain) IBOutlet PaypalSettingsController* paypalSettingsController;	
+@property (nonatomic, retain) IBOutlet PaypalSettingsController* paypalSettingsController;
+@property (nonatomic, retain) IBOutlet UsaEpaySettingsController* usaEpaySettingsController;
 
 @property(assign) int selectedGatewayIndex;
 

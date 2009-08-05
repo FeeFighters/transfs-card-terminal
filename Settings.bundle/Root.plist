@@ -36,7 +36,7 @@
 			<key>Title</key>
 			<string>Login</string>
 			<key>Key</key>
-			<string>login</string>
+			<string>authNetLogin</string>
 			<key>DefaultValue</key>
 			<string>my login</string>
 			<key>IsSecure</key>
@@ -54,11 +54,11 @@
 			<key>Title</key>
 			<string>Password (tran_key)</string>
 			<key>Key</key>
-			<string>password</string>
+			<string>authNetPassword</string>
 			<key>DefaultValue</key>
 			<string>auth key</string>
 			<key>IsSecure</key>
-			<false/>
+			<true/>
 			<key>KeyboardType</key>
 			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
@@ -72,7 +72,7 @@
 			<key>Title</key>
 			<string>Test Mode Enabled</string>
 			<key>Key</key>
-			<string>testMode</string>
+			<string>authNetTestMode</string>
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
@@ -80,35 +80,121 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Email Receipts</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Email Receipts Enabled</string>
-			<key>Key</key>
-			<string>emailReceiptEnabled</string>
-			<key>DefaultValue</key>
-			<true/>
+			<string>Paypal Account</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Your Email Address</string>
+			<string>Login</string>
 			<key>Key</key>
-			<string>emailReceiptAddress</string>
+			<string>paypalLogin</string>
 			<key>DefaultValue</key>
-			<string></string>
+			<string>my login</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>KeyboardType</key>
-			<string>Email</string>
+			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
 			<string>None</string>
 			<key>AutocorrectionType</key>
 			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Password</string>
+			<key>Key</key>
+			<string>paypalPassword</string>
+			<key>DefaultValue</key>
+			<string>password</string>
+			<key>IsSecure</key>
+			<true/>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+			<key>AutocapitalizationType</key>
+			<string>None</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Signature</string>
+			<key>Key</key>
+			<string>paypalSignature</string>
+			<key>DefaultValue</key>
+			<string>signature</string>
+			<key>IsSecure</key>
+			<true/>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+			<key>AutocapitalizationType</key>
+			<string>None</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Test Mode Enabled</string>
+			<key>Key</key>
+			<string>paypalTestMode</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>USA ePay Account</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Source Key</string>
+			<key>Key</key>
+			<string>usaEpaySourceKey</string>
+			<key>DefaultValue</key>
+			<string>source key</string>
+			<key>IsSecure</key>
+			<true/>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+			<key>AutocapitalizationType</key>
+			<string>None</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Test Mode Enabled</string>
+			<key>Key</key>
+			<string>usaEpayTestMode</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Setup Message</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<true/>
+			<key>Key</key>
+			<string>showSetupMessage</string>
+			<key>Title</key>
+			<string>Show Setup Message on Start</string>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
 		</dict>
 	</array>
 </dict>

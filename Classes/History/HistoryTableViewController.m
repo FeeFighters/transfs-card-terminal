@@ -24,8 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	detailViewController = [[HistoryDetailViewController alloc] initWithNibName:@"HistoryDetailView" bundle:nil];	
-	
+	detailViewController = [[HistoryDetailViewController alloc] initWithNibName:@"HistoryDetailView" bundle:nil];
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -35,7 +35,7 @@
     [self.tableView reloadData];
 
 	//self.navigationItem.prompt = @"TransFS.com Card Terminal";
-	self.navigationItem.title = @"Transaction History";	
+	self.navigationItem.title = @"Transaction History";
 }
 
 /*
@@ -86,25 +86,18 @@
     return delegate.transactionHistory.count;
 }
 
-
-// The accessory type is the image displayed on the far right of each table cell. In order for the delegate method
-// tableView:accessoryButtonClickedForRowWithIndexPath: to be called, you must return the "Detail Disclosure Button" type.
-- (UITableViewCellAccessoryType)tableView:(UITableView *)tv accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellAccessoryDisclosureIndicator;
-}
-
 // Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TransactionTableViewCell* cell = (TransactionTableViewCell*)[self.tableView dequeueReusableCellWithIdentifier:@"TransactionCell"];
     if (cell == nil) {
 		cell = (TransactionTableViewCell*)[[[NSBundle mainBundle] loadNibNamed:@"TransactionTableViewCell" owner:self options: nil] objectAtIndex:0];
 	}
-	
+
     // Retrieve the Transaction object matching the row from the application delegate's array.
     Transaction *transaction = (Transaction *)[delegate.transactionHistory objectAtIndex:indexPath.row];
 
-    // Set up the cell...	
+    // Set up the cell...
 	if (transaction.status == TransactionVoided) {
 		[cell.amount setFont:[UIFont italicSystemFontOfSize:17]];
 		[cell.amount setTextColor:[UIColor redColor]];
@@ -121,7 +114,7 @@
 		[cell.date setTextColor:[UIColor blackColor]];
 	}
 	[cell.name setText:[NSString stringWithFormat:@"%@ %@", transaction.firstName, transaction.lastName]];
-	[cell.amount setText:[NSString stringWithFormat:@"%.2f", transaction.dollarAmount]];
+	[cell.amount setText:[NSString stringWithFormat:@"%.2f", [transaction.moneyAmount dollars]]];
 	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
 	[dateFormatter setDateStyle:NSDateFormatterShortStyle];
 	[dateFormatter setTimeStyle:NSDateFormatterNoStyle];
@@ -138,13 +131,13 @@
     [transaction hydrate];
     // Set the detail controller's inspected item to the currently-selected transaction.
     detailViewController.transaction = transaction;
-    
+
 	// Navigation logic may go here. Create and push another view controller.
 	[self.navigationController pushViewController:detailViewController animated:true];
 }
 
-- (void)tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
-									forRowAtIndexPath:(NSIndexPath *)indexPath 
+- (void)tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+									forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // If row is deleted, remove it from the list.
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -152,7 +145,7 @@
 		Transaction *transaction = (Transaction *)[delegate.transactionHistory objectAtIndex:indexPath.row];
         [delegate removeTransaction:transaction];
         // Animate the deletion from the table.
-        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] 
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
 							  withRowAnimation:UITableViewRowAnimationFade];
     }
 }

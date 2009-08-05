@@ -135,7 +135,7 @@
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">2</int>
-					<bytes key="NSRGB">MCAwLjMwMDQ4MDYgMC41AA</bytes>
+					<bytes key="NSRGB">MC4xMDc2OTA4NiAwLjI3Nzg4MjgxIDAuNTM2NDk2MzQAA</bytes>
 				</object>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>

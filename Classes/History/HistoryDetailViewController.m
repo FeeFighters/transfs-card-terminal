@@ -38,39 +38,39 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[firstName setText:[transaction firstName]];
-	[lastName setText:[transaction lastName]];	
-	[amount setText:[NSString stringWithFormat:@"$%.2f", [transaction dollarAmount]]];
+	[lastName setText:[transaction lastName]];
+	[amount setText:[NSString stringWithFormat:@"$%.2f", [[transaction moneyAmount] dollars]]];
 
 	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
 	[dateFormatter setDateStyle:NSDateFormatterShortStyle];
 	[dateFormatter setTimeStyle:NSDateFormatterNoStyle];
 	[date setText:[dateFormatter stringFromDate:transaction.date]];
 
-	[transactionId setText:[transaction authorizationId]];	
-	[sanitizedCardNumber setText:[transaction sanitizedCardNumber]];		
-    
+	[transactionId setText:[transaction authorizationId]];
+	[sanitizedCardNumber setText:[transaction sanitizedCardNumber]];
+
 	if (transaction.status == TransactionVoided) {
 		[voidResponseLabel setText:@"Transaction Voided."];
 		[voidResponseLabel setHidden:false];
-		[voidTransactionButton setHidden:true];		
+		[voidTransactionButton setHidden:true];
 	} else {
 		[voidResponseLabel setHidden:true];
-		[voidTransactionButton setHidden:false];		
+		[voidTransactionButton setHidden:false];
 	}
-	
+
 	[super viewWillAppear:animated];
 }
 
 
 - (IBAction) voidButtonClick:(id)sender
 {
-	UIActionSheet *alert = [[UIActionSheet alloc] initWithTitle:@"Void Transaction?" 
-													   delegate:self 
-											  cancelButtonTitle:nil 
+	UIActionSheet *alert = [[UIActionSheet alloc] initWithTitle:@"Void Transaction?"
+													   delegate:self
+											  cancelButtonTitle:nil
 										 destructiveButtonTitle:@"Cancel"
 											  otherButtonTitles:nil];
 	[alert addButtonWithTitle:@"Yes, Void!"];
-		
+
 	[alert showInView:self.tabBarController.view];
 }
 
@@ -82,8 +82,8 @@
 	else if (buttonIndex==1)
 	{
 		[voidResponseLabel setText:@"Transaction Voided."];
-		[voidResponseLabel setHidden:false];	
-		[voidTransactionButton setHidden:true];		
+		[voidResponseLabel setHidden:false];
+		[voidTransactionButton setHidden:true];
 		[NSThread detachNewThreadSelector:@selector(voidTransactionThread) toTarget:self withObject:nil];
 	}
 }
@@ -91,14 +91,17 @@
 - (void) voidTransactionThread
 {
 	[NSThread sleepForTimeInterval:0.5];
-	[transaction voidTransaction];
+
+	BillingGateway *gateway = [[[UIApplication sharedApplication] delegate] setupGateway];
+	[transaction voidTransaction:gateway];
+
 	if (transaction.status == TransactionVoided) {
 		[voidResponseLabel setText:@"Transaction Voided."];
-		[voidResponseLabel setHidden:false];		
+		[voidResponseLabel setHidden:false];
 	} else {
 		[voidResponseLabel setText:[transaction errorMessages]];
-		[voidResponseLabel setHidden:false];		
-		[voidTransactionButton setHidden:false];		
+		[voidResponseLabel setHidden:false];
+		[voidTransactionButton setHidden:false];
 	}
 }
 
