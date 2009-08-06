@@ -1,5 +1,5 @@
 h1. TransFS Card Terminal for iPhone
 
-This project is an open-source iPhone application for processing credit card transactions via the Authorize.Net gateway.
+This project is an open-source iPhone application for processing credit card transactions via a number of gateways.  It is powered by the ObjectiveMerchant library (a port of Ruby's ActiveMerchant).
 
-It is sponsored by "Transparent Financial Services":http://transfs.com at "TransFS.com":http://transfs.com.
+TransFS Card Terminal is sponsored by "TransFS.com":http://transfs.com.  TransFS.com is an online marketplace for business financial services, such as "credit card processing":http://transfs.com/credit-card-processing, insurance, payroll processing, and business loans.

@@ -8,6 +8,7 @@
 
 #import "TransFS_Card_TerminalAppDelegate.h"
 #import "Transaction.h"
+#import "ZipCode.h"
 #import "SettingsIndexViewController.h"
 #import "AuthorizeNetGateway.h"
 #import "PaypalGateway.h"
@@ -173,6 +174,7 @@
     // Save changes.
     [transactionHistory makeObjectsPerformSelector:@selector(dehydrate)];
     [Transaction finalizeStatements];
+    [ZipCode finalizeStatements];
     // Close the database.
     if (sqlite3_close(database) != SQLITE_OK) {
         NSAssert1(0, @"Error: failed to close database with message '%s'.", sqlite3_errmsg(database));

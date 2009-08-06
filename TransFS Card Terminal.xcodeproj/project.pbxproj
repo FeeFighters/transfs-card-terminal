@@ -63,6 +63,11 @@
 		1D5220150F6542C400F11E37 /* PaypalSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5220140F6542C400F11E37 /* PaypalSettings.xib */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1D6FB71B102A5A6F001C0301 /* ZipCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FB719102A5A6F001C0301 /* ZipCode.m */; };
+		1D6FB77B102A5FF5001C0301 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FB777102A5FF5001C0301 /* DoneUp.png */; };
+		1D6FB77C102A5FF5001C0301 /* DoneDown3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FB778102A5FF5001C0301 /* DoneDown3.png */; };
+		1D6FB77D102A5FF5001C0301 /* DoneUp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FB779102A5FF5001C0301 /* DoneUp3.png */; };
+		1D6FB77E102A5FF5001C0301 /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FB77A102A5FF5001C0301 /* DoneDown.png */; };
 		1D7520340F47D6C400996F8E /* AvsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520000F47D6C400996F8E /* AvsResult.m */; };
 		1D7520350F47D6C400996F8E /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520020F47D6C400996F8E /* Base.m */; };
 		1D7520360F47D6C400996F8E /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520040F47D6C400996F8E /* Check.m */; };
@@ -215,6 +220,14 @@
 		1D5220120F65415600F11E37 /* PaypalSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaypalSettingsController.m; sourceTree = "<group>"; };
 		1D5220140F6542C400F11E37 /* PaypalSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaypalSettings.xib; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TransFS Card Terminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6FB719102A5A6F001C0301 /* ZipCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipCode.m; sourceTree = "<group>"; };
+		1D6FB71A102A5A6F001C0301 /* ZipCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipCode.h; sourceTree = "<group>"; };
+		1D6FB777102A5FF5001C0301 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp.png; sourceTree = "<group>"; };
+		1D6FB778102A5FF5001C0301 /* DoneDown3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown3.png; sourceTree = "<group>"; };
+		1D6FB779102A5FF5001C0301 /* DoneUp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp3.png; sourceTree = "<group>"; };
+		1D6FB77A102A5FF5001C0301 /* DoneDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneDown.png; sourceTree = "<group>"; };
+		1D6FB792102A634A001C0301 /* NumberKeypadWithDone_Implementation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberKeypadWithDone_Implementation.h; sourceTree = "<group>"; };
+		1D6FB793102A634A001C0301 /* NumberKeypadWithDone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberKeypadWithDone.h; sourceTree = "<group>"; };
 		1D751FFF0F47D6C400996F8E /* AvsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvsResult.h; sourceTree = "<group>"; };
 		1D7520000F47D6C400996F8E /* AvsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvsResult.m; sourceTree = "<group>"; };
 		1D7520010F47D6C400996F8E /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
@@ -336,6 +349,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1D6FB719102A5A6F001C0301 /* ZipCode.m */,
+				1D6FB71A102A5A6F001C0301 /* ZipCode.h */,
 				1D5057F10F63D88D008B2FCC /* Charge */,
 				1D50580A0F63D88D008B2FCC /* History */,
 				1D5058110F63D88D008B2FCC /* Settings */,
@@ -428,6 +443,8 @@
 		1D50581C0F63D88D008B2FCC /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1D6FB792102A634A001C0301 /* NumberKeypadWithDone_Implementation.h */,
+				1D6FB793102A634A001C0301 /* NumberKeypadWithDone.h */,
 				1D50581D0F63D88D008B2FCC /* CardExpirationPickerDelegate.h */,
 				1D50581E0F63D88D008B2FCC /* CardExpirationPickerDelegate.m */,
 				1D50581F0F63D88D008B2FCC /* NumberKeypadView.h */,
@@ -606,6 +623,10 @@
 		1DC8680D0F53B2BC00D2DB08 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1D6FB777102A5FF5001C0301 /* DoneUp.png */,
+				1D6FB778102A5FF5001C0301 /* DoneDown3.png */,
+				1D6FB779102A5FF5001C0301 /* DoneUp3.png */,
+				1D6FB77A102A5FF5001C0301 /* DoneDown.png */,
 				1DB9B705100AF4DB00A71B93 /* splash-about_settings.png */,
 				1DB9B693100AE16500A71B93 /* splash-bg.png */,
 				1DB9B694100AE16500A71B93 /* splash-cc.png */,
@@ -792,6 +813,10 @@
 				1DB9B699100AE16500A71B93 /* splash-logo.png in Resources */,
 				1DB9B69A100AE16500A71B93 /* splash-terminal.png in Resources */,
 				1DB9B706100AF4DB00A71B93 /* splash-about_settings.png in Resources */,
+				1D6FB77B102A5FF5001C0301 /* DoneUp.png in Resources */,
+				1D6FB77C102A5FF5001C0301 /* DoneDown3.png in Resources */,
+				1D6FB77D102A5FF5001C0301 /* DoneUp3.png in Resources */,
+				1D6FB77E102A5FF5001C0301 /* DoneDown.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +881,7 @@
 				1DB9B5B91009C32C00A71B93 /* UsaEpayGateway.m in Sources */,
 				1DB9B5EE1009CEA200A71B93 /* UsaEpaySettingsController.m in Sources */,
 				1DB9B5FC1009D58400A71B93 /* Money.m in Sources */,
+				1D6FB71B102A5A6F001C0301 /* ZipCode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,7 +892,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
