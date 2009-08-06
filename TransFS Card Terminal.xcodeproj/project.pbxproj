@@ -117,6 +117,7 @@
 		1DA22A4B102AE07B006BBDAE /* keypad.blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A33102AE07B006BBDAE /* keypad.blank.png */; };
 		1DA22A5A102AE203006BBDAE /* keypad.dot.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A58102AE203006BBDAE /* keypad.dot.down.png */; };
 		1DA22A5B102AE203006BBDAE /* keypad.dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A59102AE203006BBDAE /* keypad.dot.png */; };
+		1DA22AC3102AF22F006BBDAE /* IpAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA22AC2102AF22F006BBDAE /* IpAddress.m */; };
 		1DB5DE950F4B9CEF005EA877 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1DB5DE940F4B9CEF005EA877 /* Settings.bundle */; };
 		1DB9B5B61009C31000A71B93 /* NSNullAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9B5B51009C31000A71B93 /* NSNullAdditions.m */; };
 		1DB9B5B91009C32C00A71B93 /* UsaEpayGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9B5B81009C32C00A71B93 /* UsaEpayGateway.m */; };
@@ -342,6 +343,8 @@
 		1DA22A33102AE07B006BBDAE /* keypad.blank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keypad.blank.png; sourceTree = "<group>"; };
 		1DA22A58102AE203006BBDAE /* keypad.dot.down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keypad.dot.down.png; sourceTree = "<group>"; };
 		1DA22A59102AE203006BBDAE /* keypad.dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keypad.dot.png; sourceTree = "<group>"; };
+		1DA22AC1102AF22F006BBDAE /* IpAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpAddress.h; sourceTree = "<group>"; };
+		1DA22AC2102AF22F006BBDAE /* IpAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpAddress.m; sourceTree = "<group>"; };
 		1DB5DE940F4B9CEF005EA877 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1DB9B5B41009C31000A71B93 /* NSNullAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNullAdditions.h; sourceTree = "<group>"; };
 		1DB9B5B51009C31000A71B93 /* NSNullAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNullAdditions.m; sourceTree = "<group>"; };
@@ -510,6 +513,8 @@
 				1D5058240F63D88D008B2FCC /* UIGradientView.m */,
 				1D5058250F63D88D008B2FCC /* UIScrollViewAdditions.h */,
 				1D5058260F63D88D008B2FCC /* UIScrollViewAdditions.m */,
+				1DA22AC1102AF22F006BBDAE /* IpAddress.h */,
+				1DA22AC2102AF22F006BBDAE /* IpAddress.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -998,6 +1003,7 @@
 				1DB9B5EE1009CEA200A71B93 /* UsaEpaySettingsController.m in Sources */,
 				1DB9B5FC1009D58400A71B93 /* Money.m in Sources */,
 				1D6FB71B102A5A6F001C0301 /* ZipCode.m in Sources */,
+				1DA22AC3102AF22F006BBDAE /* IpAddress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

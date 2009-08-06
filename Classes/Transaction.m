@@ -10,6 +10,7 @@
 #import "Response.h"
 #import "ChargeViewController.h"
 #import "NSArrayAdditions.h"
+#import "IpAddress.h"
 #import <sqlite3.h>
 
 // Static variables for compiled SQL queries. This implementation choice is to be able to share a one time
@@ -125,15 +126,24 @@ static sqlite3_stmt *dehydrate_statement = nil;
 
 	if ([card is_valid])
 	{
-		NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
+		NSMutableDictionary *addressOptions = [[NSMutableDictionary alloc] init];
 
 		bool avsEnabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"];
 		if (avsEnabled) {
-			[options setObject:nilToEmptyStr(chargeAddressViewController.address.text) forKey:@"address1"];
-			[options setObject:nilToEmptyStr(chargeAddressViewController.zipcode.text) forKey:@"zip"];
-			[options setObject:nilToEmptyStr(chargeAddressViewController.city.text) forKey:@"city"];
-			// [options setObject:[chargeAddressViewController state] forKey:@"state"];
+			[addressOptions setObject:nilToEmptyStr(chargeAddressViewController.address.text) forKey:@"address1"];
+			[addressOptions setObject:nilToEmptyStr(chargeAddressViewController.zipcode.text) forKey:@"zip"];
+			[addressOptions setObject:nilToEmptyStr(chargeAddressViewController.city.text) forKey:@"city"];
+			[addressOptions setObject:nilToEmptyStr(chargeAddressViewController.state.text) forKey:@"state"];
+			[addressOptions setObject:nilToEmptyStr(@"US") forKey:@"country"];
+			[addressOptions setObject:nilToEmptyStr([NSString stringWithFormat:@"%@ %@", nilToEmptyStr(chargeCardNameViewController.firstName.text), nilToEmptyStr(chargeCardNameViewController.lastName.text)])
+                         forKey:@"name"];
 		}
+
+		NSMutableDictionary *authorizeOptions = [NSMutableDictionary dictionaryWithObject:addressOptions forKey:@"address"];
+		if (avsEnabled) {
+			[authorizeOptions setObject:addressOptions forKey:@"shippingAddress"];
+		}
+		[authorizeOptions setObject:nilToEmptyStr([IpAddress stringFromIpAddress]) forKey:@"ip"];
 
 		// Store value that we want to keep around for later
 		NSString* dollarTxt = chargeAmountViewController.number;
@@ -141,7 +151,7 @@ static sqlite3_stmt *dehydrate_statement = nil;
 
 		@try {
 			BillingResponse *response;
-			response = [gateway authorize:self.moneyAmount creditcard:card options:[NSDictionary dictionaryWithObject:options forKey:@"address"]];
+			response = [gateway authorize:self.moneyAmount creditcard:card options:authorizeOptions];
 			if (![response is_success])
 				[NSException raise:@"Authorize.Net Gateway Error, authorize:" format:[response message]];
 			else {

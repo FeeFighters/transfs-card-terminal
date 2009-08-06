@@ -15,7 +15,7 @@
 
 #import "NumberKeypadWithDone_Implementation.h"
 
-@synthesize address, city, zipcode, addressPicker;
+@synthesize address, city, zipcode, state, addressPicker;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.

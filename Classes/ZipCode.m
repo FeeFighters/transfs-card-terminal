@@ -32,13 +32,16 @@ static sqlite3_stmt *query_statement = nil;
 // Query for a list of zipcodes
 + (NSArray*) zipcodesByZip:(NSString*)zip fromDatabase:(sqlite3 *)database
 {
-  if (query_statement == nil) {
-      NSString *sql = [NSString stringWithFormat:@"SELECT zip, city, state, county FROM zips WHERE zip='%@';", zip];
-      if (sqlite3_prepare_v2(database, [sql UTF8String], -1, &query_statement, NULL) != SQLITE_OK) {
-          NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
-      }
+  if (query_statement != nil) {
+	  sqlite3_finalize(query_statement);
+	  query_statement = nil;
   }
 
+	NSString *sql = [NSString stringWithFormat:@"SELECT zip, city, state, county FROM zips WHERE zip='%@';", zip];
+	if (sqlite3_prepare_v2(database, [sql UTF8String], -1, &query_statement, NULL) != SQLITE_OK) {
+		NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
+	}
+	
 	NSMutableArray* zipCodes = [[NSMutableArray alloc] init];
 	char *str;
 
