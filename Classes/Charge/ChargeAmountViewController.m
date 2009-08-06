@@ -54,6 +54,12 @@
 	[self.navigationController pushViewController:nextViewController animated:true];
 }
 
+// Clear data for this form
+- (void) clearData {
+	number = [[NSMutableString alloc] init];
+	numberField.text = @"";
+}
+
 - (void) keypadNumberPressed:(int)num button:(UIButton*)sender
 {
 	[number appendFormat:@"%d", num];

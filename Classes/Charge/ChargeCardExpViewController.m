@@ -56,6 +56,10 @@
 	[self.navigationController pushViewController:nextViewController animated:true];
 }
 
+// Clear data for this form
+- (void) clearData {
+}
+
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

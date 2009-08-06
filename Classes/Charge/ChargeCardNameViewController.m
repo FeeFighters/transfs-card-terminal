@@ -54,6 +54,12 @@
 	[self.navigationController pushViewController:nextViewController animated:true];
 }
 
+// Clear data for this form
+- (void) clearData {
+	firstName.text = @"";
+	lastName.text = @"";
+}
+
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

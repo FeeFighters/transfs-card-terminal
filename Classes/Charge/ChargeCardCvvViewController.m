@@ -34,7 +34,7 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	number = [[NSMutableString alloc] init];
 }
 
@@ -57,6 +57,12 @@
 		UIViewController* nextViewController = [(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] chargeViewController];
 		[self.navigationController popToViewController:nextViewController animated:true];
 	}
+}
+
+// Clear data for this form
+- (void) clearData {
+	cvvLabel.text = @"";
+	number = [[NSMutableString alloc] init];
 }
 
 - (void) keypadNumberPressed:(int)num button:(UIButton*)sender

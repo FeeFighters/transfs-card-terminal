@@ -19,5 +19,6 @@
 @property(retain, nonatomic) IBOutlet UIPickerView* yearPicker;
 
 - (void) goToNextStep;
+- (void) clearData;
 
 @end

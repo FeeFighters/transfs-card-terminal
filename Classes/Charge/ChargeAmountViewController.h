@@ -22,5 +22,6 @@
 - (void) keypadPeriodPressed:(UIButton*)sender;
 
 - (void) goToNextStep;
+- (void) clearData;
 
 @end

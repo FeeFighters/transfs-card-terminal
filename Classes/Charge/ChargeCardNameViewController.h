@@ -18,5 +18,6 @@
 @property(assign, nonatomic) IBOutlet UITextField* lastName;
 
 - (void) goToNextStep;
+- (void) clearData;
 
 @end

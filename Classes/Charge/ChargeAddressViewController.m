@@ -55,6 +55,14 @@
 	[self.navigationController popToViewController:nextViewController animated:true];
 }
 
+// Clear data for this form
+- (void) clearData {
+	address.text = @"";
+	city.text = @"";
+	state.text = @"";
+	zipcode.text = @"";
+	addressPicker.hidden = true;
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.

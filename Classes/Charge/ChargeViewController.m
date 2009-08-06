@@ -16,9 +16,10 @@
 #import "CreditCardMethods.h"
 #import "Transaction.h"
 
+
 @implementation ChargeViewController
 
-@synthesize tableView;
+@synthesize tableView, clearDataFlashView;
 @synthesize chargeAmountViewController, chargeCardNameViewController, chargeCardNumberViewController;
 @synthesize chargeCardExpViewController, chargeCardCvvViewController, chargeAddressViewController;
 
@@ -49,17 +50,36 @@
 	chargeAddressViewController = [[ChargeAddressViewController alloc] initWithNibName:@"ChargeAddressView" bundle:nil];
 
 	tableView.backgroundColor = self.view.backgroundColor;
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   [self.tableView reloadData];
 
-//	self.navigationItem.prompt = @"TransFS.com Card Terminal";
 	self.navigationItem.title = @"Process Transaction";
+
+	UIBarButtonItem* clearButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearData)];
+	[self.navigationItem setRightBarButtonItem:clearButton animated:NO];
 }
 
+// Clear data for this form
+- (void) clearData {
+	[chargeAmountViewController clearData];
+	[chargeCardNumberViewController clearData];
+	[chargeCardNameViewController clearData];
+	[chargeCardExpViewController clearData];
+	[chargeCardCvvViewController clearData];
+	[chargeAddressViewController clearData];
+	[self.tableView reloadData];
+
+	[[self.view superview] addSubview:clearDataFlashView];
+	[UIView beginAnimations:@"clearDataFlash" context:nil];		//	Begin an animation block.
+	[UIView setAnimationDuration:0.75];
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:[clearDataFlashView superview] cache:NO];
+	[clearDataFlashView removeFromSuperview];
+	[UIView commitAnimations];
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -72,10 +92,10 @@
 - (IBAction) processButtonClick:(id)sender
 {
 	UIActionSheet *alert = [[UIActionSheet alloc] initWithTitle:@"Process Transaction?"
-													   delegate:self
-											  cancelButtonTitle:nil
-										 destructiveButtonTitle:@"Cancel"
-											  otherButtonTitles:nil];
+                                                     delegate:self
+                                            cancelButtonTitle:nil
+                                       destructiveButtonTitle:@"Cancel"
+                                            otherButtonTitles:nil];
 	[alert addButtonWithTitle:@"Proceed!"];
 
 	[alert showInView:self.tabBarController.view];

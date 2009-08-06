@@ -20,30 +20,35 @@
 	IBOutlet ChargeAmountViewController* chargeAmountViewController;
 	IBOutlet ChargeCardNameViewController* chargeCardNameViewController;
 	IBOutlet ChargeCardNumberViewController* chargeCardNumberViewController;
-	IBOutlet ChargeCardExpViewController* chargeCardExpViewController;	
-	IBOutlet ChargeCardCvvViewController* chargeCardCvvViewController;	
+	IBOutlet ChargeCardExpViewController* chargeCardExpViewController;
+	IBOutlet ChargeCardCvvViewController* chargeCardCvvViewController;
 	IBOutlet ChargeAddressViewController* chargeAddressViewController;
 
 	IBOutlet UIButton* processButton;
 	IBOutlet UIActivityIndicatorView* spinner;
 	IBOutlet UIView* successView;
 	IBOutlet UIImageView* successViewImage;
-	IBOutlet UILabel* successViewLabel;	
+	IBOutlet UILabel* successViewLabel;
 	IBOutlet UIView* failureView;
 	IBOutlet UILabel* responseLabel;
 	UIView *savedSubviewforSuccess;
+
+	IBOutlet UIView* clearDataFlashView;	
 }
 
 @property(retain, nonatomic) IBOutlet ChargeAmountViewController* chargeAmountViewController;
 @property(retain, nonatomic) IBOutlet ChargeCardNameViewController* chargeCardNameViewController;
 @property(retain, nonatomic) IBOutlet ChargeCardNumberViewController* chargeCardNumberViewController;
-@property(retain, nonatomic) IBOutlet ChargeCardExpViewController* chargeCardExpViewController;	
-@property(retain, nonatomic) IBOutlet ChargeCardCvvViewController* chargeCardCvvViewController;	
+@property(retain, nonatomic) IBOutlet ChargeCardExpViewController* chargeCardExpViewController;
+@property(retain, nonatomic) IBOutlet ChargeCardCvvViewController* chargeCardCvvViewController;
 @property(retain, nonatomic) IBOutlet ChargeAddressViewController* chargeAddressViewController;
 @property(retain, nonatomic) IBOutlet UITableView* tableView;
+@property(retain, nonatomic) IBOutlet UIView* clearDataFlashView;
 
 - (IBAction) processButtonClick:(id)sender;
 - (IBAction) startOverButtonClick:(id)sender;
 - (IBAction) goBackButtonClick:(id)sender;
+
+- (void) clearData;
 
 @end

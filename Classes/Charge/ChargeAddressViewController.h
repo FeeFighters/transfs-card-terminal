@@ -26,6 +26,7 @@
 @property(retain, nonatomic) IBOutlet UIPickerView* addressPicker;
 
 - (void) goToNextStep;
+- (void) clearData;
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
