@@ -22,7 +22,7 @@
 		ignoreCount = 0;
 		lineNumber = 168;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.670148;
+		modificationTime = 271227145.492673;
 		state = 2;
 	};
 	1D3623240D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.h */ = {
@@ -55,7 +55,7 @@
 		ignoreCount = 0;
 		lineNumber = 59;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.670337;
+		modificationTime = 271227145.492795;
 		state = 2;
 	};
 	1D3802BA0F58CD2E0041D924 /* CreditCard.m:88 */ = {
@@ -72,7 +72,7 @@
 		ignoreCount = 0;
 		lineNumber = 88;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.670043;
+		modificationTime = 271227145.492597;
 		state = 2;
 	};
 	1D4547410F375F78007CB4E4 /* TransFS Card Terminal */ = {
@@ -343,7 +343,7 @@
 		ignoreCount = 0;
 		lineNumber = 183;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.670247;
+		modificationTime = 271227145.492732;
 		state = 2;
 	};
 	1D5220110F65415600F11E37 /* PaypalSettingsController.h */ = {
@@ -719,7 +719,7 @@
 	};
 	1D7520190F47D6C400996F8E /* CreditCardFormatting.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1114, 386}}";
+			sepNavIntBoundsRect = "{{0, 0}, {813, 520}}";
 			sepNavSelRange = "{278, 0}";
 			sepNavVisRange = "{0, 415}";
 		};
@@ -879,7 +879,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 24;
-		modificationTime = 271218380.874326;
+		modificationTime = 271227145.512513;
 		state = 0;
 	};
 	1D7521C80F481EA000996F8E /* CardNumberTextField.m:35 */ = {
@@ -895,7 +895,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 35;
-		modificationTime = 271218380.884396;
+		modificationTime = 271227145.556111;
 		state = 0;
 	};
 	1D7940B50F48FF8B00CAA3CF /* RegexKitLite.h */ = {
@@ -926,7 +926,7 @@
 		ignoreCount = 0;
 		lineNumber = 137;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.669858;
+		modificationTime = 271227145.492478;
 		state = 2;
 	};
 	1D7943880F49472800CAA3CF /* CreditCardMethods.m:122 */ = {
@@ -943,7 +943,7 @@
 		ignoreCount = 0;
 		lineNumber = 122;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.669953;
+		modificationTime = 271227145.49254;
 		state = 2;
 	};
 	1D91A7570F604C4E00792E8B /* PaypalGateway.m */ = {
@@ -979,6 +979,125 @@
 		rType = 0;
 		vrLen = 415;
 		vrLoc = 0;
+	};
+	1DA227FB102A86B8006BBDAE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7520190F47D6C400996F8E /* CreditCardFormatting.h */;
+		name = "CreditCardFormatting.h: 13";
+		rLen = 0;
+		rLoc = 278;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	1DA227FC102A86B8006BBDAE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7520190F47D6C400996F8E /* CreditCardFormatting.h */;
+		name = "CreditCardFormatting.h: 13";
+		rLen = 0;
+		rLoc = 278;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	1DA22801102A89FC006BBDAE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7520190F47D6C400996F8E /* CreditCardFormatting.h */;
+		name = "CreditCardFormatting.h: 13";
+		rLen = 0;
+		rLoc = 278;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	1DA22802102A89FC006BBDAE /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Programming/TransFS/transfs-card-terminal/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1DA22803102A89FC006BBDAE /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 1DA22804102A89FC006BBDAE /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Programming/TransFS/transfs-card-terminal/Settings.bundle/Root.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1DA22804102A89FC006BBDAE /* Root.plist */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.plist.xml;
+		name = Root.plist;
+		path = "/Programming/TransFS/transfs-card-terminal/Settings.bundle/Root.plist";
+		sourceTree = "<absolute>";
+	};
+	1DA22805102A89FC006BBDAE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D7520190F47D6C400996F8E /* CreditCardFormatting.h */;
+		name = "CreditCardFormatting.h: 13";
+		rLen = 0;
+		rLoc = 278;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 0;
+	};
+	1DA22806102A89FC006BBDAE /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Programming/TransFS/transfs-card-terminal/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1DA22807102A89FC006BBDAE /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 1DA22808102A89FC006BBDAE /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Programming/TransFS/transfs-card-terminal/Settings.bundle/Root.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1DA22808102A89FC006BBDAE /* Root.plist */ = {
+		isa = PBXFileReference;
+		name = Root.plist;
+		path = "/Programming/TransFS/transfs-card-terminal/Settings.bundle/Root.plist";
+		sourceTree = "<absolute>";
+	};
+	1DA2280B102A8A11006BBDAE /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 1DA22804102A89FC006BBDAE /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Programming/TransFS/transfs-card-terminal/Settings.bundle/Root.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	1DA2280E102A96A7006BBDAE /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 1DA22804102A89FC006BBDAE /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Programming/TransFS/transfs-card-terminal/Settings.bundle/Root.plist";
+		rLen = 0;
+		rLoc = 2147483647;
 	};
 	1DB9B5B71009C32C00A71B93 /* UsaEpayGateway.h */ = {
 		uiCtxt = {
@@ -1291,7 +1410,7 @@
 		ignoreCount = 0;
 		lineNumber = 97;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.670427;
+		modificationTime = 271227145.492861;
 		state = 2;
 	};
 	1DB9B7F1100B22FE00A71B93 /* Transaction.m:140 */ = {
@@ -1307,7 +1426,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 140;
-		modificationTime = 271218380.670518;
+		modificationTime = 271227145.492911;
 		state = 2;
 	};
 	1DB9B810100B24F800A71B93 /* PBXTextBookmark */ = {
@@ -1418,7 +1537,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 73;
-		modificationTime = 271218380.670639;
+		modificationTime = 271227145.492999;
 		state = 1;
 	};
 	1DB9B839100B25C800A71B93 /* PBXTextBookmark */ = {
@@ -1445,7 +1564,7 @@
 		ignoreCount = 0;
 		lineNumber = 160;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.670733;
+		modificationTime = 271227146.120441;
 		state = 1;
 	};
 	1DB9B844100B266E00A71B93 /* PBXTextBookmark */ = {
@@ -1502,7 +1621,7 @@
 		ignoreCount = 0;
 		lineNumber = 117;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.670825;
+		modificationTime = 271227145.493143;
 		state = 2;
 	};
 	1DB9B885100B293800A71B93 /* PBXTextBookmark */ = {
@@ -1549,7 +1668,7 @@
 		ignoreCount = 0;
 		lineNumber = 47;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.670927;
+		modificationTime = 271227145.493231;
 		state = 2;
 	};
 	1DB9B89E100B320400A71B93 /* Transaction.m:316 */ = {
@@ -1566,7 +1685,7 @@
 		ignoreCount = 0;
 		lineNumber = 316;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.671245;
+		modificationTime = 271227146.137287;
 		state = 1;
 	};
 	1DB9C24B10155EB3002B348F /* Transaction.m:82 */ = {
@@ -1583,7 +1702,7 @@
 		ignoreCount = 0;
 		lineNumber = 82;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.671357;
+		modificationTime = 271227146.145833;
 		state = 1;
 	};
 	1DB9C24C10155EB6002B348F /* PBXTextBookmark */ = {
@@ -1620,7 +1739,7 @@
 		ignoreCount = 0;
 		lineNumber = 171;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.662508;
+		modificationTime = 271227145.492057;
 		state = 2;
 	};
 	1DD9BEEA0F46D95600343F2C /* CardViewController.m:171 */ = {
@@ -1637,7 +1756,7 @@
 		ignoreCount = 0;
 		lineNumber = 171;
 		location = "TransFS Card Terminal";
-		modificationTime = 271218380.662766;
+		modificationTime = 271227145.492294;
 		state = 2;
 	};
 	1DFC98E40F525DB900191E58 /* Transaction.h */ = {
@@ -1673,7 +1792,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 1D4547410F375F78007CB4E4 /* TransFS Card Terminal */;
-		activeSDKPreference = iphoneos3.0;
+		activeSDKPreference = iphonesimulator3.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* TransFS Card Terminal */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* TransFS Card Terminal */,
@@ -1822,6 +1941,16 @@
 			1D6FB828102A7465001C0301 = 1D6FB828102A7465001C0301 /* PBXTextBookmark */;
 			1DA227E6102A756F006BBDAE /* PBXTextBookmark */ = 1DA227E6102A756F006BBDAE /* PBXTextBookmark */;
 			1DA227F5102A7688006BBDAE /* PBXTextBookmark */ = 1DA227F5102A7688006BBDAE /* PBXTextBookmark */;
+			1DA227FB102A86B8006BBDAE /* PBXTextBookmark */ = 1DA227FB102A86B8006BBDAE /* PBXTextBookmark */;
+			1DA227FC102A86B8006BBDAE /* PBXTextBookmark */ = 1DA227FC102A86B8006BBDAE /* PBXTextBookmark */;
+			1DA22801102A89FC006BBDAE /* PBXTextBookmark */ = 1DA22801102A89FC006BBDAE /* PBXTextBookmark */;
+			1DA22802102A89FC006BBDAE /* PlistBookmark */ = 1DA22802102A89FC006BBDAE /* PlistBookmark */;
+			1DA22803102A89FC006BBDAE /* PlistBookmark */ = 1DA22803102A89FC006BBDAE /* PlistBookmark */;
+			1DA22805102A89FC006BBDAE /* PBXTextBookmark */ = 1DA22805102A89FC006BBDAE /* PBXTextBookmark */;
+			1DA22806102A89FC006BBDAE /* PlistBookmark */ = 1DA22806102A89FC006BBDAE /* PlistBookmark */;
+			1DA22807102A89FC006BBDAE /* PlistBookmark */ = 1DA22807102A89FC006BBDAE /* PlistBookmark */;
+			1DA2280B102A8A11006BBDAE /* PlistBookmark */ = 1DA2280B102A8A11006BBDAE /* PlistBookmark */;
+			1DA2280E102A96A7006BBDAE /* PlistBookmark */ = 1DA2280E102A96A7006BBDAE /* PlistBookmark */;
 			1DB9B5D31009C51700A71B93 = 1DB9B5D31009C51700A71B93 /* PBXTextBookmark */;
 			1DB9B5D41009C51700A71B93 = 1DB9B5D41009C51700A71B93 /* PBXTextBookmark */;
 			1DB9B5D71009C51700A71B93 = 1DB9B5D71009C51700A71B93 /* PBXTextBookmark */;

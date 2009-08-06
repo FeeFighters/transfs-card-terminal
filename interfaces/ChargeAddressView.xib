@@ -68,6 +68,7 @@
 							<int key="IBUIKeyboardType">1</int>
 							<int key="IBUIReturnKeyType">9</int>
 						</object>
+						<int key="IBUIClearButtonMode">1</int>
 					</object>
 					<object class="IBUITextField" id="85318245">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -126,7 +127,7 @@
 							<int key="IBUIReturnKeyType">9</int>
 						</object>
 					</object>
-					<object class="IBUIPickerView" id="820906604">
+					<object class="IBUIPickerView" id="227074667">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">-2147483356</int>
 						<string key="NSFrame">{{0, 151}, {320, 216}}</string>
@@ -136,7 +137,7 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<bool key="IBUIShowsSelectionIndicator">YES</bool>
 					</object>
-					<object class="IBUILabel" id="835583721">
+					<object class="IBUILabel" id="313333881">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">288</int>
 						<string key="NSFrame">{{137, 57}, {163, 49}}</string>
@@ -163,7 +164,7 @@
 						<int key="IBUINumberOfLines">3</int>
 						<int key="IBUILineBreakMode">0</int>
 					</object>
-					<object class="IBUITextField" id="890562293">
+					<object class="IBUITextField" id="64068070">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{208, 105}, {92, 31}}</string>
@@ -244,7 +245,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="820906604"/>
+						<reference key="source" ref="227074667"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">11</int>
@@ -253,7 +254,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addressPicker</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="820906604"/>
+						<reference key="destination" ref="227074667"/>
 					</object>
 					<int key="connectionID">12</int>
 				</object>
@@ -269,7 +270,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">state</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="890562293"/>
+						<reference key="destination" ref="64068070"/>
 					</object>
 					<int key="connectionID">16</int>
 				</object>
@@ -284,7 +285,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="890562293"/>
+						<reference key="source" ref="64068070"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">18</int>
@@ -315,11 +316,11 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="85318245"/>
-							<reference ref="820906604"/>
+							<reference ref="227074667"/>
 							<reference ref="73461000"/>
-							<reference ref="835583721"/>
+							<reference ref="313333881"/>
 							<reference ref="483100383"/>
-							<reference ref="890562293"/>
+							<reference ref="64068070"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
@@ -351,17 +352,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">10</int>
-						<reference key="object" ref="820906604"/>
+						<reference key="object" ref="227074667"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
-						<reference key="object" ref="835583721"/>
+						<reference key="object" ref="313333881"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">15</int>
-						<reference key="object" ref="890562293"/>
+						<reference key="object" ref="64068070"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>

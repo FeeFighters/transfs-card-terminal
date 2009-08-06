@@ -59,14 +59,18 @@
 		splashScreenInfo.text = @"Loading...";
 	}
 
-
-	// Add the views that we'll need
-	[window addSubview:splashScreenView];
-	[window insertSubview:tabBarController.view belowSubview:splashScreenView];
+	// Add the views that we'll need, if showSplashScreen setting
+	bool showSplashScreen = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSplashScreen"];
+	if (showSplashScreen) {
+		[window addSubview:splashScreenView];
+		[window insertSubview:tabBarController.view belowSubview:splashScreenView];
+	} else {
+		[window addSubview:tabBarController.view];
+	}
 
 	// Kick off a delayed animation to get rid of the splash screen
-	if (showSetupMessage) {
-
+	if (showSetupMessage || !showSplashScreen) {
+		// do nothing
 	} else {
 		[self performSelector:@selector(startSplashAnim:) withObject:nil afterDelay:2.0];
 	}
@@ -82,7 +86,7 @@
 	[UIView beginAnimations:nil context:NULL];
 	{
 		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-		[UIView setAnimationDuration:1.0];
+		[UIView setAnimationDuration:1.5];
 		[UIView setAnimationDidStopSelector:@selector(splashScreenAnimDidStop)];
 		splashScreenView.alpha = 0.0;
 		splashScreenLogoView.center = CGPointMake(splashScreenLogoView.center.x, -100);
