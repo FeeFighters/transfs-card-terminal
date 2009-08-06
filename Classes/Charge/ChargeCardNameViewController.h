@@ -11,10 +11,12 @@
 
 @interface ChargeCardNameViewController : UIViewController {
 	IBOutlet UITextField* firstName;
-	IBOutlet UITextField* lastName;	
+	IBOutlet UITextField* lastName;
 }
 
 @property(assign, nonatomic) IBOutlet UITextField* firstName;
 @property(assign, nonatomic) IBOutlet UITextField* lastName;
+
+- (void) goToNextStep;
 
 @end

@@ -40,7 +40,7 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	chargeAmountViewController = [[ChargeAmountViewController alloc] initWithNibName:@"ChargeAmountView" bundle:nil];
 	chargeCardNumberViewController = [[ChargeCardNumberViewController alloc] initWithNibName:@"ChargeCardNumberView" bundle:nil];
 	chargeCardNameViewController = [[ChargeCardNameViewController alloc] initWithNibName:@"ChargeCardNameView" bundle:nil];
@@ -53,8 +53,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
+  [super viewWillAppear:animated];
+  [self.tableView reloadData];
 
 //	self.navigationItem.prompt = @"TransFS.com Card Terminal";
 	self.navigationItem.title = @"Process Transaction";

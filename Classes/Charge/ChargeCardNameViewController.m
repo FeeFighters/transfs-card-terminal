@@ -6,6 +6,8 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
+#import "TransFS_Card_TerminalAppDelegate.h"
+#import "ChargeViewController.h"
 #import "ChargeCardNameViewController.h"
 
 
@@ -37,12 +39,20 @@
 */
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+  [super viewWillAppear:animated];
 	//	self.navigationItem.prompt = @"TransFS.com Card Terminal";
-	self.navigationItem.title = @"Customer Name";	
+	self.navigationItem.title = @"Name";
 	[firstName becomeFirstResponder];
+
+	UIBarButtonItem* nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(goToNextStep)];
+	[self.navigationItem setRightBarButtonItem:nextButton animated:YES];
 }
 
+// Go to the next data-entry step
+- (void) goToNextStep {
+	UIViewController* nextViewController = [(ChargeViewController*)[(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] chargeViewController] chargeCardNumberViewController];
+	[self.navigationController pushViewController:nextViewController animated:true];
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.

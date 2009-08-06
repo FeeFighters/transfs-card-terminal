@@ -20,4 +20,6 @@
 - (void) keypadNumberPressed:(int)number button:(UIButton*)sender;
 - (void) keypadBackspacePressed:(UIButton*)sender;
 
+- (void) goToNextStep;
+
 @end

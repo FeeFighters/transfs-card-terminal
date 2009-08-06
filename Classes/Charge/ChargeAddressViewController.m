@@ -6,6 +6,8 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
+#import "TransFS_Card_TerminalAppDelegate.h"
+#import "ChargeViewController.h"
 #import "ChargeAddressViewController.h"
 #import "ZipCode.h"
 
@@ -40,10 +42,18 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	//self.navigationItem.prompt = @"TransFS.com Card Terminal";
-	self.navigationItem.title = @"Customer Address";
+	self.navigationItem.title = @"Address";
 	[address becomeFirstResponder];
+
+	UIBarButtonItem* nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(goToNextStep)];
+	[self.navigationItem setRightBarButtonItem:nextButton animated:YES];
 }
 
+// Go to the next data-entry step
+- (void) goToNextStep {
+	UIViewController* nextViewController = [(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] chargeViewController];
+	[self.navigationController popToViewController:nextViewController animated:true];
+}
 
 
 /*

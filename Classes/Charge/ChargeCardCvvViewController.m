@@ -6,6 +6,8 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
+#import "TransFS_Card_TerminalAppDelegate.h"
+#import "ChargeViewController.h"
 #import "ChargeCardCvvViewController.h"
 #import "NSStringAdditions.h"
 
@@ -37,9 +39,24 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+  [super viewWillAppear:animated];
 	//	self.navigationItem.prompt = @"TransFS.com Card Terminal";
-	self.navigationItem.title = @"CVV Code";	
+	self.navigationItem.title = @"CVV Code";
+
+	UIBarButtonItem* nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(goToNextStep)];
+	[self.navigationItem setRightBarButtonItem:nextButton animated:YES];
+}
+
+// Go to the next data-entry step
+- (void) goToNextStep {
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"]) {
+		UIViewController* nextViewController = [(ChargeViewController*)[(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] chargeViewController] chargeAddressViewController];
+		[self.navigationController pushViewController:nextViewController animated:true];
+	}
+	else {
+		UIViewController* nextViewController = [(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] chargeViewController];
+		[self.navigationController popToViewController:nextViewController animated:true];
+	}
 }
 
 - (void) keypadNumberPressed:(int)num button:(UIButton*)sender

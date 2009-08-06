@@ -18,5 +18,6 @@
 @property(retain, nonatomic) IBOutlet UIPickerView* monthPicker;
 @property(retain, nonatomic) IBOutlet UIPickerView* yearPicker;
 
+- (void) goToNextStep;
 
 @end

@@ -11,7 +11,7 @@
 
 @interface ChargeAmountViewController : UIViewController <NumberKeypadDelegate> {
 	NSMutableString* number;
-	IBOutlet UITextField* numberField;	
+	IBOutlet UITextField* numberField;
 }
 
 @property(nonatomic, retain) IBOutlet UITextField* numberField;
@@ -20,5 +20,7 @@
 - (void) keypadNumberPressed:(int)number button:(UIButton*)sender;
 - (void) keypadBackspacePressed:(UIButton*)sender;
 - (void) keypadPeriodPressed:(UIButton*)sender;
+
+- (void) goToNextStep;
 
 @end

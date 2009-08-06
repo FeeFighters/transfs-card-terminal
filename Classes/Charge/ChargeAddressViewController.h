@@ -25,6 +25,8 @@
 @property(retain, nonatomic) IBOutlet UITextField* zipcode;
 @property(retain, nonatomic) IBOutlet UIPickerView* addressPicker;
 
+- (void) goToNextStep;
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField;
 - (void)textFieldDidEndEditing:(UITextField *)textField;
 

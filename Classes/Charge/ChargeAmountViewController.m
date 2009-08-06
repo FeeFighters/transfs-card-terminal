@@ -6,6 +6,8 @@
 //  Copyright 2009 TransFS.com. All rights reserved.
 //
 
+#import "TransFS_Card_TerminalAppDelegate.h"
+#import "ChargeViewController.h"
 #import "ChargeAmountViewController.h"
 #import "NSStringAdditions.h"
 
@@ -32,18 +34,25 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
-	number = [[NSMutableString alloc] init];	
+  [super viewDidLoad];
+	number = [[NSMutableString alloc] init];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-//	self.navigationItem.prompt = @"TransFS.com Card Terminal";
-	self.navigationItem.title = @"Set Charge Amount";
+ 	[super viewWillAppear:animated];
+	self.navigationItem.title = @"Amount";
 	numberField.text = number;
+
+	UIBarButtonItem* nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(goToNextStep)];
+	[self.navigationItem setRightBarButtonItem:nextButton animated:YES];
 }
 
+// Go to the next data-entry step
+- (void) goToNextStep {
+	UIViewController* nextViewController = [(ChargeViewController*)[(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] chargeViewController] chargeCardNameViewController];
+	[self.navigationController pushViewController:nextViewController animated:true];
+}
 
 - (void) keypadNumberPressed:(int)num button:(UIButton*)sender
 {
