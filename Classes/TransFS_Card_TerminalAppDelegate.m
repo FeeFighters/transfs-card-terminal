@@ -14,6 +14,7 @@
 #import "PaypalGateway.h"
 #import "UsaEpayGateway.h"
 
+
 // Private interface for AppDelegate - internal only methods.
 @interface TransFS_Card_TerminalAppDelegate (Private)
 - (void)createEditableCopyOfDatabaseIfNeeded;
@@ -30,18 +31,10 @@
 @synthesize window, tabBarController;
 @synthesize splashScreenView, splashScreenBgView, splashScreenLogoView, splashScreenCcView, splashScreenTerminalView;
 @synthesize splashScreenInfo, splashScreenSpinner, splashScreenPressToBegin, splashScreenAboutSettings;
-@synthesize transactionHistory, database;
+@synthesize transactionHistory, database, keyboardClickSoundID;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
-	// The application ships with a default database in its bundle. If anything in the application
-	// bundle is altered, the code sign will fail. We want the database to be editable by users,
-	// so we need to create a copy of it in the application's Documents directory.
-	[self createEditableCopyOfDatabaseIfNeeded];
-	// Call internal method to initialize database connection
-	[self initializeDatabase];
-
-
 	// Set up the text that we'll show in the splash screen
 	bool showSetupMessage = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSetupMessage"];
 	if (showSetupMessage) {
@@ -74,6 +67,17 @@
 	} else {
 		[self performSelector:@selector(startSplashAnim:) withObject:nil afterDelay:2.0];
 	}
+	
+	// The application ships with a default database in its bundle. If anything in the application
+	// bundle is altered, the code sign will fail. We want the database to be editable by users,
+	// so we need to create a copy of it in the application's Documents directory.
+	[self createEditableCopyOfDatabaseIfNeeded];
+	// Call internal method to initialize database connection
+	[self initializeDatabase];
+	
+	CFURLRef tockSoundFileURLRef = CFBundleCopyResourceURL(CFBundleGetBundleWithIdentifier(CFSTR("com.apple.UIKit")),
+													   CFSTR ("Tock"), CFSTR("aiff"), NULL);
+	AudioServicesCreateSystemSoundID(tockSoundFileURLRef, &keyboardClickSoundID);
 }
 
 - (IBAction) aboutSettingsPressed:(id)sender

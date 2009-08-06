@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
+#import <AudioToolbox/AudioServices.h>
 
 @class Transaction, StartViewController, CardViewController, ProcessViewController, AddressViewController;
 @class AboutSettingsController, EmailSettingsViewController, GeneralSettingsViewController, AuthNetSettingsController;
@@ -32,6 +33,8 @@
 
 	NSMutableArray* transactionHistory;
 	sqlite3 *database; // Opaque reference to the SQLite database.
+	
+	SystemSoundID keyboardClickSoundID;
 }
 
 @property (nonatomic, retain) IBOutlet UIView* splashScreenView;
@@ -54,6 +57,7 @@
 // Makes the main array of transaction objects available to other objects in the application.
 @property (nonatomic, retain) NSMutableArray *transactionHistory;
 @property (readonly) sqlite3 *database;
+@property (readonly) SystemSoundID keyboardClickSoundID;
 
 - (BillingGateway*) setupGateway;
 

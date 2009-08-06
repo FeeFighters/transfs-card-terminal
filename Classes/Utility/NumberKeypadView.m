@@ -7,7 +7,7 @@
 //
 
 #import "NumberKeypadView.h"
-
+#import "TransFS_Card_TerminalAppDelegate.h"
 
 @implementation NumberKeypadView
 
@@ -39,16 +39,16 @@
 				btnFrame.origin.x = btnNarrow.width + btnWide.width;
 			}
 			if (i==7 || i==8 || i==9) {
-				// Top
-				btnFrame.size.height = btnNarrow.height;				
+				// Bottom-numbers
+				btnFrame.size.height = btnNarrow.height;
+				btnFrame.origin.y = 2*btnNarrow.height;
 			} else if (i==4 || i==5 || i==6) {
 				// Middle
 				btnFrame.size.height = btnNarrow.height;				
 				btnFrame.origin.y = btnNarrow.height;
 			} else if (i==1 || i==2 || i==3) {
-				// Bottom-numbers
-				btnFrame.size.height = btnNarrow.height;
-				btnFrame.origin.y = 2*btnNarrow.height;
+				// Top
+				btnFrame.size.height = btnNarrow.height;				
 			} else {
 				// Bottom
 				btnFrame.size.height = btnWide.height;
@@ -56,11 +56,22 @@
 			}			
 			[newButton setFrame:btnFrame];
 			
-			[newButton setFont:[UIFont systemFontOfSize:28.0]];
-			[newButton setTitle:[NSString stringWithFormat:@"%d", i] forState:UIControlStateNormal];
-			[newButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-			[newButton setBackgroundImage:[UIImage imageNamed:@"keypad_button_normal.png"] forState:UIControlStateNormal];
-			[newButton setBackgroundImage:[UIImage imageNamed:@"keypad_button_highlighted.png"] forState:UIControlStateHighlighted];			
+//			[newButton setFont:[UIFont systemFontOfSize:28.0]];
+			
+			if (i >=0 && i <=9) {
+				[newButton setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"keypad.%d.png", i]] forState:UIControlStateNormal];
+				[newButton setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"keypad.%d.down.png", i]] forState:UIControlStateHighlighted];
+			}
+			else if (i == 10) {
+				[newButton setBackgroundImage:[UIImage imageNamed:@"keypad.dot.png"] forState:UIControlStateNormal];
+				[newButton setBackgroundImage:[UIImage imageNamed:@"keypad.dot.down.png"] forState:UIControlStateHighlighted];
+			}
+			else {
+				[newButton setBackgroundImage:[UIImage imageNamed:@"keypad.back.png"] forState:UIControlStateNormal];
+				[newButton setBackgroundImage:[UIImage imageNamed:@"keypad.back.down.png"] forState:UIControlStateHighlighted];
+			}
+//			[newButton setTitle:[NSString stringWithFormat:@"%d", i] forState:UIControlStateNormal];
+//			[newButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 			[newButton setUserInteractionEnabled:true];
 			
 			[newButton addTarget:self action:@selector(keypadButtonTouchUpInside:forEvent:) forControlEvents:UIControlEventTouchUpInside];
@@ -69,8 +80,8 @@
 			[self addSubview:newButton];
 		}
 		
-		[[keypadButtons objectAtIndex:10] setTitle:@"." forState:UIControlStateNormal];
-		[[keypadButtons objectAtIndex:11] setTitle:@"<-" forState:UIControlStateNormal];
+//		[[keypadButtons objectAtIndex:10] setTitle:@"." forState:UIControlStateNormal];
+//		[[keypadButtons objectAtIndex:11] setTitle:@"<-" forState:UIControlStateNormal];
 		
     }
     return self;
@@ -94,6 +105,8 @@
 				[delegate keypadNumberPressed:[keypadButtons indexOfObject:button] button:button];
 		}
 	}
+	
+	AudioServicesPlaySystemSound([(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] keyboardClickSoundID]);
 }
 			
 - (void)drawRect:(CGRect)rect {

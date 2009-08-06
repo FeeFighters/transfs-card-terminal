@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.03">
 	<data>
-		<int key="IBDocument.SystemTarget">528</int>
+		<int key="IBDocument.SystemTarget">768</int>
 		<string key="IBDocument.SystemVersion">9J3050</string>
 		<string key="IBDocument.InterfaceBuilderVersion">677</string>
 		<string key="IBDocument.AppKitVersion">949.46</string>
@@ -140,17 +140,17 @@
 					<object class="IBUILabel" id="313333881">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">288</int>
-						<string key="NSFrame">{{137, 57}, {163, 49}}</string>
+						<string key="NSFrame">{{137, 63}, {163, 35.5}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIAutoresizesSubviews">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">9</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="IBUIText">Enter a zipcode, then select the city/state below</string>
+						<string key="IBUIText">Enter a zipcode, Press Done, then select the city/state</string>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Helvetica</string>
-							<double key="NSSize">1.300000e+01</double>
+							<double key="NSSize">1.200000e+01</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<object class="NSColor" key="IBUITextColor">
@@ -159,9 +159,8 @@
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
-						<float key="IBUIMinimumFontSize">1.000000e+01</float>
-						<int key="IBUINumberOfLines">3</int>
+						<float key="IBUIMinimumFontSize">8.000000e+00</float>
+						<int key="IBUINumberOfLines">2</int>
 						<int key="IBUILineBreakMode">0</int>
 					</object>
 					<object class="IBUITextField" id="64068070">
@@ -318,9 +317,9 @@
 							<reference ref="85318245"/>
 							<reference ref="227074667"/>
 							<reference ref="73461000"/>
-							<reference ref="313333881"/>
 							<reference ref="483100383"/>
 							<reference ref="64068070"/>
+							<reference ref="313333881"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
