@@ -3,7 +3,7 @@
 //  TransFS Card Terminal
 //
 //  Created by Joshua Krall on 3/8/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyright 2009 TransFS.com. All rights reserved.
 //
 
 #import "SettingsIndexViewController.h"
@@ -80,7 +80,7 @@ typedef enum sections {
 	aboutSection = 0,
 	generalSection,
 	gatewaySection,
-//	emailSection,
+	emailSection,
 	sectionCount
 } tableSections;
 
@@ -96,8 +96,8 @@ typedef enum sections {
 		return gatewaysCount;
 	else if (section==generalSection)
 		return 1;
-//	else if (section==emailSection)
-//		return 1;
+	else if (section==emailSection)
+		return 1;
 	return 1;
 }
 
@@ -109,8 +109,8 @@ typedef enum sections {
 		return @"Processing Gateways:";
 	else if (section==generalSection)
 		return nil;
-//	else if (section==emailSection)
-//		return nil;
+	else if (section==emailSection)
+		return nil;
 	return nil;
 }
 
@@ -168,11 +168,11 @@ typedef enum sections {
 		cell.label.text = @"General Settings";
 		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 	}
-//	else if (indexPath.section==emailSection)
-//	{
-//		cell.label.text = @"Email Receipt Settings";
-//		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-//	}
+	else if (indexPath.section==emailSection)
+	{
+		cell.label.text = @"Email Receipt Settings";
+		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+	}
 
     return cell;
 }
@@ -200,9 +200,9 @@ typedef enum sections {
 	else if (indexPath.section==generalSection) {
 		[self.navigationController pushViewController:generalSettingsController animated:true];
 	}
-//	else if (indexPath.section==emailSection) {
-//		[self.navigationController pushViewController:emailSettingsController animated:true];
-//	}
+	else if (indexPath.section==emailSection) {
+		[self.navigationController pushViewController:emailSettingsController animated:true];
+	}
 	else if (indexPath.section==aboutSection) {
 		[self.navigationController pushViewController:aboutSettingsController animated:true];
 	}

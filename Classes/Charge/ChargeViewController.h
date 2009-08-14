@@ -13,8 +13,10 @@
 #import "ChargeCardExpViewController.h"
 #import "ChargeCardCvvViewController.h"
 #import "ChargeAddressViewController.h"
+#import "Transaction.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface ChargeViewController : UIViewController <UITableViewDelegate, UIActionSheetDelegate> {
+@interface ChargeViewController : UIViewController <UITableViewDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
 	IBOutlet UITableView* tableView;
 
 	IBOutlet ChargeAmountViewController* chargeAmountViewController;
@@ -32,8 +34,11 @@
 	IBOutlet UIView* failureView;
 	IBOutlet UILabel* responseLabel;
 	UIView *savedSubviewforSuccess;
+	IBOutlet UIButton* sendReceiptButton;
 
-	IBOutlet UIView* clearDataFlashView;	
+	Transaction* recentSale;
+
+	IBOutlet UIView* clearDataFlashView;
 }
 
 @property(retain, nonatomic) IBOutlet ChargeAmountViewController* chargeAmountViewController;
@@ -46,9 +51,12 @@
 @property(retain, nonatomic) IBOutlet UIView* clearDataFlashView;
 
 - (IBAction) processButtonClick:(id)sender;
-- (IBAction) startOverButtonClick:(id)sender;
 - (IBAction) goBackButtonClick:(id)sender;
+- (IBAction) startOverButtonClick:(id)sender;
+- (IBAction) sendReceiptButtonClick:(id)sender;
 
 - (void) clearData;
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error;
 
 @end

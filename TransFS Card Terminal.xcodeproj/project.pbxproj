@@ -53,7 +53,6 @@
 		1D5058680F63D8A0008B2FCC /* HistoryDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058520F63D8A0008B2FCC /* HistoryDetailView.xib */; };
 		1D5058690F63D8A0008B2FCC /* HistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058530F63D8A0008B2FCC /* HistoryView.xib */; };
 		1D50586A0F63D8A0008B2FCC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058540F63D8A0008B2FCC /* MainWindow.xib */; };
-		1D50586B0F63D8A0008B2FCC /* ProcessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058550F63D8A0008B2FCC /* ProcessView.xib */; };
 		1D50586F0F63D8A0008B2FCC /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5058590F63D8A0008B2FCC /* TransactionTableViewCell.xib */; };
 		1D50592B0F63F840008B2FCC /* SettingsIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D50592A0F63F840008B2FCC /* SettingsIndexView.xib */; };
 		1D50592F0F63F891008B2FCC /* SettingsIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50592E0F63F891008B2FCC /* SettingsIndexViewController.m */; };
@@ -145,8 +144,9 @@
 		1DC8682A0F53B2FF00D2DB08 /* money_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868220F53B2FF00D2DB08 /* money_7.png */; };
 		1DC869560F53EE4B00D2DB08 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC869550F53EE4B00D2DB08 /* libsqlite3.dylib */; };
 		1DC8697A0F53EF8200D2DB08 /* transactionHistory.sql in Resources */ = {isa = PBXBuildFile; fileRef = 1DC869790F53EF8200D2DB08 /* transactionHistory.sql */; };
+		1DEC0B491034CD2700C2265D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC0B481034CD2700C2265D /* MessageUI.framework */; };
+		1DEC0C471034F30C00C2265D /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC0C461034F30C00C2265D /* Entitlements.plist */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		1DFC98B10F52126600191E58 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DFC98B00F52126600191E58 /* Entitlements.plist */; };
 		1DFC98E60F525DB900191E58 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC98E50F525DB900191E58 /* Transaction.m */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
@@ -236,7 +236,6 @@
 		1D5058520F63D8A0008B2FCC /* HistoryDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDetailView.xib; sourceTree = "<group>"; };
 		1D5058530F63D8A0008B2FCC /* HistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryView.xib; sourceTree = "<group>"; };
 		1D5058540F63D8A0008B2FCC /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		1D5058550F63D8A0008B2FCC /* ProcessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessView.xib; sourceTree = "<group>"; };
 		1D5058590F63D8A0008B2FCC /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		1D50592A0F63F840008B2FCC /* SettingsIndexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsIndexView.xib; sourceTree = "<group>"; };
 		1D50592D0F63F891008B2FCC /* SettingsIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsIndexViewController.h; sourceTree = "<group>"; };
@@ -376,8 +375,9 @@
 		1DC868220F53B2FF00D2DB08 /* money_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money_7.png; sourceTree = "<group>"; };
 		1DC869550F53EE4B00D2DB08 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = /usr/lib/libsqlite3.dylib; sourceTree = "<absolute>"; };
 		1DC869790F53EF8200D2DB08 /* transactionHistory.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = transactionHistory.sql; sourceTree = "<group>"; };
+		1DEC0B481034CD2700C2265D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1DEC0C461034F30C00C2265D /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		1DFC98B00F52126600191E58 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		1DFC98E40F525DB900191E58 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		1DFC98E50F525DB900191E58 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -398,6 +398,7 @@
 				1D7520920F47D85700996F8E /* libicucore.dylib in Frameworks */,
 				1DC869560F53EE4B00D2DB08 /* libsqlite3.dylib in Frameworks */,
 				1DA22951102ACF3E006BBDAE /* AudioToolbox.framework in Frameworks */,
+				1DEC0B491034CD2700C2265D /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +541,6 @@
 				1D5058520F63D8A0008B2FCC /* HistoryDetailView.xib */,
 				1D5058530F63D8A0008B2FCC /* HistoryView.xib */,
 				1D5058540F63D8A0008B2FCC /* MainWindow.xib */,
-				1D5058550F63D8A0008B2FCC /* ProcessView.xib */,
 				1D5058590F63D8A0008B2FCC /* TransactionTableViewCell.xib */,
 				1D50592A0F63F840008B2FCC /* SettingsIndexView.xib */,
 				1D50594B0F63FC58008B2FCC /* SettingsTableCells.xib */,
@@ -774,7 +774,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				1DFC98B00F52126600191E58 /* Entitlements.plist */,
 			);
 			name = "TransFS Card Terminal";
 			sourceTree = "<group>";
@@ -793,6 +792,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1DEC0C461034F30C00C2265D /* Entitlements.plist */,
 				1D5058430F63D8A0008B2FCC /* interfaces */,
 				1DC869790F53EF8200D2DB08 /* transactionHistory.sql */,
 				1DC8680D0F53B2BC00D2DB08 /* images */,
@@ -805,6 +805,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1DEC0B481034CD2700C2265D /* MessageUI.framework */,
 				1DA22950102ACF3E006BBDAE /* AudioToolbox.framework */,
 				1DC869550F53EE4B00D2DB08 /* libsqlite3.dylib */,
 				1D7520910F47D85700996F8E /* libicucore.dylib */,
@@ -860,7 +861,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DB5DE950F4B9CEF005EA877 /* Settings.bundle in Resources */,
-				1DFC98B10F52126600191E58 /* Entitlements.plist in Resources */,
 				1DC868150F53B2BC00D2DB08 /* american_express.png in Resources */,
 				1DC868160F53B2BC00D2DB08 /* credit_card_image_mask.png in Resources */,
 				1DC868170F53B2BC00D2DB08 /* discover.png in Resources */,
@@ -893,7 +893,6 @@
 				1D5058680F63D8A0008B2FCC /* HistoryDetailView.xib in Resources */,
 				1D5058690F63D8A0008B2FCC /* HistoryView.xib in Resources */,
 				1D50586A0F63D8A0008B2FCC /* MainWindow.xib in Resources */,
-				1D50586B0F63D8A0008B2FCC /* ProcessView.xib in Resources */,
 				1D50586F0F63D8A0008B2FCC /* TransactionTableViewCell.xib in Resources */,
 				1D50592B0F63F840008B2FCC /* SettingsIndexView.xib in Resources */,
 				1D50594C0F63FC58008B2FCC /* SettingsTableCells.xib in Resources */,
@@ -938,6 +937,7 @@
 				1DA22A4B102AE07B006BBDAE /* keypad.blank.png in Resources */,
 				1DA22A5A102AE203006BBDAE /* keypad.dot.down.png in Resources */,
 				1DA22A5B102AE203006BBDAE /* keypad.dot.png in Resources */,
+				1DEC0C471034F30C00C2265D /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

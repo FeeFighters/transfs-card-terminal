@@ -3,7 +3,7 @@
 //  TransFS Card Terminal
 //
 //  Created by Joshua Krall on 2/28/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyright 2009 TransFS.com. All rights reserved.
 //
 
 #import "EmailSettingsViewController.h"
@@ -11,7 +11,7 @@
 
 @implementation EmailSettingsViewController
 
-@synthesize emailReceiptEnabled, emailReceiptAddress;
+@synthesize emailReceiptAddress, emailReceiptName, emailReceiptCopy;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -38,16 +38,22 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-	[emailReceiptEnabled setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"emailReceiptEnabled"]];			
+	[emailReceiptName setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"emailReceiptName"]];
 	[emailReceiptAddress setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"emailReceiptAddress"]];
+	[emailReceiptCopy setText:[[[NSUserDefaults standardUserDefaults] stringForKey:@"emailReceiptCopy"]
+														  stringByReplacingOccurrencesOfString:@"__LF__"
+													                              withString:@"\n"]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
-	[[NSUserDefaults standardUserDefaults] setBool:[emailReceiptEnabled isOn] forKey:@"emailReceiptEnabled"];	
+	if (![NSString isBlank:[emailReceiptName text]])
+		[[NSUserDefaults standardUserDefaults] setObject:[emailReceiptName text] forKey:@"emailReceiptName"];
 	if (![NSString isBlank:[emailReceiptAddress text]])
 		[[NSUserDefaults standardUserDefaults] setObject:[emailReceiptAddress text] forKey:@"emailReceiptAddress"];
-	[[NSUserDefaults standardUserDefaults] synchronize];	
+	if (![NSString isBlank:[emailReceiptCopy text]])
+		[[NSUserDefaults standardUserDefaults] setObject:[emailReceiptCopy text] forKey:@"emailReceiptCopy"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

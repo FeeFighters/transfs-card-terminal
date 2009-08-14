@@ -49,6 +49,10 @@
 	chargeCardCvvViewController = [[ChargeCardCvvViewController alloc] initWithNibName:@"ChargeCardCvvView" bundle:nil];
 	chargeAddressViewController = [[ChargeAddressViewController alloc] initWithNibName:@"ChargeAddressView" bundle:nil];
 
+	if (![MFMailComposeViewController canSendMail]) {
+		sendReceiptButton.hidden = YES;
+	}
+
 	tableView.backgroundColor = self.view.backgroundColor;
 }
 
@@ -130,12 +134,12 @@
 	[NSThread sleepForTimeInterval:0.5];
 
 	BillingGateway* gateway = [(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] setupGateway];
-	Transaction* sale = [Transaction transactionAndProcessWithGateway:gateway];
+	recentSale = [Transaction transactionAndProcessWithGateway:gateway];
 
-	if ([sale status]==TransactionSuccess)
+	if ([recentSale status]==TransactionSuccess)
 	{
 		[successViewImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"money_%d.png", (random() % 7)+1]]];
-		[successViewLabel setText:[NSString stringWithFormat:@"Successfully Charged $%.2f to %@ %@'s Card", [sale.moneyAmount dollars], [sale firstName], [sale lastName]]];
+		[successViewLabel setText:[NSString stringWithFormat:@"Successfully Charged $%.2f to %@ %@'s Card", [recentSale.moneyAmount dollars], [recentSale firstName], [recentSale lastName]]];
 
 		savedSubviewforSuccess = [[self tabBarController] view];
 		UIView* curView = [savedSubviewforSuccess superview];
@@ -143,13 +147,13 @@
 		[UIView beginAnimations:@"successView" context:nil];		//	Begin an animation block.
 		[UIView setAnimationDuration:0.75];
 		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:curView cache:true];	//	Set the transition on the container view.
-		[savedSubviewforSuccess removeFromSuperview];	//	Remove the subview from the container view.
+		//[savedSubviewforSuccess removeFromSuperview];	//	Remove the subview from the container view.
 		[curView addSubview:successView];		//	Add the new subview to the container view.
 		[UIView commitAnimations];
 	}
 	else
 	{
-		[responseLabel setText:[NSString stringWithString:[sale errorMessages]]];
+		[responseLabel setText:[NSString stringWithString:[recentSale errorMessages]]];
 
 		savedSubviewforSuccess = [[self tabBarController] view];
 		UIView* curView = [savedSubviewforSuccess superview];
@@ -157,7 +161,7 @@
 		[UIView beginAnimations:@"failureView" context:nil];		//	Begin an animation block.
 		[UIView setAnimationDuration:0.75];
 		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:curView cache:true];	//	Set the transition on the container view.
-		[savedSubviewforSuccess removeFromSuperview];	//	Remove the subview from the container view.
+		//[savedSubviewforSuccess removeFromSuperview];	//	Remove the subview from the container view.
 		[curView addSubview:failureView];		//	Add the new subview to the container view.
 		[UIView commitAnimations];
 	}
@@ -179,24 +183,67 @@
 	[UIView setAnimationDuration:0.5];
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:curView cache:true];	//	Set the transition on the container view.
 	[failureView removeFromSuperview];	//	Remove the subview from the container view.
-	[curView addSubview:savedSubviewforSuccess];		//	Add the new subview to the container view.
+	//[curView addSubview:savedSubviewforSuccess];		//	Add the new subview to the container view.
 	[UIView commitAnimations];
 }
 
 - (IBAction) startOverButtonClick:(id)sender
 {
-	[chargeAmountViewController.number setString:@""];  // Reset amount field
+	[chargeAmountViewController clearData];  // Reset amount field
+	[self.tableView reloadData];
 
 	UIView* curView = [successView superview];
 	[UIView beginAnimations:@"startOver" context:nil];		//	Begin an animation block.
 	[UIView setAnimationDuration:0.5];
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:curView cache:true];	//	Set the transition on the container view.
 	[successView removeFromSuperview];	//	Remove the subview from the container view.
-	[curView addSubview:savedSubviewforSuccess];		//	Add the new subview to the container view.
+	//[curView addSubview:savedSubviewforSuccess];		//	Add the new subview to the container view.
 	[UIView commitAnimations];
-
 }
 
+- (IBAction) sendReceiptButtonClick:(id)sender
+{
+	MFMailComposeViewController* mailController = [[MFMailComposeViewController alloc] init];
+
+	NSString* name = [[NSUserDefaults standardUserDefaults] stringForKey:@"emailReceiptName"];
+	NSString* address = [[NSUserDefaults standardUserDefaults] stringForKey:@"emailReceiptAddress"];
+	NSString* copy = [[NSUserDefaults standardUserDefaults] stringForKey:@"emailReceiptCopy"];
+	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+	[dateFormatter setDateStyle:NSDateFormatterShortStyle];
+	[dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+
+	[mailController setSubject:[NSString stringWithFormat:@"%@ - Credit Card Receipt",name]];
+	NSArray* messageLines = [NSArray arrayWithObjects:
+		copy,
+		@"",
+		[NSString stringWithFormat:@"%@ charged $%.2f to your card on %@:", name, [recentSale.moneyAmount dollars], [dateFormatter stringFromDate:recentSale.date]],
+		@"",
+		[NSString stringWithFormat:@"%@ %@", recentSale.firstName, recentSale.lastName],
+		[NSString stringWithFormat:@"%@", recentSale.sanitizedCardNumber],
+		@"",
+		@"Merchant Contact Information:",
+		name,
+		address,
+			nil];
+
+	[mailController setMessageBody:[messageLines componentsJoinedByString:@"\n"] isHTML:NO];
+	[mailController setCcRecipients:[NSArray arrayWithObjects:address,nil]];
+	mailController.mailComposeDelegate = self;
+
+	[[successView superview] sendSubviewToBack:successView];
+
+	[self.navigationController presentModalViewController:mailController animated:YES];
+	[mailController release];
+}
+
+// Mail Composer Delegate Callback
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error
+{
+	[self.navigationController dismissModalViewControllerAnimated:YES];
+	[[successView superview] bringSubviewToFront:successView];
+}
 
 #pragma mark Table view methods
 
