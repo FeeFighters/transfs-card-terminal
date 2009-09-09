@@ -1,140 +1,128 @@
-<!-- Based on work by Joe Hewitt : http://www.joehewitt.com/blog/iphone_tips_loo.php -->
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<title>TransFS Card Terminal</title>
 
 	<style type="text/css" media="screen">
-	
-	    body {
-	        margin: 0;
-	        font-family: Helvetica;
-	        background: #EEEEEE;
-	        color: #FFFFFF;
-	        overflow:hidden;
-	    }
-	    
-	    .container {
-	        position: absolute;
-	        width: 100%;
-	    }
-	
-	    body[orient="profile"] .container {
-	        height: 416px;
-	    }
-	    
-	    body[orient="landscape"] .container {
-	        height: 268px;
-	    }
-	    
-	    .toolbar {
-	        position: absolute;
-	        padding: 10px 0;
-	        width: 100%;
-	        height: 20px;
-	        font-size: 20px;
-	        font-weight: bold;
-	        text-align: center;
-	        text-shadow: #3F4E63 0px -1px 1px;
-	        background: url(iPhoneToolbar.png) #8191AA repeat-x;
-	    }
-	    
-	    body[orient="landscape"] .toolbar {
-	        font-size: 20px;
-	    }
-	
-	    .anchorTop {
-	        top: 0;
-	    }
-	
-	    .anchorBottom {
-	        border-top: 1px solid #3f4e63;
-	        padding-bottom: 9px;
-	        bottom: 0;
-	    }
-	
-	    .center {
-	        position: absolute;
-	        top: 40px;
-	        bottom: 40px;
-	        background: #EEEEEE;
-	    }
-	
-	    body[orient="landscape"] .center {
-	        top: 40px;
-	        bottom: 40px;
-	        width: 100%;
-	    }
-	    
-	    .item {	    	
-	        border-bottom: 1px solid #666;
-	        padding: 8px 32px 8px 8px;
-	        color: #000000;
-	    }
-	    
-		 .title {
-			  font-variant: small-caps;		 
-			  font-weight: bold;	
-		 }
-		 
-		 .main {
-	        padding: 8px 32px 8px 8px;
-	        color: #000000;
-			  font-size: 14px;
-		 }
-		 
-		 .transfs-tag {
-			  font-size: 14px;		 	
-			  font-variant: small-caps;
-		 }
-		 
+		body {
+			margin: 0;
+			font-family: Helvetica;
+			background: #FFF;
+			color: #FFFFFF;
+			overflow: hidden;
+		}
+		.container {
+			position: absolute;
+			width: 100%;
+		}
+
+		body[orient="profile"] .container {
+			height: 416px;
+		}
+
+		body[orient="landscape"] .container {
+			height: 268px;
+		}
+
+		body[orient="landscape"] .toolbar {
+			font-size: 20px;
+		}
+
+		.anchorTop {
+			top: 0;
+		}
+		.anchorBottom {
+			border-top: 1px solid #3f4e63;
+			padding-bottom: 9px;
+			bottom: 0;
+		}
+		.center {
+			position: absolute;
+			top: 40px;
+			bottom: 40px;
+			background: #EEEEEE;
+			text-align: center;
+		}
+
+		body[orient="landscape"] .center {
+			top: 40px;
+			bottom: 40px;
+			width: 100%;
+		}
+
+		.item {
+			border-bottom: 1px solid #666;
+			padding: 8px 32px 8px 8px;
+			color: #000000;
+		}
+
+		.title {
+			font-size: 22px;
+			font-variant: small-caps;
+			font-weight: bold;
+			color: #88F;
+		}
+		.title span {
+			color: #CF3;
+		}
+
+		.main {
+			padding: 8px 32px 8px 8px;
+			color: #000000;
+			font-size: 14px;
+		}
+
+		.transfs-tag {
+			font-size: 14px;
+			font-variant: small-caps;
+		}
 	</style>
 	<script type="text/javascript">
-	    
-		addEventListener("load", function()
-		{
+		addEventListener("load", function()	{
 		    setTimeout(updateLayout, 0);
 		}, false);
-		
-		var currentWidth = 0;
-		
-		function updateLayout()
-		{
-		    if (window.innerWidth != currentWidth)
-		    {
-		        currentWidth = window.innerWidth;
-		
-		        var orient = currentWidth == 320 ? "profile" : "landscape";
-		        document.body.setAttribute("orient", orient);
-		        setTimeout(function()
-		        {
-		            window.scrollTo(0, 1);
-		        }, 100);            
-		    }
-		}
-		
-		setInterval(updateLayout, 1400);
-	    
-	</script>
 
+		var currentWidth = 0;
+		function updateLayout() {
+			if (window.innerWidth != currentWidth) {
+				currentWidth = window.innerWidth;
+
+				var orient = currentWidth == 320 ? "profile" : "landscape";
+				document.body.setAttribute("orient", orient);
+				setTimeout(function() {
+					window.scrollTo(0, 1);
+				}, 100);
+			}
+		}
+		setInterval(updateLayout, 1400);
+	</script>
 </head>
 
 <body>
     <div class="container">
-        <!-- div class="toolbar anchorTop">TOP</div -->
         <div class="center">
-            <div class="item title">TransFS Card Terminal</div>
+						<img src='logo-color.medium.png' width='250px'/><br />
+            <div class="item title"><span>TransFS</span> Card Terminal</div>
 				<div class='main'>
-					To learn more about credit card processing merchant accounts, visit the TransFS.com <a href="http://transfs.com/credit-card-processing">Credit Card Processing</a> page.
+					If you need a credit card processing merchant account, or want to get a better deal
+					on your existing service, visit the TransFS.com for
+					<a href="http://transfs.com/iphone">iPhone Credit Card Processing</a>.
 				</div>
-				<div class='item transfs-tag' style='border-top: 1px solid #666'>
-					Brought to you by...<br /><img src='transparent-logo-tiny.png' width='200px'/>
+				<div class='main'>
+					<strong>TransFS</strong> <strong>is a comparison shopping website for credit card
+					processing.</strong> Our unique auction process and comparison engine allows us
+					to <strong>save businesses 40% on average</strong> on their credit card processing.
+					TransFS is <strong>quick and simple to use</strong> and all of the processors that
+					bid on our site are vetted and certified by TransFS to ensure quality and
+					ethical behavior.
 				</div>
-        </div>
-        <!-- div class="toolbar anchorBottom">BOTTOM</div -->
+				<div class='main'>
+					To learn more about credit card processing, check out:
+					<a href="http://transfs.com/blog">Financially Speaking</a>, the TransFS.com blog.
+					We are having an ongoing conversation with our business customers about how to
+					save money on financial services.
+				</div>
     </div>
 </body>
 </html>
