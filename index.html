@@ -8,8 +8,7 @@
 		body {
 			margin: 0;
 			font-family: Helvetica;
-			background: #FFF;
-			color: #FFFFFF;
+			background: #FFFFFF;
 			overflow: hidden;
 		}
 		.container {
@@ -38,10 +37,8 @@
 			bottom: 0;
 		}
 		.center {
-			position: absolute;
 			top: 40px;
 			bottom: 40px;
-			background: #EEEEEE;
 			text-align: center;
 		}
 
@@ -51,20 +48,24 @@
 			width: 100%;
 		}
 
-		.item {
+		.header {
 			border-bottom: 1px solid #666;
 			padding: 8px 32px 8px 8px;
 			color: #000000;
+			font-size: 12px;
 		}
 
 		.title {
+			color: #276FA4;
+			margin-bottom: -20px;
+		}
+		.title span {
 			font-size: 22px;
 			font-variant: small-caps;
 			font-weight: bold;
-			color: #88F;
 		}
-		.title span {
-			color: #CF3;
+		img.logo {
+			padding-top: 20px;
 		}
 
 		.main {
@@ -101,9 +102,10 @@
 
 <body>
     <div class="container">
-        <div class="center">
-						<img src='logo-color.medium.png' width='250px'/><br />
-            <div class="item title"><span>TransFS</span> Card Terminal</div>
+        <div class="center header">
+					<div class="title"><span>TransFS Card Terminal</span><br/><br/>...brought to you by</div>
+					<img src='logo-color.medium.png' width='250px' class='logo'/>
+    		</div>
 				<div class='main'>
 					If you need a credit card processing merchant account, or want to get a better deal
 					on your existing service, visit the TransFS.com for
