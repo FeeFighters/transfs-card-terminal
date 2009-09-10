@@ -8,6 +8,7 @@
 
 #import "AuthNetSettingsController.h"
 #import "NSStringAdditions.h"
+#import "TransFS_Card_TerminalAppDelegate.h"
 
 @implementation AuthNetSettingsController
 
@@ -41,7 +42,7 @@
 
 	[authNetLogin setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"authNetLogin"]];
 	[authNetPassword setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"authNetPassword"]];
-	[authNetTestMode setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"authNetTestMode"]];	
+	[authNetTestMode setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"authNetTestMode"]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -52,7 +53,8 @@
 	if (![NSString isBlank:[authNetPassword text]])
 		[[NSUserDefaults standardUserDefaults] setObject:[authNetPassword text] forKey:@"authNetPassword"];
 	[[NSUserDefaults standardUserDefaults] setBool:[authNetTestMode isOn] forKey:@"authNetTestMode"];
-	[[NSUserDefaults standardUserDefaults] synchronize];	
+	[[NSUserDefaults standardUserDefaults] synchronize];
+	[(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] setupReachability];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

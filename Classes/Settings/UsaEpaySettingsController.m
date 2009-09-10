@@ -8,6 +8,7 @@
 
 #import "UsaEpaySettingsController.h"
 #import "NSStringAdditions.h"
+#import "TransFS_Card_TerminalAppDelegate.h"
 
 @implementation UsaEpaySettingsController
 
@@ -50,6 +51,7 @@
 		[[NSUserDefaults standardUserDefaults] setObject:[sourceKey text] forKey:@"usaEpaySourceKey"];
 	[[NSUserDefaults standardUserDefaults] setBool:[testMode isOn] forKey:@"usaEpayTestMode"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
+	[(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] setupReachability];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

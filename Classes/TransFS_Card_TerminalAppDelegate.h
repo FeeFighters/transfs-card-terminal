@@ -13,6 +13,7 @@
 @class Transaction, StartViewController, CardViewController, ProcessViewController, AddressViewController;
 @class AboutSettingsController, EmailSettingsViewController, GeneralSettingsViewController, AuthNetSettingsController;
 @class BillingGateway, ChargeViewController;
+@class Reachability;
 
 @interface TransFS_Card_TerminalAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 	IBOutlet ChargeViewController* chargeViewController;
@@ -33,8 +34,10 @@
 
 	NSMutableArray* transactionHistory;
 	sqlite3 *database; // Opaque reference to the SQLite database.
-	
+
 	SystemSoundID keyboardClickSoundID;
+
+	Reachability* gatewayHostReach;
 }
 
 @property (nonatomic, retain) IBOutlet UIView* splashScreenView;

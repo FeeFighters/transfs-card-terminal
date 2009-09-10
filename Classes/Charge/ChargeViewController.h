@@ -49,6 +49,7 @@
 @property(retain, nonatomic) IBOutlet ChargeAddressViewController* chargeAddressViewController;
 @property(retain, nonatomic) IBOutlet UITableView* tableView;
 @property(retain, nonatomic) IBOutlet UIView* clearDataFlashView;
+@property(retain, nonatomic) IBOutlet UIButton* processButton;
 
 - (IBAction) processButtonClick:(id)sender;
 - (IBAction) goBackButtonClick:(id)sender;

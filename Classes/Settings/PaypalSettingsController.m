@@ -8,6 +8,7 @@
 
 #import "PaypalSettingsController.h"
 #import "NSStringAdditions.h"
+#import "TransFS_Card_TerminalAppDelegate.h"
 
 @implementation PaypalSettingsController
 
@@ -38,16 +39,16 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-	
+
 	[login setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"paypalLogin"]];
 	[password setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"paypalPassword"]];
-	[signature setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"paypalSignature"]];	
-	[testMode setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"paypalTestMode"]];	
+	[signature setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"paypalSignature"]];
+	[testMode setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"paypalTestMode"]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
-	
+
 	if (![NSString isBlank:[login text]])
 		[[NSUserDefaults standardUserDefaults] setObject:[login text] forKey:@"paypalLogin"];
 	if (![NSString isBlank:[password text]])
@@ -55,7 +56,8 @@
 	if (![NSString isBlank:[signature text]])
 		[[NSUserDefaults standardUserDefaults] setObject:[signature text] forKey:@"paypalSignature"];
 	[[NSUserDefaults standardUserDefaults] setBool:[testMode isOn] forKey:@"paypalTestMode"];
-	[[NSUserDefaults standardUserDefaults] synchronize];	
+	[[NSUserDefaults standardUserDefaults] synchronize];
+	[(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] setupReachability];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

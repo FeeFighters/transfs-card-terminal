@@ -19,7 +19,7 @@
 
 @implementation ChargeViewController
 
-@synthesize tableView, clearDataFlashView;
+@synthesize tableView, clearDataFlashView, processButton;
 @synthesize chargeAmountViewController, chargeCardNameViewController, chargeCardNumberViewController;
 @synthesize chargeCardExpViewController, chargeCardCvvViewController, chargeAddressViewController;
 

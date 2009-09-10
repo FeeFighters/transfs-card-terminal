@@ -13,6 +13,7 @@
 #import "AuthorizeNetGateway.h"
 #import "PaypalGateway.h"
 #import "UsaEpayGateway.h"
+#import "Reachability.h"
 
 
 // Private interface for AppDelegate - internal only methods.
@@ -67,17 +68,20 @@
 	} else {
 		[self performSelector:@selector(startSplashAnim:) withObject:nil afterDelay:2.0];
 	}
-	
+
 	// The application ships with a default database in its bundle. If anything in the application
 	// bundle is altered, the code sign will fail. We want the database to be editable by users,
 	// so we need to create a copy of it in the application's Documents directory.
 	[self createEditableCopyOfDatabaseIfNeeded];
 	// Call internal method to initialize database connection
 	[self initializeDatabase];
-	
+
 	CFURLRef tockSoundFileURLRef = CFBundleCopyResourceURL(CFBundleGetBundleWithIdentifier(CFSTR("com.apple.UIKit")),
 													   CFSTR ("Tock"), CFSTR("aiff"), NULL);
 	AudioServicesCreateSystemSoundID(tockSoundFileURLRef, &keyboardClickSoundID);
+
+	gatewayHostReach = NULL;
+	[self setupReachability];
 }
 
 - (IBAction) aboutSettingsPressed:(id)sender
@@ -263,6 +267,71 @@
 
 	return gateway;
 }
+
+//Called by Reachability whenever status changes.
+- (void) reachabilityChanged: (NSNotification* )note
+{
+	Reachability* curReach = [note object];
+	NSParameterAssert([curReach isKindOfClass: [Reachability class]]);
+
+  NetworkStatus netStatus = [curReach currentReachabilityStatus];
+  //BOOL connectionRequired= [curReach connectionRequired];
+
+	if (netStatus == NotReachable) {
+		[self.chargeViewController.processButton setTitle:@"You must be connected to the internet to process transactions."
+                                             forState:UIControlStateNormal];
+		self.chargeViewController.processButton.titleLabel.font = [UIFont systemFontOfSize: 14];
+		self.chargeViewController.processButton.titleLabel.textAlignment = UITextAlignmentCenter;
+		[self.chargeViewController.processButton setTitleColor:[UIColor redColor]
+                                                  forState:UIControlStateNormal];
+		self.chargeViewController.processButton.enabled = NO;
+	}
+	else {
+		[self.chargeViewController.processButton setTitle:@"Process Transaction"
+                                             forState:UIControlStateNormal];
+		self.chargeViewController.processButton.titleLabel.font = [UIFont systemFontOfSize: 18];
+		[self.chargeViewController.processButton setTitleColor:[UIColor colorWithRed:50.0/256.0 green:79.0/256.0 blue:133.0/256.0 alpha:1.0]
+                                                  forState:UIControlStateNormal];
+		self.chargeViewController.processButton.enabled = YES;
+	}
+}
+
+- (void) setupReachability
+{
+	int gatewayIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"gatewayId"];
+	NSString *url;
+
+	if (gatewayIndex == authNet) {
+		if ([[NSUserDefaults standardUserDefaults] boolForKey:@"authNetTestMode"])
+			url = [AuthorizeNetGateway testUrl];
+		else
+			url = [AuthorizeNetGateway liveUrl];
+	}
+	else if (gatewayIndex == paypal) {
+		url = [PaypalGateway endpointUrl];
+	}
+	else {	/* if (gatewayIndex == usaEpay) { */
+		if ([[NSUserDefaults standardUserDefaults] boolForKey:@"usaEpayTestMode"])
+			url = [UsaEpayGateway SandboxUrl];
+		else
+			url = [UsaEpayGateway Url];
+	}
+
+	// Try to reach the outside world, just to spin up the network if it exists
+	[NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://transfs.com/transfs-card-terminal/about"]
+                           encoding:NSASCIIStringEncoding
+                              error:NULL];
+
+	// Observe the kNetworkReachabilityChangedNotification. When that notification is posted, the
+	// method "reachabilityChanged" will be called.
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(reachabilityChanged:) name: kReachabilityChangedNotification object: nil];
+
+	//Change the host name here to change the server your monitoring
+	if (gatewayHostReach) [gatewayHostReach release];
+	gatewayHostReach = [[Reachability reachabilityWithHostName: url] retain];
+	[gatewayHostReach startNotifer];
+}
+
 
 
 @end
