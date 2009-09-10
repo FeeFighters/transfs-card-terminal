@@ -2,15 +2,15 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.03">
 	<data>
 		<int key="IBDocument.SystemTarget">768</int>
-		<string key="IBDocument.SystemVersion">9J61</string>
-		<string key="IBDocument.InterfaceBuilderVersion">677</string>
-		<string key="IBDocument.AppKitVersion">949.46</string>
+		<string key="IBDocument.SystemVersion">9L31a</string>
+		<string key="IBDocument.InterfaceBuilderVersion">680</string>
+		<string key="IBDocument.AppKitVersion">949.54</string>
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="69"/>
 			<integer value="9"/>
 			<integer value="59"/>
-			<integer value="69"/>
 			<integer value="93"/>
 			<integer value="3"/>
 		</object>
@@ -305,7 +305,7 @@
 							<object class="IBUIButton" id="176082932">
 								<reference key="NSNextResponder" ref="650428117"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{264, 6}, {29, 31}}</string>
+								<string key="NSFrame">{{265, 6}, {29, 31}}</string>
 								<reference key="NSSuperview" ref="650428117"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -920,7 +920,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>ChargeTableCardExpCvvCell</string>
-					<string>{{60, 576}, {300, 44}}</string>
+					<string>{{60, 608}, {300, 44}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSArray">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -932,7 +932,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>ChargeTableAddressCell</string>
-					<string>{{60, 488}, {300, 60}}</string>
+					<string>{{57, 608}, {300, 60}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>ChargeTableCardNumberCell</string>
 					<string>{{60, 646}, {300, 44}}</string>
@@ -998,11 +998,15 @@
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>address</string>
+							<string>addressPicker</string>
 							<string>city</string>
+							<string>state</string>
 							<string>zipcode</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UITextField</string>
+							<string>UIPickerView</string>
 							<string>UITextField</string>
 							<string>UITextField</string>
 							<string>UITextField</string>
@@ -1244,10 +1248,12 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>goBackButtonClick:</string>
 							<string>processButtonClick:</string>
+							<string>sendReceiptButtonClick:</string>
 							<string>startOverButtonClick:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -1263,9 +1269,11 @@
 							<string>chargeCardExpViewController</string>
 							<string>chargeCardNameViewController</string>
 							<string>chargeCardNumberViewController</string>
+							<string>clearDataFlashView</string>
 							<string>failureView</string>
 							<string>processButton</string>
 							<string>responseLabel</string>
+							<string>sendReceiptButton</string>
 							<string>spinner</string>
 							<string>successView</string>
 							<string>successViewImage</string>
@@ -1281,8 +1289,10 @@
 							<string>ChargeCardNameViewController</string>
 							<string>ChargeCardNumberViewController</string>
 							<string>UIView</string>
+							<string>UIView</string>
 							<string>UIButton</string>
 							<string>UILabel</string>
+							<string>UIButton</string>
 							<string>UIActivityIndicatorView</string>
 							<string>UIView</string>
 							<string>UIImageView</string>
@@ -1307,6 +1317,6 @@
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.LastKnownRelativeProjectPath">../TransFS Card Terminal.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<string key="IBCocoaTouchPluginVersion">3.0</string>
+		<string key="IBCocoaTouchPluginVersion">3.1</string>
 	</data>
 </archive>

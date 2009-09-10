@@ -38,23 +38,23 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	[spinner startAnimating];
-	[aboutWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://jkrall.github.com/transfs-card-terminal"]]];	
+	[aboutWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://transfs.com/transfs-card-terminal/about"]]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
-	// [[NSUserDefaults standardUserDefaults] synchronize];		
+	// [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-	[spinner stopAnimating];	
+	[spinner stopAnimating];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
 	[spinner stopAnimating];
 	[[[UIAlertView alloc] initWithTitle:@"About TransFS Card Terminal" message:@"Couldn't open TransFS.com web address." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
-	
+
 - (void) openInSafari:(id)sender {
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://transfs.com"]];
 }

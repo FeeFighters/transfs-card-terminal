@@ -12,6 +12,8 @@
 		1D129AEB0FF6626C00509A6C /* setting-tab-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D129AEA0FF6626C00509A6C /* setting-tab-icon.png */; };
 		1D2BA5180F62362000DB0F6E /* keypad_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA5160F62362000DB0F6E /* keypad_button_normal.png */; };
 		1D2BA5190F62362000DB0F6E /* keypad_button_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA5170F62362000DB0F6E /* keypad_button_highlighted.png */; };
+		1D30FC37105921850091D93B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30FC36105921850091D93B /* Reachability.m */; };
+		1D30FC5B1059248E0091D93B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30FC5A1059248E0091D93B /* SystemConfiguration.framework */; };
 		1D3623260D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */; };
 		1D5058270F63D88D008B2FCC /* ChargeAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057F30F63D88D008B2FCC /* ChargeAddressViewController.m */; };
 		1D5058280F63D88D008B2FCC /* ChargeAmountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057F50F63D88D008B2FCC /* ChargeAmountViewController.m */; };
@@ -170,6 +172,9 @@
 		1D2BA5160F62362000DB0F6E /* keypad_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keypad_button_normal.png; sourceTree = "<group>"; };
 		1D2BA5170F62362000DB0F6E /* keypad_button_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keypad_button_highlighted.png; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D30FC35105921850091D93B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		1D30FC36105921850091D93B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		1D30FC5A1059248E0091D93B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransFS_Card_TerminalAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransFS_Card_TerminalAppDelegate.m; sourceTree = "<group>"; };
 		1D5057F20F63D88D008B2FCC /* ChargeAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeAddressViewController.h; sourceTree = "<group>"; };
@@ -399,6 +404,7 @@
 				1DC869560F53EE4B00D2DB08 /* libsqlite3.dylib in Frameworks */,
 				1DA22951102ACF3E006BBDAE /* AudioToolbox.framework in Frameworks */,
 				1DEC0B491034CD2700C2265D /* MessageUI.framework in Frameworks */,
+				1D30FC5B1059248E0091D93B /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +508,8 @@
 		1D50581C0F63D88D008B2FCC /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1D30FC35105921850091D93B /* Reachability.h */,
+				1D30FC36105921850091D93B /* Reachability.m */,
 				1D6FB792102A634A001C0301 /* NumberKeypadWithDone_Implementation.h */,
 				1D6FB793102A634A001C0301 /* NumberKeypadWithDone.h */,
 				1D50581D0F63D88D008B2FCC /* CardExpirationPickerDelegate.h */,
@@ -805,6 +813,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D30FC5A1059248E0091D93B /* SystemConfiguration.framework */,
 				1DEC0B481034CD2700C2265D /* MessageUI.framework */,
 				1DA22950102ACF3E006BBDAE /* AudioToolbox.framework */,
 				1DC869550F53EE4B00D2DB08 /* libsqlite3.dylib */,
@@ -1004,6 +1013,7 @@
 				1DB9B5FC1009D58400A71B93 /* Money.m in Sources */,
 				1D6FB71B102A5A6F001C0301 /* ZipCode.m in Sources */,
 				1DA22AC3102AF22F006BBDAE /* IpAddress.m in Sources */,
+				1D30FC37105921850091D93B /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1095,7 +1105,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos3.1;
 			};
 			name = Debug;
 		};
