@@ -299,23 +299,7 @@
 - (void) setupReachability
 {
 	int gatewayIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"gatewayId"];
-	NSString *url;
-
-	if (gatewayIndex == authNet) {
-		if ([[NSUserDefaults standardUserDefaults] boolForKey:@"authNetTestMode"])
-			url = [AuthorizeNetGateway testUrl];
-		else
-			url = [AuthorizeNetGateway liveUrl];
-	}
-	else if (gatewayIndex == paypal) {
-		url = [PaypalGateway endpointUrl];
-	}
-	else {	/* if (gatewayIndex == usaEpay) { */
-		if ([[NSUserDefaults standardUserDefaults] boolForKey:@"usaEpayTestMode"])
-			url = [UsaEpayGateway SandboxUrl];
-		else
-			url = [UsaEpayGateway Url];
-	}
+	NSString *url = [[self setupGateway] endpointUrl];
 
 	// Try to reach the outside world, just to spin up the network if it exists
 	[NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://transfs.com/transfs-card-terminal/about"]
