@@ -8,11 +8,11 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="69"/>
 			<integer value="9"/>
-			<integer value="59"/>
-			<integer value="93"/>
 			<integer value="3"/>
+			<integer value="69"/>
+			<integer value="93"/>
+			<integer value="59"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -229,7 +229,6 @@
 								<reference key="NSSuperview" ref="46203505"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-								<float key="IBUIAlpha">5.000000e-01</float>
 								<int key="IBUIContentMode">1</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<object class="NSCustomResource" key="IBUIImage">
@@ -417,7 +416,7 @@
 								<reference key="IBUINormalTitleShadowColor" ref="1010378092"/>
 							</object>
 						</object>
-						<string key="NSFrameSize">{300, 44}</string>
+						<string key="NSFrameSize">{300, 45}</string>
 						<reference key="NSSuperview" ref="719890090"/>
 						<reference key="IBUIBackgroundColor" ref="19086650"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -426,7 +425,7 @@
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 					</object>
 				</object>
-				<string key="NSFrameSize">{300, 44}</string>
+				<string key="NSFrameSize">{300, 45}</string>
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -528,11 +527,7 @@
 				</object>
 				<string key="NSFrameSize">{300, 60}</string>
 				<reference key="NSSuperview"/>
-				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MQA</bytes>
-					<reference key="NSCustomColorSpace" ref="325464152"/>
-				</object>
+				<reference key="IBUIBackgroundColor" ref="786343817"/>
 				<bool key="IBUIOpaque">NO</bool>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<int key="IBUIAccessoryType">2</int>
@@ -920,7 +915,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>ChargeTableCardExpCvvCell</string>
-					<string>{{60, 608}, {300, 44}}</string>
+					<string>{{68, 397}, {300, 45}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSArray">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -932,7 +927,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>ChargeTableAddressCell</string>
-					<string>{{57, 608}, {300, 60}}</string>
+					<string>{{79, 530}, {300, 60}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>ChargeTableCardNumberCell</string>
 					<string>{{60, 646}, {300, 44}}</string>

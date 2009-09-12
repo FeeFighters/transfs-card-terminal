@@ -15,7 +15,7 @@
 #import "CreditCard.h"
 #import "CreditCardMethods.h"
 #import "Transaction.h"
-
+#import "UICustomCellBackgroundView.h"
 
 @implementation ChargeViewController
 
@@ -53,7 +53,7 @@
 		sendReceiptButton.hidden = YES;
 	}
 
-	tableView.backgroundColor = self.view.backgroundColor;
+	tableView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -281,6 +281,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	UITableViewCell* cell = nil;
+	CustomCellBackgroundViewPosition position = CustomCellBackgroundViewPositionMiddle;
 
 	if (indexPath.row == 0) {
 		cell = (ChargeTableAmountCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChargeTableAmountCell"];
@@ -293,6 +294,7 @@
 		else {
 			((ChargeTableAmountCell*)cell).amount.text = [NSString stringWithFormat:@"$ %@", chargeAmountViewController.number];
 		}
+		position = CustomCellBackgroundViewPositionTop;
 	}
 	else if (indexPath.row == 1) {
 		cell = (ChargeTableCardNameCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChargeTableCardNameCell"];
@@ -381,10 +383,18 @@
 			((ChargeTableAddressCell*)cell).city.text = chargeAddressViewController.city.text;
 			((ChargeTableAddressCell*)cell).zip.text = chargeAddressViewController.zipcode.text;
 		}
-
+		position = CustomCellBackgroundViewPositionBottom;
 	}
 
-    return cell;
+	UICustomCellBackgroundView* customBg = [[UICustomCellBackgroundView alloc] initWithFrame:cell.backgroundView.frame];
+	customBg.borderColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0];
+	customBg.fillColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+	customBg.position = position;
+	[cell.backgroundView release];
+	cell.backgroundView = customBg;
+	[cell.backgroundView setNeedsDisplay];
+
+	return cell;
 }
 
 

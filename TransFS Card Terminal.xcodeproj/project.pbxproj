@@ -149,6 +149,7 @@
 		1DEC0B491034CD2700C2265D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC0B481034CD2700C2265D /* MessageUI.framework */; };
 		1DEC0C471034F30C00C2265D /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC0C461034F30C00C2265D /* Entitlements.plist */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		1DFBFF07105B3DAD00B8D411 /* UICustomCellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFBFF06105B3DAD00B8D411 /* UICustomCellBackgroundView.m */; };
 		1DFC98E60F525DB900191E58 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC98E50F525DB900191E58 /* Transaction.m */; };
 		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
@@ -383,6 +384,8 @@
 		1DEC0B481034CD2700C2265D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1DEC0C461034F30C00C2265D /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1DFBFF05105B3DAD00B8D411 /* UICustomCellBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomCellBackgroundView.h; sourceTree = "<group>"; };
+		1DFBFF06105B3DAD00B8D411 /* UICustomCellBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomCellBackgroundView.m; sourceTree = "<group>"; };
 		1DFC98E40F525DB900191E58 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		1DFC98E50F525DB900191E58 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -508,6 +511,8 @@
 		1D50581C0F63D88D008B2FCC /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1DFBFF05105B3DAD00B8D411 /* UICustomCellBackgroundView.h */,
+				1DFBFF06105B3DAD00B8D411 /* UICustomCellBackgroundView.m */,
 				1D30FC35105921850091D93B /* Reachability.h */,
 				1D30FC36105921850091D93B /* Reachability.m */,
 				1D6FB792102A634A001C0301 /* NumberKeypadWithDone_Implementation.h */,
@@ -1014,6 +1019,7 @@
 				1D6FB71B102A5A6F001C0301 /* ZipCode.m in Sources */,
 				1DA22AC3102AF22F006BBDAE /* IpAddress.m in Sources */,
 				1D30FC37105921850091D93B /* Reachability.m in Sources */,
+				1DFBFF07105B3DAD00B8D411 /* UICustomCellBackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
