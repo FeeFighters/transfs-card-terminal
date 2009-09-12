@@ -20,11 +20,10 @@
 	IBOutlet UINavigationController* historyTableNavigationController;
 
 	UIView* splashScreenView;
-	UIView* splashScreenBgView;
-	UIView* splashScreenLogoView;
-	UIView* splashScreenCcView;
-	UIView* splashScreenTerminalView;
-	UITextView* splashScreenInfo;
+	UIView* splashScreenTopView;
+	UIView* splashScreenBottomView;
+	UIView* splashScreenTitleView;
+	UIView* splashScreenIconView;
 	UITextView* splashScreenPressToBegin;
 	UIButton* splashScreenAboutSettings;
 	UIActivityIndicatorView* splashScreenSpinner;
@@ -41,11 +40,10 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIView* splashScreenView;
-@property (nonatomic, retain) IBOutlet UIView* splashScreenBgView;
-@property (nonatomic, retain) IBOutlet UIView* splashScreenLogoView;
-@property (nonatomic, retain) IBOutlet UIView* splashScreenCcView;
-@property (nonatomic, retain) IBOutlet UIView* splashScreenTerminalView;
-@property (nonatomic, retain) IBOutlet UITextView* splashScreenInfo;
+@property (nonatomic, retain) IBOutlet UIView* splashScreenTopView;
+@property (nonatomic, retain) IBOutlet UIView* splashScreenBottomView;
+@property (nonatomic, retain) IBOutlet UIView* splashScreenTitleView;
+@property (nonatomic, retain) IBOutlet UIView* splashScreenIconView;
 @property (nonatomic, retain) IBOutlet UITextView* splashScreenPressToBegin;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView* splashScreenSpinner;
 @property (nonatomic, retain) IBOutlet UIButton* splashScreenAboutSettings;

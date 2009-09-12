@@ -30,8 +30,8 @@
 @synthesize historyTableNavigationController, chargeViewController;
 
 @synthesize window, tabBarController;
-@synthesize splashScreenView, splashScreenBgView, splashScreenLogoView, splashScreenCcView, splashScreenTerminalView;
-@synthesize splashScreenInfo, splashScreenSpinner, splashScreenPressToBegin, splashScreenAboutSettings;
+@synthesize splashScreenView, splashScreenTopView, splashScreenBottomView, splashScreenTitleView, splashScreenIconView;
+@synthesize splashScreenSpinner, splashScreenPressToBegin, splashScreenAboutSettings;
 @synthesize transactionHistory, database, keyboardClickSoundID;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
@@ -40,17 +40,17 @@
 	bool showSetupMessage = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSetupMessage"];
 	if (showSetupMessage) {
 		splashScreenSpinner.hidden = true;
+		splashScreenIconView.hidden = true;
 		splashScreenAboutSettings.hidden = false;
 		splashScreenPressToBegin.hidden = false;
-		splashScreenInfo.text = @"To get started... Set up your gateway account information in the Settings tab.";
 		[[NSUserDefaults standardUserDefaults] setBool:false forKey:@"showSetupMessage"];
 		tabBarController.selectedIndex = 2;
 	}
 	else {
 		splashScreenAboutSettings.hidden = true;
 		splashScreenPressToBegin.hidden = true;
+		splashScreenIconView.hidden = false;
 		splashScreenSpinner.hidden = false;
-		splashScreenInfo.text = @"Loading...";
 	}
 
 	// Add the views that we'll need, if showSplashScreen setting
@@ -60,13 +60,6 @@
 		[window insertSubview:tabBarController.view belowSubview:splashScreenView];
 	} else {
 		[window addSubview:tabBarController.view];
-	}
-
-	// Kick off a delayed animation to get rid of the splash screen
-	if (showSetupMessage || !showSplashScreen) {
-		// do nothing
-	} else {
-		[self performSelector:@selector(startSplashAnim:) withObject:nil afterDelay:2.0];
 	}
 
 	// The application ships with a default database in its bundle. If anything in the application
@@ -82,6 +75,13 @@
 
 	gatewayHostReach = NULL;
 	[self setupReachability];
+
+	// Kick off a delayed animation to get rid of the splash screen
+	if (showSetupMessage || !showSplashScreen) {
+		// do nothing
+	} else {
+		[self performSelector:@selector(startSplashAnim:) withObject:nil afterDelay:2.0];
+	}
 }
 
 - (IBAction) aboutSettingsPressed:(id)sender
@@ -95,11 +95,15 @@
 	{
 		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
 		[UIView setAnimationDuration:1.5];
-		[UIView setAnimationDidStopSelector:@selector(splashScreenAnimDidStop)];
-		splashScreenView.alpha = 0.0;
-		splashScreenLogoView.center = CGPointMake(splashScreenLogoView.center.x, -100);
-		splashScreenCcView.center = CGPointMake(-160, splashScreenCcView.center.y);
-		splashScreenTerminalView.center = CGPointMake(480, splashScreenTerminalView.center.y);
+		[UIView setAnimationDelegate:self];
+		[UIView setAnimationDidStopSelector:@selector(splashScreenAnimDidStop:finished:context:)];
+		//splashScreenView.alpha = 0.0;
+		int slideDown = (620 - splashScreenBottomView.center.y);
+		splashScreenTopView.center = CGPointMake(splashScreenTopView.center.x, -100);
+		splashScreenBottomView.center = CGPointMake(splashScreenBottomView.center.x, splashScreenBottomView.center.y + slideDown);
+		splashScreenTitleView.center = CGPointMake(-160, splashScreenTitleView.center.y + slideDown);
+		splashScreenIconView.center = CGPointMake(480, splashScreenIconView.center.y + slideDown);
+		splashScreenSpinner.alpha = 0.0;
 	}
 	[UIView commitAnimations];
 }
