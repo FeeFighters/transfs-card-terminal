@@ -20,6 +20,7 @@
 @interface TransFS_Card_TerminalAppDelegate (Private)
 - (void)createEditableCopyOfDatabaseIfNeeded;
 - (void)initializeDatabase;
+- (void)initAppOnStartup:(id)obj;
 - (void)startSplashAnim:(id)obj;
 - (void)splashScreenAnimDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context;
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
@@ -61,6 +62,14 @@
 	} else {
 		[window addSubview:tabBarController.view];
 	}
+
+	[self performSelector:@selector(initAppOnStartup:) withObject:nil afterDelay:0.0];
+}
+
+- (void)initAppOnStartup:(id)obj
+{
+	bool showSetupMessage = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSetupMessage"];
+	bool showSplashScreen = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSplashScreen"];
 
 	// The application ships with a default database in its bundle. If anything in the application
 	// bundle is altered, the code sign will fail. We want the database to be editable by users,

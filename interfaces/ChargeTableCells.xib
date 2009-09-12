@@ -10,8 +10,8 @@
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<integer value="69"/>
 			<integer value="9"/>
-			<integer value="93"/>
 			<integer value="59"/>
+			<integer value="93"/>
 			<integer value="3"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -401,7 +401,7 @@
 							<object class="IBUIButton" id="114371148">
 								<reference key="NSNextResponder" ref="650428117"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{181, 3}, {114, 37}}</string>
+								<string key="NSFrame">{{159, 3}, {136, 37}}</string>
 								<reference key="NSSuperview" ref="650428117"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
