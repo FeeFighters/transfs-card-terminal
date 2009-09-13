@@ -61,6 +61,7 @@
 @property (readonly) SystemSoundID keyboardClickSoundID;
 
 - (BillingGateway*) setupGateway;
+- (void) setupReachability;
 
 // Creates a new transaction object with default data.
 - (void)addTransaction:(Transaction *)transaction;

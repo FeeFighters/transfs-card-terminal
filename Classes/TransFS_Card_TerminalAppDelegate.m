@@ -290,7 +290,18 @@
   NetworkStatus netStatus = [curReach currentReachabilityStatus];
   //BOOL connectionRequired= [curReach connectionRequired];
 
+	bool forcedPingIsSuccessful = NO;
 	if (netStatus == NotReachable) {
+		// Try to reach the outside world, just to spin up the network if it exists
+		NSError *pingError = NULL;
+		NSString *pingResponse = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://transfs.com/transfs-card-terminal/about"]
+	                                                    encoding:NSASCIIStringEncoding
+	                                                       error:&pingError];
+		if (pingResponse && ![pingResponse isBlank])
+			forcedPingIsSuccessful = YES;
+	}
+
+	if (netStatus == NotReachable && forcedPingIsSuccessful==NO) {
 		[self.chargeViewController.processButton setTitle:@"You must be connected to the internet to process transactions."
                                              forState:UIControlStateNormal];
 		self.chargeViewController.processButton.titleLabel.font = [UIFont systemFontOfSize: 14];
@@ -303,7 +314,10 @@
 		[self.chargeViewController.processButton setTitle:@"Process Transaction"
                                              forState:UIControlStateNormal];
 		self.chargeViewController.processButton.titleLabel.font = [UIFont systemFontOfSize: 18];
-		[self.chargeViewController.processButton setTitleColor:[UIColor colorWithRed:50.0/256.0 green:79.0/256.0 blue:133.0/256.0 alpha:1.0]
+		[self.chargeViewController.processButton setTitleColor:[UIColor colorWithRed:50.0/256.0
+                                                                           green:79.0/256.0
+                                                                            blue:133.0/256.0
+                                                                           alpha:1.0]
                                                   forState:UIControlStateNormal];
 		self.chargeViewController.processButton.enabled = YES;
 	}
@@ -311,13 +325,7 @@
 
 - (void) setupReachability
 {
-	int gatewayIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"gatewayId"];
 	NSString *url = [[self setupGateway] endpointUrl];
-
-	// Try to reach the outside world, just to spin up the network if it exists
-	[NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://transfs.com/transfs-card-terminal/about"]
-                           encoding:NSASCIIStringEncoding
-                              error:NULL];
 
 	// Observe the kNetworkReachabilityChangedNotification. When that notification is posted, the
 	// method "reachabilityChanged" will be called.
