@@ -392,8 +392,13 @@ static sqlite3_stmt *dehydrate_statement = nil;
 - (Money*)moneyAmount {
     return moneyAmount;
 }
-- (void)setMoneyAmount:(Money*)aString {
-	storeAttr(moneyAmount);
+- (void)setMoneyAmount:(Money*)aMoney {
+	if ((!moneyAmount && !aMoney) ||
+	    (moneyAmount && aMoney && ([moneyAmount.cents intValue]==[aMoney.cents intValue]))
+	    ) return;
+  dirty = YES;
+  [moneyAmount release];
+  moneyAmount = [aMoney copy];
 }
 
 - (NSString *)authorizationId {

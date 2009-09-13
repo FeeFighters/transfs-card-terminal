@@ -92,7 +92,7 @@
 {
 	[NSThread sleepForTimeInterval:0.5];
 
-	BillingGateway *gateway = [[[UIApplication sharedApplication] delegate] setupGateway];
+	BillingGateway *gateway = [(TransFS_Card_TerminalAppDelegate*)[[UIApplication sharedApplication] delegate] setupGateway];
 	[transaction voidTransaction:gateway];
 
 	if (transaction.status == TransactionVoided) {

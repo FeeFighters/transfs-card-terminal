@@ -24,6 +24,6 @@
 
 @end
 
-@protocol CreditCardFormatting
+@interface Money (NSCopying)
 -(id)copyWithZone:(NSZone *)zone;
 @end

@@ -16,6 +16,7 @@
 #import "Base.h"
 #import "Money.h"
 #import "Gateway.h"
+#import "GatewayStandardAPI.h"
 
 typedef enum {
 	TransactionSuccess = 0,

@@ -39,7 +39,6 @@
 	return [[Money alloc]	initWithDollars:dollars];
 }
 
-
 -(id)copyWithZone:(NSZone *)zone
 {
     Money *copy = [[[self class] allocWithZone: zone] init];
@@ -47,4 +46,6 @@
     return copy;
 }
 
+
 @end
+
