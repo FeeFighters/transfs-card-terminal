@@ -144,6 +144,7 @@
 		1DEC0B491034CD2700C2265D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC0B481034CD2700C2265D /* MessageUI.framework */; };
 		1DEC0C471034F30C00C2265D /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC0C461034F30C00C2265D /* Entitlements.plist */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		1DF98B9C105D58140034D965 /* GatewayStandardAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF98B9B105D58140034D965 /* GatewayStandardAPI.m */; };
 		1DFB002A105BC08F00B8D411 /* splash-bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DFB0026105BC08F00B8D411 /* splash-bottom.png */; };
 		1DFB002B105BC08F00B8D411 /* splash-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DFB0027105BC08F00B8D411 /* splash-icon.png */; };
 		1DFB002C105BC08F00B8D411 /* splash-title.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DFB0028105BC08F00B8D411 /* splash-title.png */; };
@@ -379,6 +380,8 @@
 		1DEC0B481034CD2700C2265D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1DEC0C461034F30C00C2265D /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1DF98B9A105D58140034D965 /* GatewayStandardAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GatewayStandardAPI.h; sourceTree = "<group>"; };
+		1DF98B9B105D58140034D965 /* GatewayStandardAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GatewayStandardAPI.m; sourceTree = "<group>"; };
 		1DFB0026105BC08F00B8D411 /* splash-bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-bottom.png"; sourceTree = "<group>"; };
 		1DFB0027105BC08F00B8D411 /* splash-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-icon.png"; sourceTree = "<group>"; };
 		1DFB0028105BC08F00B8D411 /* splash-title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-title.png"; sourceTree = "<group>"; };
@@ -613,6 +616,8 @@
 				1D75200F0F47D6C400996F8E /* Gateways */,
 				1D7520140F47D6C400996F8E /* Response.h */,
 				1D7520150F47D6C400996F8E /* Response.m */,
+				1DF98B9A105D58140034D965 /* GatewayStandardAPI.h */,
+				1DF98B9B105D58140034D965 /* GatewayStandardAPI.m */,
 			);
 			path = Billing;
 			sourceTree = "<group>";
@@ -1020,6 +1025,7 @@
 				1DA22AC3102AF22F006BBDAE /* IpAddress.m in Sources */,
 				1D30FC37105921850091D93B /* Reachability.m in Sources */,
 				1DFBFF07105B3DAD00B8D411 /* UICustomCellBackgroundView.m in Sources */,
+				1DF98B9C105D58140034D965 /* GatewayStandardAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
