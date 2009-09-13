@@ -1091,7 +1091,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Transparent Financial Services, LLC";
 				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1100,10 +1100,45 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8BFBDCFD-637A-4666-81F1-BBEB5B5A791D";
 				SDKROOT = iphoneos3.1;
 			};
 			name = "Ad-Hoc Distribution";
+		};
+		1DF98CE4105DA31D0034D965 /* App Store Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Transparent Financial Services, LLC";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "0D8CB9ED-4F7E-4523-BC97-E41986909AD7";
+				SDKROOT = iphoneos3.0;
+			};
+			name = "App Store Distribution";
+		};
+		1DF98CE5105DA31D0034D965 /* App Store Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Transparent Financial Services, LLC";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TransFS_Card_Terminal_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "TransFS Card Terminal";
+				PROVISIONING_PROFILE = "9661D9FA-348C-4012-9AAA-99BF91D6C24F";
+				SDKROOT = iphoneos3.1;
+			};
+			name = "App Store Distribution";
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1145,6 +1180,7 @@
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
 				1DB647640F52104E00249886 /* Ad-Hoc Distribution */,
+				1DF98CE5105DA31D0034D965 /* App Store Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1155,6 +1191,7 @@
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
 				1DB647630F52104E00249886 /* Ad-Hoc Distribution */,
+				1DF98CE4105DA31D0034D965 /* App Store Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
