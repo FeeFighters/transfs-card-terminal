@@ -37,6 +37,8 @@
 	SystemSoundID keyboardClickSoundID;
 
 	Reachability* gatewayHostReach;
+	bool showSetupMessage;
+	bool showSplashScreen;
 }
 
 @property (nonatomic, retain) IBOutlet UIView* splashScreenView;

@@ -18,6 +18,7 @@
 
 // Private interface for AppDelegate - internal only methods.
 @interface TransFS_Card_TerminalAppDelegate (Private)
+- (void)initializeDefaultPrefs;
 - (void)createEditableCopyOfDatabaseIfNeeded;
 - (void)initializeDatabase;
 - (void)initAppOnStartup:(id)obj;
@@ -37,8 +38,12 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
+	[self initializeDefaultPrefs];
+
+	showSetupMessage = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSetupMessage"];
+	showSplashScreen = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSplashScreen"];
+
 	// Set up the text that we'll show in the splash screen
-	bool showSetupMessage = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSetupMessage"];
 	if (showSetupMessage) {
 		splashScreenSpinner.hidden = true;
 		splashScreenIconView.hidden = true;
@@ -55,7 +60,6 @@
 	}
 
 	// Add the views that we'll need, if showSplashScreen setting
-	bool showSplashScreen = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSplashScreen"];
 	if (showSplashScreen) {
 		[window addSubview:splashScreenView];
 		[window insertSubview:tabBarController.view belowSubview:splashScreenView];
@@ -66,11 +70,41 @@
 	[self performSelector:@selector(initAppOnStartup:) withObject:nil afterDelay:0.0];
 }
 
+- (void)initializeDefaultPrefs
+{
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	NSString *testValue = [defaults stringForKey:@"authNetLogin"];
+	if (testValue == nil)
+	{
+		// no default values have been set, create them here based on what's in our Settings bundle info
+		//
+		NSString *pathStr = [[NSBundle mainBundle] bundlePath];
+		NSString *settingsBundlePath = [pathStr stringByAppendingPathComponent:@"Settings.bundle"];
+		NSString *finalPath = [settingsBundlePath stringByAppendingPathComponent:@"Root.plist"];
+
+		NSDictionary *settingsDict = [NSDictionary dictionaryWithContentsOfFile:finalPath];
+		NSArray *prefSpecifierArray = [settingsDict objectForKey:@"PreferenceSpecifiers"];
+
+		// since no default values have been set (i.e. no preferences file created), create it here
+		NSMutableDictionary *appDefaults = [[NSMutableDictionary alloc] init];
+
+		NSDictionary *prefItem;
+		for (prefItem in prefSpecifierArray)
+		{
+			NSString *keyValueStr = [prefItem objectForKey:@"Key"];
+			id defaultValue = [prefItem objectForKey:@"DefaultValue"];
+			if (keyValueStr && defaultValue)
+				[appDefaults setObject:defaultValue forKey:keyValueStr];
+		}
+
+		[[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+	}
+}
+
+
 - (void)initAppOnStartup:(id)obj
 {
-	bool showSetupMessage = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSetupMessage"];
-	bool showSplashScreen = [[NSUserDefaults standardUserDefaults] boolForKey:@"showSplashScreen"];
-
 	// The application ships with a default database in its bundle. If anything in the application
 	// bundle is altered, the code sign will fail. We want the database to be editable by users,
 	// so we need to create a copy of it in the application's Documents directory.
@@ -113,6 +147,8 @@
 		splashScreenTitleView.center = CGPointMake(-160, splashScreenTitleView.center.y + slideDown);
 		splashScreenIconView.center = CGPointMake(480, splashScreenIconView.center.y + slideDown);
 		splashScreenSpinner.alpha = 0.0;
+		splashScreenAboutSettings.alpha = 0.0;
+		splashScreenPressToBegin.alpha = 0.0;
 	}
 	[UIView commitAnimations];
 }

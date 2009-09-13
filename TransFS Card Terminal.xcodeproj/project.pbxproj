@@ -1048,7 +1048,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos3.1;
 			};
 			name = Debug;
 		};
@@ -1066,7 +1066,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos3.1;
 			};
 			name = Release;
 		};
@@ -1101,7 +1101,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos3.1;
 			};
 			name = "Ad-Hoc Distribution";
 		};

@@ -361,6 +361,9 @@
 			((ChargeTableCardExpCvvCell*)cell).cvvDisabledLabel.hidden = true;
 			((ChargeTableCardExpCvvCell*)cell).cvv.text = chargeCardCvvViewController.number;
 		}
+
+		if (![[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"])
+			position = CustomCellBackgroundViewPositionBottom;
 	}
 	else if (indexPath.row == 4) {
 		cell = (ChargeTableAddressCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChargeTableAddressCell"];
