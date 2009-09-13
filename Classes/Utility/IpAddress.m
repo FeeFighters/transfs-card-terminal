@@ -14,11 +14,10 @@
 {
 #if defined(TARGET_IPHONE_SIMULATOR) || defined(TARGET_OS_IPHONE)
 	NSStringEncoding encoding;
-	NSError *error;
-	NSString *ip = [NSString stringWithContentsOfURL:@"http://www.wanderworx.com/services/ip.php"
+	NSString *ip = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://whatismyip.org"]
                                       usedEncoding:&encoding
-                                             error:(NSError **)error];
-	return ip;
+                                             error:NULL];
+	return ip ? ip : @"";
 #else
 	char iphone_ip[255];
 	strcpy(iphone_ip,"127.0.0.1"); // if everything fails
