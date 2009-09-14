@@ -11,7 +11,7 @@
 
 @implementation GeneralSettingsViewController
 
-@synthesize avsEnabled;
+@synthesize avsEnabled, splashScreenEnabled;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -37,21 +37,23 @@
 */
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+	[super viewWillAppear:animated];
 	[avsEnabled setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"]];
+	[splashScreenEnabled setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"showSplashScreen"]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
 	[[NSUserDefaults standardUserDefaults] setBool:[avsEnabled isOn] forKey:@"avsEnabled"];
+	[[NSUserDefaults standardUserDefaults] setBool:[splashScreenEnabled isOn] forKey:@"showSplashScreen"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (IBAction) settingsClearHistoryPressed:(id)sender
 {
-	UIActionSheet *alert = [[UIActionSheet alloc] initWithTitle:@"Clear Transaction History?" 
-													   delegate:self 
-											  cancelButtonTitle:nil 
+	UIActionSheet *alert = [[UIActionSheet alloc] initWithTitle:@"Clear Transaction History?"
+													   delegate:self
+											  cancelButtonTitle:nil
 										 destructiveButtonTitle:@"No, Cancel"
 											  otherButtonTitles:nil];
 	[alert addButtonWithTitle:@"Yes, Clear History."];

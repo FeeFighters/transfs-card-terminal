@@ -11,9 +11,11 @@
 
 @interface GeneralSettingsViewController : UIViewController <UIActionSheetDelegate> {
 	IBOutlet UISwitch* avsEnabled;
+	IBOutlet UISwitch* splashScreenEnabled;
 }
 
 @property(retain, nonatomic) IBOutlet UISwitch* avsEnabled;
+@property(retain, nonatomic) IBOutlet UISwitch* splashScreenEnabled;
 
 - (IBAction) settingsClearHistoryPressed:(id)sender;
 
