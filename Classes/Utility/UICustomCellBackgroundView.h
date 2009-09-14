@@ -1,5 +1,5 @@
 //
-//  CustomCellBackgroundView.h
+//  UICustomCellBackgroundView.h
 //
 //  Created by Mike Akers on 11/21/08.
 //
@@ -7,19 +7,19 @@
 #import <UIKit/UIKit.h>
 
 typedef enum  {
-	CustomCellBackgroundViewPositionTop,
-	CustomCellBackgroundViewPositionMiddle,
-	CustomCellBackgroundViewPositionBottom,
-	CustomCellBackgroundViewPositionSingle
-} CustomCellBackgroundViewPosition;
+	UICustomCellBackgroundViewPositionTop,
+	UICustomCellBackgroundViewPositionMiddle,
+	UICustomCellBackgroundViewPositionBottom,
+	UICustomCellBackgroundViewPositionSingle
+} UICustomCellBackgroundViewPosition;
 
 @interface UICustomCellBackgroundView : UIView {
 	UIColor *borderColor;
 	UIColor *fillColor;
-	CustomCellBackgroundViewPosition position;
+	UICustomCellBackgroundViewPosition position;
 }
 
 @property(nonatomic, retain) UIColor *borderColor, *fillColor;
-@property(nonatomic) CustomCellBackgroundViewPosition position;
+@property(nonatomic) UICustomCellBackgroundViewPosition position;
 
 @end
