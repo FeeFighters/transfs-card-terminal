@@ -281,7 +281,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	UITableViewCell* cell = nil;
-	CustomCellBackgroundViewPosition position = CustomCellBackgroundViewPositionMiddle;
+	UICustomCellBackgroundViewPosition position = UICustomCellBackgroundViewPositionMiddle;
 
 	if (indexPath.row == 0) {
 		cell = (ChargeTableAmountCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChargeTableAmountCell"];
@@ -294,7 +294,7 @@
 		else {
 			((ChargeTableAmountCell*)cell).amount.text = [NSString stringWithFormat:@"$ %@", chargeAmountViewController.number];
 		}
-		position = CustomCellBackgroundViewPositionTop;
+		position = UICustomCellBackgroundViewPositionTop;
 	}
 	else if (indexPath.row == 1) {
 		cell = (ChargeTableCardNameCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChargeTableCardNameCell"];
@@ -363,7 +363,7 @@
 		}
 
 		if (![[NSUserDefaults standardUserDefaults] boolForKey:@"avsEnabled"])
-			position = CustomCellBackgroundViewPositionBottom;
+			position = UICustomCellBackgroundViewPositionBottom;
 	}
 	else if (indexPath.row == 4) {
 		cell = (ChargeTableAddressCell*)[self.tableView dequeueReusableCellWithIdentifier:@"ChargeTableAddressCell"];
@@ -386,7 +386,7 @@
 			((ChargeTableAddressCell*)cell).city.text = chargeAddressViewController.city.text;
 			((ChargeTableAddressCell*)cell).zip.text = chargeAddressViewController.zipcode.text;
 		}
-		position = CustomCellBackgroundViewPositionBottom;
+		position = UICustomCellBackgroundViewPositionBottom;
 	}
 
 	UICustomCellBackgroundView* customBg = [[UICustomCellBackgroundView alloc] initWithFrame:cell.backgroundView.frame];
