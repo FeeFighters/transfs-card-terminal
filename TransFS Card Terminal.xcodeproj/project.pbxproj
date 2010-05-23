@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -64,6 +64,152 @@
 		1D5220150F6542C400F11E37 /* PaypalSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D5220140F6542C400F11E37 /* PaypalSettings.xib */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1D6CC42611A9051D00E3C5CD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1DB5DE940F4B9CEF005EA877 /* Settings.bundle */; };
+		1D6CC42711A9051D00E3C5CD /* american_express.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8680F0F53B2BC00D2DB08 /* american_express.png */; };
+		1D6CC42811A9051D00E3C5CD /* credit_card_image_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868100F53B2BC00D2DB08 /* credit_card_image_mask.png */; };
+		1D6CC42911A9051D00E3C5CD /* discover.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868110F53B2BC00D2DB08 /* discover.png */; };
+		1D6CC42A11A9051D00E3C5CD /* master.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868120F53B2BC00D2DB08 /* master.png */; };
+		1D6CC42B11A9051D00E3C5CD /* unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868130F53B2BC00D2DB08 /* unknown.png */; };
+		1D6CC42C11A9051D00E3C5CD /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868140F53B2BC00D2DB08 /* visa.png */; };
+		1D6CC42D11A9051D00E3C5CD /* money_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8681C0F53B2FF00D2DB08 /* money_1.png */; };
+		1D6CC42E11A9051D00E3C5CD /* money_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8681D0F53B2FF00D2DB08 /* money_2.png */; };
+		1D6CC42F11A9051D00E3C5CD /* money_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8681E0F53B2FF00D2DB08 /* money_3.png */; };
+		1D6CC43011A9051D00E3C5CD /* money_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8681F0F53B2FF00D2DB08 /* money_4.png */; };
+		1D6CC43111A9051D00E3C5CD /* money_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868200F53B2FF00D2DB08 /* money_5.png */; };
+		1D6CC43211A9051D00E3C5CD /* money_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868210F53B2FF00D2DB08 /* money_6.png */; };
+		1D6CC43311A9051D00E3C5CD /* money_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC868220F53B2FF00D2DB08 /* money_7.png */; };
+		1D6CC43411A9051D00E3C5CD /* transactionHistory.sql in Resources */ = {isa = PBXBuildFile; fileRef = 1DC869790F53EF8200D2DB08 /* transactionHistory.sql */; };
+		1D6CC43511A9051D00E3C5CD /* keypad_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA5160F62362000DB0F6E /* keypad_button_normal.png */; };
+		1D6CC43611A9051D00E3C5CD /* keypad_button_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2BA5170F62362000DB0F6E /* keypad_button_highlighted.png */; };
+		1D6CC44B11A9051D00E3C5CD /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D129AB60FF65D4A00509A6C /* icon-small.png */; };
+		1D6CC44C11A9051D00E3C5CD /* icon-large.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D129AB70FF65D4A00509A6C /* icon-large.png */; };
+		1D6CC44D11A9051D00E3C5CD /* setting-tab-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D129AEA0FF6626C00509A6C /* setting-tab-icon.png */; };
+		1D6CC44F11A9051D00E3C5CD /* splash-about_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9B705100AF4DB00A71B93 /* splash-about_settings.png */; };
+		1D6CC45011A9051D00E3C5CD /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FB777102A5FF5001C0301 /* DoneUp.png */; };
+		1D6CC45111A9051D00E3C5CD /* DoneDown3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FB778102A5FF5001C0301 /* DoneDown3.png */; };
+		1D6CC45211A9051D00E3C5CD /* DoneUp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FB779102A5FF5001C0301 /* DoneUp3.png */; };
+		1D6CC45311A9051D00E3C5CD /* DoneDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FB77A102A5FF5001C0301 /* DoneDown.png */; };
+		1D6CC45411A9051D00E3C5CD /* keypad.0.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A1C102AE07B006BBDAE /* keypad.0.down.png */; };
+		1D6CC45511A9051D00E3C5CD /* keypad.0.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A1D102AE07B006BBDAE /* keypad.0.png */; };
+		1D6CC45611A9051D00E3C5CD /* keypad.1.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A1E102AE07B006BBDAE /* keypad.1.down.png */; };
+		1D6CC45711A9051D00E3C5CD /* keypad.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A1F102AE07B006BBDAE /* keypad.1.png */; };
+		1D6CC45811A9051D00E3C5CD /* keypad.2.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A20102AE07B006BBDAE /* keypad.2.down.png */; };
+		1D6CC45911A9051D00E3C5CD /* keypad.2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A21102AE07B006BBDAE /* keypad.2.png */; };
+		1D6CC45A11A9051D00E3C5CD /* keypad.3.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A22102AE07B006BBDAE /* keypad.3.down.png */; };
+		1D6CC45B11A9051D00E3C5CD /* keypad.3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A23102AE07B006BBDAE /* keypad.3.png */; };
+		1D6CC45C11A9051D00E3C5CD /* keypad.4.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A24102AE07B006BBDAE /* keypad.4.down.png */; };
+		1D6CC45D11A9051D00E3C5CD /* keypad.4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A25102AE07B006BBDAE /* keypad.4.png */; };
+		1D6CC45E11A9051D00E3C5CD /* keypad.5.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A26102AE07B006BBDAE /* keypad.5.down.png */; };
+		1D6CC45F11A9051D00E3C5CD /* keypad.5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A27102AE07B006BBDAE /* keypad.5.png */; };
+		1D6CC46011A9051D00E3C5CD /* keypad.6.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A28102AE07B006BBDAE /* keypad.6.down.png */; };
+		1D6CC46111A9051D00E3C5CD /* keypad.6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A29102AE07B006BBDAE /* keypad.6.png */; };
+		1D6CC46211A9051D00E3C5CD /* keypad.7.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A2A102AE07B006BBDAE /* keypad.7.down.png */; };
+		1D6CC46311A9051D00E3C5CD /* keypad.7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A2B102AE07B006BBDAE /* keypad.7.png */; };
+		1D6CC46411A9051D00E3C5CD /* keypad.8.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A2C102AE07B006BBDAE /* keypad.8.down.png */; };
+		1D6CC46511A9051D00E3C5CD /* keypad.8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A2D102AE07B006BBDAE /* keypad.8.png */; };
+		1D6CC46611A9051D00E3C5CD /* keypad.9.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A2E102AE07B006BBDAE /* keypad.9.down.png */; };
+		1D6CC46711A9051D00E3C5CD /* keypad.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A2F102AE07B006BBDAE /* keypad.9.png */; };
+		1D6CC46811A9051D00E3C5CD /* keypad.back.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A30102AE07B006BBDAE /* keypad.back.down.png */; };
+		1D6CC46911A9051D00E3C5CD /* keypad.back.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A31102AE07B006BBDAE /* keypad.back.png */; };
+		1D6CC46A11A9051D00E3C5CD /* keypad.blank.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A32102AE07B006BBDAE /* keypad.blank.down.png */; };
+		1D6CC46B11A9051D00E3C5CD /* keypad.blank.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A33102AE07B006BBDAE /* keypad.blank.png */; };
+		1D6CC46C11A9051D00E3C5CD /* keypad.dot.down.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A58102AE203006BBDAE /* keypad.dot.down.png */; };
+		1D6CC46D11A9051D00E3C5CD /* keypad.dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA22A59102AE203006BBDAE /* keypad.dot.png */; };
+		1D6CC46E11A9051D00E3C5CD /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC0C461034F30C00C2265D /* Entitlements.plist */; };
+		1D6CC46F11A9051D00E3C5CD /* splash-bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DFB0026105BC08F00B8D411 /* splash-bottom.png */; };
+		1D6CC47011A9051D00E3C5CD /* splash-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DFB0027105BC08F00B8D411 /* splash-icon.png */; };
+		1D6CC47111A9051D00E3C5CD /* splash-title.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DFB0028105BC08F00B8D411 /* splash-title.png */; };
+		1D6CC47211A9051D00E3C5CD /* splash-top.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DFB0029105BC08F00B8D411 /* splash-top.png */; };
+		1D6CC47311A9051D00E3C5CD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DFB0063105BDC4900B8D411 /* Default.png */; };
+		1D6CC47611A9051D00E3C5CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D6CC47711A9051D00E3C5CD /* TransFS_Card_TerminalAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TransFS_Card_TerminalAppDelegate.m */; };
+		1D6CC47811A9051D00E3C5CD /* AvsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520000F47D6C400996F8E /* AvsResult.m */; };
+		1D6CC47911A9051D00E3C5CD /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520020F47D6C400996F8E /* Base.m */; };
+		1D6CC47A11A9051D00E3C5CD /* Check.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520040F47D6C400996F8E /* Check.m */; };
+		1D6CC47B11A9051D00E3C5CD /* CreditCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520060F47D6C400996F8E /* CreditCard.m */; };
+		1D6CC47C11A9051D00E3C5CD /* CreditCardMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520080F47D6C400996F8E /* CreditCardMethods.m */; };
+		1D6CC47D11A9051D00E3C5CD /* CvvResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D75200A0F47D6C400996F8E /* CvvResult.m */; };
+		1D6CC47E11A9051D00E3C5CD /* ExpiryDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D75200C0F47D6C400996F8E /* ExpiryDate.m */; };
+		1D6CC47F11A9051D00E3C5CD /* Gateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D75200E0F47D6C400996F8E /* Gateway.m */; };
+		1D6CC48011A9051D00E3C5CD /* AuthorizeNetGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520110F47D6C400996F8E /* AuthorizeNetGateway.m */; };
+		1D6CC48111A9051D00E3C5CD /* BogusGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520130F47D6C400996F8E /* BogusGateway.m */; };
+		1D6CC48211A9051D00E3C5CD /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520150F47D6C400996F8E /* Response.m */; };
+		1D6CC48311A9051D00E3C5CD /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520170F47D6C400996F8E /* Errors.m */; };
+		1D6CC48411A9051D00E3C5CD /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520260F47D6C400996F8E /* NSArrayAdditions.m */; };
+		1D6CC48511A9051D00E3C5CD /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520280F47D6C400996F8E /* NSDataAdditions.m */; };
+		1D6CC48611A9051D00E3C5CD /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D75202A0F47D6C400996F8E /* NSStringAdditions.m */; };
+		1D6CC48711A9051D00E3C5CD /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D75202E0F47D6C400996F8E /* GDataXMLNode.m */; };
+		1D6CC48811A9051D00E3C5CD /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520310F47D6C400996F8E /* RegexKitLite.m */; };
+		1D6CC48911A9051D00E3C5CD /* VarArgsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7520330F47D6C400996F8E /* VarArgsHelper.m */; };
+		1D6CC48A11A9051D00E3C5CD /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFC98E50F525DB900191E58 /* Transaction.m */; };
+		1D6CC48B11A9051D00E3C5CD /* PaypalGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A7570F604C4E00792E8B /* PaypalGateway.m */; };
+		1D6CC48C11A9051D00E3C5CD /* GDataXMLNodeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D91A75E0F604C6000792E8B /* GDataXMLNodeAdditions.m */; };
+		1D6CC48D11A9051D00E3C5CD /* ChargeAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057F30F63D88D008B2FCC /* ChargeAddressViewController.m */; };
+		1D6CC48E11A9051D00E3C5CD /* ChargeAmountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057F50F63D88D008B2FCC /* ChargeAmountViewController.m */; };
+		1D6CC48F11A9051D00E3C5CD /* ChargeCardCvvViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057F70F63D88D008B2FCC /* ChargeCardCvvViewController.m */; };
+		1D6CC49011A9051D00E3C5CD /* ChargeCardExpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057F90F63D88D008B2FCC /* ChargeCardExpViewController.m */; };
+		1D6CC49111A9051D00E3C5CD /* ChargeCardNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057FB0F63D88D008B2FCC /* ChargeCardNameViewController.m */; };
+		1D6CC49211A9051D00E3C5CD /* ChargeCardNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057FD0F63D88D008B2FCC /* ChargeCardNumberViewController.m */; };
+		1D6CC49311A9051D00E3C5CD /* ChargeTableAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5057FF0F63D88D008B2FCC /* ChargeTableAddressCell.m */; };
+		1D6CC49411A9051D00E3C5CD /* ChargeTableAmountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058010F63D88D008B2FCC /* ChargeTableAmountCell.m */; };
+		1D6CC49511A9051D00E3C5CD /* ChargeTableCardExpCvvCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058030F63D88D008B2FCC /* ChargeTableCardExpCvvCell.m */; };
+		1D6CC49611A9051D00E3C5CD /* ChargeTableCardNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058050F63D88D008B2FCC /* ChargeTableCardNameCell.m */; };
+		1D6CC49711A9051D00E3C5CD /* ChargeTableCardNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058070F63D88D008B2FCC /* ChargeTableCardNumberCell.m */; };
+		1D6CC49811A9051D00E3C5CD /* ChargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058090F63D88D008B2FCC /* ChargeViewController.m */; };
+		1D6CC49911A9051D00E3C5CD /* HistoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50580C0F63D88D008B2FCC /* HistoryDetailViewController.m */; };
+		1D6CC49A11A9051D00E3C5CD /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50580E0F63D88D008B2FCC /* HistoryTableViewController.m */; };
+		1D6CC49B11A9051D00E3C5CD /* TransactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058100F63D88D008B2FCC /* TransactionTableViewCell.m */; };
+		1D6CC49C11A9051D00E3C5CD /* AboutSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058130F63D88D008B2FCC /* AboutSettingsController.m */; };
+		1D6CC49D11A9051D00E3C5CD /* AuthNetSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058150F63D88D008B2FCC /* AuthNetSettingsController.m */; };
+		1D6CC49E11A9051D00E3C5CD /* EmailSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058170F63D88D008B2FCC /* EmailSettingsViewController.m */; };
+		1D6CC49F11A9051D00E3C5CD /* GeneralSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058190F63D88D008B2FCC /* GeneralSettingsViewController.m */; };
+		1D6CC4A011A9051D00E3C5CD /* CardExpirationPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50581E0F63D88D008B2FCC /* CardExpirationPickerDelegate.m */; };
+		1D6CC4A111A9051D00E3C5CD /* NumberKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058200F63D88D008B2FCC /* NumberKeypadView.m */; };
+		1D6CC4A211A9051D00E3C5CD /* UIGradientScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058220F63D88D008B2FCC /* UIGradientScrollView.m */; };
+		1D6CC4A311A9051D00E3C5CD /* UIGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058240F63D88D008B2FCC /* UIGradientView.m */; };
+		1D6CC4A411A9051D00E3C5CD /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5058260F63D88D008B2FCC /* UIScrollViewAdditions.m */; };
+		1D6CC4A511A9051D00E3C5CD /* SettingsIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50592E0F63F891008B2FCC /* SettingsIndexViewController.m */; };
+		1D6CC4A611A9051D00E3C5CD /* SettingsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D50594F0F63FC8B008B2FCC /* SettingsTableCell.m */; };
+		1D6CC4A711A9051D00E3C5CD /* PaypalSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5220120F65415600F11E37 /* PaypalSettingsController.m */; };
+		1D6CC4A811A9051D00E3C5CD /* NSNullAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9B5B51009C31000A71B93 /* NSNullAdditions.m */; };
+		1D6CC4A911A9051D00E3C5CD /* UsaEpayGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9B5B81009C32C00A71B93 /* UsaEpayGateway.m */; };
+		1D6CC4AA11A9051D00E3C5CD /* UsaEpaySettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9B5ED1009CEA200A71B93 /* UsaEpaySettingsController.m */; };
+		1D6CC4AB11A9051D00E3C5CD /* Money.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9B5FB1009D58400A71B93 /* Money.m */; };
+		1D6CC4AC11A9051D00E3C5CD /* ZipCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FB719102A5A6F001C0301 /* ZipCode.m */; };
+		1D6CC4AD11A9051D00E3C5CD /* IpAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA22AC2102AF22F006BBDAE /* IpAddress.m */; };
+		1D6CC4AE11A9051D00E3C5CD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D30FC36105921850091D93B /* Reachability.m */; };
+		1D6CC4AF11A9051D00E3C5CD /* UICustomCellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DFBFF06105B3DAD00B8D411 /* UICustomCellBackgroundView.m */; };
+		1D6CC4B011A9051D00E3C5CD /* GatewayStandardAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF98B9B105D58140034D965 /* GatewayStandardAPI.m */; };
+		1D6CC4B211A9051D00E3C5CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1D6CC4B311A9051D00E3C5CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		1D6CC4B411A9051D00E3C5CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		1D6CC4B511A9051D00E3C5CD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D75207B0F47D82300996F8E /* libxml2.dylib */; };
+		1D6CC4B611A9051D00E3C5CD /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7520910F47D85700996F8E /* libicucore.dylib */; };
+		1D6CC4B711A9051D00E3C5CD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC869550F53EE4B00D2DB08 /* libsqlite3.dylib */; };
+		1D6CC4B811A9051D00E3C5CD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA22950102ACF3E006BBDAE /* AudioToolbox.framework */; };
+		1D6CC4B911A9051D00E3C5CD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC0B481034CD2700C2265D /* MessageUI.framework */; };
+		1D6CC4BA11A9051D00E3C5CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30FC5A1059248E0091D93B /* SystemConfiguration.framework */; };
+		1D6CC4D811A9052900E3C5CD /* AboutSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4C311A9052900E3C5CD /* AboutSettings.xib */; };
+		1D6CC4D911A9052900E3C5CD /* AddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4C411A9052900E3C5CD /* AddressView.xib */; };
+		1D6CC4DA11A9052900E3C5CD /* AuthNetSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4C511A9052900E3C5CD /* AuthNetSettings.xib */; };
+		1D6CC4DB11A9052900E3C5CD /* ChargeAddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4C611A9052900E3C5CD /* ChargeAddressView.xib */; };
+		1D6CC4DC11A9052900E3C5CD /* ChargeAmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4C711A9052900E3C5CD /* ChargeAmountView.xib */; };
+		1D6CC4DD11A9052900E3C5CD /* ChargeCardCvvView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4C811A9052900E3C5CD /* ChargeCardCvvView.xib */; };
+		1D6CC4DE11A9052900E3C5CD /* ChargeCardExpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4C911A9052900E3C5CD /* ChargeCardExpView.xib */; };
+		1D6CC4DF11A9052900E3C5CD /* ChargeCardNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4CA11A9052900E3C5CD /* ChargeCardNameView.xib */; };
+		1D6CC4E011A9052900E3C5CD /* ChargeCardNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4CB11A9052900E3C5CD /* ChargeCardNumberView.xib */; };
+		1D6CC4E111A9052900E3C5CD /* ChargeTableCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4CC11A9052900E3C5CD /* ChargeTableCells.xib */; };
+		1D6CC4E211A9052900E3C5CD /* ChargeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4CD11A9052900E3C5CD /* ChargeView.xib */; };
+		1D6CC4E311A9052900E3C5CD /* EmailSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4CE11A9052900E3C5CD /* EmailSettings.xib */; };
+		1D6CC4E411A9052900E3C5CD /* GeneralSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4CF11A9052900E3C5CD /* GeneralSettings.xib */; };
+		1D6CC4E511A9052900E3C5CD /* HistoryDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4D011A9052900E3C5CD /* HistoryDetailView.xib */; };
+		1D6CC4E611A9052900E3C5CD /* HistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4D111A9052900E3C5CD /* HistoryView.xib */; };
+		1D6CC4E711A9052900E3C5CD /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4D211A9052900E3C5CD /* MainWindow.xib */; };
+		1D6CC4E811A9052900E3C5CD /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4D311A9052900E3C5CD /* TransactionTableViewCell.xib */; };
+		1D6CC4E911A9052900E3C5CD /* SettingsIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4D411A9052900E3C5CD /* SettingsIndexView.xib */; };
+		1D6CC4EA11A9052900E3C5CD /* SettingsTableCells.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4D511A9052900E3C5CD /* SettingsTableCells.xib */; };
+		1D6CC4EB11A9052900E3C5CD /* PaypalSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4D611A9052900E3C5CD /* PaypalSettings.xib */; };
+		1D6CC4EC11A9052900E3C5CD /* UsaEpaySettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D6CC4D711A9052900E3C5CD /* UsaEpaySettings.xib */; };
 		1D6FB71B102A5A6F001C0301 /* ZipCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6FB719102A5A6F001C0301 /* ZipCode.m */; };
 		1D6FB77B102A5FF5001C0301 /* DoneUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FB777102A5FF5001C0301 /* DoneUp.png */; };
 		1D6FB77C102A5FF5001C0301 /* DoneDown3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6FB778102A5FF5001C0301 /* DoneDown3.png */; };
@@ -156,6 +302,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1D6CC47411A9051D00E3C5CD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D751E8C0F47D1DC00996F8E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +409,28 @@
 		1D5220120F65415600F11E37 /* PaypalSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaypalSettingsController.m; sourceTree = "<group>"; };
 		1D5220140F6542C400F11E37 /* PaypalSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaypalSettings.xib; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TransFS Card Terminal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6CC4C011A9051D00E3C5CD /* TransFS Card Terminal-iPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TransFS Card Terminal-iPad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6CC4C311A9052900E3C5CD /* AboutSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AboutSettings.xib; path = "Resources-iPad/interfaces/AboutSettings.xib"; sourceTree = "<group>"; };
+		1D6CC4C411A9052900E3C5CD /* AddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddressView.xib; path = "Resources-iPad/interfaces/AddressView.xib"; sourceTree = "<group>"; };
+		1D6CC4C511A9052900E3C5CD /* AuthNetSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AuthNetSettings.xib; path = "Resources-iPad/interfaces/AuthNetSettings.xib"; sourceTree = "<group>"; };
+		1D6CC4C611A9052900E3C5CD /* ChargeAddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChargeAddressView.xib; path = "Resources-iPad/interfaces/ChargeAddressView.xib"; sourceTree = "<group>"; };
+		1D6CC4C711A9052900E3C5CD /* ChargeAmountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChargeAmountView.xib; path = "Resources-iPad/interfaces/ChargeAmountView.xib"; sourceTree = "<group>"; };
+		1D6CC4C811A9052900E3C5CD /* ChargeCardCvvView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChargeCardCvvView.xib; path = "Resources-iPad/interfaces/ChargeCardCvvView.xib"; sourceTree = "<group>"; };
+		1D6CC4C911A9052900E3C5CD /* ChargeCardExpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChargeCardExpView.xib; path = "Resources-iPad/interfaces/ChargeCardExpView.xib"; sourceTree = "<group>"; };
+		1D6CC4CA11A9052900E3C5CD /* ChargeCardNameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChargeCardNameView.xib; path = "Resources-iPad/interfaces/ChargeCardNameView.xib"; sourceTree = "<group>"; };
+		1D6CC4CB11A9052900E3C5CD /* ChargeCardNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChargeCardNumberView.xib; path = "Resources-iPad/interfaces/ChargeCardNumberView.xib"; sourceTree = "<group>"; };
+		1D6CC4CC11A9052900E3C5CD /* ChargeTableCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChargeTableCells.xib; path = "Resources-iPad/interfaces/ChargeTableCells.xib"; sourceTree = "<group>"; };
+		1D6CC4CD11A9052900E3C5CD /* ChargeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChargeView.xib; path = "Resources-iPad/interfaces/ChargeView.xib"; sourceTree = "<group>"; };
+		1D6CC4CE11A9052900E3C5CD /* EmailSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EmailSettings.xib; path = "Resources-iPad/interfaces/EmailSettings.xib"; sourceTree = "<group>"; };
+		1D6CC4CF11A9052900E3C5CD /* GeneralSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GeneralSettings.xib; path = "Resources-iPad/interfaces/GeneralSettings.xib"; sourceTree = "<group>"; };
+		1D6CC4D011A9052900E3C5CD /* HistoryDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HistoryDetailView.xib; path = "Resources-iPad/interfaces/HistoryDetailView.xib"; sourceTree = "<group>"; };
+		1D6CC4D111A9052900E3C5CD /* HistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HistoryView.xib; path = "Resources-iPad/interfaces/HistoryView.xib"; sourceTree = "<group>"; };
+		1D6CC4D211A9052900E3C5CD /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = "Resources-iPad/interfaces/MainWindow.xib"; sourceTree = "<group>"; };
+		1D6CC4D311A9052900E3C5CD /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TransactionTableViewCell.xib; path = "Resources-iPad/interfaces/TransactionTableViewCell.xib"; sourceTree = "<group>"; };
+		1D6CC4D411A9052900E3C5CD /* SettingsIndexView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsIndexView.xib; path = "Resources-iPad/interfaces/SettingsIndexView.xib"; sourceTree = "<group>"; };
+		1D6CC4D511A9052900E3C5CD /* SettingsTableCells.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsTableCells.xib; path = "Resources-iPad/interfaces/SettingsTableCells.xib"; sourceTree = "<group>"; };
+		1D6CC4D611A9052900E3C5CD /* PaypalSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PaypalSettings.xib; path = "Resources-iPad/interfaces/PaypalSettings.xib"; sourceTree = "<group>"; };
+		1D6CC4D711A9052900E3C5CD /* UsaEpaySettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = UsaEpaySettings.xib; path = "Resources-iPad/interfaces/UsaEpaySettings.xib"; sourceTree = "<group>"; };
 		1D6FB719102A5A6F001C0301 /* ZipCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipCode.m; sourceTree = "<group>"; };
 		1D6FB71A102A5A6F001C0301 /* ZipCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipCode.h; sourceTree = "<group>"; };
 		1D6FB777102A5FF5001C0301 /* DoneUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoneUp.png; sourceTree = "<group>"; };
@@ -414,6 +591,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D6CC4B111A9051D00E3C5CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6CC4B211A9051D00E3C5CD /* Foundation.framework in Frameworks */,
+				1D6CC4B311A9051D00E3C5CD /* UIKit.framework in Frameworks */,
+				1D6CC4B411A9051D00E3C5CD /* CoreGraphics.framework in Frameworks */,
+				1D6CC4B511A9051D00E3C5CD /* libxml2.dylib in Frameworks */,
+				1D6CC4B611A9051D00E3C5CD /* libicucore.dylib in Frameworks */,
+				1D6CC4B711A9051D00E3C5CD /* libsqlite3.dylib in Frameworks */,
+				1D6CC4B811A9051D00E3C5CD /* AudioToolbox.framework in Frameworks */,
+				1D6CC4B911A9051D00E3C5CD /* MessageUI.framework in Frameworks */,
+				1D6CC4BA11A9051D00E3C5CD /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -440,6 +633,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */,
+				1D6CC4C011A9051D00E3C5CD /* TransFS Card Terminal-iPad.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -562,6 +756,34 @@
 				1D50594B0F63FC58008B2FCC /* SettingsTableCells.xib */,
 			);
 			path = interfaces;
+			sourceTree = "<group>";
+		};
+		1D6CC4C211A9051D00E3C5CD /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+				1D6CC4C311A9052900E3C5CD /* AboutSettings.xib */,
+				1D6CC4C411A9052900E3C5CD /* AddressView.xib */,
+				1D6CC4C511A9052900E3C5CD /* AuthNetSettings.xib */,
+				1D6CC4C611A9052900E3C5CD /* ChargeAddressView.xib */,
+				1D6CC4C711A9052900E3C5CD /* ChargeAmountView.xib */,
+				1D6CC4C811A9052900E3C5CD /* ChargeCardCvvView.xib */,
+				1D6CC4C911A9052900E3C5CD /* ChargeCardExpView.xib */,
+				1D6CC4CA11A9052900E3C5CD /* ChargeCardNameView.xib */,
+				1D6CC4CB11A9052900E3C5CD /* ChargeCardNumberView.xib */,
+				1D6CC4CC11A9052900E3C5CD /* ChargeTableCells.xib */,
+				1D6CC4CD11A9052900E3C5CD /* ChargeView.xib */,
+				1D6CC4CE11A9052900E3C5CD /* EmailSettings.xib */,
+				1D6CC4CF11A9052900E3C5CD /* GeneralSettings.xib */,
+				1D6CC4D011A9052900E3C5CD /* HistoryDetailView.xib */,
+				1D6CC4D111A9052900E3C5CD /* HistoryView.xib */,
+				1D6CC4D211A9052900E3C5CD /* MainWindow.xib */,
+				1D6CC4D311A9052900E3C5CD /* TransactionTableViewCell.xib */,
+				1D6CC4D411A9052900E3C5CD /* SettingsIndexView.xib */,
+				1D6CC4D511A9052900E3C5CD /* SettingsTableCells.xib */,
+				1D6CC4D611A9052900E3C5CD /* PaypalSettings.xib */,
+				1D6CC4D711A9052900E3C5CD /* UsaEpaySettings.xib */,
+			);
+			name = "Resources-iPad";
 			sourceTree = "<group>";
 		};
 		1D751FF80F47D66B00996F8E /* objective_merchant */ = {
@@ -789,6 +1011,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				1D6CC4C211A9051D00E3C5CD /* Resources-iPad */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -857,19 +1080,38 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* TransFS Card Terminal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1D6CC42411A9051D00E3C5CD /* TransFS Card Terminal-iPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6CC4BB11A9051D00E3C5CD /* Build configuration list for PBXNativeTarget "TransFS Card Terminal-iPad" */;
+			buildPhases = (
+				1D6CC42511A9051D00E3C5CD /* Resources */,
+				1D6CC47411A9051D00E3C5CD /* CopyFiles */,
+				1D6CC47511A9051D00E3C5CD /* Sources */,
+				1D6CC4B111A9051D00E3C5CD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TransFS Card Terminal-iPad";
+			productName = "TransFS Card Terminal";
+			productReference = 1D6CC4C011A9051D00E3C5CD /* TransFS Card Terminal-iPad.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TransFS Card Terminal" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* TransFS Card Terminal */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* TransFS Card Terminal */,
+				1D6CC42411A9051D00E3C5CD /* TransFS Card Terminal-iPad */,
 			);
 		};
 /* End PBXProject section */
@@ -960,6 +1202,91 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D6CC42511A9051D00E3C5CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6CC42611A9051D00E3C5CD /* Settings.bundle in Resources */,
+				1D6CC42711A9051D00E3C5CD /* american_express.png in Resources */,
+				1D6CC42811A9051D00E3C5CD /* credit_card_image_mask.png in Resources */,
+				1D6CC42911A9051D00E3C5CD /* discover.png in Resources */,
+				1D6CC42A11A9051D00E3C5CD /* master.png in Resources */,
+				1D6CC42B11A9051D00E3C5CD /* unknown.png in Resources */,
+				1D6CC42C11A9051D00E3C5CD /* visa.png in Resources */,
+				1D6CC42D11A9051D00E3C5CD /* money_1.png in Resources */,
+				1D6CC42E11A9051D00E3C5CD /* money_2.png in Resources */,
+				1D6CC42F11A9051D00E3C5CD /* money_3.png in Resources */,
+				1D6CC43011A9051D00E3C5CD /* money_4.png in Resources */,
+				1D6CC43111A9051D00E3C5CD /* money_5.png in Resources */,
+				1D6CC43211A9051D00E3C5CD /* money_6.png in Resources */,
+				1D6CC43311A9051D00E3C5CD /* money_7.png in Resources */,
+				1D6CC43411A9051D00E3C5CD /* transactionHistory.sql in Resources */,
+				1D6CC43511A9051D00E3C5CD /* keypad_button_normal.png in Resources */,
+				1D6CC43611A9051D00E3C5CD /* keypad_button_highlighted.png in Resources */,
+				1D6CC44B11A9051D00E3C5CD /* icon-small.png in Resources */,
+				1D6CC44C11A9051D00E3C5CD /* icon-large.png in Resources */,
+				1D6CC44D11A9051D00E3C5CD /* setting-tab-icon.png in Resources */,
+				1D6CC44F11A9051D00E3C5CD /* splash-about_settings.png in Resources */,
+				1D6CC45011A9051D00E3C5CD /* DoneUp.png in Resources */,
+				1D6CC45111A9051D00E3C5CD /* DoneDown3.png in Resources */,
+				1D6CC45211A9051D00E3C5CD /* DoneUp3.png in Resources */,
+				1D6CC45311A9051D00E3C5CD /* DoneDown.png in Resources */,
+				1D6CC45411A9051D00E3C5CD /* keypad.0.down.png in Resources */,
+				1D6CC45511A9051D00E3C5CD /* keypad.0.png in Resources */,
+				1D6CC45611A9051D00E3C5CD /* keypad.1.down.png in Resources */,
+				1D6CC45711A9051D00E3C5CD /* keypad.1.png in Resources */,
+				1D6CC45811A9051D00E3C5CD /* keypad.2.down.png in Resources */,
+				1D6CC45911A9051D00E3C5CD /* keypad.2.png in Resources */,
+				1D6CC45A11A9051D00E3C5CD /* keypad.3.down.png in Resources */,
+				1D6CC45B11A9051D00E3C5CD /* keypad.3.png in Resources */,
+				1D6CC45C11A9051D00E3C5CD /* keypad.4.down.png in Resources */,
+				1D6CC45D11A9051D00E3C5CD /* keypad.4.png in Resources */,
+				1D6CC45E11A9051D00E3C5CD /* keypad.5.down.png in Resources */,
+				1D6CC45F11A9051D00E3C5CD /* keypad.5.png in Resources */,
+				1D6CC46011A9051D00E3C5CD /* keypad.6.down.png in Resources */,
+				1D6CC46111A9051D00E3C5CD /* keypad.6.png in Resources */,
+				1D6CC46211A9051D00E3C5CD /* keypad.7.down.png in Resources */,
+				1D6CC46311A9051D00E3C5CD /* keypad.7.png in Resources */,
+				1D6CC46411A9051D00E3C5CD /* keypad.8.down.png in Resources */,
+				1D6CC46511A9051D00E3C5CD /* keypad.8.png in Resources */,
+				1D6CC46611A9051D00E3C5CD /* keypad.9.down.png in Resources */,
+				1D6CC46711A9051D00E3C5CD /* keypad.9.png in Resources */,
+				1D6CC46811A9051D00E3C5CD /* keypad.back.down.png in Resources */,
+				1D6CC46911A9051D00E3C5CD /* keypad.back.png in Resources */,
+				1D6CC46A11A9051D00E3C5CD /* keypad.blank.down.png in Resources */,
+				1D6CC46B11A9051D00E3C5CD /* keypad.blank.png in Resources */,
+				1D6CC46C11A9051D00E3C5CD /* keypad.dot.down.png in Resources */,
+				1D6CC46D11A9051D00E3C5CD /* keypad.dot.png in Resources */,
+				1D6CC46E11A9051D00E3C5CD /* Entitlements.plist in Resources */,
+				1D6CC46F11A9051D00E3C5CD /* splash-bottom.png in Resources */,
+				1D6CC47011A9051D00E3C5CD /* splash-icon.png in Resources */,
+				1D6CC47111A9051D00E3C5CD /* splash-title.png in Resources */,
+				1D6CC47211A9051D00E3C5CD /* splash-top.png in Resources */,
+				1D6CC47311A9051D00E3C5CD /* Default.png in Resources */,
+				1D6CC4D811A9052900E3C5CD /* AboutSettings.xib in Resources */,
+				1D6CC4D911A9052900E3C5CD /* AddressView.xib in Resources */,
+				1D6CC4DA11A9052900E3C5CD /* AuthNetSettings.xib in Resources */,
+				1D6CC4DB11A9052900E3C5CD /* ChargeAddressView.xib in Resources */,
+				1D6CC4DC11A9052900E3C5CD /* ChargeAmountView.xib in Resources */,
+				1D6CC4DD11A9052900E3C5CD /* ChargeCardCvvView.xib in Resources */,
+				1D6CC4DE11A9052900E3C5CD /* ChargeCardExpView.xib in Resources */,
+				1D6CC4DF11A9052900E3C5CD /* ChargeCardNameView.xib in Resources */,
+				1D6CC4E011A9052900E3C5CD /* ChargeCardNumberView.xib in Resources */,
+				1D6CC4E111A9052900E3C5CD /* ChargeTableCells.xib in Resources */,
+				1D6CC4E211A9052900E3C5CD /* ChargeView.xib in Resources */,
+				1D6CC4E311A9052900E3C5CD /* EmailSettings.xib in Resources */,
+				1D6CC4E411A9052900E3C5CD /* GeneralSettings.xib in Resources */,
+				1D6CC4E511A9052900E3C5CD /* HistoryDetailView.xib in Resources */,
+				1D6CC4E611A9052900E3C5CD /* HistoryView.xib in Resources */,
+				1D6CC4E711A9052900E3C5CD /* MainWindow.xib in Resources */,
+				1D6CC4E811A9052900E3C5CD /* TransactionTableViewCell.xib in Resources */,
+				1D6CC4E911A9052900E3C5CD /* SettingsIndexView.xib in Resources */,
+				1D6CC4EA11A9052900E3C5CD /* SettingsTableCells.xib in Resources */,
+				1D6CC4EB11A9052900E3C5CD /* PaypalSettings.xib in Resources */,
+				1D6CC4EC11A9052900E3C5CD /* UsaEpaySettings.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1029,6 +1356,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D6CC47511A9051D00E3C5CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6CC47611A9051D00E3C5CD /* main.m in Sources */,
+				1D6CC47711A9051D00E3C5CD /* TransFS_Card_TerminalAppDelegate.m in Sources */,
+				1D6CC47811A9051D00E3C5CD /* AvsResult.m in Sources */,
+				1D6CC47911A9051D00E3C5CD /* Base.m in Sources */,
+				1D6CC47A11A9051D00E3C5CD /* Check.m in Sources */,
+				1D6CC47B11A9051D00E3C5CD /* CreditCard.m in Sources */,
+				1D6CC47C11A9051D00E3C5CD /* CreditCardMethods.m in Sources */,
+				1D6CC47D11A9051D00E3C5CD /* CvvResult.m in Sources */,
+				1D6CC47E11A9051D00E3C5CD /* ExpiryDate.m in Sources */,
+				1D6CC47F11A9051D00E3C5CD /* Gateway.m in Sources */,
+				1D6CC48011A9051D00E3C5CD /* AuthorizeNetGateway.m in Sources */,
+				1D6CC48111A9051D00E3C5CD /* BogusGateway.m in Sources */,
+				1D6CC48211A9051D00E3C5CD /* Response.m in Sources */,
+				1D6CC48311A9051D00E3C5CD /* Errors.m in Sources */,
+				1D6CC48411A9051D00E3C5CD /* NSArrayAdditions.m in Sources */,
+				1D6CC48511A9051D00E3C5CD /* NSDataAdditions.m in Sources */,
+				1D6CC48611A9051D00E3C5CD /* NSStringAdditions.m in Sources */,
+				1D6CC48711A9051D00E3C5CD /* GDataXMLNode.m in Sources */,
+				1D6CC48811A9051D00E3C5CD /* RegexKitLite.m in Sources */,
+				1D6CC48911A9051D00E3C5CD /* VarArgsHelper.m in Sources */,
+				1D6CC48A11A9051D00E3C5CD /* Transaction.m in Sources */,
+				1D6CC48B11A9051D00E3C5CD /* PaypalGateway.m in Sources */,
+				1D6CC48C11A9051D00E3C5CD /* GDataXMLNodeAdditions.m in Sources */,
+				1D6CC48D11A9051D00E3C5CD /* ChargeAddressViewController.m in Sources */,
+				1D6CC48E11A9051D00E3C5CD /* ChargeAmountViewController.m in Sources */,
+				1D6CC48F11A9051D00E3C5CD /* ChargeCardCvvViewController.m in Sources */,
+				1D6CC49011A9051D00E3C5CD /* ChargeCardExpViewController.m in Sources */,
+				1D6CC49111A9051D00E3C5CD /* ChargeCardNameViewController.m in Sources */,
+				1D6CC49211A9051D00E3C5CD /* ChargeCardNumberViewController.m in Sources */,
+				1D6CC49311A9051D00E3C5CD /* ChargeTableAddressCell.m in Sources */,
+				1D6CC49411A9051D00E3C5CD /* ChargeTableAmountCell.m in Sources */,
+				1D6CC49511A9051D00E3C5CD /* ChargeTableCardExpCvvCell.m in Sources */,
+				1D6CC49611A9051D00E3C5CD /* ChargeTableCardNameCell.m in Sources */,
+				1D6CC49711A9051D00E3C5CD /* ChargeTableCardNumberCell.m in Sources */,
+				1D6CC49811A9051D00E3C5CD /* ChargeViewController.m in Sources */,
+				1D6CC49911A9051D00E3C5CD /* HistoryDetailViewController.m in Sources */,
+				1D6CC49A11A9051D00E3C5CD /* HistoryTableViewController.m in Sources */,
+				1D6CC49B11A9051D00E3C5CD /* TransactionTableViewCell.m in Sources */,
+				1D6CC49C11A9051D00E3C5CD /* AboutSettingsController.m in Sources */,
+				1D6CC49D11A9051D00E3C5CD /* AuthNetSettingsController.m in Sources */,
+				1D6CC49E11A9051D00E3C5CD /* EmailSettingsViewController.m in Sources */,
+				1D6CC49F11A9051D00E3C5CD /* GeneralSettingsViewController.m in Sources */,
+				1D6CC4A011A9051D00E3C5CD /* CardExpirationPickerDelegate.m in Sources */,
+				1D6CC4A111A9051D00E3C5CD /* NumberKeypadView.m in Sources */,
+				1D6CC4A211A9051D00E3C5CD /* UIGradientScrollView.m in Sources */,
+				1D6CC4A311A9051D00E3C5CD /* UIGradientView.m in Sources */,
+				1D6CC4A411A9051D00E3C5CD /* UIScrollViewAdditions.m in Sources */,
+				1D6CC4A511A9051D00E3C5CD /* SettingsIndexViewController.m in Sources */,
+				1D6CC4A611A9051D00E3C5CD /* SettingsTableCell.m in Sources */,
+				1D6CC4A711A9051D00E3C5CD /* PaypalSettingsController.m in Sources */,
+				1D6CC4A811A9051D00E3C5CD /* NSNullAdditions.m in Sources */,
+				1D6CC4A911A9051D00E3C5CD /* UsaEpayGateway.m in Sources */,
+				1D6CC4AA11A9051D00E3C5CD /* UsaEpaySettingsController.m in Sources */,
+				1D6CC4AB11A9051D00E3C5CD /* Money.m in Sources */,
+				1D6CC4AC11A9051D00E3C5CD /* ZipCode.m in Sources */,
+				1D6CC4AD11A9051D00E3C5CD /* IpAddress.m in Sources */,
+				1D6CC4AE11A9051D00E3C5CD /* Reachability.m in Sources */,
+				1D6CC4AF11A9051D00E3C5CD /* UICustomCellBackgroundView.m in Sources */,
+				1D6CC4B011A9051D00E3C5CD /* GatewayStandardAPI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -1048,7 +1441,8 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphonesimulator3.1.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1066,9 +1460,102 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphoneos3.1.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
+		};
+		1D6CC4BC11A9051D00E3C5CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphoneos*]" = armv7;
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TransFS_Card_Terminal_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "TransFS Card Terminal-iPad";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		1D6CC4BD11A9051D00E3C5CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphoneos*]" = armv7;
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TransFS_Card_Terminal_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "TransFS Card Terminal-iPad";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		1D6CC4BE11A9051D00E3C5CD /* Ad-Hoc Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphoneos*]" = armv7;
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Transparent Financial Services, LLC";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TransFS_Card_Terminal_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "TransFS Card Terminal-iPad";
+				PROVISIONING_PROFILE = "8BFBDCFD-637A-4666-81F1-BBEB5B5A791D";
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = "Ad-Hoc Distribution";
+		};
+		1D6CC4BF11A9051D00E3C5CD /* App Store Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphoneos*]" = armv7;
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Transparent Financial Services, LLC";
+				CODE_SIGN_RESOURCE_RULES_PATH = "${SDKROOT}/ResourceRules.plist";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TransFS_Card_Terminal_Prefix.pch;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PRODUCT_NAME = "TransFS Card Terminal-iPad";
+				PROVISIONING_PROFILE = "9661D9FA-348C-4012-9AAA-99BF91D6C24F";
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = "App Store Distribution";
 		};
 		1DB647630F52104E00249886 /* Ad-Hoc Distribution */ = {
 			isa = XCBuildConfiguration;
@@ -1101,7 +1588,8 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
 				PROVISIONING_PROFILE = "8BFBDCFD-637A-4666-81F1-BBEB5B5A791D";
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphoneos3.1.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Ad-Hoc Distribution";
 		};
@@ -1136,7 +1624,8 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
 				PROVISIONING_PROFILE = "9661D9FA-348C-4012-9AAA-99BF91D6C24F";
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphoneos3.1.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "App Store Distribution";
 		};
@@ -1152,7 +1641,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphonesimulator3.1.3;
 			};
 			name = Debug;
 		};
@@ -1181,6 +1670,17 @@
 				1D6058950D05DD3E006BFB54 /* Release */,
 				1DB647640F52104E00249886 /* Ad-Hoc Distribution */,
 				1DF98CE5105DA31D0034D965 /* App Store Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D6CC4BB11A9051D00E3C5CD /* Build configuration list for PBXNativeTarget "TransFS Card Terminal-iPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6CC4BC11A9051D00E3C5CD /* Debug */,
+				1D6CC4BD11A9051D00E3C5CD /* Release */,
+				1D6CC4BE11A9051D00E3C5CD /* Ad-Hoc Distribution */,
+				1D6CC4BF11A9051D00E3C5CD /* App Store Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
