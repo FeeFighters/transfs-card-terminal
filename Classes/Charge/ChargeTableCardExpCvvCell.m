@@ -14,8 +14,8 @@
 @synthesize chargeView;
 @synthesize expDate, cvv, expDisabledLabel, cvvDisabledLabel;
 
-- (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithFrame:frame reuseIdentifier:reuseIdentifier]) {
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         // Initialization code
     }
     return self;

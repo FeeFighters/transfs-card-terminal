@@ -1048,7 +1048,7 @@
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "TransFS Card Terminal";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphoneos3.2;
 			};
 			name = Debug;
 		};
@@ -1082,7 +1082,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "0D8CB9ED-4F7E-4523-BC97-E41986909AD7";
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos3.2;
 			};
 			name = "Ad-Hoc Distribution";
 		};
@@ -1117,7 +1117,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "0D8CB9ED-4F7E-4523-BC97-E41986909AD7";
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos3.2;
 			};
 			name = "App Store Distribution";
 		};
@@ -1152,7 +1152,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos3.1;
+				SDKROOT = iphoneos3.2;
 			};
 			name = Debug;
 		};
@@ -1167,7 +1167,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos3.2;
 			};
 			name = Release;
 		};
